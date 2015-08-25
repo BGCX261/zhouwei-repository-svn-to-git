@@ -1,0 +1,14 @@
+<%@ page contentType="text/html; charset=utf-8" language="java"%>
+<%@ page import="java.util.Map" %>
+<%@ include file="/common/init_tag.jsp" %>
+<html>
+<head>
+<html:base/>
+<title>测试页面</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="../../themes/themes1/style.css" rel="stylesheet" type="text/css" />
+<%@ include file="/common/init_js.jsp" %>
+<%@ include file="/common/init_date.jsp" %>
+${test}
+</body>
+</html>

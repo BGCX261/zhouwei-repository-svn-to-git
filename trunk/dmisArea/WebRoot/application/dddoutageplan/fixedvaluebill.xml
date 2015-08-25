@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" ?>
+<rows>
+   <head>
+        <column width="40" type="link" align="center"  sort="na">img:[../../themes/themes1/images/grid/config.gif]</column>
+        <column width="80" type="ed" align="center" sort="int">编号</column>
+        <column width="100" type="ed" align="left" sort="str">厂站名称</column>
+        <column width="100" type="ed" align="center" sort="str">被保护对象</column>
+        <column width="120" type="ed" align="center" sort="str">被保护对象调度号</column>
+        <column width="100" type="ed" align="left" sort="str">保护名称</column>
+        <column width="100" type="ed" align="left" sort="str">保护型号</column>
+        <column width="100" type="ed" align="left" sort="str">软件版本</column>
+        <column width="110" type="ed" align="left" sort="str">整定时间</column>
+        <column width="100" type="ed" align="left" sort="int">状态</column>
+        <settings>
+            <colwidth>px</colwidth>
+        </settings>
+    </head>
+    <row id ="0">
+      <cell>...</cell>
+      <cell></cell>
+      <cell></cell>
+      <cell></cell>
+      <cell></cell>
+      <cell></cell>
+      <cell></cell>
+      <cell></cell>
+      <cell></cell>
+      <cell></cell>
+   </row>
+   <row id ="1">
+      <cell>1</cell>
+      <cell>8080</cell>
+      <cell>新温泉站</cell>
+      <cell>变压器</cell>
+      <cell>1#</cell>
+      <cell>四方保护</cell>
+      <cell>IEC61970</cell>
+      <cell>v1.0.21</cell>
+      <cell>2006-9-12</cell>
+      <cell>审批中</cell>
+   </row>
+   <row id ="2">
+      <cell>4</cell>
+      <cell>8080</cell>
+      <cell>新温泉站</cell>
+      <cell>变压器</cell>
+      <cell>1#</cell>
+      <cell>四方保护</cell>
+      <cell>IEC61970</cell>
+      <cell>v1.0.21</cell>
+      <cell>2006-9-12</cell>
+      <cell>已执行</cell>
+   </row>
+</rows>

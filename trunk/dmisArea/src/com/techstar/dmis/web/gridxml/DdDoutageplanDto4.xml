@@ -1,0 +1,9 @@
+<!--日停电计划-->
+<head>
+  <obj>DayplancoopraterelDto</obj>
+  <column  colName="frelid" propertyName="fdddayplandelaylist1" colType="string" dataTypeLen="32" isPrimary="1" visible="0" width="10" isEdit="0" textColor="#000000" className="" refName="frelid" ></column>
+  <column  colName="fcooperatename" propertyName="fdddayplandelaylist1" colType="string" dataTypeLen="20" isPrimary="0" visible="1" width="180" isEdit="0" textColor="#000000" className="" refName="fcooperatename" ></column>
+  <column  colName="cooperatedate" propertyName="fdddayplandelaylist1" colType="date" dataTypeLen="20" isPrimary="0" visible="1" width="180" isEdit="0" textColor="#000000" className="" refName="cooperatedate" ></column>
+ <column  colName="version" propertyName="fdddayplanexcutelist1" colType="integer" dataTypeLen="80" isPrimary="0" visible="0" width="10" isEdit="1" textColor="#000000" className="" refName="version" ></column>
+</head>
+

@@ -1,0 +1,26 @@
+<!DOCTYPE mappings PUBLIC "-//DOZER//DTD MAPPINGS//EN"
+"http://dozer.sourceforge.net/dtd/dozerbeanmapping.dtd">
+<mappings>
+   <mapping>
+   <class-a>com.techstar.dmis.dto.ZdhRmrecDto</class-a>
+   <class-b>com.techstar.dmis.dto.transfer.TransZdhRmrecDto</class-b>
+   <field>
+      <a>zzdhrmrec1.ondutyno</a>
+      <b>trans_zzdhrmrec1</b>
+      <a-hint>com.techstar.dmis.dto.ZdhAutoondutylogDto</a-hint>
+      <b-hint>java.lang.String</b-hint>
+   </field>
+   <field>
+      <a>zzdhrmrec4.id</a>
+      <b>trans_zzdhrmrec4</b>
+      <a-hint>com.techstar.dmis.dto.StdStationDto</a-hint>
+      <b-hint>java.lang.String</b-hint>
+   </field>
+   <field>
+      <a>zzdhrmrec2.recordsno</a>
+      <b>trans_zzdhrmrec2</b>
+      <a-hint>com.techstar.dmis.dto.ZdhCharalterrecordDto</a-hint>
+      <b-hint>java.lang.String</b-hint>
+   </field>
+   </mapping>
+</mappings>

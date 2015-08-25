@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+  <!-- jBPM configuration -->
+ <bean id="jbpmConfig" 
+     class="org.springmodules.workflow.jbpm31.LocalJbpmConfigurationFactoryBean">
+    <property name="sessionFactory" ref="${proname}SessionFactory"/>
+    <property name="configuration" value="/WEB-INF/spring/jbpm.cfg.xml"/>
+ </bean>
+
+<bean id="jbpmTemplate" class="org.springmodules.workflow.jbpm31.JbpmTemplate">
+ 	<property name="jbpmConfiguration">
+			<ref local="jbpmConfig" />
+	</property>
+</bean>
+ 
+	<!-- data interface -->
+<bean id="iWorkflowDao" parent="baseLogAOP">
+	<property name="target">
+		<bean
+			class="com.techstar.framework.service.workflow.dao.WorkflowDao">
+			<property name="jbpmTemplate">
+				<ref local="jbpmTemplate" />
+			</property>
+		</bean>
+	</property>
+</bean>
+
+	<!-- workflow interface-->
+#foreach($class in $wfServices)
+	<bean id="i${class.getUpEntityName()}WFService" parent="baseTransaction">
+		<property name="target">
+			<bean
+				class="${wfservicepath}.${class.getUpEntityName()}WFServiceImpl">
+				<property name="workFlowDao" ref="iWorkflowDao"></property>
+			</bean>
+		</property>
+	</bean>
+#end
+</beans>

@@ -1,0 +1,147 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context-2.5.xsd
+        http://www.springframework.org/schema/aop 
+        http://www.springframework.org/schema/aop/spring-aop-2.0.xsd
+        http://www.springframework.org/schema/tx
+        http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
+
+
+	<bean id="bookDao1"
+		class="com.sitechasia.webx.example.book.dao.impl.BookHibernateDaoImpl">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory1" />
+		</property>
+	</bean>
+
+	<bean id="categoryDao1"
+		class="com.sitechasia.webx.example.book.dao.impl.CategoryHibernateDaoImpl">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory1" />
+		</property>
+	</bean>
+
+	<bean id="bookDao2"
+		class="com.sitechasia.webx.example.book.dao.impl.BookHibernateDaoImpl">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory2" />
+		</property>
+	</bean>
+
+	<bean id="categoryDao2"
+		class="com.sitechasia.webx.example.book.dao.impl.CategoryHibernateDaoImpl">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory2" />
+		</property>
+	</bean>
+
+	<bean id="serviceForMultiDataSource"
+		class="com.sitechasia.webx.example.book.service.impl.ServiceImplForMultiDataSource">
+		<property name="bookDao1">
+			<ref bean="bookDao1" />
+		</property>
+		<property name="categoryDao1">
+			<ref bean="categoryDao1" />
+		</property>
+		<property name="bookDao2">
+			<ref bean="bookDao2" />
+		</property>
+		<property name="categoryDao2">
+			<ref bean="categoryDao2" />
+		</property>
+	</bean>
+
+	<bean id="jotm" class="org.springframework.transaction.jta.JotmFactoryBean" />
+
+	<!--JTA事务管理器-->
+	<bean id="txManager"
+		class="org.springframework.transaction.jta.JtaTransactionManager">
+		<property name="userTransaction" ref="jotm" />
+	</bean>
+
+	<!--注解事务驱动-->
+	<tx:annotation-driven transaction-manager="txManager"
+		proxy-target-class="true" />
+
+
+	<!-- 数据源 1 -->
+	<bean id="dataSource1" class="org.enhydra.jdbc.pool.StandardXAPoolDataSource"
+		destroy-method="shutdown">
+		<property name="dataSource">
+			<bean class="org.enhydra.jdbc.standard.StandardXADataSource"
+				destroy-method="shutdown">
+				<property name="transactionManager" ref="jotm" />
+				<property name="driverName" value="org.hsqldb.jdbcDriver" />
+				<property name="url" value="jdbc:hsqldb:mem:book1;create=true" />
+			</bean>
+		</property>
+		<property name="user" value="sa" />
+		<property name="password" value="" />
+	</bean>
+
+	<!-- 数据源 2 -->
+	<bean id="dataSource2" class="org.enhydra.jdbc.pool.StandardXAPoolDataSource"
+		destroy-method="shutdown">
+		<property name="dataSource">
+			<bean class="org.enhydra.jdbc.standard.StandardXADataSource"
+				destroy-method="shutdown">
+				<property name="transactionManager" ref="jotm" />
+				<property name="driverName" value="org.hsqldb.jdbcDriver" />
+				<property name="url" value="jdbc:hsqldb:mem:book2;create=true" />
+			</bean>
+		</property>
+		<property name="user" value="sa" />
+		<property name="password" value="" />
+	</bean>
+
+	<bean id="sessionFactory1"
+		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="dataSource" ref="dataSource1" />
+		<property name="mappingResources">
+			<list>
+				<value>
+					com/sitechasia/webx/example/book/model/Book.hbm.xml
+				</value>
+				<value>
+					com/sitechasia/webx/example/book/model/Category.hbm.xml
+				</value>
+			</list>
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">org.hibernate.dialect.HSQLDialect
+				</prop>
+				<prop key="hibernate.show_sql">true</prop>
+				<prop key="hibernate.hbm2ddl.auto">update</prop>
+			</props>
+		</property>
+	</bean>
+
+	<bean id="sessionFactory2"
+		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="dataSource" ref="dataSource2" />
+		<property name="mappingResources">
+			<list>
+				<value>
+					com/sitechasia/webx/example/book/model/Book.hbm.xml
+				</value>
+				<value>
+					com/sitechasia/webx/example/book/model/Category.hbm.xml
+				</value>
+			</list>
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">org.hibernate.dialect.HSQLDialect
+				</prop>
+				<prop key="hibernate.show_sql">true</prop>
+				<prop key="hibernate.hbm2ddl.auto">update</prop>
+			</props>
+		</property>
+	</bean>
+
+</beans>

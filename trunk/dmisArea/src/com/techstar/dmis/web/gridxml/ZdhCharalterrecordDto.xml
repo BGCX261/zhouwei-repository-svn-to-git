@@ -1,0 +1,12 @@
+<!--系统图修改记录-->
+<head>
+  <obj>ZdhCharalterrecordDto</obj>
+  <column  colName="recordsno" propertyName="recordsno" colType="string" dataTypeLen="32" isPrimary="1" visible="1" width="74" isEdit="0" textColor="#000000" className="ZdhCharalterrecordDto" refName="recordsno" ></column>
+  <column  colName="modexplanation" propertyName="modexplanation" colType="string" dataTypeLen="400" isPrimary="0" visible="1" width="138" isEdit="0" textColor="#000000" className="ZdhCharalterrecordDto" refName="modexplanation" ></column>
+  <column  colName="linediagramamount" propertyName="linediagramamount" colType="integer" dataTypeLen="0" isPrimary="0" visible="1" width="122" isEdit="0" textColor="#000000" className="ZdhCharalterrecordDto" refName="linediagramamount" ></column>
+  <column  colName="stationdiagramamount" propertyName="stationdiagramamount" colType="integer" dataTypeLen="0" isPrimary="0" visible="1" width="122" isEdit="0" textColor="#000000" className="ZdhCharalterrecordDto" refName="stationdiagramamount" ></column>
+  <column  colName="systemchartno" propertyName="systemchartno" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="170" isEdit="0" textColor="#000000" className="ZdhCharalterrecordDto" refName="systemchartno" ></column>
+  <column  colName="mdiagram" propertyName="mdiagram" colType="blob" dataTypeLen="40" isPrimary="0" visible="1" width="170" isEdit="0" textColor="#000000" className="ZdhCharalterrecordDto" refName="mdiagram" ></column>
+  <column  colName="fstatus" propertyName="fstatus" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="170" isEdit="0" textColor="#000000" className="ZdhCharalterrecordDto" refName="fstatus" ></column>
+	<column  colName="version" propertyName="version" colType="string" dataTypeLen="40" isPrimary="0" visible="0" width="170" isEdit="0" textColor="#000000" className="ZdhCharalterrecordDto" refName="version" ></column>
+</head>

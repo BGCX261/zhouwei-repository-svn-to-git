@@ -1,0 +1,21 @@
+<!--拉路限电记录-->
+<head>
+  <obj>DdCutofflistDto</obj>
+  <column  colName="fid" propertyName="fid" colType="string" dataTypeLen="32" isPrimary="1" visible="0" width="122" isEdit="0" textColor="#000000" className="DdCutofflistDto" refName="fid" ></column>
+  <column  colName="floadunit" propertyName="floadunit" colType="string" dataTypeLen="150" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="DdCutofflistDto" refName="floadunit" ></column>
+  <column  colName="faccepter" propertyName="faccepter" colType="string" dataTypeLen="20" isPrimary="0" visible="1" width="58" isEdit="0" textColor="#000000" className="DdCutofflistDto" refName="faccepter" ></column>
+  <column  colName="fsummitter" propertyName="fsummitter" colType="string" dataTypeLen="20" isPrimary="0" visible="1" width="58" isEdit="0" textColor="#000000" className="DdCutofflistDto" refName="fsummitter" ></column>
+  <column  colName="fsummitordertime" propertyName="fsummitordertime" colType="timestamp" dataTypeLen="0" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="DdCutofflistDto" refName="fsummitordertime" ></column>
+  <column  colName="fload" propertyName="fload" colType="float" dataTypeLen="14" isPrimary="0" visible="1" width="114" isEdit="0" textColor="#000000" className="DdCutofflistDto" refName="fload" ></column>
+  <column  colName="fregionloadbefore" propertyName="fregionloadbefore" colType="float" dataTypeLen="14" isPrimary="0" visible="1" width="154" isEdit="0" textColor="#000000" className="DdCutofflistDto" refName="fregionloadbefore" ></column>
+  <column  colName="fregionloadafter" propertyName="fregionloadafter" colType="float" dataTypeLen="14" isPrimary="0" visible="1" width="154" isEdit="0" textColor="#000000" className="DdCutofflistDto" refName="fregionloadafter" ></column>
+  <column  colName="frealload" propertyName="frealload" colType="float" dataTypeLen="14" isPrimary="0" visible="1" width="106" isEdit="0" textColor="#000000" className="DdCutofflistDto" refName="frealload" ></column>
+  <column  colName="frealno" propertyName="frealno" colType="integer" dataTypeLen="0" isPrimary="0" visible="1" width="90" isEdit="0" textColor="#000000" className="DdCutofflistDto" refName="frealno" ></column>
+  <column  colName="frecoverytime" propertyName="frecoverytime" colType="timestamp" dataTypeLen="0" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="DdCutofflistDto" refName="frecoverytime" ></column>
+  <column  colName="frecoveryload" propertyName="frecoveryload" colType="float" dataTypeLen="14" isPrimary="0" visible="1" width="106" isEdit="0" textColor="#000000" className="DdCutofflistDto" refName="frecoveryload" ></column>
+  <column  colName="frecoverygiver" propertyName="frecoverygiver" colType="string" dataTypeLen="20" isPrimary="0" visible="1" width="90" isEdit="0" textColor="#000000" className="DdCutofflistDto" refName="frecoverygiver" ></column>
+  <column  colName="fgiverecoverytime" propertyName="fgiverecoverytime" colType="timestamp" dataTypeLen="0" isPrimary="0" visible="1" width="106" isEdit="0" textColor="#000000" className="DdCutofflistDto" refName="fgiverecoverytime" ></column>
+  <column  colName="faccepterrecorery" propertyName="faccepterrecorery" colType="string" dataTypeLen="20" isPrimary="0" visible="1" width="90" isEdit="0" textColor="#000000" className="DdCutofflistDto" refName="faccepterrecorery" ></column>
+  <column  colName="fsummiterrecorery" propertyName="fsummiterrecorery" colType="string" dataTypeLen="20" isPrimary="0" visible="1" width="90" isEdit="0" textColor="#000000" className="DdCutofflistDto" refName="fsummiterrecorery" ></column>
+  <column  colName="fsummiterecorerytime" propertyName="fsummiterecorerytime" colType="date" dataTypeLen="0" isPrimary="0" visible="1" width="106" isEdit="0" textColor="#000000" className="DdCutofflistDto" refName="fsummiterecorerytime" ></column>
+</head>

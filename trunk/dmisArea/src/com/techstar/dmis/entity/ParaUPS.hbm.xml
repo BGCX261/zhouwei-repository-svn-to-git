@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="com.techstar.dmis.entity">
+	<class name="ParaUPS" table="DMIS_ParaUPS" dynamic-insert="true" dynamic-update="true" optimistic-lock="version">
+    <id name="feqpid" type="string">
+      <column name="feqpid" sql-type="varchar(80)" not-null="true"/>
+      <generator class="assigned"/>
+    </id>
+
+ 	<version name="version" column="VERSION" unsaved-value="undefined"/>
+  
+   <property name="froutcapacity" type="integer"  not-null="false">
+    <column name="froutcapacity"  
+		length="25"        precision="10"       
+    />
+</property>	
+    <property name="fbatteryfac" type="string"  not-null="false">
+    <column name="fbatteryfac"  
+		length="30"               
+    />
+</property>	
+    <property name="fbatterymodel" type="string"  not-null="false">
+    <column name="fbatterymodel"  
+		length="40"               
+    />
+</property>	
+    <property name="fbatterycapacity" type="integer"  not-null="false">
+    <column name="fbatterycapacity"  
+		length="25"        precision="10"       
+    />
+</property>	
+    <property name="fbatterycount" type="integer"  not-null="false">
+    <column name="fbatterycount"  
+		               
+    />
+</property>	
+    <property name="fsratedvoltage" type="integer"  not-null="false">
+    <column name="fsratedvoltage"  
+		               
+    />
+</property>	
+    <property name="fcheckchargetime" type="date"  not-null="false">
+    <column name="fcheckchargetime"  
+		               
+    />
+</property>	
+    <property name="fisindepdntbattery" type="string"  not-null="false">
+    <column name="fisindepdntbattery"  
+		length="2"               
+    />
+</property>	
+    <property name="fspecspara" type="string"  not-null="false">
+    <column name="fspecspara"  
+		length="40"               
+    />
+</property>	
+  
+	
+ <many-to-one name="zparaups2" class="EtsEquipment"   column="FEqpID" cascade="delete-orphan"></many-to-one>
+     </class>
+
+</hibernate-mapping>
+

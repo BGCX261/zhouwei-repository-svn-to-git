@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN"
+          "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+	 <form-beans>
+		<form-bean name="workflowForm" type="com.techstar.framework.service.workflow.manager.WFManagerForm" />
+	</form-beans>
+	
+   <global-forwards></global-forwards>
+  
+   <action-mappings>
+     <action path="/wfmanager" name="workflowForm" type="org.springframework.web.struts.DelegatingActionProxy" parameter="method" scope="request">
+			<forward name="listRunningWF" path="/common/wfmanage/wfList.jsp"/>
+			<forward name="getWFNodes" path="/common/wfmanage/wf_detail_content.jsp"/>
+			<forward name="startWF" path="/common/wfmanage/wf_detail_content.jsp"/>
+			<forward name="listtask" path="/common/wfmanage/wf_detail_content.jsp"/>
+			<forward name="taskroles" path="/common/wfmanage/wf_detail_content.jsp"/>
+			<forward name="addtaskroles" path="/common/wfmanage/wf_detail_content.jsp"/>
+			<forward name="addmessages" path="/common/wfmanage/wf_detail_content.jsp"/>
+			<forward name="messages" path="/common/wfmanage/wf_detail_content.jsp"/>
+		</action>
+   </action-mappings>
+   <message-resources parameter="ApplicationResources"/>
+	<plug-in
+		className="org.springframework.web.struts.ContextLoaderPlugIn">
+		<set-property property="contextConfigLocation"
+			value="/WEB-INF/struts/action-servlet-${proname}.xml" />
+	</plug-in>
+	<plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+		<set-property property="pathnames"
+			value="/WEB-INF/struts/validator-rules.xml,	              
+	              /WEB-INF/struts/validator-rules-${proname}.xml" />
+	</plug-in>
+
+	<plug-in className="org.apache.struts.tiles.TilesPlugin">
+		<set-property property="definitions-config"
+			value="/WEB-INF/struts/tiles-defs.xml,
+		           /WEB-INF/struts/tiles-defs_${proname}.xml" />
+		<set-property property="definitions-debug" value="1"/>
+		<set-property property="definitions-parser-details" value="0"/>
+		<set-property property="definitions-parser-validate" value="true"/>		
+	</plug-in>
+
+</struts-config>

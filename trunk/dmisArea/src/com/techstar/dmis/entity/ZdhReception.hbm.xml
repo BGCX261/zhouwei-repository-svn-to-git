@@ -1,0 +1,153 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="com.techstar.dmis.entity">
+	<class name="ZdhReception" table="DMIS_Zdh_Reception" dynamic-insert="true" dynamic-update="true" optimistic-lock="version">
+    <id name="fapplicationid" type="string">
+      <column name="fapplicationid" sql-type="varchar(40)" not-null="true"/>
+      <generator class="assigned"/>
+    </id>
+
+ 	<version name="version" column="VERSION" unsaved-value="undefined"/>
+  
+   <property name="fstationname" type="string"  not-null="false">
+    <column name="fstationname"  
+		length="40"               
+    />
+</property>	
+    <property name="fsystemname" type="string"  not-null="false">
+    <column name="fsystemname"  
+		length="40"               
+    />
+</property>	
+    <property name="freceptiondate" type="date"  not-null="false">
+    <column name="freceptiondate"  
+		               
+    />
+</property>	
+    <property name="feqpremark" type="string"  not-null="false">
+    <column name="feqpremark"  
+		length="200"               
+    />
+</property>	
+    <property name="freceptiongraph" type="org.springframework.orm.hibernate3.support.BlobByteArrayType"  not-null="false">
+    <column name="freceptiongraph"  
+		               
+    />
+</property>	
+    <property name="freceptionreport" type="org.springframework.orm.hibernate3.support.BlobByteArrayType"  not-null="false">
+    <column name="freceptionreport"  
+		               
+    />
+</property>	
+    <property name="fsequence" type="org.springframework.orm.hibernate3.support.BlobByteArrayType"  not-null="false">
+    <column name="fsequence"  
+		               
+    />
+</property>	
+    <property name="ftranrec" type="org.springframework.orm.hibernate3.support.BlobByteArrayType"  not-null="false">
+    <column name="ftranrec"  
+		               
+    />
+</property>	
+    <property name="fremark" type="string"  not-null="false">
+    <column name="fremark"  
+		length="200"               
+    />
+</property>	
+    <property name="fstationid" type="string"  not-null="false">
+    <column name="fstationid"  
+		length="40"               
+    />
+</property>	
+    <property name="freceptionno" type="string"  not-null="false">
+    <column name="freceptionno"  
+		length="40"               
+    />
+</property>	
+    <property name="fruneqoremark" type="string"  not-null="false">
+    <column name="fruneqoremark"  
+		length="400"               
+    />
+</property>	
+    <property name="fapplyrundate" type="date"  not-null="false">
+    <column name="fapplyrundate"  
+		               
+    />
+</property>	
+    <property name="fapproverundate" type="date"  not-null="false">
+    <column name="fapproverundate"  
+		               
+    />
+</property>	
+    <property name="frundate" type="date"  not-null="false">
+    <column name="frundate"  
+		               
+    />
+</property>	
+    <property name="fexcutestatus" type="string"  not-null="false">
+    <column name="fexcutestatus"  
+		length="40"               
+    />
+    </property>	
+    <property name="fstatus" type="string"  not-null="false">
+    <column name="fstatus"  
+		length="20"               
+    />
+</property>	
+    <property name="localapprover1" type="string"  not-null="false">
+    <column name="localapprover1"  
+		length="40"               
+    />
+</property>	
+    <property name="centeropinion1" type="string"  not-null="false">
+    <column name="centeropinion1"  
+		length="100"               
+    />
+</property>	
+    <property name="centeropinion2" type="string"  not-null="false">
+    <column name="centeropinion2"  
+		length="100"               
+    />
+</property>	
+    <property name="runeqpcontent" type="org.springframework.orm.hibernate3.support.BlobByteArrayType"  not-null="false">
+    <column name="runeqpcontent"  
+		               
+    />
+</property>	
+    <property name="sys_fille" type="string"  not-null="false">
+    <column name="sys_fille"  
+		length="40"               
+    />
+</property>	
+    <property name="sys_filldept" type="string"  not-null="false">
+    <column name="sys_filldept"  
+		length="80"               
+    />
+</property>	
+    <property name="sys_filltime" type="timestamp"  not-null="false">
+    <column name="sys_filltime"  
+		               
+    />
+</property>	
+    <property name="sys_isvalid" type="integer"  not-null="false">
+    <column name="sys_isvalid"  
+		               
+    />
+</property>	
+    <property name="sys_dataowner" type="string"  not-null="false">
+    <column name="sys_dataowner"  
+		length="40"               
+    />
+</property>	
+    <property name="fsystemtype" type="string"  >
+    <column name="fsystemtype"  
+		length="200"               
+    />
+</property>	
+  
+	
+    <set name="fzdhreceptioneqprel1" inverse="true" cascade="none"><key column="FapplicationID"/><one-to-many class="ZdhReceptioneqprel"/></set>
+     </class>
+
+</hibernate-mapping>
+

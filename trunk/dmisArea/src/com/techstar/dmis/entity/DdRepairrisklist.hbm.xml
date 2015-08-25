@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="com.techstar.dmis.entity">
+	<class name="DdRepairrisklist" table="DMIS_DD_RepairRiskList"
+		dynamic-insert="true" dynamic-update="true"
+		optimistic-lock="version">
+		<id name="fid" type="string">
+			<column name="fid" sql-type="varchar(40)" not-null="true" />
+			<generator class="assigned" />
+		</id>
+
+		<version name="version" column="VERSION"
+			unsaved-value="undefined" />
+
+		<property name="ftransformer" type="string" not-null="false">
+			<column name="ftransformer" length="40" />
+		</property>
+		<property name="fline" type="string" not-null="false">
+			<column name="fline" length="40" />
+		</property>
+		<property name="fworkcontent" type="string" not-null="false">
+			<column name="fworkcontent" length="500" />
+		</property>
+		<property name="foutagestime" type="timestamp"
+			not-null="false">
+			<column name="foutagestime" />
+		</property>
+		<property name="foutageetime" type="timestamp"
+			not-null="false">
+			<column name="foutageetime" />
+		</property>
+		<property name="friskprompt" type="string" not-null="false">
+			<column name="friskprompt" length="300" />
+		</property>
+		<property name="fforecast" type="string" not-null="false">
+			<column name="fforecast" length="300" />
+		</property>
+		<property name="friskunit" type="string" not-null="false">
+			<column name="friskunit" length="100" />
+		</property>
+		<property name="fstatus" type="string" not-null="false">
+			<column name="fstatus" length="40" />
+		</property>
+		<property name="fexcutestatus" type="string" not-null="false">
+			<column name="fexcutestatus" length="40" />
+		</property>
+		<property name="sys_fille" type="string" not-null="false">
+			<column name="sys_fille" length="40" />
+		</property>
+		<property name="sys_filldept" type="string" not-null="false">
+			<column name="sys_filldept" length="80" />
+		</property>
+		<property name="sys_filltime" type="timestamp"
+			not-null="false">
+			<column name="sys_filltime" />
+		</property>
+		<property name="sys_isvalid" type="integer" not-null="false">
+			<column name="sys_isvalid" />
+		</property>
+		<property name="sys_dataowner" type="string" not-null="false">
+			<column name="sys_dataowner" length="40" />
+		</property>
+		<property name="fdangerreason" type="string">
+			<column name="fdangerreason" length="200" />
+		</property>
+
+
+		<many-to-one name="zddrepairrisklist4" class="DdMoutageplan"
+			column="FMonthPlanNO" cascade="none">
+		</many-to-one>
+	</class>
+
+</hibernate-mapping>
+

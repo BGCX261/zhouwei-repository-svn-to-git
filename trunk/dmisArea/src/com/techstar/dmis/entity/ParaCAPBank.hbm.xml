@@ -1,0 +1,278 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="com.techstar.dmis.entity">
+	<class name="ParaCAPBank" table="DMIS_ParaCAPBank" dynamic-insert="true" dynamic-update="true" optimistic-lock="version">
+    <id name="feqpid" type="string">
+      <column name="feqpid" sql-type="varchar(80)" not-null="true"/>
+      <generator class="assigned"/>
+    </id>
+
+ 	<version name="version" column="VERSION" unsaved-value="undefined"/>
+  
+   <property name="fcapvalue" type="integer"  not-null="false">
+    <column name="fcapvalue"  
+		               
+    />
+</property>	
+    <property name="fcapwirestyle" type="string"  not-null="false">
+    <column name="fcapwirestyle"  
+		length="40"               
+    />
+</property>	
+    <property name="fcapphaserwirestyle" type="string"  not-null="false">
+    <column name="fcapphaserwirestyle"  
+		length="40"               
+    />
+</property>	
+    <property name="fcapinnerprostyle" type="string"  not-null="false">
+    <column name="fcapinnerprostyle"  
+		length="40"               
+    />
+</property>	
+    <property name="fcapresismode" type="string"  not-null="false">
+    <column name="fcapresismode"  
+		length="40"               
+    />
+</property>	
+    <property name="fcapresisvalue" type="integer"  not-null="false">
+    <column name="fcapresisvalue"  
+		               
+    />
+</property>	
+    <property name="fdchcoilmodel" type="string"  not-null="false">
+    <column name="fdchcoilmodel"  
+		length="40"               
+    />
+</property>	
+    <property name="fdchcoilvarirate" type="string"  not-null="false">
+    <column name="fdchcoilvarirate"  
+		length="40"               
+    />
+</property>	
+    <property name="fdchcoiloncevol" type="integer"  not-null="false">
+    <column name="fdchcoiloncevol"  
+		               
+    />
+</property>	
+    <property name="fdchcoilsecvol" type="integer"  not-null="false">
+    <column name="fdchcoilsecvol"  
+		               
+    />
+</property>	
+    <property name="fmidubalctvarirate" type="string"  not-null="false">
+    <column name="fmidubalctvarirate"  
+		length="40"               
+    />
+</property>	
+    <property name="funitcapacity" type="integer"  not-null="false">
+    <column name="funitcapacity"  
+		               
+    />
+</property>	
+    <property name="forgquantity" type="integer"  not-null="false">
+    <column name="forgquantity"  
+		               
+    />
+</property>	
+    <property name="forgcapacity" type="integer"  not-null="false">
+    <column name="forgcapacity"  
+		               
+    />
+</property>	
+    <property name="fruncapacity" type="integer"  not-null="false">
+    <column name="fruncapacity"  
+		               
+    />
+</property>	
+    <property name="fruncapacith" type="integer"  not-null="false">
+    <column name="fruncapacith"  
+		               
+    />
+</property>	
+    <property name="fperreatance" type="integer"  not-null="false">
+    <column name="fperreatance"  
+		               
+    />
+</property>	
+    <property name="fimpedancevalue" type="integer"  not-null="false">
+    <column name="fimpedancevalue"  
+		               
+    />
+</property>	
+    <property name="fparabusbar" type="string"  not-null="false">
+    <column name="fparabusbar"  
+		length="40"               
+    />
+</property>	
+    <property name="fratedcapacity" type="integer"  not-null="false">
+    <column name="fratedcapacity"  
+		               
+    />
+</property>	
+    <property name="fhiswitchcount" type="integer"  not-null="false">
+    <column name="fhiswitchcount"  
+		               
+    />
+</property>	
+    <property name="fctcount" type="integer"  not-null="false">
+    <column name="fctcount"  
+		               
+    />
+</property>	
+    <property name="farrestercount" type="integer"  not-null="false">
+    <column name="farrestercount"  
+		               
+    />
+</property>	
+    <property name="fdisconnectcount" type="integer"  not-null="false">
+    <column name="fdisconnectcount"  
+		               
+    />
+</property>	
+    <property name="fpowercapmodel" type="string"  not-null="false">
+    <column name="fpowercapmodel"  
+		length="40"               
+    />
+</property>	
+    <property name="fpowercapfac" type="string"  not-null="false">
+    <column name="fpowercapfac"  
+		length="100"               
+    />
+</property>	
+    <property name="fpowercapcountry" type="string"  not-null="false">
+    <column name="fpowercapcountry"  
+		length="100"               
+    />
+</property>	
+    <property name="fpowercapwiremode" type="string"  not-null="false">
+    <column name="fpowercapwiremode"  
+		length="40"               
+    />
+</property>	
+    <property name="fdischargecoilfac" type="string"  not-null="false">
+    <column name="fdischargecoilfac"  
+		length="100"               
+    />
+</property>	
+    <property name="fdischargecoilmodel" type="string"  not-null="false">
+    <column name="fdischargecoilmodel"  
+		length="40"               
+    />
+</property>	
+    <property name="flghtarrestermodel" type="string"  not-null="false">
+    <column name="flghtarrestermodel"  
+		length="40"               
+    />
+</property>	
+    <property name="freactormodel" type="string"  not-null="false">
+    <column name="freactormodel"  
+		length="40"               
+    />
+</property>	
+    <property name="freactortype" type="string"  not-null="false">
+    <column name="freactortype"  
+		length="40"               
+    />
+</property>	
+    <property name="freactorfac" type="string"  not-null="false">
+    <column name="freactorfac"  
+		length="100"               
+    />
+</property>	
+    <property name="freactornum" type="integer"  not-null="false">
+    <column name="freactornum"  
+		               
+    />
+</property>	
+    <property name="freactorcapacity" type="integer"  not-null="false">
+    <column name="freactorcapacity"  
+		               
+    />
+</property>	
+    <property name="freactorcurrent" type="integer"  not-null="false">
+    <column name="freactorcurrent"  
+		               
+    />
+</property>	
+    <property name="fzeroctmodel" type="string"  not-null="false">
+    <column name="fzeroctmodel"  
+		length="40"               
+    />
+</property>	
+    <property name="fzerocttransratio" type="string"  not-null="false">
+    <column name="fzerocttransratio"  
+		length="40"               
+    />
+</property>	
+    <property name="fzeroctfac" type="string"  not-null="false">
+    <column name="fzeroctfac"  
+		length="100"               
+    />
+</property>	
+    <property name="fpowercaptype" type="string"  not-null="false">
+    <column name="fpowercaptype"  
+		length="40"               
+    />
+</property>	
+    <property name="flghtacapacity" type="integer"  not-null="false">
+    <column name="flghtacapacity"  
+		               
+    />
+</property>	
+    <property name="fcleandate" type="date"  not-null="false">
+    <column name="fcleandate"  
+		               
+    />
+</property>	
+    <property name="feswitchmodel" type="string"  not-null="false">
+    <column name="feswitchmodel"  
+		length="40"               
+    />
+</property>	
+    <property name="feswitchfac" type="string"  not-null="false">
+    <column name="feswitchfac"  
+		length="100"               
+    />
+</property>	
+    <property name="flghtarresterfac" type="string"  not-null="false">
+    <column name="flghtarresterfac"  
+		length="100"               
+    />
+</property>	
+    <property name="fhasinfuse" type="string"  not-null="false">
+    <column name="fhasinfuse"  
+		length="2"               
+    />
+</property>	
+    <property name="finternalwiremode" type="string"  not-null="false">
+    <column name="finternalwiremode"  
+		length="40"               
+    />
+</property>	
+    <property name="finsurancedevcount" type="integer"  not-null="false">
+    <column name="finsurancedevcount"  
+		               
+    />
+</property>	
+    <property name="ffixdate" type="date"  not-null="false">
+    <column name="ffixdate"  
+		               
+    />
+</property>	
+    <property name="fexamdate" type="date"  not-null="false">
+    <column name="fexamdate"  
+		               
+    />
+</property>	
+    <property name="fassaydate" type="date"  not-null="false">
+    <column name="fassaydate"  
+		               
+    />
+</property>	
+  
+	
+ <many-to-one name="zparacapbank2" class="EtsEquipment"   column="FEqpID" cascade="delete-orphan"></many-to-one>
+     </class>
+
+</hibernate-mapping>
+

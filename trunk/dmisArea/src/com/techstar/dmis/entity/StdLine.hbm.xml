@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="com.techstar.dmis.entity">
+	<class name="StdLine" table="DMIS_ZD_Std_line" dynamic-insert="true" dynamic-update="true" optimistic-lock="version">
+    <id name="id" type="string">
+      <column name="id" sql-type="varchar(40)" not-null="true"/>
+      <generator class="assigned"/>
+    </id>
+
+ 	<version name="version" column="VERSION" unsaved-value="undefined"/>
+  
+   <property name="stationno" type="string"  not-null="false">
+    <column name="stationno"  
+		length="80"               
+    />
+</property>	
+    <property name="linename" type="string"  not-null="false">
+    <column name="linename"  
+		length="80"               
+    />
+</property>	
+    <property name="manageunit" type="string"  not-null="false">
+    <column name="manageunit"  
+		length="80"               
+    />
+</property>	
+    <property name="voltagelevel" type="string"  not-null="false">
+    <column name="voltagelevel"  
+		length="80"               
+    />
+</property>	
+    <property name="stationendno" type="string"  not-null="false">
+    <column name="stationendno"  
+		length="80"               
+    />
+</property>	
+    <property name="switchno" type="string"  not-null="false">
+    <column name="switchno"  
+		length="80"               
+    />
+</property>	
+    <property name="owner" type="string"  not-null="false">
+    <column name="owner"  
+		length="80"               
+    />
+</property>	
+    <property name="scheduleunit" type="string"  not-null="false">
+    <column name="scheduleunit"  
+		length="80"               
+    />
+</property>	
+    <property name="linetype" type="string"  not-null="false">
+    <column name="linetype"  
+		length="80"               
+    />
+</property>	
+    <property name="isconnectline" type="string"  not-null="false">
+    <column name="isconnectline"  
+		length="2"               
+    />
+</property>	
+    <property name="displayno" type="integer"  not-null="false">
+    <column name="displayno"  
+		               
+    />
+</property>	
+    <property name="manageunitno" type="string"  not-null="false">
+    <column name="manageunitno"  
+		length="80"               
+    />
+</property>	
+  
+</class>
+
+</hibernate-mapping>
+

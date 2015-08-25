@@ -1,0 +1,14 @@
+<!DOCTYPE mappings PUBLIC "-//DOZER//DTD MAPPINGS//EN"
+"http://dozer.sourceforge.net/dtd/dozerbeanmapping.dtd">
+<mappings>
+   <mapping>
+   <class-a>com.techstar.dmis.dto.SystemdicTypeDto</class-a>
+   <class-b>com.techstar.dmis.dto.transfer.TransSystemdicTypeDto</class-b>
+   <field>
+      <a>systemdic</a>
+      <b>systemdic</b>
+      <a-hint>com.techstar.dmis.dto.SystemdicDto</a-hint>
+      <b-hint>com.techstar.dmis.dto.transfer.TransSystemdicDto</b-hint>
+   </field>
+   </mapping>
+</mappings>

@@ -1,0 +1,20 @@
+<!DOCTYPE mappings PUBLIC "-//DOZER//DTD MAPPINGS//EN"
+"http://dozer.sourceforge.net/dtd/dozerbeanmapping.dtd">
+<mappings>
+   <mapping>
+   <class-a>com.techstar.dmis.dto.DdWoutageplanDto</class-a>
+   <class-b>com.techstar.dmis.dto.transfer.TransDdWoutageplanDto</class-b>
+   <field>
+      <a>fddrepairdetail3</a>
+      <b>fddrepairdetail3</b>
+      <a-hint>com.techstar.dmis.dto.DdRepairdetailDto</a-hint>
+      <b-hint>com.techstar.dmis.dto.transfer.TransDdRepairdetailDto</b-hint>
+   </field>
+   <field>
+      <a>zddwoutageplan5.fmonthplanno</a>
+      <b>trans_zddwoutageplan5</b>
+      <a-hint>com.techstar.dmis.dto.DdMoutageplanDto</a-hint>
+      <b-hint>java.lang.String</b-hint>
+   </field>
+   </mapping>
+</mappings>

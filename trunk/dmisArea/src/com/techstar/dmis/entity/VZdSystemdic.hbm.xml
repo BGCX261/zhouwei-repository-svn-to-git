@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="com.techstar.dmis.entity">
+	<class name="VZdSystemdic" table="v_zd_systemdic" dynamic-insert="true" dynamic-update="true" optimistic-lock="version">
+    <id name="viewid" type="string">
+      <column name="viewid" sql-type="varchar(32)" not-null="true"/>
+      <generator class="assigned"/>
+    </id>
+
+  
+   <property name="systemdicid" type="string"  >
+    <column name="systemdicid"  
+		length="20"               
+    />
+</property>	
+    <property name="name" type="string"  >
+    <column name="name"  
+		length="20"               
+    />
+</property>	
+    <property name="fatherid" type="string"  >
+    <column name="fatherid"  
+		length="20"               
+    />
+</property>	
+    <property name="typeid" type="string"  >
+    <column name="typeid"  
+		length="20"               
+    />
+</property>	
+    <property name="typename" type="string"  >
+    <column name="typename"  
+		length="20"               
+    />
+</property>	
+  
+</class>
+
+</hibernate-mapping>
+

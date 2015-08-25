@@ -1,0 +1,14 @@
+<!DOCTYPE mappings PUBLIC "-//DOZER//DTD MAPPINGS//EN"
+"http://dozer.sourceforge.net/dtd/dozerbeanmapping.dtd">
+<mappings>
+   <mapping>
+   <class-a>com.techstar.exchange.dto.bussiness.BhFaultlistDto</class-a>
+   <class-b>com.techstar.exchange.dto.TransBhFaultlistDto</class-b>
+   <field>
+      <a>zbhfaultlist3.feqpid</a>
+      <b>zbhfaultlist</b>
+      <a-hint>com.techstar.exchange.dto.bussiness.EtsEquipmentDto</a-hint>
+      <b-hint>java.lang.String</b-hint>
+   </field>
+   </mapping>
+</mappings>

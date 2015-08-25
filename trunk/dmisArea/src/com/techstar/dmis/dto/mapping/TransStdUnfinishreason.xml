@@ -1,0 +1,20 @@
+<!DOCTYPE mappings PUBLIC "-//DOZER//DTD MAPPINGS//EN"
+"http://dozer.sourceforge.net/dtd/dozerbeanmapping.dtd">
+<mappings>
+   <mapping>
+   <class-a>com.techstar.dmis.dto.StdUnfinishreasonDto</class-a>
+   <class-b>com.techstar.dmis.dto.transfer.TransStdUnfinishreasonDto</class-b>
+   <field>
+      <a>fddmoutageplan3</a>
+      <b>fddmoutageplan3</b>
+      <a-hint>com.techstar.dmis.dto.DdMoutageplanDto</a-hint>
+      <b-hint>com.techstar.dmis.dto.transfer.TransDdMoutageplanDto</b-hint>
+   </field>
+   <field>
+      <a>fdddoutageplan5</a>
+      <b>fdddoutageplan5</b>
+      <a-hint>com.techstar.dmis.dto.DdDoutageplanDto</a-hint>
+      <b-hint>com.techstar.dmis.dto.transfer.TransDdDoutageplanDto</b-hint>
+   </field>
+   </mapping>
+</mappings>

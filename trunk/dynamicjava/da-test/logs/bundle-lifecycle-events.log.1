@@ -1,0 +1,210 @@
+2009-4-10 13:57:31 org.dynamicjava.osgi.da_launcher.internal.bundle.installers.BaseBundleInstaller installBundle
+��Ϣ: Installed Non-Bundled Library Bundle[symbolic-name = 'myservice_1894162827', location = 'C:\Documents and Settings\Administrator\Desktop\gui-app-using-da-launcher\gui-app\bundles\non-bundled-libraries\myservice.jar'] 
+2009-4-10 13:57:31 org.dynamicjava.osgi.da_launcher.internal.bundle.installers.BaseBundleInstaller startBundle
+��Ϣ: Started Non-Bundled Library Bundle[symbolic-name = 'myservice_1894162827', location = 'C:\Documents and Settings\Administrator\Desktop\gui-app-using-da-launcher\gui-app\bundles\non-bundled-libraries\myservice.jar'] 
+2009-4-10 13:57:31 org.dynamicjava.osgi.da_launcher.internal.bundle.installers.BaseBundleInstaller installBundle
+��Ϣ: Installed Application Bundle[symbolic-name = 'mybundle', location = 'C:\Documents and Settings\Administrator\Desktop\gui-app-using-da-launcher\gui-app\bundles\application-bundles\mybundle.jar'] 
+2009-4-10 13:57:31 org.dynamicjava.osgi.da_launcher.internal.bundle.installers.BaseBundleInstaller startBundle
+����: Failed to start Application Bundle[symbolic-name = 'mybundle', location = 'C:\Documents and Settings\Administrator\Desktop\gui-app-using-da-launcher\gui-app\bundles\application-bundles\mybundle.jar'] 
+org.dynamicjava.osgi.da_launcher.internal.exceptions.BundleInstallationException: Failed to start Application Bundle[symbolic-name = 'mybundle', location = 'C:\Documents and Settings\Administrator\Desktop\gui-app-using-da-launcher\gui-app\bundles\application-bundles\mybundle.jar'] : Activator start error.
+	at org.dynamicjava.osgi.da_launcher.internal.bundle.installers.BaseBundleInstaller.startBundle(BaseBundleInstaller.java:143)
+	at org.dynamicjava.osgi.da_launcher.internal.bundle.installers.BaseBundleInstaller.installBundles(BaseBundleInstaller.java:75)
+	at org.dynamicjava.osgi.da_launcher.internal.bundle.DefaultBundleManager.installBundles(DefaultBundleManager.java:37)
+	at org.dynamicjava.osgi.da_launcher.internal.bundle.DefaultBundleManager.run(DefaultBundleManager.java:16)
+	at org.dynamicjava.osgi.da_launcher.internal.support.DefaultLauncher.launch(DefaultLauncher.java:52)
+	at org.dynamicjava.osgi.da_launcher.main.Main.run(Main.java:33)
+	at org.dynamicjava.osgi.da_launcher.main.Main.main(Main.java:24)
+Caused by: org.osgi.framework.BundleException: Activator start error.
+	at org.apache.felix.framework.Felix._startBundle(Felix.java:1654)
+	at org.apache.felix.framework.Felix.startBundle(Felix.java:1544)
+	at org.apache.felix.framework.BundleImpl.start(BundleImpl.java:371)
+	at org.dynamicjava.osgi.da_launcher.internal.bundle.installers.BaseBundleInstaller.startBundle(BaseBundleInstaller.java:137)
+	... 6 more
+Caused by: java.lang.UnsupportedClassVersionError: Bad version number in .class file
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClass(ClassLoader.java:620)
+	at org.apache.felix.framework.searchpolicy.ContentClassLoader.findClass(ContentClassLoader.java:214)
+	at org.apache.felix.framework.searchpolicy.ContentClassLoader.loadClassFromModule(ContentClassLoader.java:85)
+	at org.apache.felix.framework.searchpolicy.ContentLoaderImpl.getClass(ContentLoaderImpl.java:141)
+	at org.apache.felix.framework.searchpolicy.R4Wire.getClass(R4Wire.java:101)
+	at org.apache.felix.framework.searchpolicy.R4SearchPolicyCore.searchImports(R4SearchPolicyCore.java:507)
+	at org.apache.felix.framework.searchpolicy.R4SearchPolicyCore.findClassOrResource(R4SearchPolicyCore.java:468)
+	at org.apache.felix.framework.searchpolicy.R4SearchPolicyCore.findClass(R4SearchPolicyCore.java:187)
+	at org.apache.felix.framework.searchpolicy.R4SearchPolicy.findClass(R4SearchPolicy.java:45)
+	at org.apache.felix.framework.searchpolicy.ContentClassLoader.loadClass(ContentClassLoader.java:109)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:251)
+	at java.lang.ClassLoader.loadClassInternal(ClassLoader.java:319)
+	at java.lang.Class.getDeclaredConstructors0(Native Method)
+	at java.lang.Class.privateGetDeclaredConstructors(Class.java:2357)
+	at java.lang.Class.getConstructor0(Class.java:2671)
+	at java.lang.Class.newInstance0(Class.java:321)
+	at java.lang.Class.newInstance(Class.java:303)
+	at org.apache.felix.framework.Felix.createBundleActivator(Felix.java:3519)
+	at org.apache.felix.framework.Felix._startBundle(Felix.java:1605)
+	... 9 more
+2009-4-27 21:30:18 org.dynamicjava.osgi.da_launcher.internal.bundle.installers.BaseBundleInstaller installBundle
+信息: Installed Non-Bundled Library Bundle[symbolic-name = 'myservice__2123978602', location = 'D:\WORKSPACE\da-test\bundles\non-bundled-libraries\myservice.jar'] 
+2009-4-27 21:30:18 org.dynamicjava.osgi.da_launcher.internal.bundle.installers.BaseBundleInstaller startBundle
+信息: Started Non-Bundled Library Bundle[symbolic-name = 'myservice__2123978602', location = 'D:\WORKSPACE\da-test\bundles\non-bundled-libraries\myservice.jar'] 
+2009-4-27 21:30:18 org.dynamicjava.osgi.da_launcher.internal.bundle.installers.BaseBundleInstaller installBundle
+信息: Installed Application Bundle[symbolic-name = 'mybundle', location = 'D:\WORKSPACE\da-test\bundles\application-bundles\mybundle.jar'] 
+2009-4-27 21:30:18 org.dynamicjava.osgi.da_launcher.internal.bundle.installers.BaseBundleInstaller startBundle
+信息: Started Application Bundle[symbolic-name = 'mybundle', location = 'D:\WORKSPACE\da-test\bundles\application-bundles\mybundle.jar'] 
+2009-4-30 17:09:42 org.dynamicjava.osgi.da_launcher.internal.bundle.installers.BaseBundleInstaller installBundle
+信息: Installed Application Bundle[symbolic-name = 'mybundle', location = 'D:\WORKSPACE\da-test\bundles\application-bundles\mybundle.jar'] 
+2009-4-30 17:09:42 org.dynamicjava.osgi.da_launcher.internal.bundle.installers.BaseBundleInstaller installBundle
+信息: Installed Application Bundle[symbolic-name = 'com.zhouwei.myservice.auto_generated_1', location = 'D:\WORKSPACE\da-test\bundles\application-bundles\myservice.jar'] 
+2009-4-30 17:09:42 org.dynamicjava.osgi.da_launcher.internal.bundle.installers.BaseBundleInstaller startBundle
+信息: Started Application Bundle[symbolic-name = 'mybundle', location = 'D:\WORKSPACE\da-test\bundles\application-bundles\mybundle.jar'] 
+2009-4-30 17:09:42 org.dynamicjava.osgi.da_launcher.internal.bundle.installers.BaseBundleInstaller startBundle
+信息: Started Application Bundle[symbolic-name = 'com.zhouwei.myservice.auto_generated_1', location = 'D:\WORKSPACE\da-test\bundles\application-bundles\myservice.jar'] 
+2009-4-30 20:36:44 org.dynamicjava.osgi.da_launcher.internal.bundle.installers.BaseBundleInstaller installBundle
+信息: Installed Application Bundle[symbolic-name = 'mybundle', location = 'D:\WORKSPACE\da-test\bundles\application-bundles\mybundle.jar'] 
+2009-4-30 20:36:44 org.dynamicjava.osgi.da_launcher.internal.bundle.installers.BaseBundleInstaller installBundle
+信息: Installed Application Bundle[symbolic-name = 'com.zhouwei.myservice.auto_generated_1', location = 'D:\WORKSPACE\da-test\bundles\application-bundles\myservice.jar'] 
+2009-4-30 20:36:44 org.dynamicjava.osgi.da_launcher.internal.bundle.installers.BaseBundleInstaller startBundle
+信息: Started Application Bundle[symbolic-name = 'mybundle', location = 'D:\WORKSPACE\da-test\bundles\application-bundles\mybundle.jar'] 
+2009-4-30 20:36:44 org.dynamicjava.osgi.da_launcher.internal.bundle.installers.BaseBundleInstaller startBundle
+信息: Started Application Bundle[symbolic-name = 'com.zhouwei.myservice.auto_generated_1', location = 'D:\WORKSPACE\da-test\bundles\application-bundles\myservice.jar'] 
+2009-8-3 14:43:23 org.dynamicjava.osgi.da_launcher.internal.bundle.installers.BaseBundleInstaller installBundle
+信息: Installed System Bundle[symbolic-name = 'org.springframework.bundle.osgi.core', location = 'D:\WORKSPACE3\da-test\bundles\system-bundles\spring-dm\spring-osgi-core-1.1.0-m2.jar'] 
+2009-8-3 14:43:23 org.dynamicjava.osgi.da_launcher.internal.bundle.installers.BaseBundleInstaller installBundle
+信息: Installed System Bundle[symbolic-name = 'org.springframework.bundle.osgi.extender', location = 'D:\WORKSPACE3\da-test\bundles\system-bundles\spring-dm\spring-osgi-extender-1.1.0-m2.jar'] 
+2009-8-3 14:43:23 org.dynamicjava.osgi.da_launcher.internal.bundle.installers.BaseBundleInstaller installBundle
+信息: Installed System Bundle[symbolic-name = 'org.springframework.bundle.osgi.io', location = 'D:\WORKSPACE3\da-test\bundles\system-bundles\spring-dm\spring-osgi-io-1.1.0-m2.jar'] 
+2009-8-3 14:43:23 org.dynamicjava.osgi.da_launcher.internal.bundle.installers.BaseBundleInstaller installBundle
+信息: Installed System Bundle[symbolic-name = 'org.springframework.osgi.aopalliance.osgi', location = 'D:\WORKSPACE3\da-test\bundles\system-bundles\spring-dm-dependencies\aopalliance.osgi-1.0-SNAPSHOT.jar'] 
+2009-8-3 14:43:23 org.dynamicjava.osgi.da_launcher.internal.bundle.installers.BaseBundleInstaller installBundle
+信息: Installed System Bundle[symbolic-name = 'org.springframework.osgi.backport-util-concurrent.osgi', location = 'D:\WORKSPACE3\da-test\bundles\system-bundles\spring-dm-dependencies\backport-util-concurrent.osgi-3.1-SNAPSHOT.jar'] 
+2009-8-3 14:43:23 org.dynamicjava.osgi.da_launcher.internal.bundle.installers.BaseBundleInstaller installBundle
+信息: Installed System Bundle[symbolic-name = 'jcl104.over.slf4j', location = 'D:\WORKSPACE3\da-test\bundles\system-bundles\spring-dm-dependencies\jcl104-over-slf4j-1.4.3.jar'] 
+2009-8-3 14:43:23 org.dynamicjava.osgi.da_launcher.internal.bundle.installers.BaseBundleInstaller installBundle
+信息: Installed System Bundle[symbolic-name = 'org.springframework.osgi.log4j.osgi', location = 'D:\WORKSPACE3\da-test\bundles\system-bundles\spring-dm-dependencies\log4j.osgi-1.2.15-SNAPSHOT.jar'] 
+2009-8-3 14:43:23 org.dynamicjava.osgi.da_launcher.internal.bundle.installers.BaseBundleInstaller installBundle
+信息: Installed System Bundle[symbolic-name = 'slf4j.api', location = 'D:\WORKSPACE3\da-test\bundles\system-bundles\spring-dm-dependencies\slf4j-api-1.4.3.jar'] 
+2009-8-3 14:43:23 org.dynamicjava.osgi.da_launcher.internal.bundle.installers.BaseBundleInstaller installBundle
+信息: Installed System Bundle[symbolic-name = 'slf4j.log4j12', location = 'D:\WORKSPACE3\da-test\bundles\system-bundles\spring-dm-dependencies\slf4j-log4j12-1.4.3.jar'] 
+2009-8-3 14:43:23 org.dynamicjava.osgi.da_launcher.internal.bundle.installers.BaseBundleInstaller installBundle
+信息: Installed System Bundle[symbolic-name = 'org.springframework.bundle.spring.aop', location = 'D:\WORKSPACE3\da-test\bundles\system-bundles\spring-dm-dependencies\spring-aop-2.5.4.jar'] 
+2009-8-3 14:43:23 org.dynamicjava.osgi.da_launcher.internal.bundle.installers.BaseBundleInstaller installBundle
+信息: Installed System Bundle[symbolic-name = 'org.springframework.bundle.spring.beans', location = 'D:\WORKSPACE3\da-test\bundles\system-bundles\spring-dm-dependencies\spring-beans-2.5.4.jar'] 
+2009-8-3 14:43:23 org.dynamicjava.osgi.da_launcher.internal.bundle.installers.BaseBundleInstaller installBundle
+信息: Installed System Bundle[symbolic-name = 'org.springframework.bundle.spring.context', location = 'D:\WORKSPACE3\da-test\bundles\system-bundles\spring-dm-dependencies\spring-context-2.5.4.jar'] 
+2009-8-3 14:43:23 org.dynamicjava.osgi.da_launcher.internal.bundle.installers.BaseBundleInstaller installBundle
+信息: Installed System Bundle[symbolic-name = 'org.springframework.bundle.spring.core', location = 'D:\WORKSPACE3\da-test\bundles\system-bundles\spring-dm-dependencies\spring-core-2.5.4.jar'] 
+2009-8-3 14:43:23 org.dynamicjava.osgi.da_launcher.internal.bundle.installers.BaseBundleInstaller startBundle
+信息: Started System Bundle[symbolic-name = 'org.springframework.bundle.osgi.core', location = 'D:\WORKSPACE3\da-test\bundles\system-bundles\spring-dm\spring-osgi-core-1.1.0-m2.jar'] 
+2009-8-3 14:43:23 org.dynamicjava.osgi.da_launcher.internal.bundle.installers.BaseBundleInstaller startBundle
+信息: Started System Bundle[symbolic-name = 'org.springframework.bundle.osgi.extender', location = 'D:\WORKSPACE3\da-test\bundles\system-bundles\spring-dm\spring-osgi-extender-1.1.0-m2.jar'] 
+2009-8-3 14:43:23 org.dynamicjava.osgi.da_launcher.internal.bundle.installers.BaseBundleInstaller startBundle
+信息: Started System Bundle[symbolic-name = 'org.springframework.bundle.osgi.io', location = 'D:\WORKSPACE3\da-test\bundles\system-bundles\spring-dm\spring-osgi-io-1.1.0-m2.jar'] 
+2009-8-3 14:43:23 org.dynamicjava.osgi.da_launcher.internal.bundle.installers.BaseBundleInstaller startBundle
+信息: Started System Bundle[symbolic-name = 'org.springframework.osgi.aopalliance.osgi', location = 'D:\WORKSPACE3\da-test\bundles\system-bundles\spring-dm-dependencies\aopalliance.osgi-1.0-SNAPSHOT.jar'] 
+2009-8-3 14:43:23 org.dynamicjava.osgi.da_launcher.internal.bundle.installers.BaseBundleInstaller startBundle
+信息: Started System Bundle[symbolic-name = 'org.springframework.osgi.backport-util-concurrent.osgi', location = 'D:\WORKSPACE3\da-test\bundles\system-bundles\spring-dm-dependencies\backport-util-concurrent.osgi-3.1-SNAPSHOT.jar'] 
+2009-8-3 14:43:23 org.dynamicjava.osgi.da_launcher.internal.bundle.installers.BaseBundleInstaller startBundle
+信息: Started System Bundle[symbolic-name = 'jcl104.over.slf4j', location = 'D:\WORKSPACE3\da-test\bundles\system-bundles\spring-dm-dependencies\jcl104-over-slf4j-1.4.3.jar'] 
+2009-8-3 14:43:23 org.dynamicjava.osgi.da_launcher.internal.bundle.installers.BaseBundleInstaller startBundle
+信息: Started System Bundle[symbolic-name = 'org.springframework.osgi.log4j.osgi', location = 'D:\WORKSPACE3\da-test\bundles\system-bundles\spring-dm-dependencies\log4j.osgi-1.2.15-SNAPSHOT.jar'] 
+2009-8-3 14:43:23 org.dynamicjava.osgi.da_launcher.internal.bundle.installers.BaseBundleInstaller startBundle
+信息: Started System Bundle[symbolic-name = 'slf4j.api', location = 'D:\WORKSPACE3\da-test\bundles\system-bundles\spring-dm-dependencies\slf4j-api-1.4.3.jar'] 
+2009-8-3 14:43:23 org.dynamicjava.osgi.da_launcher.internal.bundle.installers.BaseBundleInstaller startBundle
+信息: Started System Bundle[symbolic-name = 'slf4j.log4j12', location = 'D:\WORKSPACE3\da-test\bundles\system-bundles\spring-dm-dependencies\slf4j-log4j12-1.4.3.jar'] 
+2009-8-3 14:43:23 org.dynamicjava.osgi.da_launcher.internal.bundle.installers.BaseBundleInstaller startBundle
+信息: Started System Bundle[symbolic-name = 'org.springframework.bundle.spring.aop', location = 'D:\WORKSPACE3\da-test\bundles\system-bundles\spring-dm-dependencies\spring-aop-2.5.4.jar'] 
+2009-8-3 14:43:23 org.dynamicjava.osgi.da_launcher.internal.bundle.installers.BaseBundleInstaller startBundle
+信息: Started System Bundle[symbolic-name = 'org.springframework.bundle.spring.beans', location = 'D:\WORKSPACE3\da-test\bundles\system-bundles\spring-dm-dependencies\spring-beans-2.5.4.jar'] 
+2009-8-3 14:43:23 org.dynamicjava.osgi.da_launcher.internal.bundle.installers.BaseBundleInstaller startBundle
+信息: Started System Bundle[symbolic-name = 'org.springframework.bundle.spring.context', location = 'D:\WORKSPACE3\da-test\bundles\system-bundles\spring-dm-dependencies\spring-context-2.5.4.jar'] 
+2009-8-3 14:43:23 org.dynamicjava.osgi.da_launcher.internal.bundle.installers.BaseBundleInstaller startBundle
+信息: Started System Bundle[symbolic-name = 'org.springframework.bundle.spring.core', location = 'D:\WORKSPACE3\da-test\bundles\system-bundles\spring-dm-dependencies\spring-core-2.5.4.jar'] 
+2009-8-3 14:43:23 org.dynamicjava.osgi.da_launcher.internal.bundle.installers.BaseBundleInstaller installBundle
+信息: Installed Application Bundle[symbolic-name = 'date-service', location = 'D:\WORKSPACE3\da-test\bundles\application-bundles\date-service-1.0.0.jar'] 
+2009-8-3 14:43:23 org.dynamicjava.osgi.da_launcher.internal.bundle.installers.BaseBundleInstaller installBundle
+信息: Installed Application Bundle[symbolic-name = 'greetings-service', location = 'D:\WORKSPACE3\da-test\bundles\application-bundles\greetings-service-1.0.0.jar'] 
+2009-8-3 14:43:23 org.dynamicjava.osgi.da_launcher.internal.bundle.installers.BaseBundleInstaller startBundle
+信息: Started Application Bundle[symbolic-name = 'date-service', location = 'D:\WORKSPACE3\da-test\bundles\application-bundles\date-service-1.0.0.jar'] 
+2009-8-3 14:43:23 org.dynamicjava.osgi.da_launcher.internal.bundle.installers.BaseBundleInstaller startBundle
+信息: Started Application Bundle[symbolic-name = 'greetings-service', location = 'D:\WORKSPACE3\da-test\bundles\application-bundles\greetings-service-1.0.0.jar'] 
+2009-8-3 15:00:14 org.dynamicjava.osgi.da_launcher.internal.bundle.installers.BaseBundleInstaller installBundle
+信息: Installed System Bundle[symbolic-name = 'org.springframework.bundle.osgi.core', location = 'D:\WORKSPACE3\da-test\bundles\system-bundles\spring-dm\spring-osgi-core-1.1.0-m2.jar'] 
+2009-8-3 15:00:14 org.dynamicjava.osgi.da_launcher.internal.bundle.installers.BaseBundleInstaller installBundle
+信息: Installed System Bundle[symbolic-name = 'org.springframework.bundle.osgi.extender', location = 'D:\WORKSPACE3\da-test\bundles\system-bundles\spring-dm\spring-osgi-extender-1.1.0-m2.jar'] 
+2009-8-3 15:00:14 org.dynamicjava.osgi.da_launcher.internal.bundle.installers.BaseBundleInstaller installBundle
+信息: Installed System Bundle[symbolic-name = 'org.springframework.bundle.osgi.io', location = 'D:\WORKSPACE3\da-test\bundles\system-bundles\spring-dm\spring-osgi-io-1.1.0-m2.jar'] 
+2009-8-3 15:00:14 org.dynamicjava.osgi.da_launcher.internal.bundle.installers.BaseBundleInstaller installBundle
+信息: Installed System Bundle[symbolic-name = 'org.springframework.osgi.aopalliance.osgi', location = 'D:\WORKSPACE3\da-test\bundles\system-bundles\spring-dm-dependencies\aopalliance.osgi-1.0-SNAPSHOT.jar'] 
+2009-8-3 15:00:14 org.dynamicjava.osgi.da_launcher.internal.bundle.installers.BaseBundleInstaller installBundle
+信息: Installed System Bundle[symbolic-name = 'org.springframework.osgi.backport-util-concurrent.osgi', location = 'D:\WORKSPACE3\da-test\bundles\system-bundles\spring-dm-dependencies\backport-util-concurrent.osgi-3.1-SNAPSHOT.jar'] 
+2009-8-3 15:00:14 org.dynamicjava.osgi.da_launcher.internal.bundle.installers.BaseBundleInstaller installBundle
+信息: Installed System Bundle[symbolic-name = 'jcl104.over.slf4j', location = 'D:\WORKSPACE3\da-test\bundles\system-bundles\spring-dm-dependencies\jcl104-over-slf4j-1.4.3.jar'] 
+2009-8-3 15:00:14 org.dynamicjava.osgi.da_launcher.internal.bundle.installers.BaseBundleInstaller installBundle
+信息: Installed System Bundle[symbolic-name = 'org.springframework.osgi.log4j.osgi', location = 'D:\WORKSPACE3\da-test\bundles\system-bundles\spring-dm-dependencies\log4j.osgi-1.2.15-SNAPSHOT.jar'] 
+2009-8-3 15:00:14 org.dynamicjava.osgi.da_launcher.internal.bundle.installers.BaseBundleInstaller installBundle
+信息: Installed System Bundle[symbolic-name = 'slf4j.api', location = 'D:\WORKSPACE3\da-test\bundles\system-bundles\spring-dm-dependencies\slf4j-api-1.4.3.jar'] 
+2009-8-3 15:00:14 org.dynamicjava.osgi.da_launcher.internal.bundle.installers.BaseBundleInstaller installBundle
+信息: Installed System Bundle[symbolic-name = 'slf4j.log4j12', location = 'D:\WORKSPACE3\da-test\bundles\system-bundles\spring-dm-dependencies\slf4j-log4j12-1.4.3.jar'] 
+2009-8-3 15:00:14 org.dynamicjava.osgi.da_launcher.internal.bundle.installers.BaseBundleInstaller installBundle
+信息: Installed System Bundle[symbolic-name = 'org.springframework.bundle.spring.aop', location = 'D:\WORKSPACE3\da-test\bundles\system-bundles\spring-dm-dependencies\spring-aop-2.5.4.jar'] 
+2009-8-3 15:00:14 org.dynamicjava.osgi.da_launcher.internal.bundle.installers.BaseBundleInstaller installBundle
+信息: Installed System Bundle[symbolic-name = 'org.springframework.bundle.spring.beans', location = 'D:\WORKSPACE3\da-test\bundles\system-bundles\spring-dm-dependencies\spring-beans-2.5.4.jar'] 
+2009-8-3 15:00:14 org.dynamicjava.osgi.da_launcher.internal.bundle.installers.BaseBundleInstaller installBundle
+信息: Installed System Bundle[symbolic-name = 'org.springframework.bundle.spring.context', location = 'D:\WORKSPACE3\da-test\bundles\system-bundles\spring-dm-dependencies\spring-context-2.5.4.jar'] 
+2009-8-3 15:00:14 org.dynamicjava.osgi.da_launcher.internal.bundle.installers.BaseBundleInstaller installBundle
+信息: Installed System Bundle[symbolic-name = 'org.springframework.bundle.spring.core', location = 'D:\WORKSPACE3\da-test\bundles\system-bundles\spring-dm-dependencies\spring-core-2.5.4.jar'] 
+2009-8-3 15:00:15 org.dynamicjava.osgi.da_launcher.internal.bundle.installers.BaseBundleInstaller startBundle
+信息: Started System Bundle[symbolic-name = 'org.springframework.bundle.osgi.core', location = 'D:\WORKSPACE3\da-test\bundles\system-bundles\spring-dm\spring-osgi-core-1.1.0-m2.jar'] 
+2009-8-3 15:00:15 org.dynamicjava.osgi.da_launcher.internal.bundle.installers.BaseBundleInstaller startBundle
+信息: Started System Bundle[symbolic-name = 'org.springframework.bundle.osgi.extender', location = 'D:\WORKSPACE3\da-test\bundles\system-bundles\spring-dm\spring-osgi-extender-1.1.0-m2.jar'] 
+2009-8-3 15:00:15 org.dynamicjava.osgi.da_launcher.internal.bundle.installers.BaseBundleInstaller startBundle
+信息: Started System Bundle[symbolic-name = 'org.springframework.bundle.osgi.io', location = 'D:\WORKSPACE3\da-test\bundles\system-bundles\spring-dm\spring-osgi-io-1.1.0-m2.jar'] 
+2009-8-3 15:00:15 org.dynamicjava.osgi.da_launcher.internal.bundle.installers.BaseBundleInstaller startBundle
+信息: Started System Bundle[symbolic-name = 'org.springframework.osgi.aopalliance.osgi', location = 'D:\WORKSPACE3\da-test\bundles\system-bundles\spring-dm-dependencies\aopalliance.osgi-1.0-SNAPSHOT.jar'] 
+2009-8-3 15:00:15 org.dynamicjava.osgi.da_launcher.internal.bundle.installers.BaseBundleInstaller startBundle
+信息: Started System Bundle[symbolic-name = 'org.springframework.osgi.backport-util-concurrent.osgi', location = 'D:\WORKSPACE3\da-test\bundles\system-bundles\spring-dm-dependencies\backport-util-concurrent.osgi-3.1-SNAPSHOT.jar'] 
+2009-8-3 15:00:15 org.dynamicjava.osgi.da_launcher.internal.bundle.installers.BaseBundleInstaller startBundle
+信息: Started System Bundle[symbolic-name = 'jcl104.over.slf4j', location = 'D:\WORKSPACE3\da-test\bundles\system-bundles\spring-dm-dependencies\jcl104-over-slf4j-1.4.3.jar'] 
+2009-8-3 15:00:15 org.dynamicjava.osgi.da_launcher.internal.bundle.installers.BaseBundleInstaller startBundle
+信息: Started System Bundle[symbolic-name = 'org.springframework.osgi.log4j.osgi', location = 'D:\WORKSPACE3\da-test\bundles\system-bundles\spring-dm-dependencies\log4j.osgi-1.2.15-SNAPSHOT.jar'] 
+2009-8-3 15:00:15 org.dynamicjava.osgi.da_launcher.internal.bundle.installers.BaseBundleInstaller startBundle
+信息: Started System Bundle[symbolic-name = 'slf4j.api', location = 'D:\WORKSPACE3\da-test\bundles\system-bundles\spring-dm-dependencies\slf4j-api-1.4.3.jar'] 
+2009-8-3 15:00:15 org.dynamicjava.osgi.da_launcher.internal.bundle.installers.BaseBundleInstaller startBundle
+信息: Started System Bundle[symbolic-name = 'slf4j.log4j12', location = 'D:\WORKSPACE3\da-test\bundles\system-bundles\spring-dm-dependencies\slf4j-log4j12-1.4.3.jar'] 
+2009-8-3 15:00:15 org.dynamicjava.osgi.da_launcher.internal.bundle.installers.BaseBundleInstaller startBundle
+信息: Started System Bundle[symbolic-name = 'org.springframework.bundle.spring.aop', location = 'D:\WORKSPACE3\da-test\bundles\system-bundles\spring-dm-dependencies\spring-aop-2.5.4.jar'] 
+2009-8-3 15:00:15 org.dynamicjava.osgi.da_launcher.internal.bundle.installers.BaseBundleInstaller startBundle
+信息: Started System Bundle[symbolic-name = 'org.springframework.bundle.spring.beans', location = 'D:\WORKSPACE3\da-test\bundles\system-bundles\spring-dm-dependencies\spring-beans-2.5.4.jar'] 
+2009-8-3 15:00:15 org.dynamicjava.osgi.da_launcher.internal.bundle.installers.BaseBundleInstaller startBundle
+信息: Started System Bundle[symbolic-name = 'org.springframework.bundle.spring.context', location = 'D:\WORKSPACE3\da-test\bundles\system-bundles\spring-dm-dependencies\spring-context-2.5.4.jar'] 
+2009-8-3 15:00:15 org.dynamicjava.osgi.da_launcher.internal.bundle.installers.BaseBundleInstaller startBundle
+信息: Started System Bundle[symbolic-name = 'org.springframework.bundle.spring.core', location = 'D:\WORKSPACE3\da-test\bundles\system-bundles\spring-dm-dependencies\spring-core-2.5.4.jar'] 
+2009-8-3 15:00:15 org.dynamicjava.osgi.da_launcher.internal.bundle.installers.BaseBundleInstaller installBundle
+信息: Installed Application Bundle[symbolic-name = 'date-service', location = 'D:\WORKSPACE3\da-test\bundles\application-bundles\date-service-1.0.0.jar'] 
+2009-8-3 15:00:15 org.dynamicjava.osgi.da_launcher.internal.bundle.installers.BaseBundleInstaller installBundle
+信息: Installed Application Bundle[symbolic-name = 'greetings-service', location = 'D:\WORKSPACE3\da-test\bundles\application-bundles\greetings-service-1.0.0.jar'] 
+2009-8-3 15:00:15 org.dynamicjava.osgi.da_launcher.internal.bundle.installers.BaseBundleInstaller startBundle
+信息: Started Application Bundle[symbolic-name = 'date-service', location = 'D:\WORKSPACE3\da-test\bundles\application-bundles\date-service-1.0.0.jar'] 
+2009-8-3 15:00:15 org.dynamicjava.osgi.da_launcher.internal.bundle.installers.BaseBundleInstaller startBundle
+信息: Started Application Bundle[symbolic-name = 'greetings-service', location = 'D:\WORKSPACE3\da-test\bundles\application-bundles\greetings-service-1.0.0.jar'] 
+2009-8-3 16:50:13 org.dynamicjava.osgi.da_launcher.internal.bundle.installers.BaseBundleInstaller installBundle
+信息: Installed System Bundle[symbolic-name = 'org.springframework.bundle.osgi.core', location = 'D:\WORKSPACE3\da-test\bundles\system-bundles\spring-dm\spring-osgi-core-1.1.0-m2.jar'] 
+2009-8-3 16:50:13 org.dynamicjava.osgi.da_launcher.internal.bundle.installers.BaseBundleInstaller installBundle
+信息: Installed System Bundle[symbolic-name = 'org.springframework.bundle.osgi.extender', location = 'D:\WORKSPACE3\da-test\bundles\system-bundles\spring-dm\spring-osgi-extender-1.1.0-m2.jar'] 
+2009-8-3 16:50:13 org.dynamicjava.osgi.da_launcher.internal.bundle.installers.BaseBundleInstaller installBundle
+信息: Installed System Bundle[symbolic-name = 'org.springframework.bundle.osgi.io', location = 'D:\WORKSPACE3\da-test\bundles\system-bundles\spring-dm\spring-osgi-io-1.1.0-m2.jar'] 
+2009-8-3 16:50:13 org.dynamicjava.osgi.da_launcher.internal.bundle.installers.BaseBundleInstaller installBundle
+信息: Installed System Bundle[symbolic-name = 'org.springframework.osgi.aopalliance.osgi', location = 'D:\WORKSPACE3\da-test\bundles\system-bundles\spring-dm-dependencies\aopalliance.osgi-1.0-SNAPSHOT.jar'] 
+2009-8-3 16:50:13 org.dynamicjava.osgi.da_launcher.internal.bundle.installers.BaseBundleInstaller installBundle
+信息: Installed System Bundle[symbolic-name = 'org.springframework.osgi.backport-util-concurrent.osgi', location = 'D:\WORKSPACE3\da-test\bundles\system-bundles\spring-dm-dependencies\backport-util-concurrent.osgi-3.1-SNAPSHOT.jar'] 
+2009-8-3 16:50:13 org.dynamicjava.osgi.da_launcher.internal.bundle.installers.BaseBundleInstaller installBundle
+信息: Installed System Bundle[symbolic-name = 'jcl104.over.slf4j', location = 'D:\WORKSPACE3\da-test\bundles\system-bundles\spring-dm-dependencies\jcl104-over-slf4j-1.4.3.jar'] 
+2009-8-3 16:50:13 org.dynamicjava.osgi.da_launcher.internal.bundle.installers.BaseBundleInstaller installBundle
+信息: Installed System Bundle[symbolic-name = 'org.springframework.osgi.log4j.osgi', location = 'D:\WORKSPACE3\da-test\bundles\system-bundles\spring-dm-dependencies\log4j.osgi-1.2.15-SNAPSHOT.jar'] 
+2009-8-3 16:50:13 org.dynamicjava.osgi.da_launcher.internal.bundle.installers.BaseBundleInstaller installBundle
+信息: Installed System Bundle[symbolic-name = 'slf4j.api', location = 'D:\WORKSPACE3\da-test\bundles\system-bundles\spring-dm-dependencies\slf4j-api-1.4.3.jar'] 
+2009-8-3 16:50:13 org.dynamicjava.osgi.da_launcher.internal.bundle.installers.BaseBundleInstaller installBundle
+信息: Installed System Bundle[symbolic-name = 'slf4j.log4j12', location = 'D:\WORKSPACE3\da-test\bundles\system-bundles\spring-dm-dependencies\slf4j-log4j12-1.4.3.jar'] 
+2009-8-3 16:50:13 org.dynamicjava.osgi.da_launcher.internal.bundle.installers.BaseBundleInstaller installBundle
+信息: Installed System Bundle[symbolic-name = 'org.springframework.bundle.spring.aop', location = 'D:\WORKSPACE3\da-test\bundles\system-bundles\spring-dm-dependencies\spring-aop-2.5.4.jar'] 
+2009-8-3 16:50:13 org.dynamicjava.osgi.da_launcher.internal.bundle.installers.BaseBundleInstaller installBundle
+信息: Installed System Bundle[symbolic-name = 'org.springframework.bundle.spring.beans', location = 'D:\WORKSPACE3\da-test\bundles\system-bundles\spring-dm-dependencies\spring-beans-2.5.4.jar'] 

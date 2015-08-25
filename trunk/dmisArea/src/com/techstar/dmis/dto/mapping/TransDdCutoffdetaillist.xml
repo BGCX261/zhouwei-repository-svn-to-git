@@ -1,0 +1,14 @@
+<!DOCTYPE mappings PUBLIC "-//DOZER//DTD MAPPINGS//EN"
+"http://dozer.sourceforge.net/dtd/dozerbeanmapping.dtd">
+<mappings>
+   <mapping>
+   <class-a>com.techstar.dmis.dto.DdCutoffdetaillistDto</class-a>
+   <class-b>com.techstar.dmis.dto.transfer.TransDdCutoffdetaillistDto</class-b>
+   <field>
+      <a>zddcutoffdetaillist1.fid</a>
+      <b>trans_zddcutoffdetaillist1</b>
+      <a-hint>com.techstar.dmis.dto.DdCutofflistDto</a-hint>
+      <b-hint>java.lang.String</b-hint>
+   </field>
+   </mapping>
+</mappings>

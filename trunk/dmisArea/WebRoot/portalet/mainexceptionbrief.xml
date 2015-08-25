@@ -1,0 +1,118 @@
+<?xml version="1.0" ?>
+<rows>
+   <head>
+        <column width="40" type="ro" align="center"  sort="na">img:[../themes/themes1/images/grid/config.gif]</column>
+        <column width="80" type="ro" align="center" sort="int">故障日期</column>
+        <column width="60" type="ro" align="center" sort="str">当日编号</column>
+        <column width="100" type="ro" align="left" sort="str">故障发生场站</column>
+        <column width="150" type="ro" align="left" sort="str">故障名称</column>
+        <column width="110" type="ro" align="left" sort="str">值班调度员</column>
+        <column width="80" type="ro" align="left" sort="str">处理结果</column>
+        <column width="150" type="ro" align="left" sort="int">故障原因</column>
+        <column width="120" type="ro" align="left" sort="str">汇报领导</column>
+        <column width="60" type="ro" align="right" sort="str">少送电度</column>
+        <column width="65" type="ro" align="left" sort="int">填报单位</column>
+        <column width="120" type="ro" align="center" sort="str">发布时间</column>
+        <settings>
+            <colwidth>px</colwidth>
+        </settings>
+    </head>
+   <row id ="1">
+      <cell>1</cell>
+      <cell>2006-11-29</cell>
+      <cell>1</cell>
+      <cell>蓝天热电厂</cell>
+      <cell>蓝天热电厂1＃，4＃机异常</cell>
+      <cell>王兴存；薛建杰</cell>
+      <cell></cell>
+      <cell>1＃燃机进汽虑高，4＃汽机凝气器漏水</cell>
+      <cell>处（郑）</cell>
+      <cell></cell>
+      <cell>调通中心</cell>
+      <cell>2006-11-29 09:09:52</cell>
+   </row>
+   <row id ="2">
+      <cell>2</cell>
+      <cell>2006-11-29</cell>
+      <cell>2</cell>
+      <cell>孙河</cell>
+      <cell>孙河1＃TR101开关B相引线支柱瓷瓶断裂</cell>
+      <cell>吴雁南;杨志宏</cell>
+      <cell></cell>
+      <cell>孙河1＃TR101开关B相引线支柱瓷瓶断裂</cell>
+      <cell>局（尚）、中心（唐）、处（郑）</cell>
+      <cell></cell>
+      <cell>调通中心</cell>
+      <cell>2006-11-29 14:08:52</cell>
+   </row>
+   <row id ="3">
+      <cell>3</cell>
+      <cell>2006-11-20</cell>
+      <cell>1</cell>
+      <cell>青塔站</cell>
+      <cell>青塔站 青沙111开关电缆仓气压低异常</cell>
+      <cell>韩蓬;段鹏;张印宝</cell>
+      <cell>已恢复正常</cell>
+      <cell>青塔站青沙111-2刀闸C相电缆仓与电缆结合处漏气</cell>
+      <cell>中心（唐）;处（郑）</cell>
+      <cell>0</cell>
+      <cell>调通中心</cell>
+      <cell>2006-11-20 22:04:20</cell>
+   </row>
+   <row id ="4">
+      <cell>4</cell>
+      <cell>2006-11-19</cell>
+      <cell>1</cell>
+      <cell>孙河</cell>
+      <cell>孙立118开关CT异音</cell>
+      <cell>韩蓬;王卫;薛建杰</cell>
+      <cell>已恢复正常</cell>
+      <cell>孙立118开关CT二次电缆绝缘低</cell>
+      <cell>中心（唐）、处（郑</cell>
+      <cell>0</cell>
+      <cell>调通中心</cell>
+      <cell>2006-11-19 21:29:20</cell>
+   </row>
+   <row id ="5">
+      <cell>5</cell>
+      <cell>2006-11-29</cell>
+      <cell>1</cell>
+      <cell>蓝天热电厂</cell>
+      <cell>蓝天热电厂1＃，4＃机异常</cell>
+      <cell>王兴存；薛建杰</cell>
+      <cell></cell>
+      <cell>1＃燃机进汽虑高，4＃汽机凝气器漏水</cell>
+      <cell>处（郑）</cell>
+      <cell></cell>
+      <cell>调通中心</cell>
+      <cell>2006-11-29 09:09:52</cell>
+   </row>
+   <row id ="6">
+      <cell>6</cell>
+      <cell>2006-11-29</cell>
+      <cell>2</cell>
+      <cell>孙河</cell>
+      <cell>孙河1＃TR101开关B相引线支柱瓷瓶断裂</cell>
+      <cell>吴雁南;杨志宏</cell>
+      <cell></cell>
+      <cell>孙河1＃TR101开关B相引线支柱瓷瓶断裂</cell>
+      <cell>局（尚）、中心（唐）、处（郑）</cell>
+      <cell></cell>
+      <cell>调通中心</cell>
+      <cell>2006-11-29 14:08:52</cell>
+   </row>
+   <row id ="7">
+      <cell>7</cell>
+      <cell>2006-11-20</cell>
+      <cell>1</cell>
+      <cell>青塔站</cell>
+      <cell>青塔站 青沙111开关电缆仓气压低异常</cell>
+      <cell>韩蓬;段鹏;张印宝</cell>
+      <cell>已恢复正常</cell>
+      <cell>青塔站青沙111-2刀闸C相电缆仓与电缆结合处漏气</cell>
+      <cell>中心（唐）;处（郑）</cell>
+      <cell>0</cell>
+      <cell>调通中心</cell>
+      <cell>2006-11-20 22:04:20</cell>
+   </row>
+</rows>

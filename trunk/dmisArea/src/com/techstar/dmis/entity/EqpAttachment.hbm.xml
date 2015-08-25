@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="com.techstar.dmis.entity">
+	<class name="EqpAttachment" table="DMIS_EqpAttachment" dynamic-insert="true" dynamic-update="true" optimistic-lock="version">
+    <id name="fid" type="string">
+      <column name="fid" sql-type="varchar(40)" not-null="true"/>
+      <generator class="assigned"/>
+    </id>
+
+ 	<version name="version" column="VERSION" unsaved-value="undefined"/>
+  
+   <property name="fattachname" type="string"  not-null="false">
+    <column name="fattachname"  
+		length="150"               
+    />
+</property>	
+    <property name="fattachtype" type="string"  not-null="false">
+    <column name="fattachtype"  
+		length="20"               
+    />
+</property>	
+    <property name="fattachremark" type="string"  not-null="false">
+    <column name="fattachremark"  
+		length="300"               
+    />
+</property>	
+    <property name="fattachbody" type="org.springframework.orm.hibernate3.support.BlobByteArrayType"  not-null="false">
+    <column name="fattachbody"  
+		               
+    />
+</property>	
+  
+	
+    <many-to-one name="zeqpattachment2" class="EtsEquipment"   column="FEqpID" cascade="delete-orphan"></many-to-one>
+     </class>
+
+</hibernate-mapping>
+

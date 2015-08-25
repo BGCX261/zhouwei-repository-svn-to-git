@@ -1,0 +1,13 @@
+<!--工作流待办事项-->
+<head>
+  <obj>WorkflowTodolistDto</obj>
+  <column  colName="id" propertyName="id" colType="string" dataTypeLen="32" isPrimary="1" visible="1" width="90" isEdit="0" textColor="#000000" className="WorkflowTodolistDto" refName="id" ></column>
+  <column  colName="content" propertyName="content" colType="string" dataTypeLen="500" isPrimary="0" visible="1" width="200" isEdit="0" textColor="#000000" className="WorkflowTodolistDto" refName="content" ></column>
+  <column  colName="status" propertyName="status" colType="string" dataTypeLen="500" isPrimary="0" visible="1" width="100" isEdit="0" textColor="#000000" className="WorkflowTodolistDto" refName="status" ></column>
+  <column  colName="bstatus" propertyName="bstatus" colType="string" dataTypeLen="500" isPrimary="0" visible="1" width="100" isEdit="0" textColor="#000000" className="WorkflowTodolistDto" refName="bstatus" ></column>
+  <column  colName="taskName_" propertyName="taskName_" colType="string" dataTypeLen="60" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="WorkflowTodolistDto" refName="taskName_" ></column>
+  <column  colName="createTime_" propertyName="createTime_" colType="timestamp" dataTypeLen="0" isPrimary="0" visible="1" width="138" isEdit="0" textColor="#000000" className="WorkflowTodolistDto" refName="createTime_" ></column>
+  <column  colName="taskInstanceId_" propertyName="taskInstanceId_" colType="double" dataTypeLen="500" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="WorkflowTodolistDto" refName="taskInstanceId_" ></column>
+  <column  colName="taskId_" propertyName="taskId_" colType="double" dataTypeLen="0" isPrimary="0" visible="1" width="50" isEdit="0" textColor="#000000" className="WorkflowTodolistDto" refName="taskId_" ></column>
+  <column  colName="processdefinition_" propertyName="processdefinition_" colType="double" dataTypeLen="40" isPrimary="0" visible="1" width="50" isEdit="0" textColor="#000000" className="WorkflowTodolistDto" refName="processdefinition_" ></column>
+</head>

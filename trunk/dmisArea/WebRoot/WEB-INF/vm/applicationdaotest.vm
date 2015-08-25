@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+  
+ <!-- 直连配置 -->
+  <bean id="${proname}DataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+  		<property name="driverClassName">
+	      <value>${configBean.driver_class}</value>
+	    </property>
+	    <property name="url">
+	      <value>${configBean.connection_url}</value>
+	    </property>
+	    <property name="username">
+	      <value>${configBean.username}</value>
+	    </property>
+	    <property name="password">
+	      <value>${configBean.password}</value>
+	    </property>    
+  </bean>
+	
+
+  <!--<bean id="${proname}DataSource" class="org.springframework.jndi.JndiObjectFactoryBean">
+   <property name="jndiName">
+    	<value>${ds.jndiname}</value>
+    </property>
+  </bean>
+  -->
+  
+  <bean id="jdbcExceptionTranslator" class="org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator">
+    <property name="dataSource">
+      <ref bean="${proname}DataSource"/>
+    </property>
+  </bean>
+  
+  <bean id="transactionManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+	    <property name="sessionFactory">
+	      <ref bean="${proname}SessionFactory"/>
+	    </property>
+   </bean>
+  
+   <!-- 以下是： 处理Blob类型的特殊声明 //-->
+  <bean id="nativeJdbcExtractor" class="org.springframework.jdbc.support.nativejdbc.CommonsDbcpNativeJdbcExtractor" lazy-init="true"/>
+  <bean id="lobHandler" class="org.springframework.jdbc.support.lob.OracleLobHandler" lazy-init="true">
+    <property name="nativeJdbcExtractor">
+      <ref local="nativeJdbcExtractor"/>
+    </property>
+  </bean>
+
+   
+  <!-- hibernate的sessionFactory配置 -->
+
+  <bean id="${proname}SessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+	    <property name="schemaUpdate">
+	      <value>false</value>
+	    </property>
+		<property name="lobHandler" ref="lobHandler"/>
+	    <property name="mappingResources">
+	      <list>
+			#if ($configBean.entityMaps.size()>0)
+               #foreach($mapping in $configBean.entityMaps)
+		          <value>$mapping</value>
+              #end
+            #end	
+	      </list>
+	    </property>
+		
+	   
+	    <property name="hibernateProperties">
+	      <props>
+	        <prop key="hibernate.dialect">$configBean.dialect</prop>
+	        <prop key="hibernate.cache.provider_class">org.hibernate.cache.EhCacheProvider</prop>
+	        <prop key="hibernate.show_sql">true</prop>
+	      </props>
+	    </property>
+	    <property name="dataSource">
+	      <ref local="${proname}DataSource"/>
+	    </property>
+   </bean>
+
+  <!-- jdbc interface -->
+  <bean id="iBaseJdbcDao"  parent="baseLogAOP">	
+		<property name="target">
+            <bean class="com.techstar.framework.dao.BaseJdbcDaoImpl">            	
+            	<property name="dataSource"><ref local="${proname}DataSource"/></property>
+            </bean>
+        </property>		
+  </bean>
+  
+  <!-- hibernate base data interface-->
+  <bean id="iBaseHbnDao"  parent="baseLogAOP">	
+		<property name="target">
+            <bean class="com.techstar.framework.dao.BaseHbnDaoImpl">            	
+            	<property name="sessionFactory"><ref local="${proname}SessionFactory"/></property>
+            </bean>
+        </property>		
+  </bean>
+  <!-- hibernate common search-->
+  <bean id="iCommonQueryDao"  parent="baseLogAOP">	
+		<property name="target">
+            <bean class="com.techstar.framework.dao.CommonQueryDaoImpl">            	
+            	<property name="sessionFactory"><ref local="${proname}SessionFactory"/></property>
+            </bean>
+        </property>		
+  </bean>
+
+
+    <!-- register data interface -->
+   #foreach($dao in $daos)
+   <bean id="$dao.idaoName" parent="baseLogAOP">
+	<property name="target">
+	    <bean	class="$daopackage$dao.daoImplName">
+			<property name="baseHbnDao">
+				<ref bean="iBaseHbnDao" />
+			</property>
+		</bean>
+	</property>
+   </bean>
+   #end
+</beans>

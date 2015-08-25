@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="com.techstar.dmis.entity">
+	<class name="ParaVQC" table="DMIS_ParaVQC" dynamic-insert="true" dynamic-update="true" optimistic-lock="version">
+    <id name="feqpid" type="string">
+      <column name="feqpid" sql-type="varchar(80)" not-null="true"/>
+      <generator class="assigned"/>
+    </id>
+
+ 	<version name="version" column="VERSION" unsaved-value="undefined"/>
+  
+   <property name="fissoftware" type="string"  not-null="false">
+    <column name="fissoftware"  
+		length="20"               
+    />
+</property>	
+    <property name="fisvolrgltruning" type="string"  not-null="false">
+    <column name="fisvolrgltruning"  
+		length="2"               
+    />
+</property>	
+    <property name="fosver" type="string"  not-null="false">
+    <column name="fosver"  
+		length="20"               
+    />
+</property>	
+    <property name="fappver" type="string"  not-null="false">
+    <column name="fappver"  
+		length="20"               
+    />
+</property>	
+  
+	
+ <many-to-one name="zparavqc2" class="EtsEquipment"   column="FEqpID" cascade="delete-orphan"></many-to-one>
+     </class>
+
+</hibernate-mapping>
+

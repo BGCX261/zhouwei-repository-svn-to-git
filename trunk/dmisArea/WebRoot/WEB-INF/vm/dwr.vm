@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE dwr PUBLIC "-//GetAhead Limited//DTD Direct Web Remoting 1.0//EN" "http://www.getahead.ltd.uk/dwr/dwr10.dtd">
+
+<dwr>
+	<allow>
+		  <!-- 系统数据字典 -->
+		<create creator="spring" javascript="SystemDicHunter">
+			<param name="beanName" value="systemDicHunter" />
+			<include method="hunter"/>
+		</create>
+		
+		<!-- 业务数据字典 -->
+		<create creator="spring" javascript="BusinessDicHunter">
+			<param name="beanName" value="businessDicHunter" />
+			<include method="hunter"/>
+		</create>	
+		
+		<!-- 通用查询 -->
+               <create creator="spring" javascript="CommonQueryHunter">
+	                <param name="beanName" value="commonQueryHunter" />
+			<include method="hunter"/>
+	       </create>
+		   
+		   <create creator="spring" javascript="SysUiGridFacade">
+			<param name="beanName" value="sysUiGridFacade" />
+			<include method="getListByParam"/>
+			<include method="updateCustomData"/>
+			<include method="updateAdvanceQueryData"/>
+			<include method="deleteAdvanceQueryData"/>
+			<include method="getAdvanceQueryXml"/>
+			<include method="saveAdvanceQueryData"/>
+			<include method="updateDefaultQuery"/>
+		</create>
+
+	</allow>
+</dwr>

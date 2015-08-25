@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+           http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.0.xsd
+           http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd"
+	default-autowire="byName">
+
+	<!--
+		Transaction Interceptor set up to do PROPOGATION_REQUIRED on all
+		methods
+	-->
+	<bean id="matchAllTxInterceptor"
+		class="org.springframework.transaction.interceptor.TransactionInterceptor">
+		<property name="transactionManager">
+			<ref bean="transactionManager" />
+		</property>
+		<property name="transactionAttributes">
+			<props>
+				<prop key="find*">PROPAGATION_REQUIRED,readOnly
+				</prop>
+				<prop key="get*">PROPAGATION_REQUIRED,readOnly
+				</prop>
+				<prop key="*">PROPAGATION_REQUIRED</prop>
+			</props>
+		</property>
+	</bean>
+
+	<bean id="autoProxyCreator"
+		class="org.springframework.aop.framework.autoproxy.BeanNameAutoProxyCreator">
+		<property name="interceptorNames">
+			<list>
+				<idref local="matchAllTxInterceptor" />
+			</list>
+		</property>
+		<property name="beanNames">
+			<list>
+				<value>*Service</value>
+			</list>
+		</property>
+	</bean>
+
+	<!-- 属性文件读入 -->
+	<bean id="propertyConfigurer"
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations">
+			<list>
+				<value>classpath*:config/jdbc.properties
+				</value>
+				<value>classpath*:config/hibernate.properties
+				</value>
+			</list>
+		</property>
+	</bean>
+
+	<!--Hibernate SessionFatory-->
+	<bean id="resourceBinder" class="com.sitechasia.webx.core.utils.base.ResourceBinder">
+		<property name="location">
+			<value>classpath*:modules/**/hibernate-conf/*.hbm.xml
+			</value>
+		</property>
+	</bean>
+
+	<bean id="sessionFactory"
+		class="com.sitechasia.webx.core.dao.hibernate3.NamedMoudleHbmLocalSessionFactoryBean">
+		<constructor-arg index="0">
+			<ref bean="resourceBinder" />
+		</constructor-arg>
+
+		<property name="dataSource" ref="baseDataSource" />
+		<property name="configLocations">
+			<list></list>
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">${hibernate.dialect}</prop>
+				<prop key="hibernate.show_sql">${hibernate.show_sql}</prop>
+				<prop key="hibernate.connection.release_mode">${hibernate.connection.release_mode}
+				</prop>
+			</props>
+		</property>
+		<property name="mappingResourceServices">
+			<value>true</value>
+		</property>
+	</bean>
+
+	<!--Hibernate TransactionManager-->
+	<bean id="transactionManager"
+		class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<!-- 数据源定义,使用Apache DBCP 连接池 -->
+	<bean id="baseDataSource" class="org.apache.commons.dbcp.BasicDataSource"
+		destroy-method="close">
+		<property name="driverClassName" value="${jdbc.driverClassName}" />
+		<property name="url" value="${jdbc.url}" />
+		<property name="username" value="${jdbc.username}" />
+		<property name="password" value="${jdbc.password}" />
+		<property name="maxActive" value="50" />
+		<property name="maxIdle" value="30" />
+		<property name="maxWait" value="1000" />
+	</bean>
+
+	<!-- dozer -->
+	<bean id="dozerResourceBinder" class="com.sitechasia.webx.core.utils.base.ResourceBinder">
+		<property name="location">
+			<value>
+				classpath*:modules/dozer.xml;classpath*:modules/**/dozer-conf/*.dozer.xml
+			</value>
+		</property>
+	</bean>
+
+	<!-- DO VO 转换器 -->
+	<bean id="dozerConverter" class="com.sitechasia.webx.dozer.DozerConverterImp">
+		<constructor-arg index="0"
+			type="com.sitechasia.webx.core.utils.base.ResourceBinder">
+			<ref bean="dozerResourceBinder" />
+		</constructor-arg>
+	</bean>
+
+	<bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<property name="maxUploadSize" value="999999999" />
+	</bean>
+
+	<!-- bean id="multipartResolver2"
+		class="org.springframework.web.multipart.cos.CosMultipartResolver">
+		<property name="maxUploadSize" value="20" />
+	</bean-->
+
+	<bean id="uploadFilter" class="com.sitechasia.webx.web.util.WebxFileUploadFilter">
+		<property name="multipartResolver" ref="multipartResolver"></property>
+	</bean>
+
+</beans>

@@ -1,0 +1,20 @@
+<!DOCTYPE mappings PUBLIC "-//DOZER//DTD MAPPINGS//EN"
+"http://dozer.sourceforge.net/dtd/dozerbeanmapping.dtd">
+<mappings>
+   <mapping>
+   <class-a>com.techstar.dmis.dto.StdUnitDto</class-a>
+   <class-b>com.techstar.dmis.dto.transfer.TransStdUnitDto</class-b>
+   <field>
+      <a>fetsequipment5</a>
+      <b>fetsequipment5</b>
+      <a-hint>com.techstar.dmis.dto.EtsEquipmentDto</a-hint>
+      <b-hint>com.techstar.dmis.dto.transfer.TransEtsEquipmentDto</b-hint>
+   </field>
+   <field>
+      <a>fetsequipment6</a>
+      <b>fetsequipment6</b>
+      <a-hint>com.techstar.dmis.dto.EtsEquipmentDto</a-hint>
+      <b-hint>com.techstar.dmis.dto.transfer.TransEtsEquipmentDto</b-hint>
+   </field>
+   </mapping>
+</mappings>

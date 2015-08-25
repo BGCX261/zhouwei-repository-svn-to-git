@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2006-12-28 10:30:46 by Hibernate Tools 3.2.0.beta8 -->
+<hibernate-mapping>
+	<class name="com.sitechasia.webx.core.dao.hibernate3.UsersDO" table="users" lazy="false">
+		<comment></comment>
+		<id name="userid" type="int">
+			<column name="USERID" />
+			<generator class="native" />
+		</id>
+		<property name="username" type="string">
+			<column name="USERNAME" length="32" not-null="true">
+				<comment></comment>
+			</column>
+		</property>
+		<property name="useremail" type="java.lang.String">
+			<column name="USEREMAIL" length="100" not-null="false">
+				<comment></comment>
+			</column>
+		</property>
+	</class>
+</hibernate-mapping>

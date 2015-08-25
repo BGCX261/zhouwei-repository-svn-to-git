@@ -1,0 +1,14 @@
+<!--自动化值班日志-->
+<head>
+  <obj>ZdhAutoondutylogDto</obj>
+  <column  colName="ondutyno" propertyName="ondutyno" colType="string" dataTypeLen="32" isPrimary="1" visible="1" width="122" isEdit="0" textColor="#000000" className="ZdhAutoondutylogDto" refName="ondutyno" ></column>
+  <column  colName="fzdhworkbill2.workingbillno" propertyName="fzdhworkbill2" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="122" isEdit="0" textColor="#000000" className="ZdhWorkbillDto" refName="workingbillno" ></column>
+  <column  colName="fzdhworkbill2.applicationunit" propertyName="fzdhworkbill2" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="ZdhWorkbillDto" refName="applicationunit" ></column>
+  <column  colName="fzdhworkbill2.applicantedtime" propertyName="fzdhworkbill2" colType="date" dataTypeLen="0" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="ZdhWorkbillDto" refName="applicantedtime" ></column>
+  <column  colName="fzdhworkbill2.applicantsno" propertyName="fzdhworkbill2" colType="integer" dataTypeLen="0" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="ZdhWorkbillDto" refName="applicantsno" ></column>
+  <column  colName="fzdhworkbill2.workingcharge" propertyName="fzdhworkbill2" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="90" isEdit="0" textColor="#000000" className="ZdhWorkbillDto" refName="workingcharge" ></column>
+  <column  colName="fzdhworkbill2.worktime" propertyName="fzdhworkbill2" colType="date" dataTypeLen="0" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="ZdhWorkbillDto" refName="worktime" ></column>
+  <column  colName="fzdhworkbill2.workcontent" propertyName="fzdhworkbill2" colType="string" dataTypeLen="1000" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="ZdhWorkbillDto" refName="workcontent" ></column>
+  <column  colName="fzdhworkbill2.fexcutestatus" propertyName="fzdhworkbill2" colType="string" dataTypeLen="64" isPrimary="0" visible="1" width="90" isEdit="0" textColor="#000000" className="ZdhWorkbillDto" refName="fexcutestatus" ></column>
+  <column  colName="fzdhworkbill2.ispassed" propertyName="fzdhworkbill2" colType="string" dataTypeLen="64" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="ZdhWorkbillDto" refName="ispassed" ></column>
+</head>

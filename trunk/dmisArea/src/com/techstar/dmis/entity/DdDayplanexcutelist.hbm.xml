@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="com.techstar.dmis.entity">
+	<class name="DdDayplanexcutelist" table="DMIS_DD_DayPlanExcutelist" dynamic-insert="true" dynamic-update="true" optimistic-lock="version">
+    <id name="fid" type="string">
+      <column name="fid" sql-type="varchar(40)" not-null="true"/>
+      <generator class="assigned"/>
+    </id>
+
+ 	<version name="version" column="VERSION" unsaved-value="undefined"/>
+  
+   <property name="fsendcmder" type="string"  not-null="false">
+    <column name="fsendcmder"  
+		length="20"               
+    />
+</property>	
+    <property name="freccmder" type="string"  not-null="false">
+    <column name="freccmder"  
+		length="20"               
+    />
+</property>	
+    <property name="fsendcmdtime" type="timestamp"  not-null="false">
+    <column name="fsendcmdtime"  
+		               
+    />
+</property>	
+    <property name="freturnner" type="string"  not-null="false">
+    <column name="freturnner"  
+		length="20"               
+    />
+</property>	
+    <property name="freturntime" type="timestamp"  not-null="false">
+    <column name="freturntime"  
+		               
+    />
+</property>	
+    <property name="fspresponser" type="string"  not-null="false">
+    <column name="fspresponser"  
+		length="20"               
+    />
+</property>	
+    <property name="faccepter" type="string"  not-null="false">
+    <column name="faccepter"  
+		length="40"               
+    />
+</property>	
+    <property name="fexcutedept" type="string"  not-null="false">
+    <column name="fexcutedept"  
+		length="100"               
+    />
+</property>	
+    <property name="fexcuteremark" type="string"  not-null="false">
+    <column name="fexcuteremark"  
+		length="100"               
+    />
+</property>	
+    <property name="sys_fille" type="string"  not-null="false">
+    <column name="sys_fille"  
+		length="40"               
+    />
+</property>	
+    <property name="sys_filldept" type="string"  not-null="false">
+    <column name="sys_filldept"  
+		length="80"               
+    />
+</property>	
+    <property name="sys_filltime" type="timestamp"  not-null="false">
+    <column name="sys_filltime"  
+		               
+    />
+</property>	
+    <property name="sys_isvalid" type="integer"  not-null="false">
+    <column name="sys_isvalid"  
+		               
+    />
+</property>	
+    <property name="sys_dataowner" type="string"  not-null="false">
+    <column name="sys_dataowner"  
+		length="40"               
+    />
+</property>	
+  
+	
+    <many-to-one name="zdddayplanexcutelist1" class="DdDoutageplan"   column="FDayPlanNO" cascade="delete-orphan"></many-to-one>
+     </class>
+
+</hibernate-mapping>
+

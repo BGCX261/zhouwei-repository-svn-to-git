@@ -1,0 +1,163 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="com.techstar.dmis.entity">
+	<class name="DdCutofflist" table="DMIS_DD_CutOffList" dynamic-insert="true" dynamic-update="true" optimistic-lock="version">
+    <id name="fid" type="string">
+      <column name="fid" sql-type="varchar(40)" not-null="true"/>
+      <generator class="assigned"/>
+    </id>
+
+ 	<version name="version" column="VERSION" unsaved-value="undefined"/>
+  
+   <property name="fsuspdate" type="date"  not-null="false">
+    <column name="fsuspdate"  
+		               
+    />
+</property>	
+    <property name="fsusptime" type="timestamp"  not-null="false">
+    <column name="fsusptime"  
+		               
+    />
+</property>	
+    <property name="fgiveorderunit" type="string"  not-null="false">
+    <column name="fgiveorderunit"  
+		length="150"               
+    />
+</property>	
+    <property name="fgiver" type="string"  not-null="false">
+    <column name="fgiver"  
+		length="20"               
+    />
+</property>	
+    <property name="fgiveordertime" type="date"  not-null="false">
+    <column name="fgiveordertime"  
+		               
+    />
+</property>	
+    <property name="floadunit" type="string"  not-null="false">
+    <column name="floadunit"  
+		length="150"               
+    />
+</property>	
+    <property name="faccepter" type="string"  not-null="false">
+    <column name="faccepter"  
+		length="20"               
+    />
+</property>	
+    <property name="fsummitter" type="string"  not-null="false">
+    <column name="fsummitter"  
+		length="20"               
+    />
+</property>	
+    <property name="fsummitordertime" type="timestamp"  not-null="false">
+    <column name="fsummitordertime"  
+		               
+    />
+</property>	
+    <property name="fload" type="integer"  not-null="false">
+    <column name="fload"  
+		length="14"               
+    />
+</property>	
+    <property name="fregionloadbefore" type="integer"  not-null="false">
+    <column name="fregionloadbefore"  
+		length="14"               
+    />
+</property>	
+    <property name="fregionloadafter" type="integer"  not-null="false">
+    <column name="fregionloadafter"  
+		length="14"               
+    />
+</property>	
+    <property name="frealload" type="integer"  not-null="false">
+    <column name="frealload"  
+		length="14"               
+    />
+</property>	
+    <property name="frealno" type="integer"  not-null="false">
+    <column name="frealno"  
+		               
+    />
+</property>	
+    <property name="frecoverytime" type="timestamp"  not-null="false">
+    <column name="frecoverytime"  
+		               
+    />
+</property>	
+    <property name="frecoveryload" type="integer"  not-null="false">
+    <column name="frecoveryload"  
+		length="14"               
+    />
+</property>	
+    <property name="frecoverygiver" type="string"  not-null="false">
+    <column name="frecoverygiver"  
+		length="20"               
+    />
+</property>	
+    <property name="fgiverecoverytime" type="timestamp"  not-null="false">
+    <column name="fgiverecoverytime"  
+		               
+    />
+</property>	
+    <property name="faccepterrecorery" type="string"  not-null="false">
+    <column name="faccepterrecorery"  
+		length="20"               
+    />
+</property>	
+    <property name="fsummiterrecorery" type="string"  not-null="false">
+    <column name="fsummiterrecorery"  
+		length="20"               
+    />
+</property>	
+    <property name="fsummiterecorerytime" type="date"  not-null="false">
+    <column name="fsummiterecorerytime"  
+		               
+    />
+</property>	
+    <property name="floadunitid" type="string"  not-null="false">
+    <column name="floadunitid"  
+		length="40"               
+    />
+</property>	
+    <property name="ffatherid" type="string"  not-null="true">
+    <column name="ffatherid"  
+		length="40"               
+    />
+</property>	
+    <property name="sys_fille" type="string"  not-null="false">
+    <column name="sys_fille"  
+		length="40"               
+    />
+</property>	
+    <property name="sys_filldept" type="string"  not-null="false">
+    <column name="sys_filldept"  
+		length="80"               
+    />
+</property>	
+    <property name="sys_filltime" type="timestamp"  not-null="false">
+    <column name="sys_filltime"  
+		               
+    />
+</property>	
+    <property name="sys_isvalid" type="integer"  not-null="false">
+    <column name="sys_isvalid"  
+		               
+    />
+</property>	
+    <property name="sys_dataowner" type="string"  not-null="false">
+    <column name="sys_dataowner"  
+		length="40"               
+    />
+</property>	
+    <property name="fordertype" type="string"  >
+    <column name="fordertype"  
+		length="200"               
+    />
+</property>	
+  
+	
+    <set name="fddcutoffdetaillist1" inverse="true" cascade="delete-orphan"><key column="FID"/><one-to-many class="DdCutoffdetaillist"/></set>
+     </class>
+
+</hibernate-mapping>
+

@@ -1,0 +1,128 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="com.techstar.dmis.entity">
+	<class name="ParaTurBineAdjuster" table="DMIS_ParaTurBineAdjuster" dynamic-insert="true" dynamic-update="true" optimistic-lock="version">
+    <id name="feqpid" type="string">
+      <column name="feqpid" sql-type="varchar(80)" not-null="true"/>
+      <generator class="assigned"/>
+    </id>
+
+ 	<version name="version" column="VERSION" unsaved-value="undefined"/>
+  
+   <property name="fpowerplan" type="string"  not-null="false">
+    <column name="fpowerplan"  
+		length="100"               
+    />
+</property>	
+    <property name="fpowerunitno" type="string"  not-null="false">
+    <column name="fpowerunitno"  
+		length="20"               
+    />
+</property>	
+    <property name="fpowerunitmode" type="string"  not-null="false">
+    <column name="fpowerunitmode"  
+		length="20"               
+    />
+</property>	
+    <property name="fpowerunitcapa" type="integer"  not-null="false">
+    <column name="fpowerunitcapa"  
+		length="10"        precision="2"       
+    />
+</property>	
+    <property name="fboilertype" type="string"  not-null="false">
+    <column name="fboilertype"  
+		length="20"               
+    />
+</property>	
+    <property name="fhasdcs" type="string"  not-null="false">
+    <column name="fhasdcs"  
+		length="150"               
+    />
+</property>	
+    <property name="fdcsfactory" type="string"  not-null="false">
+    <column name="fdcsfactory"  
+		length="100"               
+    />
+</property>	
+    <property name="fturbinefactory" type="string"  not-null="false">
+    <column name="fturbinefactory"  
+		length="150"               
+    />
+</property>	
+    <property name="fturbinetype" type="string"  not-null="false">
+    <column name="fturbinetype"  
+		length="20"               
+    />
+</property>	
+    <property name="fturbinerotorspeed" type="integer"  not-null="false">
+    <column name="fturbinerotorspeed"  
+		length="10"        precision="2"       
+    />
+</property>	
+    <property name="fhvreakconttime" type="integer"  not-null="false">
+    <column name="fhvreakconttime"  
+		length="10"        precision="2"       
+    />
+</property>	
+    <property name="freheatreakconttime" type="integer"  not-null="false">
+    <column name="freheatreakconttime"  
+		length="10"        precision="2"       
+    />
+</property>	
+    <property name="flvreakconttime" type="integer"  not-null="false">
+    <column name="flvreakconttime"  
+		length="10"        precision="2"       
+    />
+</property>	
+    <property name="fhvpowerratio" type="integer"  not-null="false">
+    <column name="fhvpowerratio"  
+		length="10"        precision="2"       
+    />
+</property>	
+    <property name="fmvpowerratio" type="integer"  not-null="false">
+    <column name="fmvpowerratio"  
+		length="10"        precision="2"       
+    />
+</property>	
+    <property name="flvpowerratio" type="integer"  not-null="false">
+    <column name="flvpowerratio"  
+		length="10"        precision="2"       
+    />
+</property>	
+    <property name="fplantmaxoutpower" type="integer"  not-null="false">
+    <column name="fplantmaxoutpower"  
+		length="10"        precision="2"       
+    />
+</property>	
+    <property name="fplantidlepower" type="integer"  not-null="false">
+    <column name="fplantidlepower"  
+		length="10"        precision="2"       
+    />
+</property>	
+    <property name="freakconttime" type="integer"  not-null="false">
+    <column name="freakconttime"  
+		length="10"        precision="2"       
+    />
+</property>	
+    <property name="ftakereakpress" type="integer"  not-null="false">
+    <column name="ftakereakpress"  
+		length="10"        precision="2"       
+    />
+</property>	
+    <property name="fheattakereakpress" type="integer"  not-null="false">
+    <column name="fheattakereakpress"  
+		length="10"        precision="2"       
+    />
+</property>	
+    <property name="fturbinefixpress" type="integer"  not-null="false">
+    <column name="fturbinefixpress"  
+		length="10"        precision="2"       
+    />
+</property>	
+  
+	
+ <many-to-one name="zparaturbineadjuster2" class="EtsEquipment"   column="FEqpID" cascade="delete-orphan"></many-to-one>
+     </class>
+
+</hibernate-mapping>
+

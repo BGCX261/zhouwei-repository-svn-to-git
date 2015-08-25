@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="com.techstar.dmis.entity">
+	<class name="FsLfeqpfixinformdetail" table="DMIS_FS_LFEqpFixInformDetail" dynamic-insert="true" dynamic-update="true" optimistic-lock="version">
+    <id name="fixinformdetailid" type="string">
+      <column name="fixinformdetailid" sql-type="varchar(40)" not-null="true"/>
+      <generator class="assigned"/>
+    </id>
+
+ 	<version name="version" column="VERSION" unsaved-value="undefined"/>
+  
+   <property name="fswitchno" type="string"  not-null="false">
+    <column name="fswitchno"  
+		length="40"               
+    />
+</property>	
+    <property name="flinename" type="string"  not-null="false">
+    <column name="flinename"  
+		length="40"               
+    />
+</property>	
+    <property name="fbusno" type="string"  not-null="false">
+    <column name="fbusno"  
+		length="40"               
+    />
+</property>	
+    <property name="ffrequency" type="integer"  not-null="false">
+    <column name="ffrequency"  
+		               
+    />
+</property>	
+    <property name="factiontime" type="integer"  not-null="false">
+    <column name="factiontime"  
+		               
+    />
+</property>	
+    <property name="fmodifydate" type="date"  not-null="false">
+    <column name="fmodifydate"  
+		               
+    />
+</property>	
+    <property name="ffixtype" type="string"  not-null="false">
+    <column name="ffixtype"  
+		length="40"               
+    />
+</property>	
+    <property name="fremark" type="string"  not-null="false">
+    <column name="fremark"  
+		length="40"               
+    />
+</property>	
+    <property name="freceiver" type="string"  not-null="false">
+    <column name="freceiver"  
+		length="40"               
+    />
+</property>	
+    <property name="freceivetime" type="date"  not-null="false">
+    <column name="freceivetime"  
+		               
+    />
+</property>	
+    <property name="fanswer" type="string"  not-null="false">
+    <column name="fanswer"  
+		length="40"               
+    />
+</property>	
+    <property name="fanswertime" type="date"  not-null="false">
+    <column name="fanswertime"  
+		               
+    />
+</property>	
+  
+	
+ <many-to-one name="zfslfeqpfixinformdetail5" class="FsLfparalist"   column="FixInformDetailID" cascade="none"></many-to-one>
+         <many-to-one name="zfslfeqpfixinformdetail1" class="FsLfeqpfixinform"   column="FixInformID" cascade="delete-orphan"></many-to-one>
+         <many-to-one name="zfslfeqpfixinformdetail2" class="StdLfround"   column="FRoundNO" cascade="none"></many-to-one>
+     </class>
+
+</hibernate-mapping>
+

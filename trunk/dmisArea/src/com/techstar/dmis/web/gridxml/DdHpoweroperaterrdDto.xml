@@ -1,0 +1,27 @@
+<!--电厂运行(下令操作)记录-->
+<head>
+  <obj>DdHpoweroperaterrdDto</obj>
+  <column  colName="fid" propertyName="fid" colType="string" dataTypeLen="32" isPrimary="1" visible="1" width="74" isEdit="0" textColor="#000000" className="DdHpoweroperaterrdDto" refName="fid" ></column>
+<column  colName="version" propertyName="version" colType="integer" dataTypeLen="0" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="DdHpoweroperaterrdDto" refName="version" ></column>
+  <column  colName="fplant" propertyName="fplant" colType="string" dataTypeLen="150" isPrimary="0" visible="1" width="58" isEdit="0" textColor="#000000" className="DdHpoweroperaterrdDto" refName="fplant" ></column>
+  <column  colName="fsendcmder" propertyName="fsendcmder" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="58" isEdit="0" textColor="#000000" className="DdHpoweroperaterrdDto" refName="fsendcmder" ></column>
+  <column  colName="freccmder" propertyName="freccmder" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="58" isEdit="0" textColor="#000000" className="DdHpoweroperaterrdDto" refName="freccmder" ></column>
+  <column  colName="fsendcmdtime" propertyName="fsendcmdtime" colType="date" dataTypeLen="0" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="DdHpoweroperaterrdDto" refName="fsendcmdtime" ></column>
+  <column  colName="fsendcmdwaterlevel" propertyName="fsendcmdwaterlevel" colType="float" dataTypeLen="14" isPrimary="0" visible="1" width="106" isEdit="0" textColor="#000000" className="DdHpoweroperaterrdDto" refName="fsendcmdwaterlevel" ></column>
+  <column  colName="fsendcmdgenerating" propertyName="fsendcmdgenerating" colType="float" dataTypeLen="14" isPrimary="0" visible="1" width="114" isEdit="0" textColor="#000000" className="DdHpoweroperaterrdDto" refName="fsendcmdgenerating" ></column>
+  <column  colName="fsendcmdoutflow" propertyName="fsendcmdoutflow" colType="float" dataTypeLen="14" isPrimary="0" visible="1" width="122" isEdit="0" textColor="#000000" className="DdHpoweroperaterrdDto" refName="fsendcmdoutflow" ></column>
+  <column  colName="fsummiter" propertyName="fsummiter" colType="string" dataTypeLen="20" isPrimary="0" visible="1" width="58" isEdit="0" textColor="#000000" className="DdHpoweroperaterrdDto" refName="fsummiter" ></column>
+  <column  colName="freccmdwaterlevel" propertyName="freccmdwaterlevel" colType="float" dataTypeLen="14" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="DdHpoweroperaterrdDto" refName="freccmdwaterlevel" ></column>
+  <column  colName="freccmdgenerating" propertyName="freccmdgenerating" colType="float" dataTypeLen="14" isPrimary="0" visible="1" width="114" isEdit="0" textColor="#000000" className="DdHpoweroperaterrdDto" refName="freccmdgenerating" ></column>
+  <column  colName="freccmdoutflow" propertyName="freccmdoutflow" colType="float" dataTypeLen="14" isPrimary="0" visible="1" width="90" isEdit="0" textColor="#000000" className="DdHpoweroperaterrdDto" refName="freccmdoutflow" ></column>
+  <column  colName="fsummittime" propertyName="fsummittime" colType="date" dataTypeLen="0" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="DdHpoweroperaterrdDto" refName="fsummittime" ></column>
+  <column  colName="fwriteinlog" propertyName="fwriteinlog" colType="string" dataTypeLen="2" isPrimary="0" visible="1" width="106" isEdit="0" textColor="#000000" className="DdHpoweroperaterrdDto" refName="fwriteinlog" ></column>
+  <column  colName="fwriteinwglog" propertyName="fwriteinwglog" colType="string" dataTypeLen="2" isPrimary="0" visible="1" width="106" isEdit="0" textColor="#000000" className="DdHpoweroperaterrdDto" refName="fwriteinwglog" ></column>
+  <column  colName="fsendcmderid" propertyName="fsendcmderid" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="DdHpoweroperaterrdDto" refName="fsendcmderid" ></column>
+  <column  colName="freccmderid" propertyName="freccmderid" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="DdHpoweroperaterrdDto" refName="freccmderid" ></column>
+  <column  colName="fsummiterid" propertyName="fsummiterid" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="DdHpoweroperaterrdDto" refName="fsummiterid" ></column>
+  <column  colName="sys_fille" propertyName="sys_fille" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="58" isEdit="0" textColor="#000000" className="DdHpoweroperaterrdDto" refName="sys_fille" ></column>
+  <column  colName="sys_filldept" propertyName="sys_filldept" colType="string" dataTypeLen="80" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="DdHpoweroperaterrdDto" refName="sys_filldept" ></column>
+  <column  colName="sys_filltime" propertyName="sys_filltime" colType="date" dataTypeLen="80" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="DdHpoweroperaterrdDto" refName="sys_filltime" ></column>
+  <column  colName="fordertype" propertyName="fordertype" colType="string" dataTypeLen="64" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="DdHpoweroperaterrdDto" refName="fordertype" ></column>
+</head>

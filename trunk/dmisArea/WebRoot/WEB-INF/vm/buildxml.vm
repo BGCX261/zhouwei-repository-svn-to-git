@@ -1,0 +1,64 @@
+<project name="dmis" basedir="." default="dist">
+<property  file="build.properties"/>
+
+<property name="dist.name" value="dmis"/>
+<property name="src" location="."/>
+<property name="build" location="build"/>
+<property name="dist" location="dist"/>
+<property name="war" location="war"/>
+
+<property name="web" location="${webroot}\WEB-INF"/>	
+<property name="webroot" location="${webroot}"/>
+<property name="web.lib" location="${webroot}\WEB-INF\lib"/>
+<property name="comm.lib" location="${envlib}"/>
+<property name="delete.home" location="${webroot}\WEB-INF\classes"/>
+
+<property name="hbm.from" location="${srcpath}\com\techstar\dmis\entity"/>
+<property name="hbm.to" location="${webroot}\classes\com\techstar\dmis\entity"/>
+
+
+<mkdir dir="${build}"/>
+<mkdir dir="${dist}"/>
+<mkdir dir="${war}"/>
+<path id="project.class.path">
+<fileset dir="${web.lib}">
+<include name="**/*.jar"/>
+</fileset>
+<fileset dir="${comm.lib}">
+<include name="**/*.jar"/>
+</fileset>
+</path>
+<target name="init">
+<tstamp/>
+</target>
+
+<target name="compile" depends="init">
+<javac srcdir="${src}" destdir="${build}">
+<classpath refid="project.class.path"/>
+</javac> 
+</target>
+
+<target name="dist" depends="compile">
+<jar jarfile="${dist}/dmis-${DSTAMP}.jar" basedir="${build}"/>
+</target>
+ <target name="clean" depends="init">
+	    <delete dir="${delete.home}/org"/>
+	    <delete dir="${delete.home}/com"/>
+	    <delete>
+	      <fileset dir="${delete.home}" includes="**/*.class"/>
+	    </delete>
+</target>
+<target name="copy" depends="compile">
+		   <copy  todir="${delete.home}">
+		      <fileset dir="./build" includes="**/*.*"/>
+		   </copy>
+</target>
+<target name="hbmcopy" depends="copy">
+	    <copy  todir="${hbm.to}">
+			 <fileset dir="${hbm.from}" includes="**/*.xml"/>
+		 </copy>
+</target>
+
+ 
+</project>
+

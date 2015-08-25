@@ -1,0 +1,108 @@
+<HTML>
+	<HEAD>
+		<TITLE></TITLE>
+		<META http-equiv="Content-Type" content="text/html; charset=宋体">
+		<link rel="stylesheet" type="text/css" media="all" href="themes/bluexp.css" title="Calendar Theme - system.css">
+			<link href="doc/css/zpcal.css" rel="stylesheet" type="text/css" />
+			<link href="doc/css/template.css" rel="stylesheet" type="text/css" />
+			<style type="text/css">
+        
+         .edges {
+            border : 1px solid;
+            border-color: #adaa9c #fff #fff #adaa9c;
+            background-color: #fffbee;
+         }
+         
+         .between {
+            background-color: #dccdb9;
+         }
+
+         .calendar tbody .disabled { text-decoration: line-through; color:#000}
+		</style>
+			<script>
+			
+				var popupcalender;
+				
+				function getpopupcalender(src)
+				{
+					popupcalender = src;
+				}
+				
+			
+			</script>
+			<script>
+				function Calendar2()
+				{
+					this.version = "0.0.06.0314";
+				    
+					this.show = function(refObj)
+					{
+						this._init(refObj);
+				        
+						this._popup.show(0,refObj.offsetHeight,250,168,refObj);
+					}
+				    
+					this.hide = function()
+					{
+						this._popup.hide();
+					}
+				    
+					this._popup = null;        
+					this._init  = function(refObj)
+					{
+						if(this._popup == null)
+						{
+							this._popup = window.createPopup();
+							this._popup.document.write(popupcalender.replace("{0}", refObj.id));
+				            
+							this._popup.document.write("<head><META http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\"></head>");
+				            
+						}
+					}
+				}
+
+				Calendar2._G_M  = null;
+				Calendar2._C_M  = null;
+				Calendar2.Show = function(refObj,showNew)
+				{
+					if(typeof(refObj) == "string")
+						refObj = document.getElementById(refObj);
+				        
+					if(showNew)
+					{
+						Calendar2._C_M = new Calendar2();
+				        
+						Calendar2._C_M.show(refObj);
+					}
+					else
+					{        
+						if(Calendar2._G_M == null)
+							Calendar2._G_M = new Calendar2();
+				        
+						Calendar2._C_M = Calendar2._G_M;
+						Calendar2._C_M.show(refObj);
+					}
+				}
+
+				Calendar2.Hide = function()
+				{
+					Calendar2._C_M.hide();
+					
+				}
+				
+				function fff(){
+					alert("ggg");
+				}
+
+			</script>
+	</HEAD>
+	<BODY >
+		<DOWNLOAD ID="dwn" STYLE="behavior:url(#default#download)" />
+		<script>
+			dwn.startDownload('popupcalendarch0.htm', getpopupcalender);
+			
+		</script>
+		
+		<input type="text" id="" onclick="Calendar2.Show(this);" NAME="test" /> <input type="text" id="test2" onclick="Calendar2.Show(this,true);" NAME="test2" />
+	</BODY>
+</HTML>

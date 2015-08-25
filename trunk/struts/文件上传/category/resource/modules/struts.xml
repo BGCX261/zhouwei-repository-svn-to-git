@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts-config PUBLIC
+		"-//Apache Software Foundation//DTD Struts Configuration 1.2//EN"
+		"http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+
+	<global-exceptions>
+		<exception
+			handler="com.sitechasia.webx.core.exception.support.StrutsExceptionHandler"
+			key="GLOBAL_ERROR_CODE" path="/commons/error.jsp" type="java.lang.Exception" />
+	</global-exceptions>
+
+	<controller>
+		<set-property property="processorClass"
+			value="org.springframework.web.struts.DelegatingRequestProcessor" />
+	</controller>
+
+	<message-resources parameter="classpath*:modules/**/i18n/*.properties@defaultExpire=0"
+		factory="com.sitechasia.webx.web.struts1.util.WebxPropertyMessageResourcesFactory" />
+
+	<plug-in className="org.springframework.web.struts.ContextLoaderPlugIn">
+		<set-property property="contextConfigLocation"
+			value="classpath*:modules/**/struts-spring-conf/*.xml" />
+	</plug-in>
+
+
+</struts-config>

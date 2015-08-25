@@ -1,0 +1,16 @@
+<!--调度日志-->
+<head>
+  <obj>DdDayondutylogDto</obj>
+  <column  colName="fondutyid" propertyName="fondutyid" colType="string" dataTypeLen="32" isPrimary="1" visible="1" width="74" isEdit="0" textColor="#000000" className="DdDayondutylogDto" refName="fondutyid" ></column>
+  <column  colName="fdaysuccessiontime" propertyName="fdaysuccessiontime" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="106" isEdit="0" textColor="#000000" className="DdDayondutylogDto" refName="fdaysuccessiontime" ></column>
+  <column  colName="fbnighthandovertime" propertyName="fbnighthandovertime" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="122" isEdit="0" textColor="#000000" className="DdDayondutylogDto" refName="fbnighthandovertime" ></column>
+  <column  colName="fanighthandovertime" propertyName="fanighthandovertime" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="122" isEdit="0" textColor="#000000" className="DdDayondutylogDto" refName="fanighthandovertime" ></column>
+  <column  colName="fdayminister" propertyName="fdayminister" colType="string" dataTypeLen="200" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="DdDayondutylogDto" refName="fdayminister" ></column>
+  <column  colName="fbnightminister" propertyName="fbnightminister" colType="string" dataTypeLen="200" isPrimary="0" visible="1" width="90" isEdit="0" textColor="#000000" className="DdDayondutylogDto" refName="fbnightminister" ></column>
+  <column  colName="fanightminister" propertyName="fanightminister" colType="string" dataTypeLen="200" isPrimary="0" visible="1" width="90" isEdit="0" textColor="#000000" className="DdDayondutylogDto" refName="fanightminister" ></column>
+  <column  colName="content" propertyName="content" colType="blob" dataTypeLen="0" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="DdDayondutylogDto" refName="content" ></column>
+  <column  colName="logdate" propertyName="logdate" colType="date" dataTypeLen="0" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="DdDayondutylogDto" refName="logdate" ></column>
+  <column  colName="sys_fille" propertyName="sys_fille" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="58" isEdit="0" textColor="#000000" className="DdDayondutylogDto" refName="sys_fille" ></column>
+  <column  colName="sys_filldept" propertyName="sys_filldept" colType="string" dataTypeLen="80" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="DdDayondutylogDto" refName="sys_filldept" ></column>
+  <column  colName="sys_filltime" propertyName="sys_filltime" colType="date" dataTypeLen="80" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="DdDayondutylogDto" refName="sys_filltime" ></column>
+</head>

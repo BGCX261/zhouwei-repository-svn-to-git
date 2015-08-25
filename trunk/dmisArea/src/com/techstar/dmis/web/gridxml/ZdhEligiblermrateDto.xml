@@ -1,0 +1,12 @@
+<!--遥测合格率-->
+<head>
+  <obj>ZdhEligiblermrateDto</obj>
+  <column  colName="fid" propertyName="fid" colType="string" dataTypeLen="32" isPrimary="1" visible="1" width="74" isEdit="0" textColor="#000000" className="ZdhEligiblermrateDto" refName="fid" ></column>
+  <column  colName="reportsdate" propertyName="reportsdate" colType="date" dataTypeLen="40" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="ZdhEligiblermrateDto" refName="reportsdate" ></column>
+  <column  colName="remotemeasureamount" propertyName="remotemeasureamount" colType="integer" dataTypeLen="0" isPrimary="0" visible="1" width="106" isEdit="0" textColor="#000000" className="ZdhEligiblermrateDto" refName="remotemeasureamount" ></column>
+  <column  colName="failuredatanoamount" propertyName="failuredatanoamount" colType="integer" dataTypeLen="0" isPrimary="0" visible="1" width="122" isEdit="0" textColor="#000000" className="ZdhEligiblermrateDto" refName="failuredatanoamount" ></column>
+  <column  colName="eligiblerate" propertyName="eligiblerate" colType="float" dataTypeLen="7" isPrimary="0" visible="1" width="146" isEdit="0" textColor="#000000" className="ZdhEligiblermrateDto" refName="eligiblerate" ></column>
+  <column  colName="remarks" propertyName="remarks" colType="string" dataTypeLen="100" isPrimary="0" visible="1" width="42" isEdit="0" textColor="#000000" className="ZdhEligiblermrateDto" refName="remarks" ></column>
+  <column  colName="sys_fille" propertyName="sys_fille" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="58" isEdit="0" textColor="#000000" className="ZdhEligiblermrateDto" refName="sys_fille" ></column>
+  <column  colName="version" propertyName="sys_fille" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="58" isEdit="0" textColor="#000000" className="ZdhEligiblermrateDto" refName="version" ></column>
+</head>

@@ -1,0 +1,44 @@
+<!DOCTYPE mappings PUBLIC "-//DOZER//DTD MAPPINGS//EN"
+"http://dozer.sourceforge.net/dtd/dozerbeanmapping.dtd">
+<mappings>
+   <mapping>
+   <class-a>com.techstar.dmis.dto.StdStationDto</class-a>
+   <class-b>com.techstar.dmis.dto.transfer.TransStdStationDto</class-b>
+   <field>
+      <a>fzdhtransrecord1</a>
+      <b>fzdhtransrecord1</b>
+      <a-hint>com.techstar.dmis.dto.ZdhTransrecordDto</a-hint>
+      <b-hint>com.techstar.dmis.dto.transfer.TransZdhTransrecordDto</b-hint>
+   </field>
+   <field>
+      <a>fddhpoweroperaterrd2</a>
+      <b>fddhpoweroperaterrd2</b>
+      <a-hint>com.techstar.dmis.dto.DdHpoweroperaterrdDto</a-hint>
+      <b-hint>com.techstar.dmis.dto.transfer.TransDdHpoweroperaterrdDto</b-hint>
+   </field>
+   <field>
+      <a>fddwaterheight2</a>
+      <b>fddwaterheight2</b>
+      <a-hint>com.techstar.dmis.dto.DdWaterheightDto</a-hint>
+      <b-hint>com.techstar.dmis.dto.transfer.TransDdWaterheightDto</b-hint>
+   </field>
+   <field>
+      <a>fbhasregulate2</a>
+      <b>fbhasregulate2</b>
+      <a-hint>com.techstar.dmis.dto.BhAsregulateDto</a-hint>
+      <b-hint>com.techstar.dmis.dto.transfer.TransBhAsregulateDto</b-hint>
+   </field>
+   <field>
+      <a>fddpowerchangrecord6</a>
+      <b>fddpowerchangrecord6</b>
+      <a-hint>com.techstar.dmis.dto.DdPowerchangrecordDto</a-hint>
+      <b-hint>com.techstar.dmis.dto.transfer.TransDdPowerchangrecordDto</b-hint>
+   </field>
+   <field>
+      <a>fzdhrmrec4</a>
+      <b>fzdhrmrec4</b>
+      <a-hint>com.techstar.dmis.dto.ZdhRmrecDto</a-hint>
+      <b-hint>com.techstar.dmis.dto.transfer.TransZdhRmrecDto</b-hint>
+   </field>
+   </mapping>
+</mappings>

@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="com.techstar.dmis.entity">
+	<class name="ParaAuxProtect" table="DMIS_ParaAuxProtect" dynamic-insert="true" dynamic-update="true" optimistic-lock="version">
+    <id name="feqpid" type="string">
+      <column name="feqpid" sql-type="varchar(80)" not-null="true"/>
+      <generator class="assigned"/>
+    </id>
+
+ 	<version name="version" column="VERSION" unsaved-value="undefined"/>
+  
+   <property name="ffaultrecorderno" type="string"  not-null="false">
+    <column name="ffaultrecorderno"  
+		length="64"               
+    />
+</property>	
+    <property name="fanalog" type="string"  not-null="false">
+    <column name="fanalog"  
+		length="256"               
+    />
+</property>	
+    <property name="fswitch" type="string"  not-null="false">
+    <column name="fswitch"  
+		length="256"               
+    />
+</property>	
+    <property name="fisinuse" type="string"  not-null="false">
+    <column name="fisinuse"  
+		length="8"               
+    />
+</property>	
+    <property name="fmaterialcodify" type="string"  not-null="false">
+    <column name="fmaterialcodify"  
+		length="40"               
+    />
+</property>	
+    <property name="fremark" type="string"  not-null="false">
+    <column name="fremark"  
+		length="500"               
+    />
+</property>	
+  
+	
+ <many-to-one name="zparaauxprotect2" class="EtsEquipment"   column="FEqpID" cascade="delete-orphan"></many-to-one>
+     </class>
+
+</hibernate-mapping>
+

@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="com.techstar.dmis.entity">
+	<class name="MSTDBayOutage" table="DMIS_MSTDBayOutage" dynamic-insert="true" dynamic-update="true" optimistic-lock="version">
+    <id name="fid" type="string">
+      <column name="fid" sql-type="varchar(40)" not-null="true"/>
+      <generator class="assigned"/>
+    </id>
+
+ 	<version name="version" column="VERSION" unsaved-value="undefined"/>
+  
+   <property name="foutagedescription" type="string"  not-null="false">
+    <column name="foutagedescription"  
+		length="500"               
+    />
+</property>	
+    <property name="fworkplace" type="string"  not-null="false">
+    <column name="fworkplace"  
+		length="100"               
+    />
+</property>	
+  
+	
+ <many-to-one name="zmstdbayoutage2" class="Mbay"   column="FBAYID" cascade="delete"></many-to-one>
+         <many-to-one name="zmstdbayoutage3" class="MBayGroup"   column="FGROUPID" cascade="delete"></many-to-one>
+     </class>
+
+</hibernate-mapping>
+

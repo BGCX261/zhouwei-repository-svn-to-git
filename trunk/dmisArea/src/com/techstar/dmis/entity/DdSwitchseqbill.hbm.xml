@@ -1,0 +1,148 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="com.techstar.dmis.entity">
+	<class name="DdSwitchseqbill" table="DMIS_DD_SwitchSeqBill" dynamic-insert="true" dynamic-update="true" optimistic-lock="version">
+    <id name="fcomputerno" type="string">
+      <column name="fcomputerno" sql-type="varchar(40)" not-null="true"/>
+      <generator class="assigned"/>
+    </id>
+
+ 	<version name="version" column="VERSION" unsaved-value="undefined"/>
+  
+   <property name="fmanualno" type="string"  not-null="false">
+    <column name="fmanualno"  
+		length="40"               
+    />
+</property>	
+    <property name="fdate" type="date"  not-null="false">
+    <column name="fdate"  
+		               
+    />
+</property>	
+    <property name="fmission" type="string"  not-null="false">
+    <column name="fmission"  
+		length="500"               
+    />
+</property>	
+    <property name="fremark" type="string"  not-null="false">
+    <column name="fremark"  
+		length="500"               
+    />
+</property>	
+    <property name="fexcutestatus" type="string"  not-null="false">
+    <column name="fexcutestatus"  
+		length="20"               
+    />
+</property>	
+    <property name="fistypicalbill" type="string"  not-null="false">
+    <column name="fistypicalbill"  
+		length="2"               
+    />
+</property>	
+    <property name="fbillsource" type="string"  not-null="false">
+    <column name="fbillsource"  
+		length="300"               
+    />
+</property>	
+    <property name="fsrcbillno" type="string"  not-null="false">
+    <column name="fsrcbillno"  
+		length="40"               
+    />
+</property>	
+    <property name="fstatus" type="string"  not-null="false">
+    <column name="fstatus"  
+		length="20"               
+    />
+</property>	
+    <property name="fstationname" type="string"  not-null="false">
+    <column name="fstationname"  
+		length="40"               
+    />
+</property>	
+    <property name="fvoltage" type="integer"  not-null="true">
+    <column name="fvoltage"  
+		               
+    />
+</property>	
+    <property name="flinename" type="string"  not-null="false">
+    <column name="flinename"  
+		length="40"               
+    />
+</property>	
+    <property name="feqpid" type="string"  not-null="false">
+    <column name="feqpid"  
+		length="80"               
+    />
+</property>	
+    <property name="ftaskname" type="string"  not-null="false">
+    <column name="ftaskname"  
+		length="100"               
+    />
+</property>	
+    <property name="ispassed" type="string"  not-null="false">
+    <column name="ispassed"  
+		length="40"               
+    />
+</property>	
+    <property name="reason" type="string"  not-null="false">
+    <column name="reason"  
+		length="100"               
+    />
+</property>	
+    <property name="passedchecker" type="string"  not-null="false">
+    <column name="passedchecker"  
+		length="40"               
+    />
+</property>	
+    <property name="passchecktime" type="timestamp"  not-null="false">
+    <column name="passchecktime"  
+		               
+    />
+</property>	
+    <property name="fstepcounts" type="integer"  not-null="false">
+    <column name="fstepcounts"  
+		               
+    />
+</property>	
+    <property name="fstopreason" type="string"  not-null="false">
+    <column name="fstopreason"  
+		length="80"               
+    />
+</property>	
+    <property name="sys_fille" type="string"  not-null="false">
+    <column name="sys_fille"  
+		length="40"               
+    />
+</property>	
+    <property name="sys_filldept" type="string"  not-null="false">
+    <column name="sys_filldept"  
+		length="80"               
+    />
+</property>	
+    <property name="sys_filltime" type="timestamp"  not-null="false">
+    <column name="sys_filltime"  
+		               
+    />
+</property>	
+    <property name="sys_isvalid" type="integer"  not-null="false">
+    <column name="sys_isvalid"  
+		               
+    />
+</property>	
+    <property name="sys_dataowner" type="string"  not-null="false">
+    <column name="sys_dataowner"  
+		length="40"               
+    />
+</property>	
+    <property name="foperate" type="string"  >
+    <column name="foperate"  
+		length="200"               
+    />
+</property>	
+  
+	
+    <set name="fddseqbilldetail1" inverse="true" cascade="delete-orphan"><key column="FComputerNo"/><one-to-many class="DdSeqbilldetail"/></set>
+     </class>
+
+</hibernate-mapping>
+

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook V5.0//EN"
+"http://www.oasis-open.org/docbook/xml/5.0b5/dtd/docbook.dtd">
+<book version="5.0" xml:id="WebX-Core"
+xmlns:xi="http://www.w3.org/2001/XInclude"
+xmlns:xlink="http://www.w3.org/1999/xlink"
+xmlns="http://docbook.org/ns/docbook">
+	<info>
+		<title>WebX-Core设计说明及开发指南</title>
+	</info>
+
+	<toc></toc>
+
+	<!-- 前言 -->
+	<preface xml:id="preface">
+		<title>前言</title>
+		<para>WebX-Core是基于Spring, Hibernate, Struts的一套提供快速开发能力的开发框架。</para>
+	</preface>
+	
+	<xi:include href="model.xml" />
+	<xi:include href="dao.xml" />
+	<xi:include href="service.xml" />
+	<xi:include href="cache.xml" />
+</book>

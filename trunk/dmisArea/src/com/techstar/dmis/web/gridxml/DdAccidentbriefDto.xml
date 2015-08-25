@@ -1,0 +1,40 @@
+<!--故障简报-->
+<head>
+  <obj>DdAccidentbriefDto</obj>
+  <column colName="faccidentid" propertyName="faccidentid" colType="string" dataTypeLen="32"
+    isPrimary="1" visible="0" width="74" isEdit="0" textColor="#000000"
+    className="DdAccidentbriefDto" refName="faccidentid"/>
+  <column colName="faccidenttime" propertyName="faccidenttime" colType="date" dataTypeLen="0"
+    isPrimary="0" visible="1" width="106" isEdit="0" textColor="#000000"
+    className="DdAccidentbriefDto" refName="faccidenttime"/>
+  <column colName="faccidentname" propertyName="faccidentname" colType="string" dataTypeLen="300"
+    isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000"
+    className="DdAccidentbriefDto" refName="faccidentname"/>
+  <column colName="fvoltage" propertyName="fvoltage" colType="string" dataTypeLen="64" isPrimary="0"
+    visible="1" width="106" isEdit="0" textColor="#000000" className="DdAccidentbriefDto"
+    refName="fvoltage"/>
+  <column colName="accidentreason" propertyName="accidentreason" colType="string" dataTypeLen="100"
+    isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000"
+    className="DdAccidentbriefDto" refName="accidentreason"/>
+  <column colName="frecoverytime" propertyName="frecoverytime" colType="date" dataTypeLen="0"
+    isPrimary="0" visible="1" width="106" isEdit="0" textColor="#000000"
+    className="DdAccidentbriefDto" refName="frecoverytime"/>
+  <column colName="fwhethercompleted" propertyName="fwhethercompleted" colType="string"
+    dataTypeLen="64" isPrimary="0" visible="1" width="138" isEdit="0" textColor="#000000"
+    className="DdAccidentbriefDto" refName="fwhethercompleted"/>
+  <!--<column colName="fresult" propertyName="fresult" colType="string" dataTypeLen="64" isPrimary="0"
+    visible="1" width="74" isEdit="0" textColor="#000000" className="DdAccidentbriefDto"
+    refName="fresult"/>-->
+  <column colName="fimpact" propertyName="fimpact" colType="string" dataTypeLen="64" isPrimary="0"
+    visible="1" width="74" isEdit="0" textColor="#000000" className="DdAccidentbriefDto"
+    refName="fimpact"/>
+  <column colName="sys_dataowner" propertyName="sys_dataowner" colType="string" dataTypeLen="40"
+    isPrimary="0" visible="1" width="106" isEdit="0" textColor="#000000"
+    className="DdAccidentbriefDto" refName="sys_dataowner"/>
+  <column colName="fstatus" propertyName="fstatus" colType="string" dataTypeLen="40" isPrimary="0"
+    visible="0" width="106" isEdit="0" textColor="#000000" className="DdAccidentbriefDto"
+    refName="fstatus"/>
+  <column colName="version" propertyName="version" colType="string" dataTypeLen="10" isPrimary="0"
+    visible="0" width="74" isEdit="0" textColor="#000000" className="DdAccidentbriefDto"
+    refName="version"/>
+</head>

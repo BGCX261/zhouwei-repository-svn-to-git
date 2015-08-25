@@ -1,0 +1,57 @@
+﻿下载链接：http://www.sun.com/download/products.xml?id=4373c4c2
+
+
+Sun ONE Directory Server 5.2 Deployment & Tuning
+
+1.Designing the Directory Tree
+  referal or chained suffix
+2.SizeLimit
+3.Index
+4.Schema OID
+
+
+
+
+1.分布式LDAP应用部署
+
+  SUN 提供两种方法实现，一是Smart Referral ,二是Chained Suffix。Sun 在自己的Sun ONE admin console 和 ldapsearch中实现了trace.可以直接通过Smart Referral操作远程服务器的数据，而使用其他工具（比如 OpenLDAP的 ldapsearch）则只是返回referralde 的URL,所以推荐使用Chained Suffix。
+  使用Chained Suffix时，要注意的是不要忘记将 ACI 控制文件添加到其 suffixDN 位于远程服务器上的条目中。
+
+  Sun关于Referral的配置，详见：
+  http://docs.sun.com/source/816-6698-10/entries.html#20362
+
+  Sun关于Chained Suffix的配置，详见:
+  http://docs.sun.com/source/816-6698-10/suffixes.html#14792
+
+
+2. ldap_search: Administrative limit exceeded 问题
+
+   在Directory Server的Configuration面板中，选中Performance条目，在右测的Client Control中调整Size Limit ,Look-through limit,Time limit和Idle timeout参数设置。
+
+3. 查询返回结果速度慢的问题
+
+   查看errors log文件，如果记录为“ search is not indexed” 说明指定条件的查询没有相应的索引，要创建索引。
+ 
+   Sun关于Index的管理，详见:
+   http://docs.sun.com/source/816-6698-10/indexing.html#14779
+
+   同时，可以在Directory Server的Configuration面板中，选中Performance条目，在右测的Caching中调整Database cache size ,Initialize cache size和Entry cache size参数设置。
+
+   Sun关于Cache的调整，详见
+   http://docs.sun.com/source/816-6697-10/caching.html 
+   http://wiki.hitb.com.cn/Sun_ONE_Directory_Server_Tuning
+
+4 .Schema 设计
+
+   为严格遵守LDAP v3标准，Attribute OID必须是合法的私有企业数字标识，IANA提供给我们的企业标识为26452,前缀为1.3.6.1.4.1。
+
+   我和周炜约定的规范详见:
+   http://wiki.hitb.com.cn/Extending_the_Directory_Schema
+
+   Sun关于Schema的定义，详见:
+   http://docs.sun.com/source/816-6698-10/schema.html
+
+   INNA关于Private Enterprise Number详见：
+   http://www.iana.org/assignments/enterprise-numbers
+
+   

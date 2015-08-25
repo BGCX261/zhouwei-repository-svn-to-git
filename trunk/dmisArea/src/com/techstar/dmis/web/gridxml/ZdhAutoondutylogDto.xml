@@ -1,0 +1,16 @@
+<!--自动化值班日志-->
+<head>
+  <obj>ZdhAutoondutylogDto</obj>
+  <column  colName="ondutyno" propertyName="ondutyno" colType="string" dataTypeLen="32" isPrimary="1" visible="0" width="122" isEdit="0" textColor="#000000" className="ZdhAutoondutylogDto" refName="ondutyno" ></column>
+  <column  colName="logdate" propertyName="logdate" colType="date" dataTypeLen="0" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="ZdhAutoondutylogDto" refName="logdate" ></column>
+  <column  colName="successiontime" propertyName="successiontime" colType="date" dataTypeLen="0" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="ZdhAutoondutylogDto" refName="successiontime" ></column>
+  <column  colName="handovertime" propertyName="handovertime" colType="date" dataTypeLen="0" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="ZdhAutoondutylogDto" refName="handovertime" ></column>
+  <column  colName="attendant2" propertyName="attendant2" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="58" isEdit="0" textColor="#000000" className="ZdhAutoondutylogDto" refName="attendant2" ></column>
+  <column  colName="successor2" propertyName="successor2" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="58" isEdit="0" textColor="#000000" className="ZdhAutoondutylogDto" refName="successor2" ></column>
+  <column  colName="upstemperature" propertyName="upstemperature" colType="float" dataTypeLen="0" isPrimary="0" visible="1" width="114" isEdit="0" textColor="#000000" className="ZdhAutoondutylogDto" refName="upstemperature" ></column>
+  <column  colName="machinehalltemperature" propertyName="machinehalltemperature" colType="float" dataTypeLen="0" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="ZdhAutoondutylogDto" refName="machinehalltemperature" ></column>
+  <column  colName="machinehallhealth" propertyName="machinehallhealth" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="ZdhAutoondutylogDto" refName="machinehallhealth" ></column>
+  <column  colName="morningreportsystem" propertyName="morningreportsystem" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="154" isEdit="0" textColor="#000000" className="ZdhAutoondutylogDto" refName="morningreportsystem" ></column>
+  <column  colName="version" propertyName="version" colType="integer" dataTypeLen="10" isPrimary="0" visible="1" width="154" isEdit="0" textColor="#000000" className="ZdhAutoondutylogDto" refName="version" ></column>
+
+</head>

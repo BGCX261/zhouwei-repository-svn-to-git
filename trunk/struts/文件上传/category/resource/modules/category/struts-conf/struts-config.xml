@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<action-mappings>
+		<!-- 留意，这个配置文件中只有mapping而没有定义action，真正的action对象将由Spring进行维护 -->
+		<action path="/categoryAction" scope="request" validate="false"
+			parameter="method">
+			<forward name="list" path="/pages/category/CategoryList.jsp" />
+			<forward name="doSave" path="/categoryAction.do?method=list" />
+			<forward name="doDeleteByIds" path="/categoryAction.do?method=list" />
+			<forward name="doEdit" path="/pages/category/CategoryEdit.jsp" />
+			<forward name="getMemo" path="/pages/category/CategoryMemo.jsp" />
+			<forward name="doAdd" path="/pages/category/CategoryEdit.jsp" />
+			<forward name="fileUpload" path="/pages/category/fileUpload.jsp" />
+		</action>
+	</action-mappings>
+
+	<!-- message-resources parameter="classpath*:modules/category/i18n/*.properties"
+		factory="webx.struts.config.WebxPropertyMessageResourcesFactory" /-->
+</struts-config>

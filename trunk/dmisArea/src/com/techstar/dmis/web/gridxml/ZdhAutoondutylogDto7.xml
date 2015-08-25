@@ -1,0 +1,12 @@
+<!--自动化值班日志-->
+<head>
+  <obj>ZdhAutoondutylogDto</obj>
+  <column  colName="ondutyno" propertyName="ondutyno" colType="string" dataTypeLen="32" isPrimary="1" visible="1" width="122" isEdit="0" textColor="#000000" className="ZdhAutoondutylogDto" refName="ondutyno" ></column>
+  <column  colName="fzdhrmrec1.fstationname" propertyName="fzdhrmrec1" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="90" isEdit="0" textColor="#000000" className="ZdhRmrecDto" refName="fstationname" ></column>
+  <column  colName="fzdhrmrec1.switchno" propertyName="fzdhrmrec1" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="58" isEdit="0" textColor="#000000" className="ZdhRmrecDto" refName="switchno" ></column>
+  <column  colName="fzdhrmrec1.changeexplanationo" propertyName="fzdhrmrec1" colType="string" dataTypeLen="400" isPrimary="0" visible="1" width="106" isEdit="0" textColor="#000000" className="ZdhRmrecDto" refName="changeexplanationo" ></column>
+  <column  colName="fzdhrmrec1.modificationdatano" propertyName="fzdhrmrec1" colType="integer" dataTypeLen="0" isPrimary="0" visible="1" width="122" isEdit="0" textColor="#000000" className="ZdhRmrecDto" refName="modificationdatano" ></column>
+  <column  colName="fzdhrmrec1.modificationreason" propertyName="fzdhrmrec1" colType="string" dataTypeLen="400" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="ZdhRmrecDto" refName="modificationreason" ></column>
+  <column  colName="fzdhrmrec1.sys_fille" propertyName="fzdhrmrec1" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="58" isEdit="0" textColor="#000000" className="ZdhRmrecDto" refName="sys_fille" ></column>
+  <column  colName="fzdhrmrec1.sys_filltime" propertyName="fzdhrmrec1" colType="timestamp" dataTypeLen="" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="ZdhRmrecDto" refName="sys_filltime" ></column>
+</head>

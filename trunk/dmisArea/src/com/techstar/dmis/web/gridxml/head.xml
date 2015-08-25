@@ -1,0 +1,15 @@
+<head>
+	<obj>SaleBillDto</obj>
+	<column colName="cre_date" colType="integer" dataTypeLen="30" isPrimary="1" visible="1" width="100" isEdit="" textColor="#ffffff" className="" refName=""></column>
+	<column colName="id" colType="integer" dataTypeLen="30" isPrimary="1" visible="1" width="100" isEdit="" textColor="#ffffff" className="" refName=""></column>
+	<column colName="custom_id" colType="string" dataTypeLen="40" isPrimary="1" visible="1" width="110" isEdit="" textColor="#ffffff" className="" refName=""></column>
+	<column colName="custom_name" colType="string" dataTypeLen="50" isPrimary="0" visible="1" width="120" isEdit="" textColor="#ffffff" className="" refName=""></column>
+	<column colName="sale_mode" colType="float" dataTypeLen="60" isPrimary="0" visible="1" width="130" isEdit="" textColor="#ffffff" className="" refName=""></column>
+	<column colName="tranpriority" colType="double" dataTypeLen="70" isPrimary="0" visible="1" width="140" isEdit="" textColor="#ffffff" className="" refName=""></column>
+	<column colName="total" colType="integer" dataTypeLen="80" isPrimary="0" visible="1" width="150" isEdit="" textColor="#ffffff" className="" refName=""></column>
+	<column colName="memo" colType="timestamp" dataTypeLen="90" isPrimary="0" visible="1" width="150" isEdit="" textColor="#ffffff" className="" refName=""></column>
+	<column colName="check_begin_date" colType="timestamp" dataTypeLen="90" isPrimary="0" visible="1" width="150" isEdit="" textColor="#ffffff" className="" refName=""></column>
+	<column colName="check_end_date" colType="boolean" dataTypeLen="90" isPrimary="0" visible="1" width="150" isEdit="" textColor="#ffffff" className="" refName=""></column>
+	<column colName="sale_doc" colType="boolean" dataTypeLen="90" isPrimary="0" visible="1" width="150" isEdit="" textColor="#ffffff" className="" refName=""></column>
+	<column colName="version" colType="string" dataTypeLen="90" isPrimary="0" visible="1" width="150" isEdit="" textColor="#ffffff" className="" refName=""></column>
+</head>	

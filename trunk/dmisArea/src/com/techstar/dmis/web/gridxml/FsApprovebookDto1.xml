@@ -1,0 +1,11 @@
+<!--发电批准书-->
+<head>
+  <obj>FsApprovebookDto</obj>
+  <column  colName="fapprovcomputerno" propertyName="fapprovcomputerno" colType="string" dataTypeLen="32" isPrimary="1" visible="0" width="122" isEdit="0" textColor="#000000" className="FsApprovebookDto" refName="fapprovcomputerno" ></column>
+  <column  colName="ffsapprovebookdetail1.fapprovexcuteno" propertyName="ffsapprovebookdetail1" colType="string" dataTypeLen="32" isPrimary="1" visible="0" width="122" isEdit="0" textColor="#000000" className="FsApprovebookdetailDto" refName="fapprovexcuteno" ></column>
+  <column  colName="ffsapprovebookdetail1.sequenceno" propertyName="ffsapprovebookdetail1" colType="integer" dataTypeLen="0" isPrimary="0" visible="1" width="58" isEdit="0" textColor="#000000" className="FsApprovebookdetailDto" refName="sequenceno" ></column>
+  <column  colName="ffsapprovebookdetail1.remark" propertyName="ffsapprovebookdetail1" colType="string" dataTypeLen="80" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="FsApprovebookdetailDto" refName="remark" ></column>
+  <column  colName="ffsapprovebookdetail1.excutetime" propertyName="ffsapprovebookdetail1" colType="date" dataTypeLen="0" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="FsApprovebookdetailDto" refName="excutetime" ></column>
+  <column  colName="ffsapprovebookdetail1.excuter" propertyName="ffsapprovebookdetail1" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="58" isEdit="0" textColor="#000000" className="FsApprovebookdetailDto" refName="excuter" ></column>
+  <column  colName="ffsapprovebookdetail1.excutesituation" propertyName="ffsapprovebookdetail1" colType="string" dataTypeLen="200" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="FsApprovebookdetailDto" refName="excutesituation" ></column>
+</head>

@@ -1,0 +1,170 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="com.techstar.dmis.entity">
+	<class name="ZdhCharalterrecord" table="DMIS_ZDH_CharAlterRecord" dynamic-insert="true" dynamic-update="true" optimistic-lock="version">
+    <id name="recordsno" type="string">
+      <column name="recordsno" sql-type="varchar(40)" not-null="true"/>
+      <generator class="assigned"/>
+    </id>
+
+ 	<version name="version" column="VERSION" unsaved-value="undefined"/>
+  
+   <property name="taskexplanation" type="string"  not-null="false">
+    <column name="taskexplanation"  
+		length="200"               
+    />
+</property>	
+    <property name="modexplanation" type="string"  not-null="false">
+    <column name="modexplanation"  
+		length="400"               
+    />
+</property>	
+    <property name="linediagramamount" type="integer"  not-null="false">
+    <column name="linediagramamount"  
+		               
+    />
+</property>	
+    <property name="stationdiagramamount" type="integer"  not-null="false">
+    <column name="stationdiagramamount"  
+		               
+    />
+</property>	
+    <property name="accompanyingmap" type="string"  not-null="false">
+    <column name="accompanyingmap"  
+		length="400"               
+    />
+</property>	
+    <property name="mdiagram" type="org.springframework.orm.hibernate3.support.BlobByteArrayType"  not-null="false">
+    <column name="mdiagram"  
+		               
+    />
+</property>	
+    <property name="newtrfnum" type="integer"  not-null="false">
+    <column name="newtrfnum"  
+		               
+    />
+</property>	
+    <property name="newbusnum" type="integer"  not-null="true">
+    <column name="newbusnum"  
+		               
+    />
+</property>	
+    <property name="newswitchnum" type="integer"  not-null="false">
+    <column name="newswitchnum"  
+		               
+    />
+</property>	
+    <property name="newothersnum" type="integer"  not-null="false">
+    <column name="newothersnum"  
+		               
+    />
+</property>	
+    <property name="newplantnum" type="integer"  not-null="false">
+    <column name="newplantnum"  
+		               
+    />
+</property>	
+    <property name="changtrmnum" type="integer"  not-null="false">
+    <column name="changtrmnum"  
+		               
+    />
+</property>	
+    <property name="changbusnum" type="integer"  not-null="false">
+    <column name="changbusnum"  
+		               
+    />
+</property>	
+    <property name="outtrfnum" type="integer"  not-null="false">
+    <column name="outtrfnum"  
+		               
+    />
+</property>	
+    <property name="outbusnum" type="integer"  not-null="false">
+    <column name="outbusnum"  
+		               
+    />
+</property>	
+    <property name="outswitchnum" type="integer"  not-null="false">
+    <column name="outswitchnum"  
+		               
+    />
+</property>	
+    <property name="bak1" type="integer"  not-null="false">
+    <column name="bak1"  
+		               
+    />
+</property>	
+    <property name="bak2" type="integer"  not-null="false">
+    <column name="bak2"  
+		               
+    />
+</property>	
+    <property name="fstatus" type="string"  not-null="false">
+    <column name="fstatus"  
+		length="40"               
+    />
+</property>	
+    <property name="newline" type="integer"  not-null="false">
+    <column name="newline"  
+		               
+    />
+</property>	
+    <property name="outlinenum" type="integer"  not-null="false">
+    <column name="outlinenum"  
+		               
+    />
+</property>	
+    <property name="changlinenum" type="integer"  not-null="false">
+    <column name="changlinenum"  
+		               
+    />
+</property>	
+    <property name="outgeneratornum" type="integer"  not-null="false">
+    <column name="outgeneratornum"  
+		               
+    />
+</property>	
+    <property name="systemchartno" type="string"  not-null="false">
+    <column name="systemchartno"  
+		length="40"               
+    />
+</property>	
+    <property name="fexcutestatus" type="string"  not-null="false">
+    <column name="fexcutestatus"  
+		length="40"               
+    />
+</property>	
+    <property name="sys_fille" type="string"  not-null="false">
+    <column name="sys_fille"  
+		length="40"               
+    />
+</property>	
+    <property name="sys_filldept" type="string"  not-null="false">
+    <column name="sys_filldept"  
+		length="80"               
+    />
+</property>	
+    <property name="sys_filltime" type="timestamp"  not-null="false">
+    <column name="sys_filltime"  
+		               
+    />
+</property>	
+    <property name="sys_isvalid" type="integer"  not-null="false">
+    <column name="sys_isvalid"  
+		               
+    />
+</property>	
+    <property name="sys_dataowner" type="string"  not-null="false">
+    <column name="sys_dataowner"  
+		length="40"               
+    />
+</property>	
+  
+	
+    <set name="fzdhrmrec2" inverse="true" cascade="none"><key column="SystemchartmodifyNO"/><one-to-many class="ZdhRmrec"/></set>
+      <many-to-one name="zzdhcharalterrecord1" class="FsApprovebook" insert="false" update="false" column="ApproveBookNo" cascade="none" ></many-to-one>
+         <many-to-one name="zzdhcharalterrecord2" class="ZdhAutoondutylog" insert="false" update="false"   column="OndutyNo" cascade="none"></many-to-one>
+     </class>
+
+</hibernate-mapping>
+

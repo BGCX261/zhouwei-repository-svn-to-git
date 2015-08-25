@@ -1,0 +1,19 @@
+Manifest-Version: 1.0
+Module-Type: Web
+Bundle-Version: 1.0.0
+Bundle-Name: Springsecurity Bundle
+Bundle-ManifestVersion: 2
+Web-ContextPath: springsecurity
+Bundle-SymbolicName: springsecurity
+Import-Package: javax.servlet.http;version="[2.5.0,2.5.0]",
+ org.springframework.security;version="[2.0.2.A,2.0.2.A]",
+ org.springframework.security.acls;version="[2.0.2.A,2.0.2.A]",
+ org.springframework.security.acls.domain;version="[2.0.2.A,2.0.2.A]",
+ org.springframework.security.context;version="[2.0.2.A,2.0.2.A]",
+ org.springframework.security.taglibs.authz;version="[2.0.2.A,2.0.2.A]",
+ org.springframework.security.taglibs.velocity;version="[2.0.2.A,2.0.2.A]",
+ org.springframework.security.userdetails;version="[2.0.2.A,2.0.2.A]"
+Web-DispatcherServletUrlPatterns: *.html
+Web-FilterMappings: springSecurityFilterChain;url-patterns:="/*"
+Import-Library: org.springframework.spring.instrumented
+

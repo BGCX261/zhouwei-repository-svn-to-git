@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<head>
+<obj>SaleDetailDto</obj>
+	<column colName="id" propertyName="id" colType="string" dataTypeLen="30" isPrimary="1" visible="1" width="80" isEdit="" textColor="#ffffff" className="" refName=""></column>
+	<column colName="print_no"  propertyName="print_no" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="80" isEdit="" textColor="#ffffff" className="" refName=""></column>
+	<column colName="print_time" propertyName="print_time" colType="string" dataTypeLen="50" isPrimary="0" visible="1" width="70" isEdit="" textColor="#ffffff" className="" refName=""></column>
+	<column colName="goodsqty" propertyName="goodsqty" colType="integer" dataTypeLen="60" isPrimary="0" visible="1" width="70" isEdit="" textColor="#ffffff" className="" refName=""></column>
+	<column colName="custom_id" propertyName="custom_id" colType="integer" dataTypeLen="70" isPrimary="0" visible="1" width="80" isEdit="" textColor="#ffffff" className="" refName=""></column>
+	<column colName="custom_name" propertyName="custom_name" colType="string" dataTypeLen="80" isPrimary="0" visible="1" width="80" isEdit="" textColor="#ffffff" className="" refName=""></column>
+	<column colName="begin_date" propertyName="begin_date" colType="string" dataTypeLen="90" isPrimary="0" visible="1" width="80" isEdit="" textColor="#ffffff" className="" refName=""></column>
+	<column colName="end_date" propertyName="end_date" colType="string" dataTypeLen="90" isPrimary="0" visible="1" width="80" isEdit="" textColor="#ffffff" className="" refName=""></column>
+	<column colName="saleBillDto" propertyName="saleBillDto" colType="string" dataTypeLen="90" isPrimary="0" visible="1" width="80" isEdit="" textColor="#ffffff" className="SaleBillDto" refName="id"></column>
+	<column colName="version" propertyName="version" colType="integer" dataTypeLen="90" isPrimary="0" visible="1" width="80" isEdit="" textColor="#ffffff" className="" refName=""></column>
+</head>	
+

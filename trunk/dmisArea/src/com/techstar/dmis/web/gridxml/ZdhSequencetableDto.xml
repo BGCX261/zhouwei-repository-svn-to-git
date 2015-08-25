@@ -1,0 +1,12 @@
+<!--序位表-->
+<head>
+  <obj>ZdhSequencetableDto</obj>
+  
+  <column  colName="fsequenceno" propertyName="fsequenceno" colType="string" dataTypeLen="32" isPrimary="1" visible="1" width="42" isEdit="0" textColor="#000000" className="" refName="fsequenceno" ></column>
+  <column  colName="version" propertyName="version" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="" refName="version" ></column>
+  <column  colName="fstationname" propertyName="fstationname" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="" refName="fstationname" ></column>
+  <column  colName="fserialno" propertyName="fserialno" colType="integer" dataTypeLen="0" isPrimary="0" visible="1" width="42" isEdit="0" textColor="#000000" className="" refName="fserialno" ></column>
+  <column  colName="fname" propertyName="fname" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="42" isEdit="0" textColor="#000000" className="" refName="fname" ></column>
+  <column  colName="fstatus" propertyName="fstatus" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="42" isEdit="0" textColor="#000000" className="" refName="fstatus" ></column>
+  
+</head>

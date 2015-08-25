@@ -1,0 +1,23 @@
+<!--自投规程-->
+<head>
+  <obj>BhAsregulateDto</obj>
+  <column  colName="asregulateid" propertyName="asregulateid" colType="string" dataTypeLen="32" isPrimary="1" visible="1" width="26" isEdit="0" textColor="#000000" className="BhAsregulateDto" refName="asregulateid" ></column>
+  <column  colName="fstationname" propertyName="fstationname" colType="string" dataTypeLen="80" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="BhAsregulateDto" refName="fstationname" ></column>
+  <column  colName="fstationid" propertyName="fstationid" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="90" isEdit="0" textColor="#000000" className="BhAsregulateDto" refName="fstationid" ></column>
+  <column  colName="fwritedate" propertyName="fwritedate" colType="date" dataTypeLen="0" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="BhAsregulateDto" refName="fwritedate" ></column>
+  <column  colName="fasregulatecid" propertyName="fasregulatecid" colType="string" dataTypeLen="80" isPrimary="0" visible="1" width="138" isEdit="0" textColor="#000000" className="BhAsregulateDto" refName="fasregulatecid" ></column>
+  <column  colName="funitname" propertyName="funitname" colType="string" dataTypeLen="80" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="BhAsregulateDto" refName="funitname" ></column>
+  <column  colName="dispatchcenteropinion" propertyName="dispatchcenteropinion" colType="string" dataTypeLen="80" isPrimary="0" visible="1" width="138" isEdit="0" textColor="#000000" className="BhAsregulateDto" refName="dispatchcenteropinion" ></column>
+  <column  colName="runmodedeptopinion" propertyName="runmodedeptopinion" colType="string" dataTypeLen="80" isPrimary="0" visible="1" width="122" isEdit="0" textColor="#000000" className="BhAsregulateDto" refName="runmodedeptopinion" ></column>
+  <column  colName="protectdeptopinion" propertyName="protectdeptopinion" colType="string" dataTypeLen="80" isPrimary="0" visible="1" width="122" isEdit="0" textColor="#000000" className="BhAsregulateDto" refName="protectdeptopinion" ></column>
+  <column  colName="protectresponsor" propertyName="protectresponsor" colType="string" dataTypeLen="80" isPrimary="0" visible="1" width="90" isEdit="0" textColor="#000000" className="BhAsregulateDto" refName="protectresponsor" ></column>
+  <column  colName="excutetime" propertyName="excutetime" colType="string" dataTypeLen="80" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="BhAsregulateDto" refName="excutetime" ></column>
+  <column  colName="ondutyname" propertyName="ondutyname" colType="string" dataTypeLen="80" isPrimary="0" visible="1" width="90" isEdit="0" textColor="#000000" className="BhAsregulateDto" refName="ondutyname" ></column>
+  <column  colName="asregulateoriginal" propertyName="asregulateoriginal" colType="blob" dataTypeLen="0" isPrimary="0" visible="1" width="106" isEdit="0" textColor="#000000" className="BhAsregulateDto" refName="asregulateoriginal" ></column>
+  <column  colName="runmodedigram" propertyName="runmodedigram" colType="blob" dataTypeLen="0" isPrimary="0" visible="1" width="90" isEdit="0" textColor="#000000" className="BhAsregulateDto" refName="runmodedigram" ></column>
+  <column  colName="remarks" propertyName="remarks" colType="string" dataTypeLen="200" isPrimary="0" visible="1" width="42" isEdit="0" textColor="#000000" className="BhAsregulateDto" refName="remarks" ></column>
+  <column  colName="asregulateno" propertyName="asregulateno" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="106" isEdit="0" textColor="#000000" className="BhAsregulateDto" refName="asregulateno" ></column>
+  <column  colName="sys_fille" propertyName="sys_fille" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="58" isEdit="0" textColor="#000000" className="BhAsregulateDto" refName="sys_fille" ></column>
+  <column  colName="sys_filldept" propertyName="sys_filldept" colType="string" dataTypeLen="80" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="BhAsregulateDto" refName="sys_filldept" ></column>
+  <column  colName="sys_filltime" propertyName="sys_filltime" colType="date" dataTypeLen="80" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="BhAsregulateDto" refName="sys_filltime" ></column>
+</head>

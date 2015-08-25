@@ -1,0 +1,10 @@
+<head>
+	<obj>TaskDto</obj>
+	<column colName="taskId" colType="string" dataTypeLen="30" isPrimary="1" visible="0" width="70" isEdit="" textColor="#ffffff" className="TaskDto" refName="taskId"></column>
+	<column colName="taskName" colType="string" dataTypeLen="30" isPrimary="0" visible="1" width="70" isEdit="" textColor="#ffffff" className="TaskDto" refName="taskName"></column>
+	<column colName="actorId" colType="string" dataTypeLen="30" isPrimary="0" visible="0" width="70" isEdit="" textColor="#ffffff" className="TaskDto" refName="actorId"></column>
+	<column colName="actorName" colType="string" dataTypeLen="30" isPrimary="0" visible="1" width="70" isEdit="" textColor="#ffffff" className="TaskDto" refName="actorName"></column>
+	<column colName="createDate" colType="string" dataTypeLen="30" isPrimary="0" visible="1" width="70" isEdit="" textColor="#ffffff" className="TaskDto" refName="createDate"></column>
+  <column  colName="opButton_2" propertyName="opButton_2" colType="string" dataTypeLen="0" isPrimary="0" visible="1" width="70" isEdit="0" textColor="#000000" className="TaskDto" refName="opButton_2" ></column>
+  <column  colName="opButton_3" propertyName="opButton_3" colType="string" dataTypeLen="0" isPrimary="0" visible="1" width="70" isEdit="0" textColor="#000000" className="TaskDto" refName="opButton_3" ></column>
+</head>	

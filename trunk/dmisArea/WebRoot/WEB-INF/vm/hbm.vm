@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="${packageName}">
+	<class name="$class.getUpEnName()" table="$class.tableName" dynamic-insert="true" dynamic-update="true" optimistic-lock="version">
+    <id name="${class.pkEnName}" type="${class.pkType}">
+      <column name="${class.pkEnName}" sql-type="varchar(32)" not-null="true"/>
+      <generator class="assigned"/>
+    </id>
+
+ #if($class.beanType!=13)
+	<version name="version" column="VERSION" unsaved-value="undefined"/>
+ #end
+ 
+ #foreach($mapa in $class.attributes)
+ #if ($mapa.enName!=$class.pkEnName)
+ <property name="$mapa.enName" type="$mapa.type"  #if($mapa.hasNotNull()==true)not-null="$mapa.notNull"#end>
+    <column name="$mapa.enName"  
+		#if($mapa.hasLength()==true)length="$mapa.length"#end
+        #if($mapa.hasPrecision()==true)precision="$mapa.precision"#end
+       
+    />
+</property>	
+ #end
+ #end
+
+#if ($class.relations.size()>0)
+	
+#foreach($ref in $class.relations)
+#if ($ref.type.equals("1"))
+ <many-to-one name="$ref.getHbmAttrName()" class="$ref.entityName"   column="$ref.attributeName" cascade="$ref.cascade"></many-to-one>
+#end
+#if ($ref.type.equals("2"))
+    <set name="$ref.getHbmAttrName()" inverse="false" cascade="$ref.cascade"><key column="$ref.attributeName"/><one-to-many class="$ref.entityName"/></set>
+#end
+#if ($ref.type.equals("3"))
+    <many-to-one name="$ref.getHbmAttrName()" class="$ref.entityName"   column="$ref.attributeName" cascade="$ref.cascade"></many-to-one>
+#end
+     #end
+#end
+</class>
+
+</hibernate-mapping>
+

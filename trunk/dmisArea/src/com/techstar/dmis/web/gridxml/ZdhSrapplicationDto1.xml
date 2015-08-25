@@ -1,0 +1,12 @@
+<!--停复役申请-->
+<head>
+  <obj>ZdhSrapplicationDto</obj>
+  <column  colName="fapplicationno" propertyName="fapplicationno" colType="string" dataTypeLen="32" isPrimary="1" visible="1" width="90" isEdit="0" textColor="#000000" className="ZdhSrapplicationDto" refName="fapplicationno" ></column>
+  <column  colName="zzdhsrappeqprel2.feqpid" propertyName="zzdhsrappeqprel2" colType="string" dataTypeLen="32" isPrimary="1" visible="1" width="58" isEdit="0" textColor="#000000" className="EtsEquipmentDto" refName="feqpid" ></column>
+  <column  colName="zzdhsrappeqprel2.fstationname" propertyName="zzdhsrappeqprel2" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="58" isEdit="0" textColor="#000000" className="EtsEquipmentDto" refName="fstationname" ></column>
+  <column  colName="zzdhsrappeqprel2.fdevclassname" propertyName="zzdhsrappeqprel2" colType="string" dataTypeLen="100" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="EtsEquipmentDto" refName="fdevclassname" ></column>
+  <column  colName="zzdhsrappeqprel2.fdevicemodel" propertyName="zzdhsrappeqprel2" colType="string" dataTypeLen="20" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="EtsEquipmentDto" refName="fdevicemodel" ></column>
+  <column  colName="zzdhsrappeqprel2.fdevfac" propertyName="zzdhsrappeqprel2" colType="string" dataTypeLen="100" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="EtsEquipmentDto" refName="fdevfac" ></column>
+  <column  colName="zzdhsrappeqprel2.finstalldate" propertyName="zzdhsrappeqprel2" colType="date" dataTypeLen="0" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="EtsEquipmentDto" refName="finstalldate" ></column>
+  <column  colName="zzdhsrappeqprel2.frunningdate" propertyName="zzdhsrappeqprel2" colType="date" dataTypeLen="0" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="EtsEquipmentDto" refName="frunningdate" ></column>
+</head>

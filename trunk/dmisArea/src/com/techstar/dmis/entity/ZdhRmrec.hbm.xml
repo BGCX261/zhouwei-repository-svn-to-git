@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="com.techstar.dmis.entity">
+	<class name="ZdhRmrec" table="DMIS_ZDH_RMrec" dynamic-insert="true" dynamic-update="true" optimistic-lock="version">
+    <id name="recordno" type="string">
+      <column name="recordno" sql-type="varchar(40)" not-null="true"/>
+      <generator class="assigned"/>
+    </id>
+
+ 	<version name="version" column="VERSION" unsaved-value="undefined"/>
+  
+   <property name="fstationname" type="string"  not-null="false">
+    <column name="fstationname"  
+		length="40"               
+    />
+</property>	
+    <property name="switchno" type="string"  not-null="false">
+    <column name="switchno"  
+		length="40"               
+    />
+</property>	
+    <property name="changeexplanationo" type="string"  not-null="false">
+    <column name="changeexplanationo"  
+		length="400"               
+    />
+</property>	
+    <property name="modificationdatano" type="integer"  not-null="false">
+    <column name="modificationdatano"  
+		               
+    />
+</property>	
+    <property name="modificationreason" type="string"  not-null="false">
+    <column name="modificationreason"  
+		length="400"               
+    />
+</property>	
+    <property name="modificationdate" type="date"  not-null="false">
+    <column name="modificationdate"  
+		               
+    />
+</property>	
+    <property name="remarks" type="string"  not-null="false">
+    <column name="remarks"  
+		length="100"               
+    />
+</property>	
+    <property name="sys_fille" type="string"  not-null="false">
+    <column name="sys_fille"  
+		length="40"               
+    />
+</property>	
+    <property name="sys_filldept" type="string"  not-null="false">
+    <column name="sys_filldept"  
+		length="80"               
+    />
+</property>	
+    <property name="sys_filltime" type="timestamp"  not-null="false">
+    <column name="sys_filltime"  
+		               
+    />
+</property>	
+    <property name="sys_isvalid" type="integer"  not-null="false">
+    <column name="sys_isvalid"  
+		               
+    />
+</property>	
+    <property name="sys_dataowner" type="string"  not-null="false">
+    <column name="sys_dataowner"  
+		length="40"               
+    />
+</property>	
+  
+	
+    <many-to-one name="zzdhrmrec1" class="ZdhAutoondutylog"   column="OndutyNo" cascade="none"></many-to-one>
+         <many-to-one name="zzdhrmrec4" class="StdStation"   column="FStationID" cascade="none"></many-to-one>
+         <many-to-one name="zzdhrmrec2" class="ZdhCharalterrecord"   column="SystemchartmodifyNO" cascade="none"></many-to-one>
+     </class>
+
+</hibernate-mapping>
+

@@ -1,0 +1,110 @@
+<?xml version="1.0" ?>
+<rows>
+   <head>
+        <column width="40" type="ro" align="center"  sort="na">img:[../themes/themes1/images/grid/config.gif]</column>
+        <column width="100" type="ro" align="center" sort="int">设备停用日期</column>
+        <column width="80" type="ro" align="left" sort="str">场站名称</column>
+        <column width="90" type="ro" align="left" sort="str">停自投开关号</column>
+        <column width="110" type="ro" align="center" sort="str">停用时间</column>
+        <column width="110" type="ro" align="left" sort="str">停自投原因</column>
+        <column width="80" type="ro" align="right" sort="str">额定电流</column>
+        <column width="80" type="ro" align="right" sort="int">N-1后电流</column>
+        <column width="80" type="ro" align="right" sort="str">N-1后负载</column>
+        <column width="110" type="ro" align="center" sort="int">恢复时间</column>
+        <column width="60" type="ro" align="center" sort="str">修改</column>
+        <settings>
+            <colwidth>px</colwidth>
+        </settings>
+    </head>
+   <row id ="1">
+      <cell>1</cell>
+      <cell>2006-08-28 </cell>
+      <cell>通州</cell>
+      <cell>245</cell>
+      <cell>2006-08-28 09:33 </cell>
+      <cell>N－1>115％</cell>
+      <cell>1700</cell>
+      <cell>2000</cell>
+      <cell>117.65</cell>
+      <cell>2006-08-28 23:05</cell>
+      <cell>修改</cell>
+   </row>
+   <row id ="2">
+      <cell>2</cell>
+      <cell>2006-08-28 </cell>
+      <cell>西直门</cell>
+      <cell>245、256</cell>
+      <cell>2006-08-28 10:02 </cell>
+      <cell>N－1>115％</cell>
+      <cell>3000</cell>
+      <cell>3450</cell>
+      <cell>115</cell>
+      <cell>2006-08-28 20:36</cell>
+      <cell>修改</cell>
+   </row>
+   <row id ="3">
+      <cell>3</cell>
+      <cell>2006-08-28 </cell>
+      <cell>通州</cell>
+      <cell>245</cell>
+      <cell>2006-08-28 09:33 </cell>
+      <cell>N－1>115％</cell>
+      <cell>1700</cell>
+      <cell>2000</cell>
+      <cell>117.65</cell>
+      <cell>2006-08-28 23:05</cell>
+      <cell>修改</cell>
+   </row>
+   <row id ="4">
+      <cell>4</cell>
+      <cell>2006-08-28 </cell>
+      <cell>西直门</cell>
+      <cell>245、256</cell>
+      <cell>2006-08-28 10:02 </cell>
+      <cell>N－1>115％</cell>
+      <cell>3000</cell>
+      <cell>3450</cell>
+      <cell>115</cell>
+      <cell>2006-08-28 20:36</cell>
+      <cell>修改</cell>
+   </row>
+   <row id ="5">
+      <cell>5</cell>
+      <cell>2006-08-28 </cell>
+      <cell>通州</cell>
+      <cell>245</cell>
+      <cell>2006-08-28 09:33 </cell>
+      <cell>N－1>115％</cell>
+      <cell>1700</cell>
+      <cell>2000</cell>
+      <cell>117.65</cell>
+      <cell>2006-08-28 23:05</cell>
+      <cell>修改</cell>
+   </row>
+   <row id ="6">
+      <cell>6</cell>
+      <cell>2006-08-28 </cell>
+      <cell>西直门</cell>
+      <cell>245、256</cell>
+      <cell>2006-08-28 10:02 </cell>
+      <cell>N－1>115％</cell>
+      <cell>3000</cell>
+      <cell>3450</cell>
+      <cell>115</cell>
+      <cell>2006-08-28 20:36</cell>
+      <cell>修改</cell>
+   </row>
+   <row id ="7">
+      <cell>7</cell>
+      <cell>2006-08-28 </cell>
+      <cell>西直门</cell>
+      <cell>245、256</cell>
+      <cell>2006-08-28 10:02 </cell>
+      <cell>N－1>115％</cell>
+      <cell>3000</cell>
+      <cell>3450</cell>
+      <cell>115</cell>
+      <cell>2006-08-28 20:36</cell>
+      <cell>修改</cell>
+   </row>
+</rows>

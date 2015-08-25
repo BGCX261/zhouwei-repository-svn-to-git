@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="com.techstar.dmis.entity">
+	<class name="Mtapchanger" table="DMIS_MTAPCHANGER" dynamic-insert="true" dynamic-update="true" optimistic-lock="version">
+    <id name="fid" type="string">
+      <column name="fid" sql-type="varchar(40)" not-null="true"/>
+      <generator class="assigned"/>
+    </id>
+
+ 	<version name="version" column="VERSION" unsaved-value="undefined"/>
+  
+   <property name="fname" type="string"  not-null="false">
+    <column name="fname"  
+		length="40"               
+    />
+</property>	
+    <property name="fdescription" type="string"  not-null="false">
+    <column name="fdescription"  
+		length="40"               
+    />
+</property>	
+    <property name="faliasname" type="string"  not-null="false">
+    <column name="faliasname"  
+		length="40"               
+    />
+</property>	
+    <property name="ftransformerwinding" type="string"  not-null="false">
+    <column name="ftransformerwinding"  
+		length="40"               
+    />
+</property>	
+    <property name="fhighstep" type="integer"  not-null="false">
+    <column name="fhighstep"  
+		length="14"        precision="4"       
+    />
+</property>	
+    <property name="flowstep" type="integer"  not-null="false">
+    <column name="flowstep"  
+		length="14"        precision="4"       
+    />
+</property>	
+    <property name="fneutralkv" type="integer"  not-null="false">
+    <column name="fneutralkv"  
+		length="14"        precision="4"       
+    />
+</property>	
+    <property name="fneutralstep" type="integer"  not-null="false">
+    <column name="fneutralstep"  
+		length="14"        precision="4"       
+    />
+</property>	
+    <property name="fnormalstep" type="integer"  not-null="false">
+    <column name="fnormalstep"  
+		length="14"        precision="4"       
+    />
+</property>	
+    <property name="fstepphaseshiftincrement" type="integer"  not-null="false">
+    <column name="fstepphaseshiftincrement"  
+		length="14"        precision="4"       
+    />
+</property>	
+    <property name="fstepvoltageincrement" type="integer"  not-null="false">
+    <column name="fstepvoltageincrement"  
+		length="14"        precision="4"       
+    />
+</property>	
+    <property name="ftculcontrolmode" type="string"  not-null="false">
+    <column name="ftculcontrolmode"  
+		length="100"               
+    />
+</property>	
+  
+</class>
+
+</hibernate-mapping>
+

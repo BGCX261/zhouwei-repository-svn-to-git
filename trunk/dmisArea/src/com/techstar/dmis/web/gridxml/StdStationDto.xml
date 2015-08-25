@@ -1,0 +1,9 @@
+<!--厂站-->
+<head>
+  <obj>StdStationDto</obj>
+  <column  colName="id" propertyName="stationno" colType="string" dataTypeLen="32" isPrimary="1" visible="1" width="90" isEdit="0" textColor="#000000" className="StdStationDto" refName="id" ></column>
+  <column  colName="manageunit" propertyName="manageunit" colType="string" dataTypeLen="80" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="StdStationDto" refName="manageunit" ></column>
+  <column  colName="voltagelevel" propertyName="voltagelevel" colType="string" dataTypeLen="64" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="StdStationDto" refName="voltagelevel" ></column>
+  <column  colName="stationname" propertyName="stationname" colType="string" dataTypeLen="80" isPrimary="0" visible="1" width="90" isEdit="0" textColor="#000000" className="StdStationDto" refName="stationname" ></column>
+  <column  colName="issubstation" propertyName="issubstation" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="250" isEdit="0" textColor="#000000" className="StdStationDto" refName="issubstation" ></column>
+</head>

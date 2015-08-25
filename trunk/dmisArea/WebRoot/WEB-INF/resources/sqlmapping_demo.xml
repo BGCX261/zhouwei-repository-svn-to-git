@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>	
+	<namedSqlQueries>
+		<!-- 业务申请查询语句 -->
+		<sqlQuery>
+			<name>demo_queryAll</name>
+			<sqlString>from Apply a order by a.applyTime desc</sqlString>
+		</sqlQuery>					
+	</namedSqlQueries>
+</config>

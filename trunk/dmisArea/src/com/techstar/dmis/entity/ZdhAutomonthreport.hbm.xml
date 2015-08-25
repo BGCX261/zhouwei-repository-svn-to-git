@@ -1,0 +1,271 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="com.techstar.dmis.entity">
+	<class name="ZdhAutomonthreport" table="DMIS_ZDH_AutoMonthReport" dynamic-insert="true" dynamic-update="true" optimistic-lock="version">
+    <id name="reportid" type="string">
+      <column name="reportid" sql-type="varchar(38)" not-null="true"/>
+      <generator class="assigned"/>
+    </id>
+
+ 	<version name="version" column="VERSION" unsaved-value="undefined"/>
+  
+   <property name="reportmonth" type="integer"  not-null="true">
+    <column name="reportmonth"  
+		               
+    />
+</property>	
+    <property name="reportyear" type="integer"  not-null="true">
+    <column name="reportyear"  
+		               
+    />
+</property>	
+    <property name="fstatus" type="string"  not-null="true">
+    <column name="fstatus"  
+		length="30"               
+    />
+</property>	
+    <property name="isvalid" type="string"  not-null="true">
+    <column name="isvalid"  
+		length="2"               
+    />
+</property>	
+    <property name="scheduleunit" type="string"  not-null="true">
+    <column name="scheduleunit"  
+		length="32"               
+    />
+</property>	
+    <property name="rtuarate" type="integer"  not-null="true">
+    <column name="rtuarate"  
+		length="6"               
+    />
+</property>	
+    <property name="rtusrate" type="integer"  not-null="true">
+    <column name="rtusrate"  
+		length="6"               
+    />
+</property>	
+    <property name="computerrate" type="integer"  not-null="true">
+    <column name="computerrate"  
+		length="6"               
+    />
+</property>	
+    <property name="rscanum" type="integer"  not-null="true">
+    <column name="rscanum"  
+		               
+    />
+</property>	
+    <property name="rseanum" type="integer"  not-null="true">
+    <column name="rseanum"  
+		               
+    />
+</property>	
+    <property name="eddreportrate" type="integer"  not-null="true">
+    <column name="eddreportrate"  
+		length="6"               
+    />
+</property>	
+    <property name="gpafrate" type="integer"  not-null="true">
+    <column name="gpafrate"  
+		length="6"               
+    />
+</property>	
+    <property name="upafrate" type="integer"  not-null="true">
+    <column name="upafrate"  
+		length="6"               
+    />
+</property>	
+    <property name="gridpcfrate" type="integer"  not-null="true">
+    <column name="gridpcfrate"  
+		length="6"               
+    />
+</property>	
+    <property name="exchangeecfrate" type="integer"  not-null="true">
+    <column name="exchangeecfrate"  
+		length="6"               
+    />
+</property>	
+    <property name="agcrundate" type="integer"  not-null="true">
+    <column name="agcrundate"  
+		length="7"               
+    />
+</property>	
+    <property name="agcrunrate" type="integer"  not-null="true">
+    <column name="agcrunrate"  
+		length="6"               
+    />
+</property>	
+    <property name="agcctrlstandtime" type="integer"  not-null="true">
+    <column name="agcctrlstandtime"  
+		length="7"               
+    />
+</property>	
+    <property name="agcctrlstandrate" type="integer"  not-null="true">
+    <column name="agcctrlstandrate"  
+		length="6"               
+    />
+</property>	
+    <property name="agcctrlcps1" type="integer"  not-null="true">
+    <column name="agcctrlcps1"  
+		length="7"               
+    />
+</property>	
+    <property name="agcctrlcps2" type="integer"  not-null="true">
+    <column name="agcctrlcps2"  
+		length="7"               
+    />
+</property>	
+    <property name="rtunum" type="integer"  not-null="true">
+    <column name="rtunum"  
+		length="7"               
+    />
+</property>	
+    <property name="sfaultrepairhours" type="integer"  not-null="true">
+    <column name="sfaultrepairhours"  
+		length="7"               
+    />
+</property>	
+    <property name="rtuspinterrupthours" type="integer"  not-null="true">
+    <column name="rtuspinterrupthours"  
+		length="7"               
+    />
+</property>	
+    <property name="channelinterrupthours" type="integer"  not-null="true">
+    <column name="channelinterrupthours"  
+		length="7"               
+    />
+</property>	
+    <property name="linepowercuthours" type="integer"  not-null="true">
+    <column name="linepowercuthours"  
+		length="7"               
+    />
+</property>	
+    <property name="sfreoairhours" type="integer"  not-null="true">
+    <column name="sfreoairhours"  
+		length="7"               
+    />
+</property>	
+    <property name="otheroutrunhours" type="integer"  not-null="true">
+    <column name="otheroutrunhours"  
+		length="7"               
+    />
+</property>	
+    <property name="rtuoutrunallhours" type="integer"  not-null="true">
+    <column name="rtuoutrunallhours"  
+		length="7"               
+    />
+</property>	
+    <property name="psaveragefhour" type="integer"  not-null="true">
+    <column name="psaveragefhour"  
+		length="7"               
+    />
+</property>	
+    <property name="sfhours" type="integer"  not-null="true">
+    <column name="sfhours"  
+		length="7"               
+    />
+</property>	
+    <property name="fsaveragefhour" type="integer"  not-null="true">
+    <column name="fsaveragefhour"  
+		length="7"               
+    />
+</property>	
+    <property name="hceqpfhours" type="integer"  not-null="true">
+    <column name="hceqpfhours"  
+		length="7"               
+    />
+</property>	
+    <property name="powerinthours" type="integer"  not-null="true">
+    <column name="powerinthours"  
+		length="7"               
+    />
+</property>	
+    <property name="maintainhours" type="integer"  not-null="true">
+    <column name="maintainhours"  
+		length="7"               
+    />
+</property>	
+    <property name="otherfaulthours" type="integer"  not-null="true">
+    <column name="otherfaulthours"  
+		length="7"               
+    />
+</property>	
+    <property name="computeroutrunhours" type="integer"  not-null="true">
+    <column name="computeroutrunhours"  
+		length="7"               
+    />
+</property>	
+    <property name="semurate" type="integer"  not-null="true">
+    <column name="semurate"  
+		length="6"               
+    />
+</property>	
+    <property name="ermrate" type="integer"  not-null="true">
+    <column name="ermrate"  
+		length="6"               
+    />
+</property>	
+    <property name="tidestandardrate" type="integer"  not-null="true">
+    <column name="tidestandardrate"  
+		length="6"               
+    />
+</property>	
+    <property name="lprrate" type="integer"  not-null="true">
+    <column name="lprrate"  
+		length="6"               
+    />
+</property>	
+    <property name="lpmarate" type="integer"  not-null="true">
+    <column name="lpmarate"  
+		length="6"               
+    />
+</property>	
+    <property name="averagelpmarate" type="integer"  not-null="true">
+    <column name="averagelpmarate"  
+		length="6"               
+    />
+</property>	
+    <property name="remarks" type="string"  not-null="true">
+    <column name="remarks"  
+		length="1024"               
+    />
+</property>	
+    <property name="phonenumber" type="string"  not-null="true">
+    <column name="phonenumber"  
+		length="32"               
+    />
+</property>	
+    <property name="approver" type="string"  not-null="true">
+    <column name="approver"  
+		length="32"               
+    />
+</property>	
+    <property name="sys_fille" type="string"  not-null="false">
+    <column name="sys_fille"  
+		length="40"               
+    />
+</property>	
+    <property name="sys_filldept" type="string"  not-null="false">
+    <column name="sys_filldept"  
+		length="80"               
+    />
+</property>	
+    <property name="sys_filltime" type="timestamp"  not-null="false">
+    <column name="sys_filltime"  
+		               
+    />
+</property>	
+    <property name="sys_isvalid" type="integer"  not-null="false">
+    <column name="sys_isvalid"  
+		               
+    />
+</property>	
+    <property name="sys_dataowner" type="string"  not-null="false">
+    <column name="sys_dataowner"  
+		length="40"               
+    />
+</property>	
+  
+</class>
+
+</hibernate-mapping>
+

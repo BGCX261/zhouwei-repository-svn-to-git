@@ -1,0 +1,19 @@
+<!--电网预案-->
+<head>
+  <obj>DdPremethodDto</obj>
+  <column  colName="fpremethodid" propertyName="fpremethodid" colType="string" dataTypeLen="40" isPrimary="1" visible="1" width="74" isEdit="0" textColor="#000000" className="DdPremethodDto" refName="fpremethodid" ></column>
+  <column  colName="fpremethodcontent" propertyName="fpremethodcontent" colType="blob" dataTypeLen="0" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="DdPremethodDto" refName="fpremethodcontent" ></column>
+  <column  colName="src" propertyName="src" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="DdPremethodDto" refName="src" ></column>
+  <column  colName="premethodtype" propertyName="premethodtype" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="DdPremethodDto" refName="premethodtype" ></column>
+  <column  colName="premethodname" propertyName="premethodname" colType="string" dataTypeLen="100" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="DdPremethodDto" refName="premethodname" ></column>
+  <column  colName="content1" propertyName="content1" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="50" isEdit="0" textColor="#000000" className="DdPremethodDto" refName="content1" ></column>
+  <column  colName="content2" propertyName="content2" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="50" isEdit="0" textColor="#000000" className="DdPremethodDto" refName="content2" ></column>
+  <column  colName="content3" propertyName="content3" colType="string" dataTypeLen="400" isPrimary="0" visible="1" width="50" isEdit="0" textColor="#000000" className="DdPremethodDto" refName="content3" ></column>
+  <column  colName="fstatus" propertyName="fstatus" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="42" isEdit="0" textColor="#000000" className="DdPremethodDto" refName="fstatus" ></column>
+  <column  colName="sys_fille" propertyName="sys_fille" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="58" isEdit="0" textColor="#000000" className="DdPremethodDto" refName="sys_fille" ></column>
+  <column  colName="sys_filldept" propertyName="sys_filldept" colType="string" dataTypeLen="80" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="DdPremethodDto" refName="sys_filldept" ></column>
+  <column  colName="sys_filltime" propertyName="sys_filltime" colType="timestamp" dataTypeLen="" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="DdPremethodDto" refName="sys_filltime" ></column>
+  <column  colName="sys_isvalid" propertyName="sys_isvalid" colType="integer" dataTypeLen="0" isPrimary="0" visible="1" width="106" isEdit="0" textColor="#000000" className="DdPremethodDto" refName="sys_isvalid" ></column>
+  <column  colName="sys_dataowner" propertyName="sys_dataowner" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="106" isEdit="0" textColor="#000000" className="DdPremethodDto" refName="sys_dataowner" ></column>
+  <column  colName="version" propertyName="version" colType="integer" dataTypeLen="" isPrimary="0" visible="1" width="122" isEdit="0" textColor="#000000" className="DdPremethodDto" refName="version" ></column>
+</head>

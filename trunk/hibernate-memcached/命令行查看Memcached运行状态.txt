@@ -1,0 +1,12 @@
+命令行查看Memcached运行状态
+
+很多时候需要监控服务器上的Memcached运行情况，比如缓存的查询次数，命中率之类的。但找到的那个memcached-tool是linux下用perl写的，我也没试过windows能不能用。后来发现个简单的办法可以做到，就是使用Telnet。
+首先登录到服务器，然后在cmd命令行中键入
+telnet 127.0.0.1 11211
+其中127.0.0.1是服务器的地址（这里是本机） ，11211是memcached绑定的端口号。
+之后命令行窗口全黑只有光标提示，摸黑输入stats，即可得到描述Memcached服务器运行情况的参数。如下图：
+
+其中，uptime 是memcached运行的秒数，cmd_get是查询缓存的次数。这两个数据相除一下就能得到平均每秒请求缓存的次数——最近niupu的流量很低，所以平均也就一秒请求一次多，这么点大的压力，用文件系统缓存一样没问题，根本不会体现出使用memcached的优越。
+下面的cmd_set 就是设置key=>value的次数。整个memcached是个大hash，用cmd_get没有找到的内容，就会调用一下cmd_set写进缓存里。紧跟着是get_hits，就是缓存命中的次数。缓存命中率 = get_hits/cmd_get * 100%。
+下面的get_misses的数字加上get_hits应该等于cmd_get。而total_itemscurr_items表示现在在缓存中的键值对个数，在图上total_items == cmd_set == get_misses，不过当可用最大内存用光时，memcached就会删掉一些内容，上面的等式就不成立了。
+话说回来，memcached要是能有一套完整的监测工具就太好了。memcached的安装和php相应配置请看这里。

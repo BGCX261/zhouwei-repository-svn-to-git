@@ -1,0 +1,335 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="com.techstar.dmis.entity">
+	<class name="DdDoutageplan" table="DMIS_DD_DOutagePlan"  dynamic-insert="true" dynamic-update="true" optimistic-lock="version">
+    <id name="fdayplanno" type="string" >
+      <column name="fdayplanno" sql-type="varchar(40)" not-null="true" />
+      <generator class="assigned"/>
+    </id>
+
+ 	<version name="version" column="VERSION" unsaved-value="undefined"/>
+  
+   <property name="fmanualno" type="string"  not-null="false">
+    <column name="fmanualno"  
+		length="40"               
+    />
+</property>	
+    <property name="fstationname" type="string"  not-null="false">
+    <column name="fstationname"  
+		length="80"               
+    />
+</property>	
+    <property name="fline" type="string"  not-null="false">
+    <column name="fline"  
+		length="80"               
+    />
+</property>	
+    <property name="fworkarea" type="string"  not-null="false">
+    <column name="fworkarea"  
+		length="300"               
+    />
+</property>	
+    <property name="foutagearea" type="string"  not-null="false">
+    <column name="foutagearea"  
+		length="30"               
+    />
+</property>	
+    <property name="fdispatchrange" type="string"  not-null="false">
+    <column name="fdispatchrange"  
+		length="20"               
+    />
+</property>	
+    <property name="fapplystime" type="timestamp"  not-null="false">
+    <column name="fapplystime"  
+		               
+    />
+</property>	
+    <property name="fapplyetime" type="timestamp"  not-null="false">
+    <column name="fapplyetime"  
+		               
+    />
+</property>	
+    <property name="fapplyoutagetime" type="timestamp"  not-null="false">
+    <column name="fapplyoutagetime"  
+		               
+    />
+</property>	
+    <property name="fapplyrestoretime" type="timestamp"  not-null="false">
+    <column name="fapplyrestoretime"  
+		               
+    />
+</property>	
+    <property name="fapplyunit" type="string"  not-null="false">
+    <column name="fapplyunit"  
+		length="300"               
+    />
+</property>	
+    <property name="fapplicant" type="string"  not-null="false">
+    <column name="fapplicant"  
+		length="30"               
+    />
+</property>	
+    <property name="fapplytime" type="timestamp"  not-null="false">
+    <column name="fapplytime"  
+		               
+    />
+    
+    
+    
+</property>	
+    <property name="fremark" type="string"  not-null="false">
+    <column name="fremark"  
+		length="500"               
+    />
+</property>	
+
+
+ <property name="stampid" type="string"  not-null="false">
+    <column name="stampid"  
+		length="400"               
+    />
+</property>	
+    <property name="faddipicture" type="org.springframework.orm.hibernate3.support.BlobByteArrayType"  not-null="false">
+    <column name="faddipicture"  
+		               
+    />
+</property>	
+    <property name="funmeasureannex" type="org.springframework.orm.hibernate3.support.BlobByteArrayType"  not-null="false">
+    <column name="funmeasureannex"  
+		               
+    />
+</property>	
+    <property name="fattention" type="string"  not-null="false">
+    <column name="fattention"  
+		length="500"               
+    />
+</property>	
+    <property name="fpermitcontent" type="string"  not-null="false">
+    <column name="fpermitcontent"  
+		length="500"               
+    />
+</property>	
+    <property name="fapprooutageword" type="string"  not-null="false">
+    <column name="fapprooutageword"  
+		length="40"               
+    />
+</property>	
+    <property name="fapprooutageno" type="string"  not-null="false">
+    <column name="fapprooutageno"  
+		length="40"               
+    />
+</property>	
+    <property name="fapproworkstime" type="timestamp"  not-null="false">
+    <column name="fapproworkstime"  
+		               
+    />
+</property>	
+    <property name="fapproworketime" type="timestamp"  not-null="false">
+    <column name="fapproworketime"  
+		               
+    />
+</property>	
+    <property name="fapprostime" type="timestamp"  not-null="false">
+    <column name="fapprostime"  
+		               
+    />
+</property>	
+    <property name="fapproetime" type="timestamp"  not-null="false">
+    <column name="fapproetime"  
+		               
+    />
+</property>	
+    <property name="fgenoutageseq" type="string"  not-null="false">
+    <column name="fgenoutageseq"  
+		length="500"               
+    />
+</property>	
+    <property name="fplanappropeople" type="string"  not-null="false">
+    <column name="fplanappropeople"  
+		length="40"               
+    />
+</property>	
+    <property name="fcanceltime" type="timestamp"  not-null="false">
+    <column name="fcanceltime"  
+		               
+    />
+</property>	
+    <property name="fabolish" type="string"  not-null="false">
+    <column name="fabolish"  
+		length="40"               
+    />
+</property>	
+    <property name="fstatus" type="string"  not-null="false">
+    <column name="fstatus"  
+		length="20"               
+    />
+</property>	
+    <property name="fexcutestatus" type="string"  not-null="false">
+    <column name="fexcutestatus"  
+		length="40"               
+    />
+</property>	
+    <property name="fmergeplanno" type="integer"  not-null="false">
+    <column name="fmergeplanno"  
+		               
+    />
+</property>	
+    <property name="freportdate" type="date"  not-null="false">
+    <column name="freportdate"  
+		               
+    />
+</property>	
+    <property name="fplansourcetype" type="string"  not-null="false">
+    <column name="fplansourcetype"  
+		length="20"               
+    />
+</property>	
+    <property name="fplansourceno" type="string"  not-null="false">
+    <column name="fplansourceno"  
+		length="40"               
+    />
+</property>	
+    <property name="fstationid" type="string"  not-null="false">
+    <column name="fstationid"  
+		length="40"               
+    />
+</property>	
+    <property name="flinenameid" type="string"  not-null="false">
+    <column name="flinenameid"  
+		length="40"               
+    />
+</property>	
+    <property name="fapplyunitid" type="string"  not-null="false">
+    <column name="fapplyunitid"  
+		length="40"               
+    />
+</property>	
+    <property name="ffilltype" type="string"  not-null="false">
+    <column name="ffilltype"  
+		length="40"               
+    />
+</property>	
+    <property name="workcontent" type="string"  not-null="false">
+    <column name="workcontent"  
+		length="600"               
+    />
+</property>	
+    <property name="ispassed" type="string"  not-null="false">
+    <column name="ispassed"  
+		length="2"               
+    />
+</property>	
+    <property name="fchecker" type="string"  not-null="false">
+    <column name="fchecker"  
+		length="40"               
+    />
+</property>	
+    <property name="reason" type="string"  not-null="false">
+    <column name="reason"  
+		length="40"               
+    />
+</property>	
+    <property name="fchecktime" type="timestamp"  not-null="false">
+    <column name="fchecktime"  
+		length="40"               
+    />
+</property>	
+    <property name="csendtime" type="timestamp"  not-null="false">
+    <column name="csendtime"  
+		               
+    />
+</property>	
+    <property name="creturncontent" type="string"  not-null="false">
+    <column name="creturncontent"  
+		length="100"               
+    />
+</property>	
+    <property name="csender" type="string"  not-null="false">
+    <column name="csender"  
+		length="40"               
+    />
+</property>	
+    <property name="creceiver2" type="string"  not-null="false">
+    <column name="creceiver2"  
+		length="40"               
+    />
+</property>	
+    <property name="cmdcontent" type="string"  not-null="false">
+    <column name="cmdcontent"  
+		length="100"               
+    />
+</property>	
+    <property name="creturner" type="string"  not-null="false">
+    <column name="creturner"  
+		length="40"               
+    />
+</property>	
+    <property name="creturntime" type="timestamp"  not-null="false">
+    <column name="creturntime"  
+		               
+    />
+</property>	
+    <property name="creceiver1" type="string"  not-null="false">
+    <column name="creceiver1"  
+		length="40"               
+    />
+</property>	
+    <property name="cancelcode" type="string"  not-null="false">
+    <column name="cancelcode"  
+		length="40"               
+    />
+</property>	
+    <property name="sys_fille" type="string"  not-null="false">
+    <column name="sys_fille"  
+		length="40"               
+    />
+</property>	
+    <property name="sys_filldept" type="string"  not-null="false">
+    <column name="sys_filldept"  
+		length="80"               
+    />
+</property>	
+    <property name="sys_filltime" type="timestamp"  not-null="false">
+    <column name="sys_filltime"  
+		               
+    />
+</property>	
+    <property name="sys_isvalid" type="integer"  not-null="false">
+    <column name="sys_isvalid"  
+		               
+    />
+</property>	
+    <property name="sys_dataowner" type="string"  not-null="false">
+    <column name="sys_dataowner"  
+		length="40"               
+    />
+</property>	
+    <property name="fplanclass" type="string"  >
+    <column name="fplanclass"  
+		length="200"               
+    />
+</property>	
+    <property name="fvoltage" type="string"  >
+    <column name="fvoltage"  
+		length="200"               
+    />
+</property>	
+    <property name="fabolishreason" type="string"  >
+    <column name="fabolishreason"  
+		length="200"               
+    />
+</property>	
+  
+	<!--  
+    <set name="fddrepairdetail2" inverse="true" cascade="none"><key column="FDayplanNo"/><one-to-many class="DdRepairdetail"/></set>
+    -->
+         <set name="fdddayplandelaylist1" inverse="true" cascade="all"><key column="FDayPlanNO"/><one-to-many class="DdDayplandelaylist"/></set>
+         <set name="fdddayplanexcutelist1" inverse="true" cascade="all"><key column="FDayPlanNO"/><one-to-many class="DdDayplanexcutelist"/></set>
+         <set name="fddfsmodechangelist4" inverse="true" cascade="delete"><key column="dayplanno"/><one-to-many class="DdfsModechangelist"/></set>
+         <set name="fdayplancoopraterel1" inverse="true" cascade="none"><key column="Fdayoutageplanid"/><one-to-many class="Dayplancoopraterel"/></set>
+         <!-- <set name="fdddayplanfixvaluerel2" inverse="true" cascade="none"><key column="Dayoutageplanid"/><one-to-many class="DdDayplanfixvaluerel"/></set>
+         <set name="fzdhopexaminelist6" inverse="true" cascade="none"><key column="PlanNo"/><one-to-many class="ZdhOpexaminelist"/></set> -->
+     </class>
+
+</hibernate-mapping>
+

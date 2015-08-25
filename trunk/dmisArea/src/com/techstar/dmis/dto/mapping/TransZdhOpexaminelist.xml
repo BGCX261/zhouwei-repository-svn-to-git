@@ -1,0 +1,20 @@
+<!DOCTYPE mappings PUBLIC "-//DOZER//DTD MAPPINGS//EN"
+"http://dozer.sourceforge.net/dtd/dozerbeanmapping.dtd">
+<mappings>
+   <mapping>
+   <class-a>com.techstar.dmis.dto.ZdhOpexaminelistDto</class-a>
+   <class-b>com.techstar.dmis.dto.transfer.TransZdhOpexaminelistDto</class-b>
+   <field>
+      <a>zzdhopexaminelist5.ondutyno</a>
+      <b>trans_zzdhopexaminelist5</b>
+      <a-hint>com.techstar.dmis.dto.ZdhAutoondutylogDto</a-hint>
+      <b-hint>java.lang.String</b-hint>
+   </field>
+   <field>
+      <a>zzdhopexaminelist6.fdayplanno</a>
+      <b>trans_zzdhopexaminelist6</b>
+      <a-hint>com.techstar.dmis.dto.DdDoutageplanDto</a-hint>
+      <b-hint>java.lang.String</b-hint>
+   </field>
+   </mapping>
+</mappings>

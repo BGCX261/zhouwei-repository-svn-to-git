@@ -1,0 +1,20 @@
+<!DOCTYPE mappings PUBLIC "-//DOZER//DTD MAPPINGS//EN"
+"http://dozer.sourceforge.net/dtd/dozerbeanmapping.dtd">
+<mappings>
+   <mapping>
+   <class-a>com.techstar.dmis.dto.DdPowerchangrecordDto</class-a>
+   <class-b>com.techstar.dmis.dto.transfer.TransDdPowerchangrecordDto</class-b>
+   <field>
+      <a>zddpowerchangrecord4.fid</a>
+      <b>trans_zddpowerchangrecord4</b>
+      <a-hint>com.techstar.dmis.dto.DdClassondutylogDto</a-hint>
+      <b-hint>java.lang.String</b-hint>
+   </field>
+   <field>
+      <a>zddpowerchangrecord6.id</a>
+      <b>trans_zddpowerchangrecord6</b>
+      <a-hint>com.techstar.dmis.dto.StdStationDto</a-hint>
+      <b-hint>java.lang.String</b-hint>
+   </field>
+   </mapping>
+</mappings>

@@ -1,0 +1,31 @@
+<%@ page contentType="text/html; charset=utf-8" language="java"%>
+<%@ include file="/common/init_tag.jsp" %>
+<script language="javascript" type="text/javascript" src="<%=request.getContextPath()%>/script/tabs/tab.js"></script>
+
+
+<script language="javascript">
+<!--
+
+#foreach($link in $links)
+
+   #if($link.name.equals("grid"))
+	function onClick$velocityCount(){
+		document.all.iframe1.src = "<%=request.getContextPath()%>/application/${mentity.entityBean.getLowEnName().toLowerCase()}/${link.value}.jsp";
+	}
+   #end
+
+   
+  #if($link.name.equals("detail"))
+	function onClick$velocityCount(isNew,isCopy){
+		var mainId = dealMainId(isNew);
+		document.all.iframe2.src = "<%=request.getContextPath()%>${despatch_url}.do?method=initDetail&mainId=" + mainId + "&isCopy="+isCopy;
+	}
+   #end
+
+#end
+//-->
+</script>
+
+#foreach($html in $tab_htmls)
+$html
+#end

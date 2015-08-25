@@ -1,0 +1,20 @@
+<!--停复役申请-->
+<head>
+  <obj>ZdhSrapplicationDto</obj>
+  <column  colName="fapplicationno" propertyName="fapplicationno" colType="string" dataTypeLen="32" isPrimary="1" visible="1" width="90" isEdit="0" textColor="#000000" className="ZdhSrapplicationDto" refName="fapplicationno" ></column>
+  <column  colName="fstationname" propertyName="fstationname" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="138" isEdit="0" textColor="#000000" className="ZdhSrapplicationDto" refName="fstationname" ></column>
+  <column  colName="feqpclasstype" propertyName="feqpclasstype" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="ZdhSrapplicationDto" refName="feqpclasstype" ></column>
+  <column  colName="feqpclassname" propertyName="feqpclassname" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="122" isEdit="0" textColor="#000000" className="ZdhSrapplicationDto" refName="feqpclassname" ></column>
+  <column  colName="fmaintenancerange" propertyName="fmaintenancerange" colType="string" dataTypeLen="200" isPrimary="0" visible="1" width="186" isEdit="0" textColor="#000000" className="ZdhSrapplicationDto" refName="fmaintenancerange" ></column>
+  <column  colName="fapplicationstarttime" propertyName="fapplicationstarttime" colType="date" dataTypeLen="0" isPrimary="0" visible="1" width="138" isEdit="0" textColor="#000000" className="ZdhSrapplicationDto" refName="fapplicationstarttime" ></column>
+  <column  colName="fapplicationendime" propertyName="fapplicationendime" colType="date" dataTypeLen="0" isPrimary="0" visible="1" width="138" isEdit="0" textColor="#000000" className="ZdhSrapplicationDto" refName="fapplicationendime" ></column>
+  <column  colName="fkeeptime" propertyName="fkeeptime" colType="integer" dataTypeLen="0" isPrimary="0" visible="1" width="122" isEdit="0" textColor="#000000" className="ZdhSrapplicationDto" refName="fkeeptime" ></column>
+  <column  colName="fattribute" propertyName="fattribute" colType="string" dataTypeLen="64" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="ZdhSrapplicationDto" refName="fattribute" ></column>
+  <column  colName="fexcutestatus" propertyName="fexcutestatus" colType="string" dataTypeLen="64" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="ZdhSrapplicationDto" refName="fexcutestatus" ></column>
+  <column  colName="version" propertyName="version" colType="integer" dataTypeLen="10" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="ZdhSrapplicationDto" refName="version" ></column>
+  	<column colName="opButton_1" propertyName="opButton_1"
+		colType="string" dataTypeLen="0" isPrimary="0" visible="1" width="70"
+		isEdit="0" textColor="#000000" className="" refName="">
+	</column>
+  <column  colName="opButton_2" propertyName="opButton_2" colType="string" dataTypeLen="0" isPrimary="0" visible="1" width="70" isEdit="0" textColor="#000000" className="" refName="" ></column>
+</head>

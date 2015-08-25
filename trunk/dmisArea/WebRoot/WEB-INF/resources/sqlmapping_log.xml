@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>	
+	<namedSqlQueries>
+		<!-- 操作日志LogInfo -->
+		<sqlQuery>
+			<name>queryAllLogInfo</name>
+			<sqlString>select * from logInfo</sqlString>
+		</sqlQuery>		
+		<sqlQuery>
+			<name>clearAllLogInfo</name>
+			<sqlString>delete from logInfo</sqlString>
+		</sqlQuery>
+		<sqlQuery>
+			<name>saveLogInfo</name>
+			<sqlString>insert into loginfo(logId\,operator\,operateDate\,content) values(?\,?\,?\,?)</sqlString>
+		</sqlQuery>
+		<sqlQuery>
+			<name>queryLogInfoForOperator</name>
+			<sqlString>select * from logInfo where operator = ?</sqlString>
+		</sqlQuery>
+		<sqlQuery>
+			<name>queryLogInfoForDate</name>
+			<sqlString>select * from logInfo where operateDate between to_date(?\,'yyyy-MM-dd') and to_date(?\,'yyyy-MM-dd')</sqlString>
+		</sqlQuery>
+		<sqlQuery>
+			<name>queryLogInfoForDateAndOperator</name>
+			<sqlString>select * from logInfo where  ( operateDate between to_date(?\,'yyyy-MM-dd') and to_date(?\,'yyyy-MM-dd'))   and ( operator = ? )</sqlString>
+		</sqlQuery>		
+	</namedSqlQueries>
+</config>

@@ -1,0 +1,17 @@
+<!--日停电计划-->
+<head>
+  <obj>DdDoutageplanDto</obj>
+  <column  colName="fdayplanno" propertyName="fdayplanno" colType="string" dataTypeLen="32" isPrimary="1" visible="1" width="90" isEdit="0" textColor="#000000" className="DdDoutageplanDto" refName="fdayplanno" ></column>
+  <column  colName="fworkarea" propertyName="fworkarea" colType="string" dataTypeLen="300" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="DdDoutageplanDto" refName="fworkarea" ></column>
+  <column  colName="foutagearea" propertyName="foutagearea" colType="string" dataTypeLen="30" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="DdDoutageplanDto" refName="foutagearea" ></column>
+  <column  colName="workcontent" propertyName="workcontent" colType="string" dataTypeLen="600" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="DdDoutageplanDto" refName="workcontent" ></column>
+  <column  colName="fplanclass" propertyName="fplanclass" colType="string" dataTypeLen="64" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="DdDoutageplanDto" refName="fplanclass" ></column>
+  <column  colName="fvoltage" propertyName="fvoltage" colType="string" dataTypeLen="64" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="DdDoutageplanDto" refName="fvoltage" ></column>
+  <column  colName="sys_dataowner" propertyName="sys_dataowner" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="106" isEdit="0" textColor="#000000" className="DdDoutageplanDto" refName="sys_dataowner" ></column>
+  <column  colName="fapplystime" propertyName="fapplystime" colType="timestamp" dataTypeLen="0" isPrimary="0" visible="1" width="138" isEdit="0" textColor="#000000" className="DdDoutageplanDto" refName="fapplystime" ></column>
+  <column  colName="fapplyetime" propertyName="fapplyetime" colType="timestamp" dataTypeLen="0" isPrimary="0" visible="1" width="138" isEdit="0" textColor="#000000" className="DdDoutageplanDto" refName="fapplyetime" ></column>
+  <column  colName="fstatus" propertyName="fstatus" colType="string" dataTypeLen="0" isPrimary="0" visible="1" width="42" isEdit="0" textColor="#000000" className="DdDoutageplanDto" refName="fstatus" ></column>
+  <column  colName="fexcutestatus" propertyName="fexcutestatus" colType="string" dataTypeLen="0" isPrimary="0" visible="1" width="42" isEdit="0" textColor="#000000" className="DdDoutageplanDto" refName="fexcutestatus" ></column>
+  <column  colName="faddipicture" propertyName="faddipicture" colType="blob" dataTypeLen="0" isPrimary="0" visible="0" width="42" isEdit="0" textColor="#000000" className="DdDoutageplanDto" refName="faddipicture" ></column>
+  <column  colName="version" propertyName="version" colType="integer" dataTypeLen="80" isPrimary="0" visible="0" width="74" isEdit="1" textColor="#000000" className="" refName="version" ></column>
+</head>

@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="com.techstar.dmis.entity">
+	<class name="RepReptemplate" table="DMIS_REP_REPTEMPLATE" dynamic-insert="true" dynamic-update="true" optimistic-lock="version">
+    <id name="f_reptmplid" type="string">
+      <column name="f_reptmplid" sql-type="varchar(40)" not-null="true"/>
+      <generator class="assigned"/>
+    </id>
+
+ 	<version name="version" column="VERSION" unsaved-value="undefined"/>
+  
+   <property name="f_treeid" type="string"  not-null="false">
+    <column name="f_treeid"  
+		length="40"               
+    />
+</property>	
+    <property name="f_applicationid" type="string"  not-null="false">
+    <column name="f_applicationid"  
+		length="40"               
+    />
+</property>	
+    <property name="f_name" type="string"  not-null="false">
+    <column name="f_name"  
+		length="60"               
+    />
+</property>	
+    <property name="freporttype" type="string"  not-null="false">
+    <column name="freporttype"  
+		length="40"               
+    />
+</property>	
+    <property name="f_otherinfo" type="string"  not-null="false">
+    <column name="f_otherinfo"  
+		length="4000"               
+    />
+</property>	
+    <property name="f_description" type="string"  not-null="false">
+    <column name="f_description"  
+		length="300"               
+    />
+</property>	
+  
+	
+    <set name="freprepresult1" inverse="true" cascade="none"><key column="FREPTMPLID"/><one-to-many class="RepRepresult"/></set>
+      <many-to-one name="zrepreptemplate1" class="RepResdata"   column="F_TMPLDATA" cascade="delete-orphan"></many-to-one>
+     </class>
+
+</hibernate-mapping>
+

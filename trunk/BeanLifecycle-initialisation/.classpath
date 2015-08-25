@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="commons-beanutils.jar"/>
+	<classpathentry kind="lib" path="commons-codec.jar"/>
+	<classpathentry kind="lib" path="commons-collections.jar"/>
+	<classpathentry kind="lib" path="commons-dbcp.jar"/>
+	<classpathentry kind="lib" path="commons-digester.jar"/>
+	<classpathentry kind="lib" path="commons-discovery.jar"/>
+	<classpathentry kind="lib" path="commons-fileupload.jar"/>
+	<classpathentry kind="lib" path="commons-httpclient.jar"/>
+	<classpathentry kind="lib" path="commons-io.jar"/>
+	<classpathentry kind="lib" path="commons-lang.jar"/>
+	<classpathentry kind="lib" path="commons-logging.jar"/>
+	<classpathentry kind="lib" path="commons-pool.jar"/>
+	<classpathentry kind="lib" path="commons-validator.jar"/>
+	<classpathentry kind="lib" path="spring-aop.jar"/>
+	<classpathentry kind="lib" path="spring-beans.jar"/>
+	<classpathentry kind="lib" path="spring-context-support.jar"/>
+	<classpathentry kind="lib" path="spring-context.jar"/>
+	<classpathentry kind="lib" path="spring-core.jar"/>
+	<classpathentry kind="lib" path="spring-jdbc.jar"/>
+	<classpathentry kind="lib" path="spring-jms.jar"/>
+	<classpathentry kind="lib" path="spring-orm.jar"/>
+	<classpathentry kind="lib" path="spring-test.jar"/>
+	<classpathentry kind="lib" path="spring-tx.jar"/>
+	<classpathentry kind="lib" path="spring-web.jar"/>
+	<classpathentry kind="lib" path="spring-webmvc-portlet.jar"/>
+	<classpathentry kind="lib" path="spring-webmvc-struts.jar"/>
+	<classpathentry kind="lib" path="spring-webmvc.jar"/>
+	<classpathentry kind="lib" path="spring.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

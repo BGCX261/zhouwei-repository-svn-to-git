@@ -1,0 +1,23 @@
+<!--定值单-->
+<head>
+  <obj>BhFixedvaluebillDto</obj>
+  <column  colName="fixvaluebillno" propertyName="fixvaluebillno" colType="string" dataTypeLen="32" isPrimary="1" visible="1" width="74" isEdit="0" textColor="#000000" className="BhFixedvaluebillDto" refName="fixvaluebillno" ></column>
+  <column  colName="fstationname" propertyName="fstationname" colType="string" dataTypeLen="80" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="BhFixedvaluebillDto" refName="fstationname" ></column>
+  <column  colName="feqpname" propertyName="feqpname" colType="string" dataTypeLen="80" isPrimary="0" visible="1" width="106" isEdit="0" textColor="#000000" className="BhFixedvaluebillDto" refName="feqpname" ></column>
+  <column  colName="fswitchno" propertyName="fswitchno" colType="string" dataTypeLen="80" isPrimary="0" visible="1" width="58" isEdit="0" textColor="#000000" className="BhFixedvaluebillDto" refName="fswitchno" ></column>
+  <column  colName="fixvaluedate" propertyName="fixvaluedate" colType="date" dataTypeLen="0" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="BhFixedvaluebillDto" refName="fixvaluedate" ></column>
+  <column  colName="fixvaluecbillno" propertyName="fixvaluecbillno" colType="string" dataTypeLen="80" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="BhFixedvaluebillDto" refName="fixvaluecbillno" ></column>
+  <column  colName="funit" propertyName="funit" colType="string" dataTypeLen="80" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="BhFixedvaluebillDto" refName="funit" ></column>
+  <column  colName="fapprover" propertyName="fapprover" colType="string" dataTypeLen="80" isPrimary="0" visible="1" width="58" isEdit="0" textColor="#000000" className="BhFixedvaluebillDto" refName="fapprover" ></column>
+  <column  colName="fchecker" propertyName="fchecker" colType="string" dataTypeLen="80" isPrimary="0" visible="1" width="58" isEdit="0" textColor="#000000" className="BhFixedvaluebillDto" refName="fchecker" ></column>
+  <column  colName="fcaculator" propertyName="fcaculator" colType="string" dataTypeLen="80" isPrimary="0" visible="1" width="58" isEdit="0" textColor="#000000" className="BhFixedvaluebillDto" refName="fcaculator" ></column>
+  <column  colName="fremark" propertyName="fremark" colType="string" dataTypeLen="80" isPrimary="0" visible="1" width="42" isEdit="0" textColor="#000000" className="BhFixedvaluebillDto" refName="fremark" ></column>
+  <column  colName="fexcutetime" propertyName="fexcutetime" colType="date" dataTypeLen="0" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="BhFixedvaluebillDto" refName="fexcutetime" ></column>
+  <column  colName="ondutymember" propertyName="ondutymember" colType="string" dataTypeLen="80" isPrimary="0" visible="1" width="90" isEdit="0" textColor="#000000" className="BhFixedvaluebillDto" refName="ondutymember" ></column>
+  <column  colName="fixvalueoriginal" propertyName="fixvalueoriginal" colType="blob" dataTypeLen="0" isPrimary="0" visible="1" width="90" isEdit="0" textColor="#000000" className="BhFixedvaluebillDto" refName="fixvalueoriginal" ></column>
+  <column  colName="fixvalueno" propertyName="fixvalueno" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="90" isEdit="0" textColor="#000000" className="BhFixedvaluebillDto" refName="fixvalueno" ></column>
+  <column  colName="sys_fille" propertyName="sys_fille" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="58" isEdit="0" textColor="#000000" className="BhFixedvaluebillDto" refName="sys_fille" ></column>
+  <column  colName="sys_filldept" propertyName="sys_filldept" colType="string" dataTypeLen="80" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="BhFixedvaluebillDto" refName="sys_filldept" ></column>
+  <column  colName="sys_filltime" propertyName="sys_filltime" colType="date" dataTypeLen="80" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="BhFixedvaluebillDto" refName="sys_filltime" ></column>
+  <column  colName="fchangereason" propertyName="fchangereason" colType="string" dataTypeLen="64" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="BhFixedvaluebillDto" refName="fchangereason" ></column>
+</head>

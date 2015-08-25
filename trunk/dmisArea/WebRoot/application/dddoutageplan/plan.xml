@@ -1,0 +1,63 @@
+<?xml version="1.0" ?>
+<rows>
+   <row id ="1" >
+      <cell>1</cell>
+      <cell>502</cell>
+      <cell>阿昔洛韦片</cell>
+      <cell>0.1g*24T*600</cell>
+      <cell>盒</cell>
+      <cell>江西汇仁药业</cell>
+      <cell>2006-11-10 20:25:43.0</cell>
+      <cell>102.8</cell>
+   </row>
+   <row id ="2" >
+      <cell>2</cell>
+      <cell>503</cell>
+      <cell>利巴韦林片</cell>
+      <cell>100mg*24T</cell>
+      <cell>盒</cell>
+      <cell>江西汇仁药业</cell>
+      <cell>2006-11-10 20:25:43.0</cell>
+      <cell>257</cell>
+   </row>
+   <row id ="3" >
+      <cell>3</cell>
+      <cell>510</cell>
+      <cell>双黄连合剂</cell>
+      <cell>100ml*50瓶</cell>
+      <cell>瓶</cell>
+      <cell>河南竹林众生药业</cell>
+      <cell>2006-11-10 20:25:43.0</cell>
+      <cell>1505</cell>
+   </row>
+   <row id ="4" >
+      <cell>4</cell>
+      <cell>515</cell>
+      <cell>感冒清热颗粒</cell>
+      <cell>12g*10袋</cell>
+      <cell>盒</cell>
+      <cell>河北万岁</cell>
+      <cell>2006-11-10 20:25:43.0</cell>
+      <cell>318</cell>
+   </row>
+   <row id ="5" >
+      <cell>5</cell>
+      <cell>517</cell>
+      <cell>桑美克拉霉素</cell>
+      <cell>0.25g*6S</cell>
+      <cell>盒</cell>
+      <cell>江苏爱普森</cell>
+      <cell>2006-11-10 20:25:43.0</cell>
+      <cell>225</cell>
+   </row>
+   <row id ="6" >
+      <cell>总计</cell>
+      <cell></cell>
+      <cell></cell>
+      <cell></cell>
+      <cell></cell>
+      <cell></cell>
+      <cell></cell>
+      <cell>2407.8</cell>
+   </row>
+</rows>

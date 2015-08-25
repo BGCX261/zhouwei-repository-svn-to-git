@@ -1,0 +1,259 @@
+<?xml version='1.0' encoding='utf-8'?>
+<?xml-stylesheet type='text/xsl' href='menu.xsl'?>
+<Menu>
+ 
+	<MenuItem Text="DEMO" id="demo">
+ 
+		<MenuItem Text="工具栏+普通数据页" src="" id="demo1" href="/rijihua.do?method=initFrame1">
+		</MenuItem>
+ 
+	 	<MenuItem Text="工具栏+Tab页" src="" id="demo2" href="/rijihua.do?method=initFrame2">
+		</MenuItem>
+		<MenuItem Text="树+普通数据页" src="" id="demo3" href="/rijihua.do?method=initFrame3">
+		</MenuItem> 
+	</MenuItem>
+
+	<MenuItem Text="调度">
+			<MenuItem Text="调度日志"  id="rj" >
+			
+				<MenuItem Text="调度运行日志"  id="sp" href="/rijihua.do?method=initFrame1">
+				</MenuItem>
+				<MenuItem Text="设备重载" id="yxzgsp" >
+				</MenuItem>
+
+				<MenuItem Text="自投停用">
+				</MenuItem>
+
+				<MenuItem Text="电厂调度">
+				</MenuItem>
+
+				<MenuItem Text="值班运行纪事">
+				</MenuItem>
+
+				<MenuItem Text="地区负荷情况">
+				</MenuItem>
+
+				<MenuItem Text="北京电网负荷曲线图">
+				</MenuItem>
+			</MenuItem>
+			
+			<MenuItem Text="施工组挂牌">
+			</MenuItem>
+
+			<MenuItem Text="拉路限电">
+				<MenuItem Text="拉路序位表">
+				</MenuItem>
+				<MenuItem Text="拉路限电记录">
+				</MenuItem>
+			</MenuItem>
+
+			<MenuItem Text="政治保电管理">
+			</MenuItem>
+
+			<MenuItem Text="调度运行日/月报管理">
+			</MenuItem>
+
+			<MenuItem Text="调度操作票管理">
+				<MenuItem Text="操作票">
+				</MenuItem>
+				<MenuItem Text="典型票">
+				</MenuItem>
+			</MenuItem>
+
+
+			<MenuItem Text="事故简报管理">
+			</MenuItem>
+
+			<MenuItem Text="检修计划管理">
+				<MenuItem Text="月检修计划">
+				</MenuItem>
+				<MenuItem Text="日检修计划" href="/application/dayplan/init.jsp">
+				</MenuItem>
+				<MenuItem Text="电网风险分析">
+				</MenuItem>
+			</MenuItem>
+
+
+			<MenuItem Text="录音查询">
+			</MenuItem>
+
+			<MenuItem Text="调度细则">
+			</MenuItem>
+
+			<MenuItem Text="资料文件">
+			</MenuItem>
+
+	</MenuItem>
+	
+	
+	
+    <MenuItem Text="运方" id="main_help">
+		<MenuItem Text="发电批准书">
+		</MenuItem>
+		<MenuItem Text="方式变更">
+		</MenuItem>
+		<MenuItem Text="低频减载">
+		</MenuItem>
+		<MenuItem Text="无功电压">
+		</MenuItem>
+		<MenuItem Text="运行方式">
+			<MenuItem Text="年运行方式">
+			</MenuItem>
+			<MenuItem Text="季运行方式">
+			</MenuItem>
+			<MenuItem Text="月运行方式">
+			</MenuItem>
+			<MenuItem Text="日运行方式">
+			</MenuItem>
+		</MenuItem>
+		<MenuItem Text="设备参数">
+		</MenuItem>
+	</MenuItem>
+	
+
+	<MenuItem Text="保护" id="main_help">
+		<MenuItem Text="缺陷管理">
+		</MenuItem>
+		<MenuItem Text="动作统计">
+		</MenuItem>
+		<MenuItem Text="保护月报">
+		</MenuItem>
+		<MenuItem Text="保护年报">
+		</MenuItem>
+		<MenuItem Text="保护设备台帐管理">
+		</MenuItem>
+		<MenuItem Text="自投规程">
+		</MenuItem>
+		<MenuItem Text="定值单">
+		</MenuItem>
+		<MenuItem Text="反措发布/执行管理">
+		</MenuItem>
+	</MenuItem>
+	
+	
+	<MenuItem Text="自动化" id="main_edit" src="">
+			<MenuItem Text="自动化设备停/复役管理" src="" id="tdjhsp">
+			</MenuItem>
+			<MenuItem Text="自动化日志管理" src="" id="fsbb">
+				<MenuItem Text="自动化日志" src="" id="fsbb">
+				</MenuItem>
+				<MenuItem Text="交接班" src="" id="tdjhsp">
+				</MenuItem>
+				<MenuItem Text="缺陷记录" src="" id="tdjhsp">
+				</MenuItem>
+				<MenuItem Text="机房工作记录" src="" id="tdjhsp">
+				</MenuItem>
+				<MenuItem Text="机房工作票" src="" id="tdjhsp">
+				</MenuItem>
+				<MenuItem Text="传动记录" src="" id="tdjhsp">
+				</MenuItem>
+				<MenuItem Text="遥信动作记录" src="" id="tdjhsp">
+				</MenuItem>
+				<MenuItem Text="遥测合格率记录" src="" id="tdjhsp">
+				</MenuItem>
+				<MenuItem Text="系统图修改记录" src="" id="tdjhsp">
+				</MenuItem>
+			</MenuItem>
+			
+			
+			<MenuItem Text="自动化月报管理" src="" id="fsbb">
+			</MenuItem>
+			<MenuItem Text="自动化设备台帐管理" src="" id="fsbb">
+			</MenuItem>
+			<MenuItem Text="基改建工程验收管理" src="" id="fsbb">
+			</MenuItem>
+			<MenuItem Text="设备管理-备品备件管理" src="" id="fsbb">
+			</MenuItem>
+			<MenuItem Text="基改建工程设备投运管理" src="" id="fsbb">
+			</MenuItem>
+			<MenuItem Text="资料管理" src="" id="fsbb">
+			</MenuItem>
+			<MenuItem Text="方式报表" src="" id="fsbb">
+			</MenuItem>
+	</MenuItem>
+	
+	
+	<MenuItem Text="通信" id="main_help">
+	</MenuItem>
+	
+	
+	<MenuItem Text="技术" id="main_help">
+		<MenuItem Text="应急体系建设" src="" id="fsbb">
+		</MenuItem>
+		<MenuItem Text="职能专业绩效考核" src="" id="fsbb">
+		</MenuItem>
+		<MenuItem Text="培训计划" src="" id="fsbb">
+		</MenuItem>
+		<MenuItem Text="专业规划" src="" id="fsbb">
+		</MenuItem>
+		<MenuItem Text="技术标准化" src="" id="fsbb">
+		</MenuItem>
+		<MenuItem Text="公司调度机构安全性评价" src="" id="fsbb">
+		</MenuItem>
+		<MenuItem Text="公司调度机构同业对标指标" src="" id="fsbb">
+		</MenuItem>
+	</MenuItem>
+	
+	
+	<MenuItem Text="综合" id="main_help">
+		<MenuItem Text="专业文件-国网文件" src="" id="fsbb">
+		</MenuItem>
+		<MenuItem Text="专业文件-华北电网公司文件" src="" id="fsbb">
+		</MenuItem>
+		<MenuItem Text="专业文件-调度中心文件" src="" id="fsbb">
+		</MenuItem>
+		<MenuItem Text="会议记录" src="" id="fsbb">
+		</MenuItem>
+		<MenuItem Text="计划管理" src="" id="fsbb">
+		</MenuItem>
+		<MenuItem Text="任务管理" src="" id="fsbb">
+		</MenuItem>
+	</MenuItem>
+	
+	
+	<MenuItem Text="人员" id="main_help">
+		<MenuItem Text="人员管理" src="" id="fsbb">
+		</MenuItem>
+		<MenuItem Text="专业培训" src="" id="fsbb">
+		</MenuItem>
+	</MenuItem>
+	
+	
+	<MenuItem Text="系统维护" id="main_help">
+		<MenuItem Text="字典维护" src="" id="fsbb" href="/application/dicconfig/init.jsp">
+		</MenuItem>
+	</MenuItem>
+	<MenuItem Text="安全管理" id="main_help">
+	</MenuItem>
+
+</Menu>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

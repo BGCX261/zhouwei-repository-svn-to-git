@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook V5.0//EN"
+"http://www.oasis-open.org/docbook/xml/5.0b5/dtd/docbook.dtd">
+<sect2 version="5.0"
+	xmlns:xi="http://www.w3.org/2001/XInclude">
+	<title>BaseHibernateDomainDao</title>
+	<para>
+		BaseHibernateDomainDao是基于Hibernate技术实现的DomainDao。在实现了标准的DomainDao的基础上，
+		它有额外提供了一些基于Hibernate的接口，例如getCriteria以及基于Criteria的查询方法。
+	</para>
+	<para>
+		Service层如果不想使用Hibernate特有的接口，那么在Service类中可以将DAO声明为IDomainDao类型；	如果希望使用Hibernate特有的接口，
+		在Service类则需要将DAO声明为BaseHibernateDomainDao类型。需要注意的是，使用了这样的声明，Service类将对底层DAO技术产生依赖，
+		在不修改代码的情况下，无法再替换为其它持久层技术。
+	</para>
+</sect2>

@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="com.techstar.dmis.entity">
+	<class name="ParaWaterTBSys" table="DMIS_ParaWaterTBSys" dynamic-insert="true" dynamic-update="true" optimistic-lock="version">
+    <id name="feqpid" type="string">
+      <column name="feqpid" sql-type="varchar(80)" not-null="true"/>
+      <generator class="assigned"/>
+    </id>
+
+ 	<version name="version" column="VERSION" unsaved-value="undefined"/>
+  
+   <property name="fctrlperiod" type="integer"  not-null="false">
+    <column name="fctrlperiod"  
+		length="10"        precision="2"       
+    />
+</property>	
+    <property name="frotapwtimes" type="integer"  not-null="false">
+    <column name="frotapwtimes"  
+		length="10"        precision="2"       
+    />
+</property>	
+    <property name="fratiogain" type="integer"  not-null="false">
+    <column name="fratiogain"  
+		length="10"        precision="2"       
+    />
+</property>	
+    <property name="fdefinitegain" type="integer"  not-null="false">
+    <column name="fdefinitegain"  
+		length="10"        precision="2"       
+    />
+</property>	
+    <property name="fdifferentialgain" type="integer"  not-null="false">
+    <column name="fdifferentialgain"  
+		length="10"        precision="2"       
+    />
+</property>	
+    <property name="foncefmdeadzone" type="integer"  not-null="false">
+    <column name="foncefmdeadzone"  
+		length="10"        precision="2"       
+    />
+</property>	
+    <property name="fkeepquiettimes" type="integer"  not-null="false">
+    <column name="fkeepquiettimes"  
+		length="10"        precision="2"       
+    />
+</property>	
+    <property name="ftempturncoe" type="integer"  not-null="false">
+    <column name="ftempturncoe"  
+		length="10"        precision="2"       
+    />
+</property>	
+    <property name="fbuffertimes" type="integer"  not-null="false">
+    <column name="fbuffertimes"  
+		length="10"        precision="2"       
+    />
+</property>	
+    <property name="fperpeturncoe" type="integer"  not-null="false">
+    <column name="fperpeturncoe"  
+		length="10"        precision="2"       
+    />
+</property>	
+    <property name="fservopentime" type="integer"  not-null="false">
+    <column name="fservopentime"  
+		length="10"        precision="2"       
+    />
+</property>	
+    <property name="fservclstime" type="integer"  not-null="false">
+    <column name="fservclstime"  
+		length="10"        precision="2"       
+    />
+</property>	
+  
+	
+ <many-to-one name="zparawatertbsys2" class="EtsEquipment"   column="FEqpID" cascade="delete-orphan"></many-to-one>
+     </class>
+
+</hibernate-mapping>
+

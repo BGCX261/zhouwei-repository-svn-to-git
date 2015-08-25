@@ -1,0 +1,117 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="com.techstar.dmis.entity">
+	<class name="FsApprovebook" table="DMIS_FS_ApproveBook" dynamic-insert="true" dynamic-update="true" optimistic-lock="version">
+    <id name="fapprovcomputerno" type="string">
+      <column name="fapprovcomputerno" sql-type="varchar(40)" not-null="true"/>
+      <generator class="assigned"/>
+    </id>
+
+ 	<version name="version" column="VERSION" unsaved-value="undefined"/>
+  
+   <property name="fapprovbookno" type="string"  not-null="false">
+    <column name="fapprovbookno"  
+		length="40"               
+    />
+</property>	
+    <property name="fstationname" type="string"  not-null="false">
+    <column name="fstationname"  
+		length="40"               
+    />
+</property>	
+    <property name="fprojectname" type="string"  not-null="false">
+    <column name="fprojectname"  
+		length="80"               
+    />
+</property>	
+    <property name="fgenerationtime" type="date"  not-null="false">
+    <column name="fgenerationtime"  
+		               
+    />
+</property>	
+    <property name="fprojectunit" type="string"  not-null="false">
+    <column name="fprojectunit"  
+		length="80"               
+    />
+</property>	
+    <property name="fsendtounit" type="string"  not-null="false">
+    <column name="fsendtounit"  
+		length="200"               
+    />
+</property>	
+    <property name="fcompletiondate" type="date"  not-null="false">
+    <column name="fcompletiondate"  
+		               
+    />
+</property>	
+    <property name="fproblem" type="string"  not-null="false">
+    <column name="fproblem"  
+		length="200"               
+    />
+</property>	
+    <property name="fstatus" type="string"  not-null="false">
+    <column name="fstatus"  
+		length="80"               
+    />
+</property>	
+    <property name="fstationid" type="string"  not-null="false">
+    <column name="fstationid"  
+		length="40"               
+    />
+</property>	
+    <property name="fwriterunit" type="string"  not-null="true">
+    <column name="fwriterunit"  
+		length="80"               
+    />
+</property>	
+    <property name="feqpcontent" type="org.springframework.orm.hibernate3.support.BlobByteArrayType"  not-null="false">
+    <column name="feqpcontent"  
+		               
+    />
+</property>	
+    <property name="sys_fille" type="string"  not-null="false">
+    <column name="sys_fille"  
+		length="40"               
+    />
+</property>	
+    <property name="sys_filldept" type="string"  not-null="false">
+    <column name="sys_filldept"  
+		length="80"               
+    />
+</property>	
+    <property name="sys_filltime" type="timestamp"  not-null="false">
+    <column name="sys_filltime"  
+		               
+    />
+</property>	
+    <property name="sys_isvalid" type="integer"  not-null="false">
+    <column name="sys_isvalid"  
+		               
+    />
+</property>	
+    <property name="sys_dataowner" type="string"  not-null="false">
+    <column name="sys_dataowner"  
+		length="40"               
+    />
+</property>	
+    <property name="fvoltage" type="string"  >
+    <column name="fvoltage"  
+		length="200"               
+    />
+</property>	
+    <property name="fexcutestatus" type="string"  >
+    <column name="fexcutestatus"  
+		length="200"               
+    />
+</property>	
+  
+	
+    <set name="ffsapprovebookdetail1" inverse="true" cascade="delete-orphan"><key column="FApprovNo"/><one-to-many class="FsApprovebookdetail"/></set>
+         <set name="ffsafrel1" inverse="true" cascade="delete-orphan"><key column="FApprovNo"/><one-to-many class="FsAfrel"/></set>
+         <set name="ffsapproveeqprel1" inverse="true" cascade="none"><key column="FAPPROVENO"/><one-to-many class="FsApproveeqprel"/></set>
+         <set name="ffsallappendix1" inverse="true" cascade="delete-orphan"><key column="F_EntityID"/><one-to-many class="FsAllappendix"/></set>
+      <many-to-one name="zfsapprovebook6" class="BhAsregulate"   column="ASRegulationID" cascade="none"></many-to-one>
+     </class>
+
+</hibernate-mapping>
+

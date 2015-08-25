@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="com.techstar.dmis.entity">
+	<class name="DdCutoffsequence" table="DMIS_DD_CutOFFSequence"
+		dynamic-insert="true" dynamic-update="true"
+		optimistic-lock="version">
+		<id name="fid" type="string">
+			<column name="fid" sql-type="varchar(40)" not-null="true" />
+			<generator class="assigned" />
+		</id>
+
+		<version name="version" column="VERSION"
+			unsaved-value="undefined" />
+
+		<property name="fstationname" type="string" not-null="true">
+			<column name="fstationname" length="150" />
+		</property>
+		<property name="ftransformer" type="string" not-null="false">
+			<column name="ftransformer" length="40" />
+		</property>
+		<property name="fbusbar" type="string" not-null="false">
+			<column name="fbusbar" length="40" />
+		</property>
+		<property name="fround" type="string" not-null="true">
+			<column name="fround" length="40" />
+		</property>
+		<property name="fswitchno" type="string" not-null="false">
+			<column name="fswitchno" length="40" />
+		</property>
+		<property name="froad" type="string" not-null="false">
+			<column name="froad" length="40" />
+		</property>
+		<property name="flineclass" type="string" not-null="false">
+			<column name="flineclass" length="40" />
+		</property>
+		<property name="fload" type="integer" not-null="false">
+			<column name="fload" />
+		</property>
+		<property name="foutageareauser" type="string"
+			not-null="false">
+			<column name="foutageareauser" length="300" />
+		</property>
+		<property name="fdubleoutagestation" type="string"
+			not-null="false">
+			<column name="fdubleoutagestation" length="300" />
+		</property>
+		<property name="fdubleoutageroad" type="string"
+			not-null="false">
+			<column name="fdubleoutageroad" length="300" />
+		</property>
+		<property name="fdubleoutageuser" type="string"
+			not-null="false">
+			<column name="fdubleoutageuser" length="300" />
+		</property>
+		<property name="fno" type="integer" not-null="true">
+			<column name="fno" />
+		</property>
+		<property name="fvoltage" type="integer" not-null="false">
+			<column name="fvoltage" />
+		</property>
+		<property name="fpowerrate" type="integer" not-null="false">
+			<column name="fpowerrate" />
+		</property>
+
+
+		<many-to-one name="zddcutoffsequence5" class="DdCutofftitle"
+			column="FmainID" cascade="delete-orphan">
+		</many-to-one>
+	</class>
+
+</hibernate-mapping>
+

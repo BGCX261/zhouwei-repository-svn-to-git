@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+ <hibernate-configuration>
+    <session-factory>
+    <property name="max_fetch_depth">1</property>
+    <property name="show_sql">true</property>
+    <property name="hibernate.query.substitutions">true Y, false N</property>
+    <property name="hibernate.cglib.use_reflection_optimizer">false</property>
+    <property name="connection.driver_class">$conf.driver_class</property>
+    <property name="connection.url">$conf.connection_url</property>
+    <property name="connection.username">$conf.username</property>
+    <property name="connection.password">$conf.password</property>
+    <property name="dialect">$conf.dialect</property>
+    
+#if ($conf.entityMaps.size()>0)
+     #foreach($mapping in $conf.entityMaps)
+        <mapping resource="$mapping"/>
+     #end
+#end
+	</session-factory>
+	</hibernate-configuration>

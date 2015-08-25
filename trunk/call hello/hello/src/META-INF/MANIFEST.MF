@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Module-Type: Web
+Bundle-Version: 1.0.0
+Bundle-Name: Hello Bundle
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: hello
+Web-ContextPath: hello
+

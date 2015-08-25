@@ -1,0 +1,20 @@
+<!DOCTYPE mappings PUBLIC "-//DOZER//DTD MAPPINGS//EN"
+"http://dozer.sourceforge.net/dtd/dozerbeanmapping.dtd">
+<mappings>
+   <mapping>
+   <class-a>com.techstar.dmis.dto.StdLfroundDto</class-a>
+   <class-b>com.techstar.dmis.dto.transfer.TransStdLfroundDto</class-b>
+   <field>
+      <a>ffslfeqpfixinformdetail2</a>
+      <b>ffslfeqpfixinformdetail2</b>
+      <a-hint>com.techstar.dmis.dto.FsLfeqpfixinformdetailDto</a-hint>
+      <b-hint>com.techstar.dmis.dto.transfer.TransFsLfeqpfixinformdetailDto</b-hint>
+   </field>
+   <field>
+      <a>ffslfparalist3</a>
+      <b>ffslfparalist3</b>
+      <a-hint>com.techstar.dmis.dto.FsLfparalistDto</a-hint>
+      <b-hint>com.techstar.dmis.dto.transfer.TransFsLfparalistDto</b-hint>
+   </field>
+   </mapping>
+</mappings>

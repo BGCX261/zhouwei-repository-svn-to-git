@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>		
+	
+	<!-- 资源加载-->
+	<bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="location">
+			<value>WEB-INF\spring\spring.properties</value>
+		</property>
+		<property name="fileEncoding">
+			<value>GBK</value>
+		</property>
+	</bean>
+	
+	<bean id="resourceI18nBundle"
+		class="org.springframework.context.support.ResourceBundleMessageSource">
+		<property name="basename" value="i18n"/>			
+	</bean>
+
+	<bean id="messageSource"
+		class="org.springframework.context.support.ResourceBundleMessageSource">
+		<property name="basename" value="messages"/>			
+	</bean>
+	
+	<!-- 系统配置工具类-->
+	<bean id="configurationHelper"
+		class="com.techstar.framework.utils.ConfigurationHelper"
+		singleton="true">	
+		<constructor-arg>
+			<value>${path.configurations}</value>
+		</constructor-arg>
+	</bean>
+
+	<!-- 异常工具类-->
+	<bean id="exceptionCacheHelper"
+		class="com.techstar.framework.utils.ExceptionCacheHelper"
+		singleton="true">
+		<constructor-arg>
+			<value>${path.exception}</value>
+		</constructor-arg>
+	</bean>	
+	
+	
+	<!-- =========日志======== -->	
+	<!-- 日志切面配置 -->		
+	<bean id="theAdvisor" class="com.techstar.framework.service.log.logaop.LoggerAdvice" />
+    <bean id="aroundAdvisor" class="com.techstar.framework.service.log.logaop.LoggerAroundAdvice" />
+	<bean id="exceptionAdvisor" class="com.techstar.framework.service.log.logaop.LoggerExceptionAdvice" />	
+	
+	<!--使用日志aop-->
+	<bean id="baseLogAOP" abstract="true" class="org.springframework.aop.framework.ProxyFactoryBean">		
+		<property name="interceptorNames" value="theAdvisor,exceptionAdvisor"/>
+	</bean>
+	
+	<!-- 操作日志服务-->
+	<bean id="logservice"  parent="baseLogAOP">	
+		<property name="target">
+            <bean class="com.techstar.framework.service.log.LogServiceImpl">   
+            	<property name="baseJdbcDao" ref="iBaseJdbcDao"></property>
+            </bean>
+        </property>		
+	</bean>
+	<!-- =========消息  配置开始======== -->
+	
+    <!-- 消息接收任务定时器配置   --> 
+     <bean id="msgService"  parent="baseLogAOP">	
+       <property name="target">
+           <bean class="com.techstar.exchange.service.impl.ExchangeServiceImpl"></bean>           
+       </property>		
+     </bean>
+     <bean id="msgJob"        class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+        <property name="targetObject" ref="msgService"/>
+        <property name="targetMethod" value="recvMessage"/>
+     </bean>
+     <bean id="cronTrigger_msg"  class="org.springframework.scheduling.quartz.CronTriggerBean">
+        <property name="jobDetail" ref="msgJob"/>
+        <property name="cronExpression" value="0 0/2 * ? * * *"/>      
+     </bean>
+    
+	
+	<bean class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+	        <property name="triggers">
+	          	<list>
+	                <ref bean="cronTrigger"/> 
+	                <ref bean="cronTrigger_msg"/> 
+	                 <ref bean="cronTrigger_msgGen"/> 
+	            </list>        	
+	        </property>
+	</bean>	 
+	 
+    <!-- =========消息  配置结束======== -->
+    
+    <!-- =========生成本地业务数据  配置开始======== -->
+    <bean id="msgServiceGen"  parent="baseLogAOP">	
+       <property name="target">
+           <bean class="com.techstar.dmis.service.message.impl.GenBussDataFromMessageImp"></bean>        
+       </property>		
+    </bean>
+    <bean id="msgJobGen"        class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+        <property name="targetObject" ref="msgServiceGen"/>
+        <property name="targetMethod" value="genBussData"/>
+    </bean>
+    <bean id="cronTrigger_msgGen"  class="org.springframework.scheduling.quartz.CronTriggerBean">
+        <property name="jobDetail" ref="msgJobGen"/>
+        <property name="cronExpression" value="0 0/2 * ? * * *" />             
+    </bean>    
+	
+	
+    <!-- 根据接收的消息中的业务对象生成本地业务数据任务定时器配置 -->	 
+    
+	<!-- 日志任务定时器配置 -->
+	<bean id="logJob"
+        class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+        <property name="targetObject" ref="logservice"/>
+        <property name="targetMethod" value="backupLogInfo"/>         
+    </bean>
+   <!--  
+     秒（0－59）分钟（0－59）小时（0－23）月份中的日期（1－31）月份（1-12或JAN－DEC）星期中的日期（1-7或SUN－SAT） 年份（1970－2099）
+
+   -->
+    <bean id="cronTrigger"  class="org.springframework.scheduling.quartz.CronTriggerBean">
+        <property name="jobDetail" ref="logJob"/>
+        <property name="cronExpression" value="0 0 0 ? * 6 *"/> <!--每个星期六的凌晨执行该任务-->        
+    </bean>
+    
+	
+	
+	<!-- =========邮件======== -->
+	<!-- 邮件本地接口 -->
+	<bean id="iMailLocalService"  parent="baseLogAOP">	
+		<property name="target">
+            <bean class="com.techstar.framework.service.mail.MailServiceImpl">            	
+            </bean>
+        </property>		
+	</bean>
+	
+	
+	<!-- =========安全======== -->
+	<!-- 安全服务 -->
+	<bean id="iSecurityService"  parent="baseLogAOP">	
+		<property name="target">
+            <bean class="com.techstar.framework.service.security.impl.SecurityServiceImpl"/>
+        </property>		
+	</bean>
+
+	<!-- =========通用查询======== -->
+	<!-- 通用查询服务-->
+	<bean id="iCommonQueryService" parent="baseTransaction">
+		<property name="target">
+			<bean
+				class="com.techstar.framework.service.commonquery.impl.CommonQueryServiceImpl">
+				<property name="commonQueryDao" ref="iCommonQueryDao"></property>
+				<property name="baseJdbcDao" ref="iBaseJdbcDao"></property>
+			</bean>
+		</property>
+	</bean>
+	
+ <!--使用事务(包含日志aop)-->
+	<bean id="baseTransaction" abstract="true" class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">		
+		<property name="transactionManager">
+     	    <ref bean="transactionManager"/>
+    	</property>	    
+    	<property name="transactionAttributes">
+      		<props>        		
+				<prop key="*">PROPAGATION_REQUIRED</prop>
+      		</props>
+    	</property>		
+       <property name="preInterceptors">
+			<list>
+				<ref bean="theAdvisor"/>
+				<ref bean="exceptionAdvisor"/>				
+			</list>
+		</property>
+		<property name="postInterceptors">
+			<list>
+				<ref bean="exceptionAdvisor"/>
+			</list>
+		</property>	
+	</bean>
+	
+		<!-- 数据访问接口 -->
+	<bean id="iWorkflowDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.framework.service.workflow.dao.WorkflowDao">
+				<property name="jbpmTemplate">
+					<ref local="jbpmTemplate" />
+				</property>
+ 
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+				<property name="baseJdbcDao">
+					<ref bean="iBaseJdbcDao" />
+				</property>		
+				<property name="commonQueryDao">
+					<ref bean="iCommonQueryDao" />
+				</property>				
+			</bean>
+ 
+		</property>
+	</bean>
+ 
+	
+	<bean id="iWFManagerService" parent="baseTransaction">
+		<property name="target">
+			<bean
+				class="com.techstar.framework.service.workflow.manager.WFManagerServiceImpl">
+				<property name="workFlowDao" ref="iWorkflowDao"></property>
+			</bean>
+		</property>
+	</bean> 
+ 
+	
+	<bean id="iWFCommonService" parent="baseTransaction">
+		<property name="target">
+			<bean class="com.techstar.framework.service.workflow.bus.WorkflowService">
+       <property name="workFlowDao" ref="iWorkflowDao"></property>                                                             
+      </bean>
+		</property>
+	</bean>		
+	
+	<!-- workflow Facade-->
+	<bean id="wfmanagerfacade" parent="baseTransaction">
+		<property name="target">
+			<bean class="com.techstar.framework.service.workflow.manager.WFManagerFacade">
+				<property name="wfmanagerservice" ref="iWFManagerService"></property>
+ 
+ 
+				<property name="wfcommonservice" ref="iWFCommonService"></property>
+			</bean>
+		</property>
+	</bean>	
+	
+	
+	
+<!-- jbpm 配置管理 -->
+ <bean id="jbpmConfig" 
+      class="org.springmodules.workflow.jbpm31.LocalJbpmConfigurationFactoryBean">
+    <property name="sessionFactory" ref="dmisSessionFactory"/>
+        <property name="configuration" value="file:${path.jbpm.cfg}jbpm.cfg.xml"/>
+  </bean>
+  
+  
+  
+
+ <!-- jBPM template -->
+ <bean id="jbpmTemplate" class="org.springmodules.workflow.jbpm31.JbpmTemplate">
+ 	<property name="jbpmConfiguration">
+			<ref local="jbpmConfig" />
+	</property>
+ </bean>
+
+
+   <!-- 使用JTA时的事务管理 -->
+	<!--<bean id="transactionManager" class="org.springframework.transaction.jta.JtaTransactionManager">
+		<property name="transactionManagerName">
+			<value>javax.transaction.TransactionManager</value>
+		</property>
+	</bean>-->
+</beans>

@@ -1,0 +1,5 @@
+<head>
+	<obj>ProcessInstanceDto</obj>
+	<column colName="processDefinedName" colType="string" dataTypeLen="30" isPrimary="0" visible="1" width="70" isEdit="" textColor="#ffffff" className="ProcessDefinedDto" refName="processDefinedName"></column>
+	<column colName="processDefinedId" colType="string" dataTypeLen="30" isPrimary="1" visible="1" width="70" isEdit="" textColor="#ffffff" className="ProcessDefinedDto" refName="processDefinedId"></column>
+</head>	

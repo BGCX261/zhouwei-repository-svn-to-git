@@ -1,0 +1,15 @@
+<!--工作票-->
+<head>
+  <obj>ZdhWorkbillDto</obj>
+  <column  colName="workbillid" propertyName="workbillid" colType="string" dataTypeLen="32" isPrimary="1" visible="1" width="122" isEdit="0" textColor="#000000" className="ZdhWorkbillDto" refName="workbillid" ></column>
+  <column  colName="workingbillno" propertyName="workingbillno" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="122" isEdit="0" textColor="#000000" className="ZdhWorkbillDto" refName="workingbillno" ></column>
+  <column  colName="applicationunit" propertyName="applicationunit" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="ZdhWorkbillDto" refName="applicationunit" ></column>
+  <column  colName="applicants" propertyName="applicants" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="58" isEdit="0" textColor="#000000" className="ZdhWorkbillDto" refName="applicants" ></column>
+  <column  colName="workingcharge" propertyName="workingcharge" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="90" isEdit="0" textColor="#000000" className="ZdhWorkbillDto" refName="workingcharge" ></column>
+  <column  colName="worktime" propertyName="worktime" colType="date" dataTypeLen="0" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="ZdhWorkbillDto" refName="worktime" ></column>
+  <column  colName="workcontent" propertyName="workcontent" colType="string" dataTypeLen="1000" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="ZdhWorkbillDto" refName="workcontent" ></column>
+  <column  colName="relativesystem" propertyName="relativesystem" colType="string" dataTypeLen="80" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="ZdhWorkbillDto" refName="relativesystem" ></column>
+  <column  colName="relativeequipment" propertyName="relativeequipment" colType="string" dataTypeLen="80" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="ZdhWorkbillDto" refName="relativeequipment" ></column>
+  <column  colName="ispassed" propertyName="ispassed" colType="string" dataTypeLen="64" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="ZdhWorkbillDto" refName="ispassed" ></column>
+  <column  colName="fexcutestatus" propertyName="fexcutestatus" colType="string" dataTypeLen="64" isPrimary="0" visible="1" width="90" isEdit="0" textColor="#000000" className="ZdhWorkbillDto" refName="fexcutestatus" ></column>
+</head>

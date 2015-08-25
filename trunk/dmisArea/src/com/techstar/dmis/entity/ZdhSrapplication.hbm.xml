@@ -1,0 +1,170 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="com.techstar.dmis.entity">
+	<class name="ZdhSrapplication" table="DMIS_ZDH_SRApplication" dynamic-insert="true" dynamic-update="true" optimistic-lock="version">
+    <id name="fapplicationno" type="string">
+      <column name="fapplicationno" sql-type="varchar(40)" not-null="true"/>
+      <generator class="assigned"/>
+    </id>
+
+ 	<version name="version" column="VERSION" unsaved-value="undefined"/>
+  
+   <property name="fstationid" type="string"  not-null="false">
+    <column name="fstationid"  
+		length="40"               
+    />
+</property>	
+    <property name="fstationname" type="string"  not-null="false">
+    <column name="fstationname"  
+		length="40"               
+    />
+</property>	
+    <property name="feqpclasstype" type="string"  not-null="false">
+    <column name="feqpclasstype"  
+		length="40"               
+    />
+</property>	
+    <property name="feqpclassname" type="string"  not-null="false">
+    <column name="feqpclassname"  
+		length="40"               
+    />
+</property>	
+    <property name="fmaintenancerange" type="string"  not-null="false">
+    <column name="fmaintenancerange"  
+		length="200"               
+    />
+</property>	
+    <property name="fapplicationstarttime" type="timestamp"  not-null="false">
+    <column name="fapplicationstarttime"  
+		               
+    />
+</property>	
+    <property name="fapplicationendime" type="timestamp"  not-null="false">
+    <column name="fapplicationendime"  
+		               
+    />
+</property>	
+    <property name="fapprovalstarttime" type="timestamp"  not-null="false">
+    <column name="fapprovalstarttime"  
+		               
+    />
+</property>	
+    <property name="fapprovalendtime" type="timestamp"  not-null="false">
+    <column name="fapprovalendtime"  
+		               
+    />
+</property>	
+    <property name="frealstarttime" type="timestamp"  not-null="false">
+    <column name="frealstarttime"  
+		               
+    />
+</property>	
+    <property name="frealendtime" type="timestamp"  not-null="false">
+    <column name="frealendtime"  
+		               
+    />
+</property>	
+    <property name="fremarks" type="string"  not-null="false">
+    <column name="fremarks"  
+		length="100"               
+    />
+</property>	
+    <property name="fapplicationtype" type="string"  not-null="false">
+    <column name="fapplicationtype"  
+		length="20"               
+    />
+</property>	
+    <property name="fannexexplanation" type="org.springframework.orm.hibernate3.support.BlobByteArrayType"  not-null="false">
+    <column name="fannexexplanation"  
+		               
+    />
+</property>	
+    <property name="fexcutestatus" type="string"  not-null="false">
+    <column name="fexcutestatus"  
+		length="40"               
+    />
+</property>	
+    <property name="fstatus" type="string"  not-null="false">
+    <column name="fstatus"  
+		length="80"               
+    />
+</property>	
+    <property name="fkeeptime" type="integer"  not-null="false">
+    <column name="fkeeptime"  
+		               
+    />
+</property>	
+    <property name="fapplicationono" type="string"  not-null="true">
+    <column name="fapplicationono"  
+		length="40"               
+    />
+</property>	
+    <property name="flocalopinion" type="string"  not-null="false">
+    <column name="flocalopinion"  
+		length="100"               
+    />
+</property>	
+    <property name="fcenteropinion2" type="string"  not-null="false">
+    <column name="fcenteropinion2"  
+		length="100"               
+    />
+</property>	
+    <property name="flocalopinion2" type="string"  not-null="false">
+    <column name="flocalopinion2"  
+		length="100"               
+    />
+</property>	
+    <property name="fcenteropinion1" type="string"  not-null="false">
+    <column name="fcenteropinion1"  
+		length="100"               
+    />
+</property>	
+    <property name="fcenteropinion3" type="string"  not-null="false">
+    <column name="fcenteropinion3"  
+		length="100"               
+    />
+</property>	
+    <property name="sys_fille" type="string"  not-null="false">
+    <column name="sys_fille"  
+		length="40"               
+    />
+</property>	
+    <property name="sys_filldept" type="string"  not-null="false">
+    <column name="sys_filldept"  
+		length="80"               
+    />
+</property>	
+    <property name="sys_filltime" type="timestamp"  not-null="false">
+    <column name="sys_filltime"  
+		               
+    />
+</property>	
+    <property name="sys_isvalid" type="integer"  not-null="false">
+    <column name="sys_isvalid"  
+		               
+    />
+</property>	
+    <property name="sys_dataowner" type="string"  not-null="false">
+    <column name="sys_dataowner"  
+		length="40"               
+    />
+</property>	
+    <property name="fattribute" type="string"  >
+    <column name="fattribute"  
+		length="200"               
+    />
+</property>	
+<property name="fisstop" type="string"  >
+  <column name="fisstop" length="200" />
+</property>	
+<property name="feqpcontent" type="string"  >
+  <column name="feqpcontent" length="4000" />
+</property>	
+	
+    <set name="fzdhsrappeqprel1" inverse="true" cascade="none">    
+       <key column="SRApplicationID"/>
+       <one-to-many class="ZdhSrappeqprel"/></set>
+     </class>
+
+</hibernate-mapping>
+

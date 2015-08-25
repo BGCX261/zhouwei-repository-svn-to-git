@@ -1,0 +1,66 @@
+<?xml version="1.0" ?>
+<rows>
+  <head>
+    <column width="30" type="link" align="center"  sort="na">行号</column>
+    <column width="150" type="ed" align="center" sort="str">下令时间</column>
+    <column width="100" type="ed" align="center" sort="str">下令人</column>
+    <column width="100" type="ed" align="center" sort="str">接令人</column>
+    <column width="200" type="ed" align="center" sort="str">停发电负责人</column>
+    <column width="150" type="ed" align="center" sort="str">交令时间</column>
+    <column width="100" type="ed" align="center" sort="str">交令人</column>
+    <column width="100" type="ed" align="center" sort="str">收令人</column>
+    <settings>
+      <colwidth>px</colwidth>
+    </settings>
+  </head>
+  <row id ="1">
+      <cell>1</cell>
+      <cell>2006-09-21 18:00:00</cell>
+      <cell>秦始皇</cell>
+      <cell>李斯</cell>
+      <cell>李白、杜甫</cell>
+      <cell>2006-09-21 18:00:00</cell>
+      <cell>李斯</cell>
+      <cell>秦始皇</cell>
+  </row>
+  <row id ="2">
+      <cell>2</cell>
+      <cell>2006-09-21 18:00:00</cell>
+      <cell>秦始皇</cell>
+      <cell>李斯</cell>
+      <cell>苏东坡、白居易</cell>
+      <cell>2006-09-21 18:00:00</cell>
+      <cell>李斯</cell>
+      <cell>秦始皇</cell>
+  </row>
+  <row id ="3">
+      <cell>3</cell>
+      <cell>2006-09-21 18:00:00</cell>
+      <cell>秦始皇</cell>
+      <cell>李斯</cell>
+      <cell>辛弃疾、王安石</cell>
+      <cell>2006-09-21 18:00:00</cell>
+      <cell>李斯</cell>
+      <cell>秦始皇</cell>
+  </row>
+  <row id ="4">
+      <cell>4</cell>
+      <cell>2006-09-21 18:00:00</cell>
+      <cell>秦始皇</cell>
+      <cell>李斯</cell>
+      <cell>屈原、韩愈</cell>
+      <cell>2006-09-21 18:00:00</cell>
+      <cell>李斯</cell>
+      <cell>秦始皇</cell>
+  </row>
+  <row id ="5">
+      <cell>5</cell>
+      <cell></cell>
+      <cell></cell>
+      <cell></cell>
+      <cell></cell>
+      <cell></cell>
+      <cell></cell>
+      <cell></cell>
+  </row>
+</rows>

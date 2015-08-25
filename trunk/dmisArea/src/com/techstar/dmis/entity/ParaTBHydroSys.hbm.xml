@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="com.techstar.dmis.entity">
+	<class name="ParaTBHydroSys" table="DMIS_ParaTBHydroSys" dynamic-insert="true" dynamic-update="true" optimistic-lock="version">
+    <id name="feqpid" type="string">
+      <column name="feqpid" sql-type="varchar(80)" not-null="true"/>
+      <generator class="assigned"/>
+    </id>
+
+ 	<version name="version" column="VERSION" unsaved-value="undefined"/>
+  
+   <property name="fsysspdchgratio" type="integer"  not-null="false">
+    <column name="fsysspdchgratio"  
+		length="10"        precision="2"       
+    />
+</property>	
+    <property name="fsysslowratio" type="integer"  not-null="false">
+    <column name="fsysslowratio"  
+		length="10"        precision="2"       
+    />
+</property>	
+    <property name="fhareaspdchgratio" type="integer"  not-null="false">
+    <column name="fhareaspdchgratio"  
+		length="10"        precision="2"       
+    />
+</property>	
+    <property name="fspeedertimes" type="integer"  not-null="false">
+    <column name="fspeedertimes"  
+		length="10"        precision="2"       
+    />
+</property>	
+    <property name="fhdooropenspd" type="integer"  not-null="false">
+    <column name="fhdooropenspd"  
+		length="10"        precision="2"       
+    />
+</property>	
+    <property name="fhdoorclsspd" type="integer"  not-null="false">
+    <column name="fhdoorclsspd"  
+		length="10"        precision="2"       
+    />
+</property>	
+    <property name="fhdoormaxclsspd" type="integer"  not-null="false">
+    <column name="fhdoormaxclsspd"  
+		length="10"        precision="2"       
+    />
+</property>	
+  
+	
+ <many-to-one name="zparatbhydrosys2" class="EtsEquipment"   column="FEqpID" cascade="delete-orphan"></many-to-one>
+     </class>
+
+</hibernate-mapping>
+

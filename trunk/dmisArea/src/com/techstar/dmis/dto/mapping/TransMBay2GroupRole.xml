@@ -1,0 +1,20 @@
+<!DOCTYPE mappings PUBLIC "-//DOZER//DTD MAPPINGS//EN"
+"http://dozer.sourceforge.net/dtd/dozerbeanmapping.dtd">
+<mappings>
+   <mapping>
+   <class-a>com.techstar.dmis.dto.MBay2GroupRoleDto</class-a>
+   <class-b>com.techstar.dmis.dto.transfer.TransMBay2GroupRoleDto</class-b>
+   <field>
+      <a>zmbay2grouprole2.fid</a>
+      <b>trans_zmbay2grouprole2</b>
+      <a-hint>com.techstar.dmis.dto.MbayDto</a-hint>
+      <b-hint>java.lang.String</b-hint>
+   </field>
+   <field>
+      <a>zmbay2grouprole3.fid</a>
+      <b>trans_zmbay2grouprole3</b>
+      <a-hint>com.techstar.dmis.dto.MBayGroupDto</a-hint>
+      <b-hint>java.lang.String</b-hint>
+   </field>
+   </mapping>
+</mappings>

@@ -1,0 +1,59 @@
+<!--基改建工程自动化设备验收投运-->
+<head>
+	<obj>ZdhReceptionDto</obj>
+	<column colName="fapplicationid" propertyName="fapplicationid"
+		colType="string" dataTypeLen="32" isPrimary="1" visible="0"
+		width="106" isEdit="0" textColor="#000000" className="ZdhReceptionDto"
+		refName="fapplicationid">
+	</column>
+	<column colName="fstationname" propertyName="fstationname"
+		colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="90"
+		isEdit="0" textColor="#000000" className="ZdhReceptionDto"
+		refName="fstationname">
+	</column>
+	<column colName="fsystemname" propertyName="fsystemname"
+		colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="74"
+		isEdit="0" textColor="#000000" className="ZdhReceptionDto"
+		refName="fsystemname">
+	</column>
+	<column colName="freceptiondate" propertyName="freceptiondate"
+		colType="date" dataTypeLen="0" isPrimary="0" visible="1" width="74"
+		isEdit="0" textColor="#000000" className="ZdhReceptionDto"
+		refName="freceptiondate">
+	</column>
+	<column colName="feqpremark" propertyName="feqpremark"
+		colType="string" dataTypeLen="200" isPrimary="0" visible="1"
+		width="74" isEdit="0" textColor="#000000" className="ZdhReceptionDto"
+		refName="feqpremark">
+	</column>
+	<column colName="freceptionno" propertyName="freceptionno"
+		colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="90"
+		isEdit="0" textColor="#000000" className="ZdhReceptionDto"
+		refName="freceptionno">
+	</column>
+	<column colName="fexcutestatus" propertyName="fexcutestatus"
+		colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="74"
+		isEdit="0" textColor="#000000" className="ZdhReceptionDto"
+		refName="fexcutestatus">
+	</column>
+	<column colName="version" propertyName="version" colType="string"
+		dataTypeLen="40" isPrimary="0" visible="0" width="74" isEdit="0"
+		textColor="#000000" className="ZdhReceptionDto" refName="version">
+	</column>
+	<column colName="opButton_1" propertyName="opButton_1"
+		colType="string" dataTypeLen="0" isPrimary="0" visible="1" width="70"
+		isEdit="0" textColor="#000000" className="" refName="">
+	</column>
+		<column colName="opButton_2" propertyName="opButton_2"
+		colType="string" dataTypeLen="0" isPrimary="0" visible="1" width="70"
+		isEdit="0" textColor="#000000" className="" refName="">
+	</column>
+		<column colName="opButton_3" propertyName="opButton_3"
+		colType="string" dataTypeLen="0" isPrimary="0" visible="1" width="70"
+		isEdit="0" textColor="#000000" className="" refName="">
+	</column>
+		<column colName="opButton_4" propertyName="opButton_4"
+		colType="string" dataTypeLen="0" isPrimary="0" visible="1" width="70"
+		isEdit="0" textColor="#000000" className="" refName="">
+	</column>
+</head>

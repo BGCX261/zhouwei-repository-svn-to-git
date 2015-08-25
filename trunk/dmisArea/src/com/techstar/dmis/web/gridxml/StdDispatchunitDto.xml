@@ -1,0 +1,13 @@
+<!--调度机构-->
+<head>
+  <obj>StdDispatchunitDto</obj>
+  <column  colName="id" propertyName="id" colType="string" dataTypeLen="40" isPrimary="1" visible="0" width="106" isEdit="1" textColor="#000000" className="StdDispatchunitDto" refName="id" ></column>
+  <column  colName="version" propertyName="version" colType="integer" dataTypeLen="" isPrimary="0" visible="0" width="122" isEdit="1" textColor="#000000" className="StdDispatchunitDto" refName="version" ></column>
+  <column  colName="unitname" propertyName="unitname" colType="string" dataTypeLen="80" isPrimary="0" visible="1" width="106" isEdit="1" textColor="#000000" className="StdDispatchunitDto" refName="unitname" ></column>
+  <column  colName="unitarea" propertyName="unitarea" colType="string" dataTypeLen="80" isPrimary="0" visible="0" width="58" isEdit="1" textColor="#000000" className="StdDispatchunitDto" refName="unitarea" ></column>
+  <column  colName="unitshortname" propertyName="unitshortname" colType="string" dataTypeLen="80" isPrimary="0" visible="1" width="74" isEdit="1" textColor="#000000" className="StdDispatchunitDto" refName="unitshortname" ></column>
+  <column  colName="scheduleunit" propertyName="scheduleunit" colType="string" dataTypeLen="80" isPrimary="0" visible="1" width="74" isEdit="1" textColor="#000000" className="StdDispatchunitDto" refName="scheduleunit" ></column>
+  <column  colName="iscanedit" propertyName="iscanedit" colType="string" dataTypeLen="2" isPrimary="0" visible="0" width="106" isEdit="1" textColor="#000000" className="StdDispatchunitDto" refName="iscanedit" ></column>
+  <column  colName="maintenanceunitid" propertyName="maintenanceunitid" colType="string" dataTypeLen="80" isPrimary="0" visible="0" width="154" isEdit="1" textColor="#000000" className="StdDispatchunitDto" refName="maintenanceunitid" ></column>
+
+</head>

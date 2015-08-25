@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="com.techstar.dmis.entity">
+	<class name="StdZdhfaulttype" table="DMIS_ZD_Std_ZDHFaultType" dynamic-insert="true" dynamic-update="true" optimistic-lock="version">
+    <id name="faulttypeid" type="string">
+      <column name="faulttypeid" sql-type="varchar(32)" not-null="true"/>
+      <generator class="assigned"/>
+    </id>
+
+ 	<version name="version" column="VERSION" unsaved-value="undefined"/>
+  
+   <property name="stdparentid" type="string"  not-null="false">
+    <column name="stdparentid"  
+		length="40"               
+    />
+</property>	
+    <property name="ffaulttype2" type="string"  not-null="true">
+    <column name="ffaulttype2"  
+		length="100"               
+    />
+</property>	
+  
+	
+    <set name="fzdhfaultlist10" inverse="false" cascade="none"><key column="FFAULTTYPEID"/><one-to-many class="ZdhFaultlist"/></set>
+     </class>
+
+</hibernate-mapping>
+

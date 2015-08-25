@@ -1,0 +1,43 @@
+package  ${packageName};
+
+import java.io.Serializable;
+import com.techstar.framework.service.dto.DictionaryBaseDto;
+
+/**
+ * Domain classe for ${class.cnName}
+ * This classe is based on ValueObject Pattern
+ * @author 
+ * @date
+ */
+public class ${class.getUpEnName()}Dto #if(${class.beanType}==11)extends DictionaryBaseDto#end implements Serializable {
+    
+	public ${class.getUpEnName()}Dto() {
+    }
+	
+    #foreach($attrs in $class.attributes)
+      private ${attrs.java_type} ${attrs.enName}; //${attrs.cnName}
+	#end
+	 
+
+  #if($wfServices.size()>0)
+	private ${class.getUpEnName()}WFTaskDto ${class.getLowEnName()}WFTaskDto;
+	public ${class.getUpEnName()}WFTaskDto get${class.getUpEnName()}WFTaskDto() {
+		return ${class.getLowEnName()}WFTaskDto;
+	}
+	public void set${class.getUpEnName()}WFTaskDto(${class.getUpEnName()}WFTaskDto ${class.getLowEnName()}WFTaskDto) {
+		this.${class.getLowEnName()}WFTaskDto = ${class.getLowEnName()}WFTaskDto;
+	}
+   #end
+	
+	
+   /**
+     * getters and setters
+     */
+    #foreach($attrs in $class.attributes)
+       ${attrs.setMethod}
+	   ${attrs.getMethod}
+    #end
+  
+  
+
+}

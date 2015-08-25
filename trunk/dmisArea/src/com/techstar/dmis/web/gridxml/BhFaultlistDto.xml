@@ -1,0 +1,18 @@
+<!--保护设备缺陷-->
+<head>
+  <obj>BhFaultlistDto</obj>
+  <column  colName="ffaultno" propertyName="ffaultno" colType="string" dataTypeLen="32" isPrimary="1" visible="1" width="106" isEdit="0" textColor="#000000" className="BhFaultlistDto" refName="ffaultno" ></column>
+  <column  colName="fstationname" propertyName="fstationname" colType="string" dataTypeLen="80" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="BhFaultlistDto" refName="fstationname" ></column>
+  <column  colName="fdispatchname" propertyName="fdispatchname" colType="string" dataTypeLen="80" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="BhFaultlistDto" refName="fdispatchname" ></column>
+  <column  colName="fhandleresult" propertyName="fhandleresult" colType="string" dataTypeLen="80" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="BhFaultlistDto" refName="fhandleresult" ></column>
+  <column  colName="foccurredtime" propertyName="foccurredtime" colType="date" dataTypeLen="0" isPrimary="0" visible="1" width="106" isEdit="0" textColor="#000000" className="BhFaultlistDto" refName="foccurredtime" ></column>
+  <column  colName="frestoretime" propertyName="frestoretime" colType="date" dataTypeLen="0" isPrimary="0" visible="1" width="106" isEdit="0" textColor="#000000" className="BhFaultlistDto" refName="frestoretime" ></column>
+  <column  colName="fcontinuetime" propertyName="fcontinuetime" colType="float" dataTypeLen="6" isPrimary="0" visible="1" width="106" isEdit="0" textColor="#000000" className="BhFaultlistDto" refName="fcontinuetime" ></column>
+  <column  colName="dataowner" propertyName="dataowner" colType="string" dataTypeLen="80" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="BhFaultlistDto" refName="dataowner" ></column>
+  <column  colName="fstates" propertyName="fstates" colType="string" dataTypeLen="80" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="BhFaultlistDto" refName="fstates" ></column>
+  <column  colName="sys_fille" propertyName="sys_fille" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="58" isEdit="0" textColor="#000000" className="BhFaultlistDto" refName="sys_fille" ></column>
+  <column  colName="sys_filldept" propertyName="sys_filldept" colType="string" dataTypeLen="80" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="BhFaultlistDto" refName="sys_filldept" ></column>
+  <column  colName="sys_filltime" propertyName="sys_filltime" colType="date" dataTypeLen="80" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="BhFaultlistDto" refName="sys_filltime" ></column>
+  <column  colName="fstaticreason" propertyName="fstaticreason" colType="string" dataTypeLen="64" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="BhFaultlistDto" refName="fstaticreason" ></column>
+  <column  colName="ffaultgrade" propertyName="ffaultgrade" colType="string" dataTypeLen="64" isPrimary="0" visible="1" width="42" isEdit="0" textColor="#000000" className="BhFaultlistDto" refName="ffaultgrade" ></column>
+</head>

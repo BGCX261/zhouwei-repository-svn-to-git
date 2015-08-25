@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="GBK"?>
+<tree>
+	<treeobj-dis treename="tree1" datasSrc="table"> 
+	   	<node-dis nodeName="proresource">
+			<tableName></tableName>
+			<idField>-1</idField>
+			<textField>资源树</textField>
+			<userDataField>-1|-1|-1</userDataField>
+		</node-dis>
+		<node-dis nodeName="resource">
+			<tableName>tree_resources</tableName>
+			<idField>b,number</idField>
+			<textField>res_name</textField>
+			<userDataField>b,number|res_name|res_detail</userDataField>
+			<parentNodeDis>proresource,resource</parentNodeDis>
+			<sqlObj sqlName="resourcesql" >
+				<sqlBody><![CDATA[select a.reS_id as b,a.res_name,a.res_detail from tree_resources a where a.res_parent_id = '?' and a.res_parent_id = '?' and a.res_name !='?']]></sqlBody>
+				<sqlParamFrom>PARENTNODE.ID,PARENTNODE.USERDATA[0],PARENTNODE.USERDATA[1]</sqlParamFrom>
+			</sqlObj>
+		</node-dis>
+	</treeobj-dis>
+</tree>

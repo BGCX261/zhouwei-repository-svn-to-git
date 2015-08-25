@@ -1,0 +1,195 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="com.techstar.dmis.entity">
+	<class name="DdMoutageplan" table="DMIS_DD_MOutagePlan" dynamic-insert="true" dynamic-update="true" optimistic-lock="version">
+    <id name="fmonthplanno" type="string">
+      <column name="fmonthplanno" sql-type="varchar(40)" not-null="true"/>
+      <generator class="assigned"/>
+    </id>
+
+ 	<version name="version" column="VERSION" unsaved-value="undefined"/>
+  
+   <property name="fstationname" type="string"  not-null="false">
+    <column name="fstationname"  
+		length="300"               
+    />
+</property>	
+    <property name="flinename" type="string"  not-null="false">
+    <column name="flinename"  
+		length="300"               
+    />
+</property>	
+    <property name="fworkcontent" type="string"  not-null="false">
+    <column name="fworkcontent"  
+		length="500"               
+    />
+</property>	
+    <property name="foutagearea" type="string"  not-null="false">
+    <column name="foutagearea"  
+		length="500"               
+    />
+</property>	
+    <property name="fdispatchrange" type="string"  not-null="false">
+    <column name="fdispatchrange"  
+		length="20"               
+    />
+</property>	
+    <property name="fstarttime" type="timestamp"  not-null="false">
+    <column name="fstarttime"  
+		               
+    />
+</property>	
+    <property name="fendtime" type="timestamp"  not-null="false">
+    <column name="fendtime"  
+		               
+    />
+</property>	
+    <property name="fapplyunit" type="string"  not-null="false">
+    <column name="fapplyunit"  
+		length="80"               
+    />
+</property>	
+    <property name="fapplicant" type="string"  not-null="false">
+    <column name="fapplicant"  
+		length="30"               
+    />
+</property>	
+    <property name="fapplytime" type="timestamp"  not-null="false">
+    <column name="fapplytime"  
+		               
+    />
+</property>	
+    <property name="fstatus" type="string"  not-null="false">
+    <column name="fstatus"  
+		length="10"               
+    />
+</property>	
+    <property name="fplansourcetype" type="string"  not-null="false">
+    <column name="fplansourcetype"  
+		length="20"               
+    />
+</property>	
+    <property name="fplansourceno" type="string"  not-null="false">
+    <column name="fplansourceno"  
+		length="40"               
+    />
+</property>	
+    <property name="ffillunit" type="string"  not-null="false">
+    <column name="ffillunit"  
+		length="80"               
+    />
+</property>	
+    <property name="fstationid" type="string"  not-null="false">
+    <column name="fstationid"  
+		length="40"               
+    />
+</property>	
+    <property name="flinenameid" type="string"  not-null="false">
+    <column name="flinenameid"  
+		length="40"               
+    />
+</property>	
+    <property name="fapplyunitid" type="string"  not-null="false">
+    <column name="fapplyunitid"  
+		length="40"               
+    />
+</property>	
+    <property name="fapplicantid" type="string"  not-null="false">
+    <column name="fapplicantid"  
+		length="40"               
+    />
+</property>	
+    <property name="ffillunitid" type="string"  not-null="false">
+    <column name="ffillunitid"  
+		length="40"               
+    />
+</property>	
+    <property name="ffillerid" type="string"  not-null="false">
+    <column name="ffillerid"  
+		length="40"               
+    />
+</property>	
+    <property name="funfinishreason" type="string"  not-null="false">
+    <column name="funfinishreason"  
+		length="80"               
+    />
+</property>	
+    <property name="fmergeid" type="string"  not-null="false">
+    <column name="fmergeid"  
+		length="40"               
+    />
+</property>	
+    <property name="isreplace" type="string"  not-null="false">
+    <column name="isreplace"  
+		length="2"               
+    />
+</property>	
+    <property name="feqpcontent" type="org.springframework.orm.hibernate3.support.BlobByteArrayType"  not-null="false">
+    <column name="feqpcontent"  
+		               
+    />
+</property>	
+    <property name="ismerge" type="string"  not-null="false">
+    <column name="ismerge"  
+		length="2"               
+    />
+</property>	
+    <property name="sys_fille" type="string"  not-null="false">
+    <column name="sys_fille"  
+		length="40"               
+    />
+</property>	
+    <property name="sys_filldept" type="string"  not-null="false">
+    <column name="sys_filldept"  
+		length="80"               
+    />
+</property>	
+    <property name="sys_filltime" type="timestamp"  not-null="false">
+    <column name="sys_filltime"  
+		               
+    />
+</property>	
+    <property name="sys_isvalid" type="integer"  not-null="false">
+    <column name="sys_isvalid"  
+		               
+    />
+</property>	
+    <property name="sys_dataowner" type="string"  not-null="false">
+    <column name="sys_dataowner"  
+		length="40"               
+    />
+</property>	
+    <property name="fvoltage" type="string"  >
+    <column name="fvoltage"  
+		length="200"               
+    />
+</property>	
+    <property name="fexcutestatus" type="string"  >
+    <column name="fexcutestatus"  
+		length="200"               
+    />
+</property>	
+    <property name="funfinishreasonid" type="string"  >
+    <column name="funfinishreasonid"  
+		length="200"               
+    />
+</property>	
+    <property name="monthplantype" type="string"  >
+    <column name="monthplantype"  
+		length="200"               
+    />
+</property>	
+<property name="fmonthplancode" type="string"  >
+    <column name="fmonthplancode"  
+		length="40"               
+    />   
+</property>	
+
+  
+	
+    <set name="fddrepairdetail1" inverse="true" cascade="none"><key column="FMonthplanNo"/><one-to-many class="DdRepairdetail"/></set>
+         <set name="fddpremethod5" inverse="true" cascade="none"><key column="srcno"/><one-to-many class="DdPremethod"/></set>
+     </class>
+
+</hibernate-mapping>
+

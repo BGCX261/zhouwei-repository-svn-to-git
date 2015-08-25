@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE dwr PUBLIC
+    "-//GetAhead Limited//DTD Direct Web Remoting 2.0//EN"
+    "http://getahead.org/dwr/dwr20.dtd">
+
+<dwr>
+  <allow>
+   <!--  -->
+    <create creator="new" javascript="frame_service">
+      <param name="class" value="frame.FrameServer"/>
+    </create>
+    <convert converter="bean" match="frame.FrameMenu"/>
+    <convert converter="bean" match="frame.FrameMenuNode"/>
+    <convert converter="bean" match="frame.FrameMenuLeaf"/>
+  </allow>
+</dwr>

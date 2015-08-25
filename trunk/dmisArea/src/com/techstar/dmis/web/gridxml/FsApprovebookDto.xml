@@ -1,0 +1,20 @@
+<!--发电批准书-->
+<head>
+  <obj>FsApprovebookDto</obj>
+  <column  colName="fapprovcomputerno" propertyName="fapprovcomputerno" colType="string" dataTypeLen="32" isPrimary="1" visible="1" width="122" isEdit="0" textColor="#000000" className="FsApprovebookDto" refName="fapprovcomputerno" ></column>
+  <column  colName="fapprovbookno" propertyName="fapprovbookno" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="FsApprovebookDto" refName="fapprovbookno" ></column>
+  <column  colName="fstationname" propertyName="fstationname" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="58" isEdit="0" textColor="#000000" className="FsApprovebookDto" refName="fstationname" ></column>
+  <column  colName="fprojectname" propertyName="fprojectname" colType="string" dataTypeLen="80" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="FsApprovebookDto" refName="fprojectname" ></column>
+  <column  colName="fgenerationtime" propertyName="fgenerationtime" colType="date" dataTypeLen="0" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="FsApprovebookDto" refName="fgenerationtime" ></column>
+  <column  colName="fprojectunit" propertyName="fprojectunit" colType="string" dataTypeLen="80" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="FsApprovebookDto" refName="fprojectunit" ></column>
+  <column  colName="fsendtounit" propertyName="fsendtounit" colType="string" dataTypeLen="200" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="FsApprovebookDto" refName="fsendtounit" ></column>
+  <column  colName="fcompletiondate" propertyName="fcompletiondate" colType="date" dataTypeLen="0" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="FsApprovebookDto" refName="fcompletiondate" ></column>
+  <column  colName="fproblem" propertyName="fproblem" colType="string" dataTypeLen="200" isPrimary="0" visible="1" width="106" isEdit="0" textColor="#000000" className="FsApprovebookDto" refName="fproblem" ></column>
+  <column  colName="fstatus" propertyName="fstatus" colType="string" dataTypeLen="80" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="FsApprovebookDto" refName="fstatus" ></column>
+  <column  colName="fwriterunit" propertyName="fwriterunit" colType="string" dataTypeLen="80" isPrimary="0" visible="1" width="122" isEdit="0" textColor="#000000" className="FsApprovebookDto" refName="fwriterunit" ></column>
+  <column  colName="sys_fille" propertyName="sys_fille" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="58" isEdit="0" textColor="#000000" className="FsApprovebookDto" refName="sys_fille" ></column>
+  <column  colName="sys_filldept" propertyName="sys_filldept" colType="string" dataTypeLen="80" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="FsApprovebookDto" refName="sys_filldept" ></column>
+  <column  colName="sys_filltime" propertyName="sys_filltime" colType="date" dataTypeLen="80" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="FsApprovebookDto" refName="sys_filltime" ></column>
+  <column  colName="fvoltage" propertyName="fvoltage" colType="string" dataTypeLen="64" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="FsApprovebookDto" refName="fvoltage" ></column>
+  <column  colName="fexcutestatus" propertyName="fexcutestatus" colType="string" dataTypeLen="64" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="FsApprovebookDto" refName="fexcutestatus" ></column>
+</head>

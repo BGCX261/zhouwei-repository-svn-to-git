@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mappings PUBLIC "-//DOZER//DTD MAPPINGS//EN"
+   "http://dozer.sourceforge.net/dtd/dozerbeanmapping.dtd">
+<mappings>
+	<configuration>
+		<custom-converters>
+			<converter type="com.zhouwei.dozer.MyCustomConverter">
+				<class-a>com.zhouwei.dozer.A</class-a>
+				<class-b>com.zhouwei.dozer.B</class-b>
+			</converter>
+		</custom-converters>
+	</configuration>
+</mappings>

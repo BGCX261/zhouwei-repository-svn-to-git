@@ -1,0 +1,20 @@
+<!DOCTYPE mappings PUBLIC "-//DOZER//DTD MAPPINGS//EN"
+"http://dozer.sourceforge.net/dtd/dozerbeanmapping.dtd">
+<mappings>
+   <mapping>
+   <class-a>com.techstar.dmis.dto.MBayGroupDto</class-a>
+   <class-b>com.techstar.dmis.dto.transfer.TransMBayGroupDto</class-b>
+   <field>
+      <a>fmbay2grouprole3</a>
+      <b>fmbay2grouprole3</b>
+      <a-hint>com.techstar.dmis.dto.MBay2GroupRoleDto</a-hint>
+      <b-hint>com.techstar.dmis.dto.transfer.TransMBay2GroupRoleDto</b-hint>
+   </field>
+   <field>
+      <a>fmstdbayoutage3</a>
+      <b>fmstdbayoutage3</b>
+      <a-hint>com.techstar.dmis.dto.MSTDBayOutageDto</a-hint>
+      <b-hint>com.techstar.dmis.dto.transfer.TransMSTDBayOutageDto</b-hint>
+   </field>
+   </mapping>
+</mappings>

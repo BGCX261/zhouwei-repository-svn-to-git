@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="com.techstar.dmis.entity">
+	<class name="ZdhOpexaminelist" table="DMIS_ZDH_OPExamineList" dynamic-insert="true" dynamic-update="true" optimistic-lock="version">
+    <id name="examinationid" type="string">
+      <column name="examinationid" sql-type="varchar(40)" not-null="true"/>
+      <generator class="assigned"/>
+    </id>
+
+ 	<version name="version" column="VERSION" unsaved-value="undefined"/>
+  
+   <property name="begincheck" type="string"  not-null="false">
+    <column name="begincheck"  
+		length="100"               
+    />
+</property>	
+    <property name="finishcheck" type="string"  not-null="false">
+    <column name="finishcheck"  
+		length="100"               
+    />
+</property>	
+    <property name="finishchecker" type="string"  not-null="false">
+    <column name="finishchecker"  
+		length="40"               
+    />
+</property>	
+    <property name="beginchecker" type="string"  not-null="false">
+    <column name="beginchecker"  
+		length="40"               
+    />
+</property>	
+    <property name="beginchecktime" type="timestamp"  not-null="false">
+    <column name="beginchecktime"  
+		               
+    />
+</property>	
+    <property name="finishchecktime" type="timestamp"  not-null="false">
+    <column name="finishchecktime"  
+		               
+    />
+</property>	
+    <property name="eondutylogno" type="string"  not-null="false">
+    <column name="eondutylogno"  
+		length="40"               
+    />
+</property>	
+    <property name="fapplystime" type="timestamp"  not-null="false">
+    <column name="fapplystime"  
+		               
+    />
+</property>	
+    <property name="fapplyetime" type="timestamp"  not-null="false">
+    <column name="fapplyetime"  
+		               
+    />
+</property>	
+    <property name="fworkcontent" type="string"  not-null="false">
+    <column name="fworkcontent"  
+		length="300"               
+    />
+</property>	
+    <property name="sys_fille" type="string"  not-null="false">
+    <column name="sys_fille"  
+		length="40"               
+    />
+</property>	
+    <property name="sys_filldept" type="string"  not-null="false">
+    <column name="sys_filldept"  
+		length="80"               
+    />
+</property>	
+    <property name="sys_filltime" type="timestamp"  not-null="false">
+    <column name="sys_filltime"  
+		               
+    />
+</property>	
+    <property name="sys_isvalid" type="integer"  not-null="false">
+    <column name="sys_isvalid"  
+		               
+    />
+</property>	
+    <property name="sys_dataowner" type="string"  not-null="false">
+    <column name="sys_dataowner"  
+		length="40"               
+    />
+</property>	
+  
+	
+    <many-to-one name="zzdhopexaminelist5" class="ZdhAutoondutylog"   column="SOndutyNo" cascade="none"></many-to-one>
+         <many-to-one name="zzdhopexaminelist6" class="DdDoutageplan"   column="PlanNo" cascade="none"></many-to-one>
+     </class>
+
+</hibernate-mapping>
+

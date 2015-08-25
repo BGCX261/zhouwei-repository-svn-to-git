@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration>    
+  <xml fileName="frameworkConfig.xml"/>
+  
+   <additional>
+   	  <xml fileName="sqlmapping_log.xml"/>
+	  <xml fileName="sqlmapping_demo.xml"/>    
+   </additional>
+</configuration>

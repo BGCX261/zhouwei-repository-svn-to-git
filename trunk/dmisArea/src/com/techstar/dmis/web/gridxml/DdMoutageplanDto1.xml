@@ -1,0 +1,11 @@
+<!--月检修计划-->
+<head>
+  <obj>DdMoutageplanDto</obj>
+  <column  colName="ddrepairdetail61.fstationname" propertyName="ddrepairdetail61" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="58" isEdit="0" textColor="#000000" className="DdRepairdetailDto" refName="fstationname" ></column>
+  <column  colName="ddrepairdetail61.feqpclass" propertyName="ddrepairdetail61" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="DdRepairdetailDto" refName="feqpclass" ></column>
+  <column  colName="ddrepairdetail61.flinename" propertyName="ddrepairdetail61" colType="string" dataTypeLen="80" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="DdRepairdetailDto" refName="flinename" ></column>
+  <column  colName="ddrepairdetail61.fscheduleno" propertyName="ddrepairdetail61" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="58" isEdit="0" textColor="#000000" className="DdRepairdetailDto" refName="fscheduleno" ></column>
+  <column  colName="ddrepairdetail61.fworktype" propertyName="ddrepairdetail61" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="DdRepairdetailDto" refName="fworktype" ></column>
+  <column  colName="ddrepairdetail61.fworkstarttime" propertyName="ddrepairdetail61" colType="date" dataTypeLen="0" isPrimary="0" visible="1" width="106" isEdit="0" textColor="#000000" className="DdRepairdetailDto" refName="fworkstarttime" ></column>
+  <column  colName="ddrepairdetail61.fapworkendtime" propertyName="ddrepairdetail61" colType="date" dataTypeLen="0" isPrimary="0" visible="1" width="106" isEdit="0" textColor="#000000" className="DdRepairdetailDto" refName="fapworkendtime" ></column>
+</head>

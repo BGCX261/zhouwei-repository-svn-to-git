@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Bundle-Version: 1.0.0
+Bundle-Name: Dozer Bundle
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: dozer
+Import-Package: net.sf.dozer.util.mapping,
+ org.apache.log4j;version="[1.2.15,1.2.15]"
+Application-TraceLevels: *=debug,com.zhouwei.dozer.*=verbose

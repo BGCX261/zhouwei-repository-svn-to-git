@@ -1,0 +1,13 @@
+<!--调度交接班记录-->
+<head>
+  <obj>DdWaterproofplanDto</obj>
+  <column  colName="zddwaterproofplan2.fid" propertyName="zddwaterproofplan2" colType="string" dataTypeLen="32" isPrimary="1" visible="1" width="74" isEdit="0" textColor="#000000" className="DdClassondutylogDto" refName="fid" ></column>
+  <column  colName="fid" propertyName="fid" colType="string" dataTypeLen="32" isPrimary="1" visible="1" width="74" isEdit="0" textColor="#000000" className="DdWaterproofplanDto" refName="fid" ></column>
+  <column  colName="version" propertyName="version" colType="integer" dataTypeLen="0" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="DdWaterproofplanDto" refName="version" ></column>
+  <column  colName="fapplyuser" propertyName="fapplyuser" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="58" isEdit="0" textColor="#000000" className="DdWaterproofplanDto" refName="fapplyuser" ></column>
+  <column  colName="fapplyunit" propertyName="fapplyunit" colType="string" dataTypeLen="150" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="DdWaterproofplanDto" refName="fapplyunit" ></column>
+  <column  colName="fapplycnt" propertyName="fapplycnt" colType="string" dataTypeLen="500" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="DdWaterproofplanDto" refName="fapplycnt" ></column>
+  <column  colName="fwaterquantity" propertyName="fwaterquantity" colType="float" dataTypeLen="0" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="DdWaterproofplanDto" refName="fwaterquantity" ></column>
+  <column  colName="sys_fille" propertyName="sys_fille" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="58" isEdit="0" textColor="#000000" className="DdWaterproofplanDto" refName="sys_fille" ></column>
+  <column  colName="sys_filltime" propertyName="sys_filltime" colType="timestamp" dataTypeLen="" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="DdWaterproofplanDto" refName="sys_filltime" ></column>
+</head>

@@ -1,0 +1,16 @@
+<!--拉路限电记录-->
+<head>
+  <obj>DdCutofflistDto</obj>
+  <column  colName="fid" propertyName="fid" colType="string" dataTypeLen="32" isPrimary="1" visible="1" width="122" isEdit="0" textColor="#000000" className="DdCutofflistDto" refName="fid" ></column>
+  <column  colName="fsuspdate" propertyName="fsuspdate" colType="date" dataTypeLen="0" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="DdCutofflistDto" refName="fsuspdate" ></column>
+  <column  colName="fsusptime" propertyName="fsusptime" colType="timestamp" dataTypeLen="0" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="DdCutofflistDto" refName="fsusptime" ></column>
+  <column  colName="fordertype" propertyName="fordertype" colType="string" dataTypeLen="64" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="DdCutofflistDto" refName="fordertype" ></column>
+  <column  colName="fgiveorderunit" propertyName="fgiveorderunit" colType="string" dataTypeLen="150" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="DdCutofflistDto" refName="fgiveorderunit" ></column>
+  <column  colName="fgiver" propertyName="fgiver" colType="string" dataTypeLen="20" isPrimary="0" visible="1" width="90" isEdit="0" textColor="#000000" className="DdCutofflistDto" refName="fgiver" ></column>
+  <column  colName="floadunit" propertyName="floadunit" colType="string" dataTypeLen="150" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="DdCutofflistDto" refName="floadunit" ></column>
+  <column  colName="faccepter" propertyName="faccepter" colType="string" dataTypeLen="20" isPrimary="0" visible="1" width="58" isEdit="0" textColor="#000000" className="DdCutofflistDto" refName="faccepter" ></column>
+  <column  colName="fload" propertyName="fload" colType="float" dataTypeLen="14" isPrimary="0" visible="1" width="114" isEdit="0" textColor="#000000" className="DdCutofflistDto" refName="fload" ></column>
+  <column  colName="frealno" propertyName="frealno" colType="integer" dataTypeLen="0" isPrimary="0" visible="1" width="90" isEdit="0" textColor="#000000" className="DdCutofflistDto" refName="frealno" ></column>
+  <column  colName="frealload" propertyName="frealload" colType="float" dataTypeLen="14" isPrimary="0" visible="1" width="106" isEdit="0" textColor="#000000" className="DdCutofflistDto" refName="frealload" ></column>
+  <column  colName="frecoverytime" propertyName="frecoverytime" colType="timestamp" dataTypeLen="0" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="DdCutofflistDto" refName="frecoverytime" ></column>
+</head>

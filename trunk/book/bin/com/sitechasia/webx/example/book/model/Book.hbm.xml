@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.sitechasia.webx.example.book.model.Book" table="book"
+		lazy="true">
+		<id name="bookId" column="book_id" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="bookName" column="book_name" type="string" />
+		<many-to-one name="category" column="category_id"
+			not-null="true" />
+	</class>
+</hibernate-mapping>

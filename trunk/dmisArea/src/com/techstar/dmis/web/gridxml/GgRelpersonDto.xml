@@ -1,0 +1,10 @@
+<!--外部人员-->
+<head>
+  <obj>GgRelpersonDto</obj>
+  <column  colName="id" propertyName="id" colType="string" dataTypeLen="40" isPrimary="1" visible="0" width="58" isEdit="0" textColor="#000000" className="GgRelpersonDto" refName="id" ></column>
+  <column  colName="version" propertyName="version" colType="integer" dataTypeLen="" isPrimary="0" visible="0" width="122" isEdit="0" textColor="#000000" className="GgRelpersonDto" refName="version" ></column>
+  <column  colName="name" propertyName="name" colType="string" dataTypeLen="10" isPrimary="0" visible="1" width="90" isEdit="0" textColor="#000000" className="GgRelpersonDto" refName="name" ></column>
+  <column  colName="type" propertyName="type" colType="string" dataTypeLen="10" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="GgRelpersonDto" refName="type" ></column>
+  <column  colName="workunit" propertyName="workunit" colType="string" dataTypeLen="100" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="GgRelpersonDto" refName="workunit" ></column>
+  <column  colName="title" propertyName="title" colType="string" dataTypeLen="10" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="GgRelpersonDto" refName="title" ></column>
+</head>

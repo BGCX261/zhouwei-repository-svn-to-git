@@ -1,0 +1,25 @@
+<!--保护动作记录-->
+<head>
+  <obj>BhActionrecordDto</obj>
+  <column  colName="protectionrecordid" propertyName="protectionrecordid" colType="string" dataTypeLen="32" isPrimary="1" visible="1" width="106" isEdit="0" textColor="#000000" className="BhActionrecordDto" refName="protectionrecordid" ></column>
+  <column  colName="eqpid" propertyName="eqpid" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="106" isEdit="0" textColor="#000000" className="BhActionrecordDto" refName="eqpid" ></column>
+  <column  colName="fstationname" propertyName="fstationname" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="BhActionrecordDto" refName="fstationname" ></column>
+  <column  colName="dispatchno" propertyName="dispatchno" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="BhActionrecordDto" refName="dispatchno" ></column>
+  <column  colName="actiontime" propertyName="actiontime" colType="date" dataTypeLen="0" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="BhActionrecordDto" refName="actiontime" ></column>
+  <column  colName="actionevaluatetimes" propertyName="actionevaluatetimes" colType="integer" dataTypeLen="0" isPrimary="0" visible="1" width="170" isEdit="0" textColor="#000000" className="BhActionrecordDto" refName="actionevaluatetimes" ></column>
+  <column  colName="faultrecordertimes" propertyName="faultrecordertimes" colType="integer" dataTypeLen="0" isPrimary="0" visible="1" width="154" isEdit="0" textColor="#000000" className="BhActionrecordDto" refName="faultrecordertimes" ></column>
+  <column  colName="faultrecordergoodtimes" propertyName="faultrecordergoodtimes" colType="integer" dataTypeLen="0" isPrimary="0" visible="1" width="154" isEdit="0" textColor="#000000" className="BhActionrecordDto" refName="faultrecordergoodtimes" ></column>
+  <column  colName="actiondescription" propertyName="actiondescription" colType="blob" dataTypeLen="0" isPrimary="0" visible="1" width="138" isEdit="0" textColor="#000000" className="BhActionrecordDto" refName="actiondescription" ></column>
+  <column  colName="actionkeeptimes" propertyName="actionkeeptimes" colType="integer" dataTypeLen="0" isPrimary="0" visible="1" width="106" isEdit="0" textColor="#000000" className="BhActionrecordDto" refName="actionkeeptimes" ></column>
+  <column  colName="faultkeeptimes" propertyName="faultkeeptimes" colType="integer" dataTypeLen="0" isPrimary="0" visible="1" width="106" isEdit="0" textColor="#000000" className="BhActionrecordDto" refName="faultkeeptimes" ></column>
+  <column  colName="switchmodel" propertyName="switchmodel" colType="string" dataTypeLen="80" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="BhActionrecordDto" refName="switchmodel" ></column>
+  <column  colName="remarks" propertyName="remarks" colType="string" dataTypeLen="80" isPrimary="0" visible="1" width="42" isEdit="0" textColor="#000000" className="BhActionrecordDto" refName="remarks" ></column>
+  <column  colName="sys_fille" propertyName="sys_fille" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="58" isEdit="0" textColor="#000000" className="BhActionrecordDto" refName="sys_fille" ></column>
+  <column  colName="sys_filldept" propertyName="sys_filldept" colType="string" dataTypeLen="80" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="BhActionrecordDto" refName="sys_filldept" ></column>
+  <column  colName="sys_filltime" propertyName="sys_filltime" colType="date" dataTypeLen="80" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="BhActionrecordDto" refName="sys_filltime" ></column>
+  <column  colName="actionevaluate" propertyName="actionevaluate" colType="string" dataTypeLen="64" isPrimary="0" visible="1" width="138" isEdit="0" textColor="#000000" className="BhActionrecordDto" refName="actionevaluate" ></column>
+  <column  colName="faulteqp" propertyName="faulteqp" colType="string" dataTypeLen="64" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="BhActionrecordDto" refName="faulteqp" ></column>
+  <column  colName="reclosuremode" propertyName="reclosuremode" colType="string" dataTypeLen="64" isPrimary="0" visible="1" width="90" isEdit="0" textColor="#000000" className="BhActionrecordDto" refName="reclosuremode" ></column>
+  <column  colName="isreclosure" propertyName="isreclosure" colType="string" dataTypeLen="64" isPrimary="0" visible="1" width="122" isEdit="0" textColor="#000000" className="BhActionrecordDto" refName="isreclosure" ></column>
+  <column  colName="linereclosure" propertyName="linereclosure" colType="string" dataTypeLen="64" isPrimary="0" visible="1" width="138" isEdit="0" textColor="#000000" className="BhActionrecordDto" refName="linereclosure" ></column>
+</head>

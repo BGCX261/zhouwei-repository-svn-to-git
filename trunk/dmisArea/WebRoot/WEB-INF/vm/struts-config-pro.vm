@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="GB2312"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+	
+	<form-beans>
+     <form-bean name="dictionaryBaseForm" type="${packageform}.DictionaryBaseForm" /> 
+		#foreach($form in $actions)
+	    <form-bean name="${form.mainentity.entityBean.getLowEnName()}Form" 
+			 type="${packageform}.${form.mainentity.entityBean.getUpEnName()}Form" />
+		#end
+	</form-beans>
+	
+ <action-mappings>
+	<action path="/${proname}dictionary" name="dictionaryBaseForm" type="org.springframework.web.struts.DelegatingActionProxy" parameter="method" scope="request">
+			<forward name="${proname}_list" path="/demo/dictionary/companylist.jsp"/>
+			<forward name="${proname}_add" path="/demo/dictionary/companyadd.jsp"/>	
+	</action>
+
+  #foreach($action in $actions)
+		
+		 <action path="${action.despatch_url}" name="${action.mainentity.entityBean.getLowEnName()}Form" 
+				 type="org.springframework.web.struts.DelegatingActionProxy" parameter="method" scope="request">
+		  
+			#foreach($tile in $action.strutsTiles)
+				
+			#if(($tile.type==201)||($tile.type==200)||($tile.type==11))
+			    <forward name="$tile.definition_Name" path="$tile.definition_Name"/>
+			   #else
+				<forward name="$tile.definition_Name" path="/application/${action.mainentity.entityBean.getLowEnName().toLowerCase()}/$tile.pageName"/>
+			  #end
+		    #end
+         </action>
+		
+ #end	
+	
+	</action-mappings>
+</struts-config>

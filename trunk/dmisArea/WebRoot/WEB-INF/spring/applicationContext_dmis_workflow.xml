@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+	<!-- workflow interface-->	
+	<bean id="iZdhSrapplicationWFService" parent="baseTransaction">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.service.workflow.impl.ZdhSrapplicationWFServiceImpl">
+				<property name="workFlowDao" ref="iWorkflowDao"></property>
+				<property name="handleHistoryDao" ref="iHandleHistoryDao"></property>
+			</bean>
+		</property>
+	</bean>
+     
+	<bean id="iZdhReceptionWFService" parent="baseTransaction">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.service.workflow.impl.ZdhReceptionWFServiceImpl">
+				<property name="workFlowDao" ref="iWorkflowDao"></property>
+				<property name="handleHistoryDao" ref="iHandleHistoryDao"></property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iZdhCharalterrecordWFService" parent="baseTransaction">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.service.workflow.impl.ZdhCharalterrecordWFServiceImpl">
+				<property name="workFlowDao" ref="iWorkflowDao"></property>
+				<property name="handleHistoryDao" ref="iHandleHistoryDao"></property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iZdhWorkbillWFService" parent="baseTransaction">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.service.workflow.impl.ZdhWorkbillWFServiceImpl">
+				<property name="workFlowDao" ref="iWorkflowDao"></property>		
+				<property name="handleHistoryDao" ref="iHandleHistoryDao"></property>						
+			</bean>
+		</property>
+	</bean>
+	
+	
+	<bean id="iDdEnsuringpsmanageWFService" parent="baseTransaction">
+		<property name="target">
+			<bean class="com.techstar.dmis.service.workflow.impl.DdEnsuringpsmanageWFServiceImpl">
+				<property name="workFlowDao" ref="iWorkflowDao"/>
+				<property name="handleHistoryDao" ref="iHandleHistoryDao"></property>	
+			</bean>
+		</property>
+	</bean>
+	
+	
+		<!--gaojing-->
+	<bean id="iDdSwitchseqbillWFService" parent="baseTransaction">
+		<property name="target">
+			<bean class="com.techstar.dmis.service.workflow.impl.DdSwitchseqbillWFServiceImpl">
+				<property name="workFlowDao" ref="iWorkflowDao"/>
+				<property name="handleHistoryDao" ref="iHandleHistoryDao"></property>	
+				
+			</bean>
+		</property>
+	</bean>
+	
+	<bean id="iDdDoutageplanWFService" parent="baseTransaction">
+		<property name="target">
+			<bean class="com.techstar.dmis.service.workflow.impl.DdDoutageplanWFServiceImpl">
+				<property name="workFlowDao" ref="iWorkflowDao"/>
+				<property name="handleHistoryDao" ref="iHandleHistoryDao"></property>	
+			</bean>
+		</property>
+	</bean>
+	<!--gaojing-->
+	
+	<!--周玮-->
+	<!--电网风险分析工作流-->
+	<bean id="iDdRepairrisklistWFService" parent="baseTransaction">
+		<property name="target">
+			<bean class="com.techstar.dmis.service.workflow.impl.DdRepairrisklistWFServiceImpl">
+				<property name="workFlowDao" ref="iWorkflowDao"/>
+				<property name="handleHistoryDao" ref="iHandleHistoryDao"/>
+			</bean>
+		</property>
+	</bean>
+	<!--电网风险分析工作流end-->
+	<!--故障简报工作流-->
+	<bean id="iDdAccidentbriefWFService" parent="baseTransaction">
+		<property name="target">
+			<bean class="com.techstar.dmis.service.workflow.impl.DdAccidentbriefWFServiceImpl">
+				<property name="workFlowDao" ref="iWorkflowDao"/>
+				<property name="handleHistoryDao" ref="iHandleHistoryDao"/>
+			</bean>
+		</property>
+	</bean>
+	<!--故障简报工作流end-->
+	<!--拉路序位信息工作流-->
+	<bean id="iDdCutofftitleWFService" parent="baseTransaction">
+		<property name="target">
+			<bean class="com.techstar.dmis.service.workflow.impl.DdCutofftitleWFServiceImpl">
+				<property name="workFlowDao" ref="iWorkflowDao"/>
+				<property name="handleHistoryDao" ref="iHandleHistoryDao"/>
+			</bean>
+		</property>
+	</bean>
+	<!--拉路序位信息工作流end-->
+	<!--月计划工作流-->
+	<bean id="iDdMoutageplanWFService" parent="baseTransaction">
+		<property name="target">
+			<bean class="com.techstar.dmis.service.workflow.impl.DdMoutageplanWFServiceImpl">
+				<property name="workFlowDao" ref="iWorkflowDao"/>
+				<property name="handleHistoryDao" ref="iHandleHistoryDao"/>
+			</bean>
+		</property>
+	</bean>
+	<!--月计划工作流end-->
+	<!--周玮结束-->
+</beans>

@@ -1,0 +1,111 @@
+package ${facadepackage};
+
+import java.util.List;
+import org.springframework.dao.DataAccessException;
+import com.techstar.framework.dao.model.QueryListObj;
+import ${servicepackage}.I${entity.getUpEnName()}Service;
+import ${dtopackage}.${entity.getUpEnName()}Dto;
+#if($wfServices.size()>0)
+import ${wservicepachage}.I${entity.getUpEnName()}WFService;
+#end
+//please add your business methods start
+	// to do it
+//add your business method end
+
+/**
+ * facade类
+ * @author 
+ * @date
+ */
+public class ${entity.getUpEnName()}Facade {
+	private I${entity.getUpEnName()}Service ${entity.getLowEnName()}Service;	
+	//private IApplyService applyService;
+
+	/**
+	 * 得到列表数据
+	 * 
+	 * @return List
+	 */
+	public List list${entity.getUpEnName()}() {
+		return ${entity.getLowEnName()}Service.list${entity.getUpEnName()}().getElemList();
+	}
+
+	/**
+	 * 增加DTO
+	 * 
+	 * @param dto
+	 */
+	public void add${entity.getUpEnName()}(${entity.getUpEnName()}Dto dto) {
+		${entity.getLowEnName()}Service.saveOrUpdate${entity.getUpEnName()}(dto);
+	}
+
+	/**
+	 * 得到指定DTO
+	 * 
+	 * @param ${entity.getUpEnName()}Id
+	 *           ֵ
+
+	 */
+	public ${entity.getUpEnName()}Dto get${entity.getUpEnName()}ById(${entity.getPkJavaType()}  ${entity.getLowEnName()}Id) {
+		${entity.getUpEnName()}Dto dto = ${entity.getLowEnName()}Service.load${entity.getUpEnName()}(${entity.getLowEnName()}Id);
+		return dto;
+	}
+
+	/**
+	 * 删除指定DTO
+	 * 
+	 * @param ${entity.getUpEnName()}Id
+	 *         ֵ
+
+	 */
+	public List delete${entity.getUpEnName()}(${entity.getPkJavaType()} ${entity.getLowEnName()}Id) {
+		${entity.getLowEnName()}Service.delete${entity.getUpEnName()}(${entity.getLowEnName()}Id);
+		return ${entity.getLowEnName()}Service.list${entity.getUpEnName()}().getElemList();
+	}
+
+	/**
+	 * 得到业务对象列表
+	 * @return List
+	 */
+	public List list${entity.getUpEnName()}4dwr() {
+		return ${entity.getLowEnName()}Service.list${entity.getUpEnName()}().getElemList();
+	}
+
+	public void set${entity.getUpEnName()}Service(I${entity.getUpEnName()}Service ${entity.getLowEnName()}Service) {
+		this.${entity.getLowEnName()}Service = ${entity.getLowEnName()}Service;		
+	}
+	
+	public QueryListObj get${entity.getUpEnName()}ByHql(String hql, int beginPage, int pageSize, String sql){
+		return this.${entity.getLowEnName()}Service.get${entity.getUpEnName()}ByHql(hql, beginPage, pageSize, sql);
+	}
+	public ${entity.getUpEnName()}Dto load${entity.getUpEnName()}(String ${entity.getLowEnName()}Id){
+		return this.${entity.getLowEnName()}Service.load${entity.getUpEnName()}(${entity.getLowEnName()}Id);
+	}
+	
+
+		
+#if($wfServices.size()>0)
+	#foreach($workflow in $wfServices)
+    #foreach($method in $workflow.getFunctions())
+	 //工作流方法
+	 ${method.accessType} ${method.returnType} ${method.enName}${entity.getUpEnName()} (${method.param}) throws DataAccessException{
+	 ${method.getFuncReturnStr()} ${entity.getLowEnName()}Service.${method.enName}${entity.getUpEnName()}(
+	  $method.getParamValueStr()
+	  );
+	
+ }
+ #end
+ #end 
+#end
+
+ /**
+    * @business method list
+	 #foreach($method in $methods)
+	* @${method.cnName}
+	 #end
+ */	
+//please add your business methods start
+	// to do it
+//add your business method end
+	
+}

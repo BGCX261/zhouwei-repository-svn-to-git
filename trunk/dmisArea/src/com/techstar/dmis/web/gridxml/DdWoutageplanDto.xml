@@ -1,0 +1,30 @@
+<!--旬检修计划-->
+<head>
+  <obj>DdWoutageplanDto</obj>
+  <column  colName="fwplanno" propertyName="fwplanno" colType="string" dataTypeLen="32" isPrimary="1" visible="1" width="90" isEdit="0" textColor="#000000" className="DdWoutageplanDto" refName="fwplanno" ></column>
+  <column  colName="fstationname" propertyName="fstationname" colType="string" dataTypeLen="30" isPrimary="0" visible="1" width="58" isEdit="0" textColor="#000000" className="DdWoutageplanDto" refName="fstationname" ></column>
+  <column  colName="flinename" propertyName="flinename" colType="string" dataTypeLen="30" isPrimary="0" visible="1" width="58" isEdit="0" textColor="#000000" className="DdWoutageplanDto" refName="flinename" ></column>
+  <column  colName="fvoltage" propertyName="fvoltage" colType="string" dataTypeLen="20" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="DdWoutageplanDto" refName="fvoltage" ></column>
+  <column  colName="fworkcontent" propertyName="fworkcontent" colType="string" dataTypeLen="500" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="DdWoutageplanDto" refName="fworkcontent" ></column>
+  <column  colName="foutagearea" propertyName="foutagearea" colType="string" dataTypeLen="300" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="DdWoutageplanDto" refName="foutagearea" ></column>
+  <column  colName="fdispatchrange" propertyName="fdispatchrange" colType="string" dataTypeLen="20" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="DdWoutageplanDto" refName="fdispatchrange" ></column>
+  <column  colName="fstarttime" propertyName="fstarttime" colType="date" dataTypeLen="0" isPrimary="0" visible="1" width="138" isEdit="0" textColor="#000000" className="DdWoutageplanDto" refName="fstarttime" ></column>
+  <column  colName="fendtime" propertyName="fendtime" colType="date" dataTypeLen="0" isPrimary="0" visible="1" width="138" isEdit="0" textColor="#000000" className="DdWoutageplanDto" refName="fendtime" ></column>
+  <column  colName="fapplyunit" propertyName="fapplyunit" colType="string" dataTypeLen="80" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="DdWoutageplanDto" refName="fapplyunit" ></column>
+  <column  colName="fapplicant" propertyName="fapplicant" colType="string" dataTypeLen="30" isPrimary="0" visible="1" width="58" isEdit="0" textColor="#000000" className="DdWoutageplanDto" refName="fapplicant" ></column>
+  <column  colName="fapplytime" propertyName="fapplytime" colType="date" dataTypeLen="0" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="DdWoutageplanDto" refName="fapplytime" ></column>
+  <column  colName="fstatus" propertyName="fstatus" colType="string" dataTypeLen="10" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="DdWoutageplanDto" refName="fstatus" ></column>
+  <column  colName="fplansourcetype" propertyName="fplansourcetype" colType="string" dataTypeLen="20" isPrimary="0" visible="1" width="106" isEdit="0" textColor="#000000" className="DdWoutageplanDto" refName="fplansourcetype" ></column>
+  <column  colName="fplansourceno" propertyName="fplansourceno" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="106" isEdit="0" textColor="#000000" className="DdWoutageplanDto" refName="fplansourceno" ></column>
+  <column  colName="fexcutestatus" propertyName="fexcutestatus" colType="string" dataTypeLen="20" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="DdWoutageplanDto" refName="fexcutestatus" ></column>
+  <column  colName="fremark" propertyName="fremark" colType="string" dataTypeLen="500" isPrimary="0" visible="1" width="42" isEdit="0" textColor="#000000" className="DdWoutageplanDto" refName="fremark" ></column>
+  <column  colName="funfinishreason" propertyName="funfinishreason" colType="string" dataTypeLen="300" isPrimary="0" visible="1" width="90" isEdit="0" textColor="#000000" className="DdWoutageplanDto" refName="funfinishreason" ></column>
+  <column  colName="fstationid" propertyName="fstationid" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="DdWoutageplanDto" refName="fstationid" ></column>
+  <column  colName="flinenameid" propertyName="flinenameid" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="DdWoutageplanDto" refName="flinenameid" ></column>
+  <column  colName="fvoltageid" propertyName="fvoltageid" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="90" isEdit="0" textColor="#000000" className="DdWoutageplanDto" refName="fvoltageid" ></column>
+  <column  colName="fapplyunitid" propertyName="fapplyunitid" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="90" isEdit="0" textColor="#000000" className="DdWoutageplanDto" refName="fapplyunitid" ></column>
+  <column  colName="fapplicantid" propertyName="fapplicantid" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="DdWoutageplanDto" refName="fapplicantid" ></column>
+  <column  colName="sys_fille" propertyName="sys_fille" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="58" isEdit="0" textColor="#000000" className="DdWoutageplanDto" refName="sys_fille" ></column>
+  <column  colName="sys_filldept" propertyName="sys_filldept" colType="string" dataTypeLen="80" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="DdWoutageplanDto" refName="sys_filldept" ></column>
+  <column  colName="sys_filltime" propertyName="sys_filltime" colType="date" dataTypeLen="80" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="DdWoutageplanDto" refName="sys_filltime" ></column>
+</head>

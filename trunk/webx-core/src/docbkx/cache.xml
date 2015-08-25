@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook V5.0//EN"
+"http://www.oasis-open.org/docbook/xml/5.0b5/dtd/docbook.dtd">
+<chapter version="5.0" xml:id="cache"
+	xmlns:xi="http://www.w3.org/2001/XInclude">
+	<title>业务层缓存</title>
+	<para>
+		在WebXCore1.5版本中，新引入了一个缓存机制。不同于Hibernate的二级缓存，这个缓存机制是业务层缓存，利用AOP拦截带有WebXCache
+		注解的业务方法，以该业务方法所在类名称、方法名称、参数类型和值的列表拼装缓存的Key值，将业务方法的返回值作为缓存的内容进行缓存。
+		同时利用Hibernate的拦截器获得实体类的增删改等事件，以通知缓存淘汰受影响的内容。同时提供强制淘汰缓存的Annotion供一些直接修改数据库的
+		业务方法使用。
+	</para>
+
+	<para>
+		Hibernate缓存是一种数据层缓存，从软件分层的角度来说它所处的层次离用户更远，所以它的效率则相对较低。而业务缓存将缓存所处
+		的层次从数据层提升到业务层，更贴近用户，所以效率较Hibernate缓存更优。当然，这也要求在设计业务方法时需要更多的考虑如何利用
+		该缓存。
+	</para>
+	<para>下面介绍一下如何使用业务缓存：</para>
+	<para>
+		<itemizedlist>
+			<listitem>
+				<para>
+					<emphasis role="bold">配置CacheProvider</emphasis>
+				</para>
+				<para>
+					首先，需要在Spring配置文件中配置CacheProvider，该CacheProvider是Cache服务对外的统一接口。
+				</para>
+				<programlisting role="java"><![CDATA[
+<bean id="webxCacheProvider" class="com.sitechasia.webx.core.cache.ehcache.EhCacheProvider"
+      init-method="start" destroy-method="close" />
+                          ]]></programlisting>
+				<para>
+					上面的配置中将CachePrivider命名为webxCacheProvider，这是其它使用这个CacheProvider的Bean的默认配置，
+					如果将其命名为其它名字，那么下述的很多Bean就需要显式的将CacheProvider注入进去。如果按上面配置，那么下述的
+					Bean就可以隐式的依靠byName方式自动将其注入。
+				</para>
+			</listitem>
+			<listitem>
+				<para>
+					<emphasis role="bold">配置针对Annotation的AOP</emphasis>
+				</para>
+				<para>
+					第二，需要在Spring中配置AOP拦截，该AOP负责拦截带有Cache
+					Annotation的业务方法。
+				</para>
+				<programlisting role="java"><![CDATA[
+<!-- Cache 相关的AOP配置 -->
+<bean id="cacheAdvice" class="com.sitechasia.webx.core.cache.annotation.CacheAdvisor" />
+<aop:config proxy-target-class="true">
+  <aop:aspect id="cacheableAdvice" ref="cacheAdvice" order="0">
+    <aop:pointcut id="cachePointCut"
+         expression="execution(* mypetstore..*.*Service*.*(..)) 
+                    and (@annotation(com.sitechasia.webx.core.cache.annotation.WebXCache) 
+                    or @annotation(com.sitechasia.webx.core.cache.annotation.WebXUpdate))" />
+    <aop:around method="doCache" pointcut-ref="cachePointCut" />
+  </aop:aspect>
+</aop:config>
+                          ]]></programlisting>
+				<para>上面的配置中execution中的是需要根据具体情况进行修改的。</para>
+				<para>
+					需要注意的是，这里使用了Spring
+					2.5版中对AOP的配置方式，采用了namespace的书写方式，需要将原来的基于DTD的配置修改为基于XSD的配置方式。修改后不会影响原来的配置。修改后的样子大致如下：
+				</para>
+				<programlisting role="java"><![CDATA[
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:aop="http://www.springframework.org/schema/aop"
+    xmlns:tx="http://www.springframework.org/schema/tx"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+                        http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.0.xsd
+                        http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd"
+    default-autowire="byName" default-lazy-init="true">
+                          ]]></programlisting>
+			</listitem>
+			<listitem>
+				<para>
+					<emphasis role="bold">配置Hibernate拦截器</emphasis>
+				</para>
+				<para>
+					第三，需要在Spring中配置Hibenrate拦截器，同时将该拦截器注入到SessionFactory中，只有通过该拦截器我们才能捕获域对象上的事件。
+				</para>
+				<programlisting role="java"><![CDATA[
+<!-- Hibernate 拦截器 -->
+<bean name="cacheInterceptor" class="com.sitechasia.webx.core.cache.CacheInterceptor"/>
+
+<!-- Hibernate Factory -->
+<bean id="sessionFactory"	class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+  <property name="dataSource" ref="mysqlDataSource" />
+  <property name="schemaUpdate" value="true" />
+  <property name="hibernateProperties">
+    <props>
+      <prop key="hibernate.dialect">org.hibernate.dialect.HSQLDialect</prop>
+      <prop key="hibernate.show_sql">true</prop>
+      <prop key="hibernate.cache.provider_class">org.hibernate.cache.OSCacheProvider</prop>
+      <prop key="hibernate.cache.use_query_cache">true</prop>
+      <prop key="hibernate.generate_statistics">true</prop>
+    </props>
+  </property> 
+  <!-- 下面的配置将Hibernate拦截器注入到SessionFactory中 -->
+  <property name="entityInterceptor" ref="cacheInterceptor" />
+</bean>
+                          ]]></programlisting>
+				<para>通过上面的配置，缓存就可以工作了，下面来看看如何使用缓存。</para>
+			</listitem>
+			<listitem>
+				<para>
+					<emphasis role="bold">为业务方法增加WebXCache注解</emphasis>
+				</para>
+				<para>
+					为需要缓存的业务方法添加WebXCache注解可使该业务方法使用缓存机制。WebXCache注解提供两种方式：简单模式和复杂模式。
+					简单模式只标记当前业务方法相关的实体类即可，复杂模式可标记到相关的实体类的具体属性的具体值。复杂模式需要实体类事件
+					不仅要拦截到当前实体各个属性的值，还要能提供该实体在修改前各个属性的值。但是很不幸的，Hibernate拦截器对于实体属性
+					的原始值的拦截需要很严格的使用Hibernate，尤其不能对一个Detached状态的对象执行saveOrUpdate操作，这样的操作是
+					无法获得该对象属性的原始值的，如果想拦截到属性的原有值，必须对Detached状态的对象调用merge方法才可以。鉴于已有项目
+					对saveOrUpdate的大量使用，推荐只使用简单模式的Annotation。简单模式的Annotation如下：
+				</para>
+				<programlisting role="java"><![CDATA[
+@WebXCache(classes={Product.class,Category.class})
+public List getProductListByCategory(String categoryId) {
+
+  //...方法体
+}
+                        ]]></programlisting>
+				<para>
+					上面的配置中，通过classes标签指明当前的业务方法跟Product和Category实体类相关。那么当拦截器捕获到这两个实体对象的事件时，
+					就会淘汰掉这个缓存内容。
+				</para>
+			</listitem>
+			<listitem>
+				<para>
+					<emphasis role="bold">
+						利用WebXUpdate注解强制更新缓存
+					</emphasis>
+				</para>
+				<para>
+					在项目中，有时会利用JDBC对数据库进行一些批量更新或删除等操作，这样的方式Hibernate拦截器就无法捕获相应的事件及时淘汰缓存。
+					通过提供WebXUpdate注解，可以强制淘汰和指定的实体类相关的缓存内容。
+				</para>
+				<programlisting role="java"><![CDATA[
+@WebXUpdate(classes={Product.class,Category.class})
+public void doBatchDeleteByJDBC() {
+
+  //...方法体
+}
+                        ]]></programlisting>
+				<para>
+					上面的配置，表明了doBatchDeleteByJDBC方法的执行结果会影响Product和Category实体，那么和这两个实体相关的缓存都会被淘汰掉，例如
+					上面的例子中对getProductListByCategory 进行的缓存。
+				</para>
+			</listitem>
+		</itemizedlist>
+	</para>
+
+</chapter>

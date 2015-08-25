@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="com.techstar.dmis.entity">
+	<class name="ParaWaterTB" table="DMIS_ParaWaterTB" dynamic-insert="true" dynamic-update="true" optimistic-lock="version">
+    <id name="feqpid" type="string">
+      <column name="feqpid" sql-type="varchar(80)" not-null="true"/>
+      <generator class="assigned"/>
+    </id>
+
+ 	<version name="version" column="VERSION" unsaved-value="undefined"/>
+  
+   <property name="fpowerplan" type="string"  not-null="false">
+    <column name="fpowerplan"  
+		length="100"               
+    />
+</property>	
+    <property name="fpowerunitno" type="string"  not-null="false">
+    <column name="fpowerunitno"  
+		length="40"               
+    />
+</property>	
+    <property name="fpowerunitmode" type="string"  not-null="false">
+    <column name="fpowerunitmode"  
+		length="40"               
+    />
+</property>	
+    <property name="fpowerunitcapa" type="integer"  not-null="false">
+    <column name="fpowerunitcapa"  
+		length="10"        precision="2"       
+    />
+</property>	
+    <property name="fwatertbfactory" type="string"  not-null="false">
+    <column name="fwatertbfactory"  
+		length="150"               
+    />
+</property>	
+    <property name="fwatertbtype" type="string"  not-null="false">
+    <column name="fwatertbtype"  
+		length="40"               
+    />
+</property>	
+    <property name="fwaterintertiatimes" type="integer"  not-null="false">
+    <column name="fwaterintertiatimes"  
+		length="10"        precision="2"       
+    />
+</property>	
+    <property name="ftbintertiatimes" type="integer"  not-null="false">
+    <column name="ftbintertiatimes"  
+		length="10"        precision="2"       
+    />
+</property>	
+    <property name="ftbmaxoutpower" type="integer"  not-null="false">
+    <column name="ftbmaxoutpower"  
+		length="10"        precision="2"       
+    />
+</property>	
+    <property name="ftbidlerpower" type="integer"  not-null="false">
+    <column name="ftbidlerpower"  
+		length="10"        precision="2"       
+    />
+</property>	
+  
+	
+ <many-to-one name="zparawatertb2" class="EtsEquipment"   column="FEqpID" cascade="delete-orphan"></many-to-one>
+     </class>
+
+</hibernate-mapping>
+

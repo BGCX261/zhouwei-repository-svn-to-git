@@ -1,0 +1,9 @@
+<head>
+	<obj>UserOut</obj>
+	<column colName="USERNAME" propertyName="USERNAME" colType="string" dataTypeLen="30" isPrimary="1" visible="1" width="70" isEdit="" textColor="#ffffff" className="" refName=""></column>
+	<column colName="REALNAME" propertyName="REALNAME" colType="string" dataTypeLen="30" isPrimary="0" visible="1" width="70" isEdit="" textColor="#ffffff" className="" refName=""></column>
+	<column colName="USERATTR" propertyName="USERATTR" colType="string" dataTypeLen="30" isPrimary="0" visible="1" width="70" isEdit="" textColor="#ffffff" className="" refName=""></column>
+	<column colName="UNITID" propertyName="UNITID" colType="string" dataTypeLen="30" isPrimary="0" visible="1" width="70" isEdit="" textColor="#ffffff" className="" refName=""></column>
+	<column colName="UNITCODE" propertyName="UNITCODE" colType="string" dataTypeLen="30" isPrimary="0" visible="1" width="70" isEdit="" textColor="#ffffff" className="" refName=""></column>
+	<column colName="UNITNAME" propertyName="UNITNAME" colType="string" dataTypeLen="30" isPrimary="0" visible="1" width="70" isEdit="" textColor="#ffffff" className="" refName=""></column>
+</head>	

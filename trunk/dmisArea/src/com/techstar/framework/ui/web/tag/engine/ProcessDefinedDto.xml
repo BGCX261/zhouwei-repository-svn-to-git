@@ -1,0 +1,7 @@
+<head>
+	<obj>ProcessDefinedDto</obj>
+	<column colName="processDefinedName" colType="string" dataTypeLen="50" isPrimary="0" visible="1" width="70" isEdit="" textColor="#ffffff" className="ProcessDefinedDto" refName="processDefinedName"></column>
+	<column colName="processDefinedId" colType="string" dataTypeLen="50" isPrimary="1" visible="1" width="70" isEdit="" textColor="#ffffff" className="ProcessDefinedDto" refName="processDefinedId"></column>
+	<column  colName="opButton_2" propertyName="opButton_1" colType="string" dataTypeLen="0" isPrimary="0" visible="1" width="70" isEdit="0" textColor="#000000" className="" refName="" ></column>
+
+</head>	

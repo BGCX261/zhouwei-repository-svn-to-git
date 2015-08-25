@@ -1,0 +1,213 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="com.techstar.dmis.entity">
+	<class name="ParaRelayProtec" table="DMIS_ParaRelayProtec" dynamic-insert="true" dynamic-update="true" optimistic-lock="version">
+    <id name="feqpid" type="string">
+      <column name="feqpid" sql-type="varchar(80)" not-null="true"/>
+      <generator class="assigned"/>
+    </id>
+
+ 	<version name="version" column="VERSION" unsaved-value="undefined"/>
+  
+   <property name="frununit" type="string"  not-null="false">
+    <column name="frununit"  
+		length="40"               
+    />
+</property>	
+    <property name="fstationhvol" type="integer"  not-null="false">
+    <column name="fstationhvol"  
+		               
+    />
+</property>	
+    <property name="fvoltage" type="string"  not-null="false">
+    <column name="fvoltage"  
+		length="64"               
+    />
+</property>	
+    <property name="fdispatchno" type="string"  not-null="false">
+    <column name="fdispatchno"  
+		length="64"               
+    />
+</property>	
+    <property name="fprotectedequip" type="string"  not-null="false">
+    <column name="fprotectedequip"  
+		length="64"               
+    />
+</property>	
+    <property name="fdispatchname" type="string"  not-null="false">
+    <column name="fdispatchname"  
+		length="128"               
+    />
+</property>	
+    <property name="fdispatchauthority" type="string"  not-null="false">
+    <column name="fdispatchauthority"  
+		length="64"               
+    />
+</property>	
+    <property name="fequipclass" type="string"  not-null="false">
+    <column name="fequipclass"  
+		length="64"               
+    />
+</property>	
+    <property name="fdevicetype" type="string"  not-null="false">
+    <column name="fdevicetype"  
+		length="64"               
+    />
+</property>	
+    <property name="faccesstype" type="string"  not-null="false">
+    <column name="faccesstype"  
+		length="64"               
+    />
+</property>	
+    <property name="fchannelmodel" type="string"  not-null="false">
+    <column name="fchannelmodel"  
+		length="64"               
+    />
+</property>	
+    <property name="fallverifydata" type="date"  not-null="false">
+    <column name="fallverifydata"  
+		               
+    />
+</property>	
+    <property name="fpartverifydata" type="date"  not-null="false">
+    <column name="fpartverifydata"  
+		               
+    />
+</property>	
+    <property name="fnextverifydate" type="date"  not-null="false">
+    <column name="fnextverifydate"  
+		               
+    />
+</property>	
+    <property name="fnextverifytype" type="string"  not-null="false">
+    <column name="fnextverifytype"  
+		length="64"               
+    />
+</property>	
+    <property name="fisrunning" type="string"  not-null="false">
+    <column name="fisrunning"  
+		length="16"               
+    />
+</property>	
+    <property name="fsoftwareversion" type="string"  not-null="false">
+    <column name="fsoftwareversion"  
+		length="32"               
+    />
+</property>	
+    <property name="fcheckcode" type="string"  not-null="false">
+    <column name="fcheckcode"  
+		length="32"               
+    />
+</property>	
+    <property name="fmoniver" type="string"  not-null="false">
+    <column name="fmoniver"  
+		length="32"               
+    />
+</property>	
+    <property name="fmonivericode" type="string"  not-null="false">
+    <column name="fmonivericode"  
+		length="32"               
+    />
+</property>	
+    <property name="fmonitime" type="date"  not-null="false">
+    <column name="fmonitime"  
+		               
+    />
+</property>	
+    <property name="fcpuonever" type="string"  not-null="false">
+    <column name="fcpuonever"  
+		length="32"               
+    />
+</property>	
+    <property name="fcpuonevericode" type="string"  not-null="false">
+    <column name="fcpuonevericode"  
+		length="32"               
+    />
+</property>	
+    <property name="fcpuonetime" type="date"  not-null="false">
+    <column name="fcpuonetime"  
+		               
+    />
+</property>	
+    <property name="fcputwover" type="string"  not-null="false">
+    <column name="fcputwover"  
+		length="32"               
+    />
+</property>	
+    <property name="fcputwovericode" type="string"  not-null="false">
+    <column name="fcputwovericode"  
+		length="32"               
+    />
+</property>	
+    <property name="fcputwotime" type="date"  not-null="false">
+    <column name="fcputwotime"  
+		               
+    />
+</property>	
+    <property name="fcputhreever" type="string"  not-null="false">
+    <column name="fcputhreever"  
+		length="32"               
+    />
+</property>	
+    <property name="fcputhreevericode" type="string"  not-null="false">
+    <column name="fcputhreevericode"  
+		length="32"               
+    />
+</property>	
+    <property name="fcputhreetime" type="date"  not-null="false">
+    <column name="fcputhreetime"  
+		               
+    />
+</property>	
+    <property name="fcpufourver" type="string"  not-null="false">
+    <column name="fcpufourver"  
+		length="32"               
+    />
+</property>	
+    <property name="fcpufourvericode" type="string"  not-null="false">
+    <column name="fcpufourvericode"  
+		length="32"               
+    />
+</property>	
+    <property name="fcpufourtime" type="date"  not-null="false">
+    <column name="fcpufourtime"  
+		               
+    />
+</property>	
+    <property name="fmaterialcodify" type="string"  not-null="false">
+    <column name="fmaterialcodify"  
+		length="40"               
+    />
+</property>	
+    <property name="fprefixveritime" type="date"  not-null="false">
+    <column name="fprefixveritime"  
+		               
+    />
+</property>	
+    <property name="fprefixveritype" type="string"  not-null="false">
+    <column name="fprefixveritype"  
+		length="64"               
+    />
+</property>	
+    <property name="fprefixveriunit" type="string"  not-null="false">
+    <column name="fprefixveriunit"  
+		length="128"               
+    />
+</property>	
+    <property name="fprefixveriper" type="integer"  not-null="false">
+    <column name="fprefixveriper"  
+		length="2"        precision="1"       
+    />
+</property>	
+    <property name="fremark" type="string"  not-null="false">
+    <column name="fremark"  
+		length="500"               
+    />
+</property>	
+  
+	
+ <many-to-one name="zpararelayprotec2" class="EtsEquipment"   column="FEqpID" cascade="delete-orphan"></many-to-one>
+     </class>
+
+</hibernate-mapping>
+

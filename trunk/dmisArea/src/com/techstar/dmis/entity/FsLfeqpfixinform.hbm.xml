@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="com.techstar.dmis.entity">
+	<class name="FsLfeqpfixinform" table="DMIS_FS_LFEqpFixInform" dynamic-insert="true" dynamic-update="true" optimistic-lock="version">
+    <id name="fixinformid" type="string">
+      <column name="fixinformid" sql-type="varchar(40)" not-null="true"/>
+      <generator class="assigned"/>
+    </id>
+
+ 	<version name="version" column="VERSION" unsaved-value="undefined"/>
+  
+   <property name="fstationname" type="string"  not-null="true">
+    <column name="fstationname"  
+		length="80"               
+    />
+</property>	
+    <property name="fstationid" type="string"  not-null="false">
+    <column name="fstationid"  
+		length="40"               
+    />
+</property>	
+    <property name="lffixinformno" type="string"  not-null="false">
+    <column name="lffixinformno"  
+		length="40"               
+    />
+</property>	
+    <property name="eqpid" type="string"  not-null="false">
+    <column name="eqpid"  
+		length="80"               
+    />
+</property>	
+    <property name="sys_fille" type="string"  not-null="false">
+    <column name="sys_fille"  
+		length="40"               
+    />
+</property>	
+    <property name="sys_filldept" type="string"  not-null="false">
+    <column name="sys_filldept"  
+		length="80"               
+    />
+</property>	
+    <property name="sys_filltime" type="timestamp"  not-null="false">
+    <column name="sys_filltime"  
+		               
+    />
+</property>	
+    <property name="sys_isvalid" type="integer"  not-null="false">
+    <column name="sys_isvalid"  
+		               
+    />
+</property>	
+    <property name="sys_dataowner" type="string"  not-null="false">
+    <column name="sys_dataowner"  
+		length="40"               
+    />
+</property>	
+  
+	
+    <set name="ffslfeqpfixinformdetail1" inverse="true" cascade="delete-orphan"><key column="FixInformID"/><one-to-many class="FsLfeqpfixinformdetail"/></set>
+     </class>
+
+</hibernate-mapping>
+

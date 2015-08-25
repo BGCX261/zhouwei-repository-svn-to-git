@@ -1,0 +1,14 @@
+<!DOCTYPE mappings PUBLIC "-//DOZER//DTD MAPPINGS//EN"
+"http://dozer.sourceforge.net/dtd/dozerbeanmapping.dtd">
+<mappings>
+   <mapping>
+   <class-a>com.techstar.dmis.dto.ZdhReceptionDto</class-a>
+   <class-b>com.techstar.dmis.dto.transfer.TransZdhReceptionDto</class-b>
+   <field>
+      <a>fzdhreceptioneqprel1</a>
+      <b>fzdhreceptioneqprel1</b>
+      <a-hint>com.techstar.dmis.dto.ZdhReceptioneqprelDto</a-hint>
+      <b-hint>com.techstar.dmis.dto.transfer.TransZdhReceptioneqprelDto</b-hint>
+   </field>
+   </mapping>
+</mappings>

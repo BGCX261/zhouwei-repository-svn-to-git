@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="com.techstar.dmis.entity">
+	<class name="DdGroup" table="DMIS_ZD_DD_group" dynamic-insert="true" dynamic-update="true" optimistic-lock="version">
+    <id name="id" type="string">
+      <column name="id" sql-type="varchar(40)" not-null="true"/>
+      <generator class="assigned"/>
+    </id>
+
+ 	<version name="version" column="VERSION" unsaved-value="undefined"/>
+  
+   <property name="fgroupname" type="string"  not-null="false">
+    <column name="fgroupname"  
+		length="40"               
+    />
+</property>	
+    <property name="roundno" type="integer"  not-null="false">
+    <column name="roundno"  
+		               
+    />
+</property>	
+  
+	
+    <set name="fddgroupmember2" inverse="true" cascade="none"><key column="FGroupid"/><one-to-many class="DdGroupmember"/></set>
+     </class>
+
+</hibernate-mapping>
+

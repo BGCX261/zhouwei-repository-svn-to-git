@@ -1,0 +1,3 @@
+srcpath=${srcpath}
+webroot=${webroot}
+envlib=D:\\soft\\tomcat5.0.28\\common\\lib\\

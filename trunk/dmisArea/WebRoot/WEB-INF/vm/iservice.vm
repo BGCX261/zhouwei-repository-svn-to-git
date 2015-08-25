@@ -1,0 +1,81 @@
+package ${packagename};
+
+
+import java.util.List;
+import java.util.Collection;
+import com.techstar.framework.dao.model.QueryListObj;
+import ${dtopackagename}.${class.getUpEnName()}Dto;
+
+//please add your business methods start
+	// to do it
+//add your business method end
+	
+/** 
+ * 业务对象服务接口类
+ * @author 
+ * @date
+ */
+public interface I${class.getUpEnName()}Service {
+
+    public void add${class.getUpEnName()}(${class.getUpEnName()}Dto dto);
+
+	/**
+	 * 进行增加或修改操作业务处理
+	 * 
+	 * @param dto
+	 *${class.getUpEnName()}Dto 业务传输对象
+	 * 
+	 */
+	public void saveOrUpdate${class.getUpEnName()}(${class.getUpEnName()}Dto dto);
+	public void saveOrUpdate${class.getUpEnName()}(List dtos);
+
+	/**
+	 * 进行加载的业务操作
+	 * @param ${class.getLowEnName()}Id
+	 *            Integer 主键值ֵ
+	 */
+	public ${class.getUpEnName()}Dto load${class.getUpEnName()}(${class.getPkJavaType()} ${class.getLowEnName()}Id);
+
+	/**
+	 * 删除指定的业务
+	 * @param ${class.getLowEnName()}Id
+	 *            Integer 主键值ֵ
+	 */
+	public void delete${class.getUpEnName()}(${class.getPkJavaType()} ${class.getLowEnName()}Id);
+    
+	/**
+	 * 进行申请查询操作业务处理
+	 */
+
+	
+	/**
+	 * 进行申请查询操作业务处理(分页)
+	 * 
+	 * @return QueryListObj 封装了结果集及记录总数的对象
+	 */
+public QueryListObj list${class.getUpEnName()}();
+public QueryListObj list${class.getUpEnName()}ByHql(String hql);
+public QueryListObj get${class.getUpEnName()}ByHql(String hql,int beginPage, int pageSize,String sql);
+
+
+	//please add your business methods start
+	// to do it
+	//add your business method end
+
+	
+	
+#if($wfServices.size()>0)
+   #foreach($workflow in $wfServices)
+ #foreach($method in $workflow.getFunctions())
+	 ${method.accessType} ${method.returnType} ${method.enName}${class.getUpEnName()} (${method.param} ${method.getBusinessId()} ) throws DataAccessException;
+	  
+ #end
+ #end 
+#end
+
+	//please add your business methods start
+	// to do it
+	//add your business method end
+	
+	
+}

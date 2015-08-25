@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="com.techstar.dmis.entity">
+	<class name="BhFixedvaluebilldetail" table="DMIS_BH_FixedValueBillDetail" dynamic-insert="true" dynamic-update="true" optimistic-lock="version">
+    <id name="serialno" type="string">
+      <column name="serialno" sql-type="varchar(40)" not-null="true"/>
+      <generator class="assigned"/>
+    </id>
+
+ 	<version name="version" column="VERSION" unsaved-value="undefined"/>
+  
+   <property name="platename" type="string"  not-null="false">
+    <column name="platename"  
+		length="40"               
+    />
+</property>	
+    <property name="paraname" type="string"  not-null="false">
+    <column name="paraname"  
+		length="100"               
+    />
+</property>	
+    <property name="oldvalue" type="string"  not-null="false">
+    <column name="oldvalue"  
+		length="80"               
+    />
+</property>	
+    <property name="newvalue" type="string"  not-null="false">
+    <column name="newvalue"  
+		length="80"               
+    />
+</property>	
+  
+	
+    <many-to-one name="zbhfixedvaluebilldetail1" class="BhFixedvaluebill"   column="FixvalueBillNo" cascade="delete-orphan"></many-to-one>
+     </class>
+
+</hibernate-mapping>
+

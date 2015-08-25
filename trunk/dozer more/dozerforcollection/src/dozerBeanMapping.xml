@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mappings PUBLIC "-//DOZER//DTD MAPPINGS//EN"
+   "http://dozer.sourceforge.net/dtd/dozerbeanmapping.dtd">
+<mappings>
+	<mapping>
+
+		<class-a>com.zhouwei.dozer.A</class-a>
+		<class-b>com.zhouwei.dozer.A1</class-b>
+		<field>
+			<a>set</a>
+			<b>set1</b>
+			<b-hint>com.zhouwei.dozer.B1</b-hint>
+		</field>
+	</mapping>
+</mappings>

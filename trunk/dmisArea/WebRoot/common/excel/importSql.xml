@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sqlXml>
+	<tableName>DMIS_ZDH_SequenceTable</tableName>
+	<primaryName>fsequenceno</primaryName>
+	<propertyName>
+		<string>fstationname</string>
+		<string>fserialno</string>
+		<string>fname</string>
+		<string>fstatus</string>
+	</propertyName>	
+
+	
+</sqlXml>

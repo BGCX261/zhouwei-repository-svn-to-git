@@ -1,0 +1,110 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="com.techstar.dmis.entity">
+	<class name="DdClassondutylog" table="DMIS_DD_ClassOnDutyLog" dynamic-insert="true" dynamic-update="true" optimistic-lock="version">
+    <id name="fid" type="string">
+      <column name="fid" sql-type="varchar(32)" not-null="true"/>
+      <generator class="assigned"/>
+    </id>
+
+ 	<version name="version" column="VERSION" unsaved-value="undefined"/>
+  
+   <property name="fsuccessiontime" type="timestamp"  not-null="false">
+    <column name="fsuccessiontime"  
+		               
+    />
+</property>	
+    <property name="fhandovertime" type="timestamp"  not-null="false">
+    <column name="fhandovertime"  
+		               
+    />
+</property>	
+    <property name="fminister" type="string"  not-null="false">
+    <column name="fminister"  
+		length="20"               
+    />
+</property>	
+    <property name="fmainattendant" type="string"  not-null="false">
+    <column name="fmainattendant"  
+		length="20"               
+    />
+</property>	
+    <property name="fsecondattendant" type="string"  not-null="false">
+    <column name="fsecondattendant"  
+		length="20"               
+    />
+</property>	
+    <property name="fdelresponser" type="string"  not-null="false">
+    <column name="fdelresponser"  
+		length="20"               
+    />
+</property>	
+    <property name="fdelworkgroup" type="string"  not-null="false">
+    <column name="fdelworkgroup"  
+		length="20"               
+    />
+</property>	
+    <property name="fdelattworkgroup" type="string"  not-null="false">
+    <column name="fdelattworkgroup"  
+		length="20"               
+    />
+</property>	
+    <property name="fforecast" type="string"  not-null="false">
+    <column name="fforecast"  
+		length="300"               
+    />
+</property>	
+    <property name="fdelivercnt" type="string"  not-null="false">
+    <column name="fdelivercnt"  
+		length="500"               
+    />
+</property>	
+    <property name="content" type="org.springframework.orm.hibernate3.support.BlobByteArrayType"  not-null="false">
+    <column name="content"  
+		               
+    />
+</property>	
+    <property name="sys_fille" type="string"  not-null="false">
+    <column name="sys_fille"  
+		length="40"               
+    />
+</property>	
+    <property name="sys_filldept" type="string"  not-null="false">
+    <column name="sys_filldept"  
+		length="80"               
+    />
+</property>	
+    <property name="sys_filltime" type="timestamp"  not-null="false">
+    <column name="sys_filltime"  
+		               
+    />
+</property>	
+    <property name="sys_isvalid" type="integer"  not-null="false">
+    <column name="sys_isvalid"  
+		               
+    />
+</property>	
+    <property name="sys_dataowner" type="string"  not-null="false">
+    <column name="sys_dataowner"  
+		length="40"               
+    />
+</property>	
+    <property name="fworkshift" type="string"  >
+    <column name="fworkshift"  
+		length="200"               
+    />
+</property>	
+  
+	
+    <set name="fddpowerplantoperlog4" inverse="true" cascade="none"><key column="FCurLogNO"/><one-to-many class="DdPowerplantoperlog"/></set>
+         <set name="fddoperationnotebook4" inverse="true" cascade="none"><key column="FCurGroupLogNO"/><one-to-many class="DdOperationnotebook"/></set>
+         <set name="fddsasusprecord3" inverse="true" cascade="none"><key column="FCurLogNO"/><one-to-many class="DdSasusprecord"/></set>
+         <set name="fddwaterheight3" inverse="true" cascade="none"><key column="FCurLogNO"/><one-to-many class="DdWaterheight"/></set>
+         <set name="fddwaterproofplan2" inverse="true" cascade="none"><key column="FCurLogNO"/><one-to-many class="DdWaterproofplan"/></set>
+         <set name="fddhloadrecord4" inverse="true" cascade="all"><key column="FCurrLogNO"/><one-to-many class="DdHloadrecord"/></set>
+         <set name="fddpowerchangrecord4" inverse="true" cascade="none"><key column="FCurLogNO"/><one-to-many class="DdPowerchangrecord"/></set>
+         <set name="fddhpoweroperaterrd5" inverse="true" cascade="none"><key column="FCurLogNO"/><one-to-many class="DdHpoweroperaterrd"/></set>
+     </class>
+
+</hibernate-mapping>
+

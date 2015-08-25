@@ -1,0 +1,20 @@
+<!DOCTYPE mappings PUBLIC "-//DOZER//DTD MAPPINGS//EN"
+"http://dozer.sourceforge.net/dtd/dozerbeanmapping.dtd">
+<mappings>
+   <mapping>
+   <class-a>com.techstar.dmis.dto.BhAsregulateDto</class-a>
+   <class-b>com.techstar.dmis.dto.transfer.TransBhAsregulateDto</class-b>
+   <field>
+      <a>fbhasregulatedetail3</a>
+      <b>fbhasregulatedetail3</b>
+      <a-hint>com.techstar.dmis.dto.BhAsregulatedetailDto</a-hint>
+      <b-hint>com.techstar.dmis.dto.transfer.TransBhAsregulatedetailDto</b-hint>
+   </field>
+   <field>
+      <a>zbhasregulate2.id</a>
+      <b>trans_zbhasregulate2</b>
+      <a-hint>com.techstar.dmis.dto.StdStationDto</a-hint>
+      <b-hint>java.lang.String</b-hint>
+   </field>
+   </mapping>
+</mappings>

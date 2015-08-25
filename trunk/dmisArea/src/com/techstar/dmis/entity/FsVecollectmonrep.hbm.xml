@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="com.techstar.dmis.entity">
+	<class name="FsVecollectmonrep" table="DMIS_FS_VEcollectMonrep" dynamic-insert="true" dynamic-update="true" optimistic-lock="version">
+    <id name="reportid" type="string">
+      <column name="reportid" sql-type="varchar(38)" not-null="true"/>
+      <generator class="assigned"/>
+    </id>
+
+ 	<version name="version" column="VERSION" unsaved-value="undefined"/>
+  
+   <property name="reportmonth" type="integer"  not-null="true">
+    <column name="reportmonth"  
+		               
+    />
+</property>	
+    <property name="reportyear" type="integer"  not-null="true">
+    <column name="reportyear"  
+		               
+    />
+</property>	
+    <property name="repanalyse" type="org.springframework.orm.hibernate3.support.BlobByteArrayType"  not-null="true">
+    <column name="repanalyse"  
+		               
+    />
+</property>	
+    <property name="sys_fille" type="string"  not-null="false">
+    <column name="sys_fille"  
+		length="40"               
+    />
+</property>	
+    <property name="sys_filldept" type="string"  not-null="false">
+    <column name="sys_filldept"  
+		length="80"               
+    />
+</property>	
+    <property name="sys_filltime" type="timestamp"  not-null="false">
+    <column name="sys_filltime"  
+		               
+    />
+</property>	
+    <property name="sys_isvalid" type="integer"  not-null="false">
+    <column name="sys_isvalid"  
+		               
+    />
+</property>	
+    <property name="sys_dataowner" type="string"  not-null="false">
+    <column name="sys_dataowner"  
+		length="40"               
+    />
+</property>	
+  
+	
+    <set name="ffsvecmrepdetail1" inverse="true" cascade="delete-orphan"><key column="MONthREPID"/><one-to-many class="FsVecmrepdetail"/></set>
+     </class>
+
+</hibernate-mapping>
+

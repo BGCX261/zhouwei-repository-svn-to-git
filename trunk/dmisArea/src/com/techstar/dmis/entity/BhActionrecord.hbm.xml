@@ -1,0 +1,136 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="com.techstar.dmis.entity">
+	<class name="BhActionrecord" table="DMIS_BH_actionRecord" dynamic-insert="true" dynamic-update="true" optimistic-lock="version">
+    <id name="protectionrecordid" type="string">
+      <column name="protectionrecordid" sql-type="varchar(40)" not-null="true"/>
+      <generator class="assigned"/>
+    </id>
+
+ 	<version name="version" column="VERSION" unsaved-value="undefined"/>
+  
+   <property name="eqpid" type="string"  not-null="false">
+    <column name="eqpid"  
+		length="80"               
+    />
+</property>	
+    <property name="fstationname" type="string"  not-null="false">
+    <column name="fstationname"  
+		length="40"               
+    />
+</property>	
+    <property name="fstationid" type="string"  not-null="false">
+    <column name="fstationid"  
+		length="40"               
+    />
+</property>	
+    <property name="dispatchno" type="string"  not-null="false">
+    <column name="dispatchno"  
+		length="40"               
+    />
+</property>	
+    <property name="actiontime" type="date"  not-null="false">
+    <column name="actiontime"  
+		               
+    />
+</property>	
+    <property name="actionevaluatetimes" type="integer"  not-null="false">
+    <column name="actionevaluatetimes"  
+		               
+    />
+</property>	
+    <property name="faultrecordertimes" type="integer"  not-null="false">
+    <column name="faultrecordertimes"  
+		               
+    />
+</property>	
+    <property name="faultrecordergoodtimes" type="integer"  not-null="false">
+    <column name="faultrecordergoodtimes"  
+		               
+    />
+</property>	
+    <property name="faulteqp" type="string"  not-null="false">
+    <column name="faulteqp"  
+		length="80"               
+    />
+</property>	
+    <property name="actiondescription" type="org.springframework.orm.hibernate3.support.BlobByteArrayType"  not-null="false">
+    <column name="actiondescription"  
+		               
+    />
+</property>	
+    <property name="actionkeeptimes" type="integer"  not-null="false">
+    <column name="actionkeeptimes"  
+		               
+    />
+</property>	
+    <property name="faultkeeptimes" type="integer"  not-null="false">
+    <column name="faultkeeptimes"  
+		               
+    />
+</property>	
+    <property name="switchmodel" type="string"  not-null="false">
+    <column name="switchmodel"  
+		length="80"               
+    />
+</property>	
+    <property name="remarks" type="string"  not-null="false">
+    <column name="remarks"  
+		length="80"               
+    />
+</property>	
+    <property name="sys_fille" type="string"  not-null="false">
+    <column name="sys_fille"  
+		length="40"               
+    />
+</property>	
+    <property name="sys_filldept" type="string"  not-null="false">
+    <column name="sys_filldept"  
+		length="80"               
+    />
+</property>	
+    <property name="sys_filltime" type="timestamp"  not-null="false">
+    <column name="sys_filltime"  
+		               
+    />
+</property>	
+    <property name="sys_isvalid" type="integer"  not-null="false">
+    <column name="sys_isvalid"  
+		               
+    />
+</property>	
+    <property name="sys_dataowner" type="string"  not-null="false">
+    <column name="sys_dataowner"  
+		length="40"               
+    />
+</property>	
+    <property name="actionevaluate" type="string"  >
+    <column name="actionevaluate"  
+		length="200"               
+    />
+</property>	
+    <property name="reclosuremode" type="string"  >
+    <column name="reclosuremode"  
+		length="200"               
+    />
+</property>	
+    <property name="isreclosure" type="string"  >
+    <column name="isreclosure"  
+		length="200"               
+    />
+</property>	
+    <property name="linereclosure" type="string"  >
+    <column name="linereclosure"  
+		length="200"               
+    />
+</property>	
+  
+	
+    <many-to-one name="zbhactionrecord3" class="StdBhtresponse"   column="ResponsedeptID" cascade="none"></many-to-one>
+         <many-to-one name="zbhactionrecord4" class="StdPreasontype"   column="Errorreason" cascade="none"></many-to-one>
+         <many-to-one name="zbhactionrecord6" class="StdBheqpfault"   column="faulttype" cascade="none"></many-to-one>
+         <many-to-one name="zbhactionrecord10" class="DdAccidentbrief"   column="AccidentbriefNo" cascade="none"></many-to-one>
+     </class>
+
+</hibernate-mapping>
+

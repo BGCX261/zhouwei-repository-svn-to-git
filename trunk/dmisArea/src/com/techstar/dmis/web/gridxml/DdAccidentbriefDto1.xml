@@ -1,0 +1,10 @@
+<!--故障简报-->
+<head>
+  <obj>DdAccidentbriefDto</obj>
+  <column  colName="faccidentid" propertyName="faccidentid" colType="string" dataTypeLen="32" isPrimary="1" visible="0" width="74" isEdit="0" textColor="#000000" className="DdAccidentbriefDto" refName="faccidentid" ></column>
+  <column  colName="fddaccidentbriefprocess1.fstepid" propertyName="fddaccidentbriefprocess1" colType="string" dataTypeLen="32" isPrimary="1" visible="0" width="42" isEdit="0" textColor="#000000" className="DdAccidentbriefprocessDto" refName="fstepid" ></column>
+  <column  colName="fddaccidentbriefprocess1.fhandleno" propertyName="fddaccidentbriefprocess1" colType="integer" dataTypeLen="0" isPrimary="0" visible="1" width="74" isEdit="1" textColor="#000000" className="DdAccidentbriefprocessDto" refName="fhandleno" ></column>
+  <column  colName="fddaccidentbriefprocess1.fprocesstime" propertyName="fddaccidentbriefprocess1" colType="date" dataTypeLen="0" isPrimary="0" visible="1" width="74" isEdit="1" textColor="#000000" className="DdAccidentbriefprocessDto" refName="fprocesstime" ></column>
+  <column  colName="fddaccidentbriefprocess1.fhandlecontent" propertyName="fddaccidentbriefprocess1" colType="string" dataTypeLen="500" isPrimary="0" visible="1" width="74" isEdit="1" textColor="#000000" className="DdAccidentbriefprocessDto" refName="fhandlecontent" ></column>
+  <column  colName="fddaccidentbriefprocess1.fhandler" propertyName="fddaccidentbriefprocess1" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="74" isEdit="1" textColor="#000000" className="DdAccidentbriefprocessDto" refName="fhandler" ></column>
+</head>

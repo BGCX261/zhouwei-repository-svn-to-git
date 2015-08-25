@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="com.techstar.dmis.entity">
+	<class name="EQPLevelReg" table="DMIS_EQPLevelReg" dynamic-insert="true" dynamic-update="true" optimistic-lock="version">
+    <id name="fid" type="string">
+      <column name="fid" sql-type="varchar(40)" not-null="true"/>
+      <generator class="assigned"/>
+    </id>
+
+ 	<version name="version" column="VERSION" unsaved-value="undefined"/>
+  
+   <property name="fviewangleid" type="string"  not-null="false">
+    <column name="fviewangleid"  
+		length="40"               
+    />
+</property>	
+    <property name="fregulationname" type="string"  not-null="false">
+    <column name="fregulationname"  
+		length="40"               
+    />
+</property>	
+    <property name="fparentregid" type="string"  not-null="false">
+    <column name="fparentregid"  
+		length="100"               
+    />
+</property>	
+    <property name="freleqpclass" type="string"  not-null="false">
+    <column name="freleqpclass"  
+		length="40"               
+    />
+</property>	
+    <property name="fremark" type="string"  not-null="false">
+    <column name="fremark"  
+		length="500"               
+    />
+</property>	
+    <property name="fparaid" type="string"  not-null="false">
+    <column name="fparaid"  
+		length="40"               
+    />
+</property>	
+  
+</class>
+
+</hibernate-mapping>
+

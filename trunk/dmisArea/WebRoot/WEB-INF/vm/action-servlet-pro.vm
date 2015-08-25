@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN"
+    "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<bean name="/${proname}dictionary" 
+        class="${packageaction}.DictionaryBaseAction" singleton="false" autowire="byType"/> 
+  #foreach($action in $actions)
+	 <bean name="${action.despatch_url}"  class="${packageaction}.${action.mainentity.entityBean.getUpEnName()}Action" singleton="false" autowire="byType"/>
+  #end
+
+
+</beans>

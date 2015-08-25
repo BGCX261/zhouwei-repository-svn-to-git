@@ -1,0 +1,33 @@
+<!--低频减载装置参数的属性清单-->
+<head>
+  <obj>FsLfparalistDto</obj>
+  <column  colName="flinesno" propertyName="flinesno" colType="string" dataTypeLen="32" isPrimary="1" visible="1" width="74" isEdit="0" textColor="#000000" className="FsLfparalistDto" refName="flinesno" ></column>
+  <column  colName="fstationname" propertyName="fstationname" colType="string" dataTypeLen="80" isPrimary="0" visible="1" width="58" isEdit="0" textColor="#000000" className="FsLfparalistDto" refName="fstationname" ></column>
+  <column  colName="ftransformerno" propertyName="ftransformerno" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="58" isEdit="0" textColor="#000000" className="FsLfparalistDto" refName="ftransformerno" ></column>
+  <column  colName="fbusno" propertyName="fbusno" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="58" isEdit="0" textColor="#000000" className="FsLfparalistDto" refName="fbusno" ></column>
+  <column  colName="fswitchno" propertyName="fswitchno" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="58" isEdit="0" textColor="#000000" className="FsLfparalistDto" refName="fswitchno" ></column>
+  <column  colName="flinename" propertyName="flinename" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="FsLfparalistDto" refName="flinename" ></column>
+  <column  colName="fpowerowner" propertyName="fpowerowner" colType="string" dataTypeLen="200" isPrimary="0" visible="1" width="138" isEdit="0" textColor="#000000" className="FsLfparalistDto" refName="fpowerowner" ></column>
+  <column  colName="fsmallarea" propertyName="fsmallarea" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="90" isEdit="0" textColor="#000000" className="FsLfparalistDto" refName="fsmallarea" ></column>
+  <column  colName="fownedunit" propertyName="fownedunit" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="106" isEdit="0" textColor="#000000" className="FsLfparalistDto" refName="fownedunit" ></column>
+  <column  colName="ffrequency" propertyName="ffrequency" colType="float" dataTypeLen="0" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="FsLfparalistDto" refName="ffrequency" ></column>
+  <column  colName="factiontime" propertyName="factiontime" colType="float" dataTypeLen="0" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="FsLfparalistDto" refName="factiontime" ></column>
+  <column  colName="fruntime" propertyName="fruntime" colType="date" dataTypeLen="0" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="FsLfparalistDto" refName="fruntime" ></column>
+  <column  colName="flockoutvalue" propertyName="flockoutvalue" colType="float" dataTypeLen="0" isPrimary="0" visible="1" width="90" isEdit="0" textColor="#000000" className="FsLfparalistDto" refName="flockoutvalue" ></column>
+  <column  colName="flinegenerationdate" propertyName="flinegenerationdate" colType="date" dataTypeLen="0" isPrimary="0" visible="1" width="106" isEdit="0" textColor="#000000" className="FsLfparalistDto" refName="flinegenerationdate" ></column>
+  <column  colName="flinevoltage" propertyName="flinevoltage" colType="float" dataTypeLen="0" isPrimary="0" visible="1" width="106" isEdit="0" textColor="#000000" className="FsLfparalistDto" refName="flinevoltage" ></column>
+  <column  colName="fcoefficient" propertyName="fcoefficient" colType="float" dataTypeLen="0" isPrimary="0" visible="1" width="42" isEdit="0" textColor="#000000" className="FsLfparalistDto" refName="fcoefficient" ></column>
+  <column  colName="f4cvalue" propertyName="f4cvalue" colType="float" dataTypeLen="0" isPrimary="0" visible="1" width="82" isEdit="0" textColor="#000000" className="FsLfparalistDto" refName="f4cvalue" ></column>
+  <column  colName="f4pvalue" propertyName="f4pvalue" colType="float" dataTypeLen="0" isPrimary="0" visible="1" width="82" isEdit="0" textColor="#000000" className="FsLfparalistDto" refName="f4pvalue" ></column>
+  <column  colName="f10cvalue" propertyName="f10cvalue" colType="float" dataTypeLen="0" isPrimary="0" visible="1" width="90" isEdit="0" textColor="#000000" className="FsLfparalistDto" refName="f10cvalue" ></column>
+  <column  colName="f10pvalue" propertyName="f10pvalue" colType="float" dataTypeLen="0" isPrimary="0" visible="1" width="90" isEdit="0" textColor="#000000" className="FsLfparalistDto" refName="f10pvalue" ></column>
+  <column  colName="f0cvalue" propertyName="f0cvalue" colType="float" dataTypeLen="0" isPrimary="0" visible="1" width="90" isEdit="0" textColor="#000000" className="FsLfparalistDto" refName="f0cvalue" ></column>
+  <column  colName="f0pvalue" propertyName="f0pvalue" colType="float" dataTypeLen="0" isPrimary="0" visible="1" width="90" isEdit="0" textColor="#000000" className="FsLfparalistDto" refName="f0pvalue" ></column>
+  <column  colName="fremark" propertyName="fremark" colType="string" dataTypeLen="100" isPrimary="0" visible="1" width="42" isEdit="0" textColor="#000000" className="FsLfparalistDto" refName="fremark" ></column>
+  <column  colName="sys_fille" propertyName="sys_fille" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="58" isEdit="0" textColor="#000000" className="FsLfparalistDto" refName="sys_fille" ></column>
+  <column  colName="sys_filldept" propertyName="sys_filldept" colType="string" dataTypeLen="80" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="FsLfparalistDto" refName="sys_filldept" ></column>
+  <column  colName="sys_filltime" propertyName="sys_filltime" colType="date" dataTypeLen="80" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="FsLfparalistDto" refName="sys_filltime" ></column>
+  <column  colName="fvoltage" propertyName="fvoltage" colType="string" dataTypeLen="64" isPrimary="0" visible="1" width="106" isEdit="0" textColor="#000000" className="FsLfparalistDto" refName="fvoltage" ></column>
+  <column  colName="froundno" propertyName="froundno" colType="string" dataTypeLen="64" isPrimary="0" visible="1" width="106" isEdit="0" textColor="#000000" className="FsLfparalistDto" refName="froundno" ></column>
+  <column  colName="frunstatus" propertyName="frunstatus" colType="string" dataTypeLen="64" isPrimary="0" visible="1" width="106" isEdit="0" textColor="#000000" className="FsLfparalistDto" refName="frunstatus" ></column>
+</head>

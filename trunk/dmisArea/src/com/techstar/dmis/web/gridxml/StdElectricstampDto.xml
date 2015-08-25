@@ -1,0 +1,9 @@
+<!--电子章-->
+<head>
+  <obj>StdElectricstampDto</obj>
+  <column  colName="id" propertyName="id" colType="string" dataTypeLen="40" isPrimary="1" visible="0" width="26" isEdit="0" textColor="#000000" className="StdElectricstampDto" refName="id" ></column>
+  <column  colName="version" propertyName="version" colType="integer" dataTypeLen="" isPrimary="0" visible="0" width="122" isEdit="0" textColor="#000000" className="StdElectricstampDto" refName="version" ></column>
+  <column  colName="ftype" propertyName="ftype" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="42" isEdit="0" textColor="#000000" className="StdElectricstampDto" refName="ftype" ></column>
+  <column  colName="fstampname" propertyName="fstampname" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="42" isEdit="0" textColor="#000000" className="StdElectricstampDto" refName="fstampname" ></column>
+  <column  colName="fgraph" propertyName="fgraph" colType="blob" dataTypeLen="0" isPrimary="0" visible="0" width="42" isEdit="0" textColor="#000000" className="StdElectricstampDto" refName="fgraph" ></column>
+</head>

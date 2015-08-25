@@ -1,0 +1,183 @@
+package ${packagename};
+
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Collection;
+import org.apache.commons.lang.StringUtils;
+import com.techstar.framework.dao.IBaseJdbcDao;
+
+import com.techstar.framework.dao.model.QueryListObj;
+import com.techstar.framework.utils.BeanHelper;
+import com.techstar.framework.utils.SequenceCreator;
+import ${daopackagename}.*;
+import ${dtopackagename}.${class.getUpEnName()}Dto;
+import ${entitypackagename}.${class.getUpEnName()};
+import ${servicepackagename}.I${class.getUpEnName()}Service;
+import org.springframework.dao.DataAccessException;
+
+#if($wfServices.size()>0)
+import com.techstar.dmis.service.workflow.I${class.getUpEnName()}WFService;
+#end
+//please add your business methods start
+	// to do it
+//add your business method end
+
+/** 
+ * 业务对象服务接口实现类
+ * @author 
+ * @date
+ */
+public class ${class.getUpEnName()}ServiceImpl implements I${class.getUpEnName()}Service {
+   //注册DAO
+   private I${class.getUpEnName()}Dao ${class.getLowEnName()}Dao;
+   private IBaseJdbcDao baseJdbcDao ;
+   
+  #if(${class.relations.size()}>0)
+	//注册管理DAO
+    #foreach($ref in ${class.getDistinctRef()})
+	 private I${ref.getUpEnName()}Dao ${ref.getLowEnName()}Dao;
+	 public void set${ref.getULenName()}Dao
+	    (I${ref.getUpEnName()}Dao ${ref.getLowEnName()}Dao) {
+		 this.${ref.getLowEnName()}Dao = ${ref.getLowEnName()}Dao;
+     }
+	#end
+  #end
+	
+#if($wfServices.size()>0)
+	//注册工作流
+    private I${class.getUpEnName()}WFService ${class.getLowEnName()}WFService;
+#end
+
+	public ${class.getUpEnName()}ServiceImpl() {}
+	
+	public void add${class.getUpEnName()}(${class.getUpEnName()}Dto dto) {
+	
+    	if (StringUtils.isEmpty(dto.${class.getPKGetMethod()}())){
+		      if( StringUtils.isEmpty(dto.${class.getPKGetMethod()}())){
+		          dto.${class.getPKSetMethod()}(new SequenceCreator().getUID());
+		       }
+		}
+    	//新增时候,主对象不用管子对象的保存
+		${class.getUpEnName()} ${class.getLowEnName()} = (${class.getUpEnName()}) BeanHelper.buildBean(${class.getUpEnName()}.class, dto);
+		${class.getLowEnName()}Dao.saveOrUpdate(${class.getLowEnName()});		
+	}
+	
+    //用于实现基本增加或修改操作
+	public void saveOrUpdate${class.getUpEnName()}(${class.getUpEnName()}Dto dto) {
+		if (StringUtils.isEmpty(dto.${class.getPKGetMethod()}())){
+		      if( StringUtils.isEmpty(dto.${class.getPKGetMethod()}())){
+		          dto.${class.getPKSetMethod()}(new SequenceCreator().getUID());
+		       }
+		}
+		${class.getUpEnName()} ${class.getLowEnName()} = (${class.getUpEnName()}) BeanHelper.buildBean(${class.getUpEnName()}.class, dto);
+		${class.getLowEnName()}Dao.saveOrUpdate(${class.getLowEnName()});
+	}
+    //用于实现基本删除操作
+	public void delete${class.getUpEnName()}(${class.getPkJavaType()} ${class.getLowEnName()}Id) {
+		${class.getUpEnName()} ${class.getLowEnName()} = new ${class.getUpEnName()}();
+		${class.getLowEnName()}.${pksetmethod}(${class.getLowEnName()}Id);
+		${class.getLowEnName()}Dao.delete(${class.getLowEnName()});
+	}
+   //用于实现基本DTOLOAD操作
+	public ${class.getUpEnName()}Dto load${class.getUpEnName()}(${class.getPkJavaType()} ${class.PkEnName}) {
+		${class.getUpEnName()} ${class.getLowEnName()} = (${class.getUpEnName()}) ${class.getLowEnName()}Dao.findByPk(${class.PkEnName});
+		${class.getUpEnName()}Dto dto = (${class.getUpEnName()}Dto) BeanHelper.buildBean(${class.getUpEnName()}Dto.class, ${class.getLowEnName()});
+		return dto;
+	}
+//用于实现列表操作
+   public QueryListObj list${class.getUpEnName()}() {
+		QueryListObj obj = ${class.getLowEnName()}Dao.getQueryList();
+		if (obj.getElemList() != null) {
+			List dtos = (List) BeanHelper.buildBeans(${class.getUpEnName()}Dto.class, obj
+					.getElemList());
+			obj.setElemList(dtos);
+		}
+		return obj;
+	}
+	
+	public QueryListObj list${class.getUpEnName()}ByHql(String hql) {
+		QueryListObj obj = ${class.getLowEnName()}Dao.getQueryListByHql(hql);
+		if (obj.getElemList() != null) {
+			List dtos = (List) BeanHelper.buildBeans(${class.getUpEnName()}.class, obj
+					.getElemList());
+			obj.setElemList(dtos);
+		}
+		return obj;
+	}
+	
+	public QueryListObj get${class.getUpEnName()}ByHql(String hql, int beginPage, int pageSize, String sql) {
+		QueryListObj obj = ${class.getLowEnName()}Dao.getQueryListByHql(hql, beginPage, pageSize);
+		if (obj.getElemList() != null) {
+			List dtos = (List) BeanHelper.buildBeans(${class.getUpEnName()}.class, obj
+					.getElemList());
+			obj.setElemList(dtos);
+		}
+		
+		List sumList = ${class.getLowEnName()}Dao.getObjPropertySums(sql);
+		//System.out.println("sumList.size():"+sumList.size());
+		obj.setPropertySum(sumList);
+		return obj;
+	}
+
+	
+  /**
+    * @business method list
+	 #foreach($method in $methods)
+	* @${method.cnName}
+	 #end
+    */
+
+	//please add your business methods start
+	// to do it
+	//add your business method end
+	
+	public I${class.getUpEnName()}Dao get${class.getUpEnName()}Dao() {
+		return ${class.getLowEnName()}Dao;
+	}
+
+	public void set${class.getUpEnName()}Dao(I${class.getUpEnName()}Dao ${class.getLowEnName()}Dao) {
+		this.${class.getLowEnName()}Dao = ${class.getLowEnName()}Dao;
+	}
+	
+	public void setBaseJdbcDao(IBaseJdbcDao baseJdbcDao) {
+		this.baseJdbcDao = baseJdbcDao;
+	}
+	
+	public void saveOrUpdate${class.getUpEnName()}(List dtos) {
+		List pos = new ArrayList();
+		for(int i=0;i<dtos.size();i++){
+			${class.getUpEnName()}Dto ${class.getLowEnName()}Dto = (${class.getUpEnName()}Dto)dtos.get(i);
+			${class.getUpEnName()} ${class.getLowEnName()} = (${class.getUpEnName()}) BeanHelper.buildBean(${class.getUpEnName()}.class, ${class.getLowEnName()}Dto);
+		    pos.add(${class.getLowEnName()});
+		}
+		
+		${class.getLowEnName()}Dao.saveOrUpdateAll(pos);	
+	}
+	
+	#if($wfServices.size()>0)
+	//注册工作流服务
+	public I${class.getUpEnName()}WFService get${class.getUpEnName()}WFService(){
+		return ${class.getLowEnName()}WFService;
+	}
+	public void set${class.getUpEnName()}WFService(I${class.getUpEnName()}WFService ${class.getLowEnName()}WFService){
+		this.${class.getLowEnName()}WFService=${class.getLowEnName()}WFService;
+	}
+	
+#foreach($workflow in $wfServices)
+		
+ #foreach($method in $workflow.getFunctions())
+	  //注册工作流方法
+	 ${method.accessType} ${method.returnType} ${method.enName}${class.getUpEnName()} (${method.param} ${method.getBusinessId()}) throws DataAccessException{
+	 ${method.getFuncReturnStr()} ${class.getLowEnName()}WFService.${method.enName}(
+	  $method.getParamValueStr()
+	 );
+ }
+ #end
+ 
+ #end 
+ #end
+	
+
+
+	
+}

@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="com.techstar.griddemo.entity">
+	<class name="SaleBillAddr" table="DMIS_SALE_ADDR" dynamic-insert="true" dynamic-update="true" optimistic-lock="version">
+    <id name="id" type="string">
+      <column name="id" sql-type="varchar(32)" not-null="true"/>
+      <generator class="assigned"/>
+    </id>
+
+ 	<version name="version" column="VERSION" unsaved-value="undefined"/>
+  
+   <property name="city" type="string"  not-null="false">
+    <column name="city"  
+		length="20"                
+    />
+
+</property>	
+    <property name="street" type="string"  not-null="false">
+    <column name="street"  
+		                
+    />
+</property>	
+ <!-- <property name="salebill_id" type="string"  not-null="false">
+    <column name="SALEBILL_ID"   />
+</property>	-->
+ 
+ <many-to-one name="saleBill" class="SaleBill"  column="SALEBILL_ID" cascade="delete-orphan"></many-to-one>
+   
+  </class>
+
+</hibernate-mapping>
+

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook V5.0//EN"
+"http://www.oasis-open.org/docbook/xml/5.0b5/dtd/docbook.dtd">
+<sect2 version="5.0"
+ xmlns:xi="http://www.w3.org/2001/XInclude">
+	<title>BaseJdbcDomainDao</title>
+	<para>
+		BaseJdbcDomainDao是基于标准JDBC实现的DAO接口。该实现类利用反射机制及命名规约将结果集转换为域对象。
+		由于利用了反射机制，所以从效率上讲还是不如纯	JDBC的实现。从针对域对象的持久化技术上讲，也不如
+		Hibernate更方便灵活。这一实现方式只是纯JDBC实现和Hibernate实现的一个折中，请酌情使用。
+	</para>
+
+	<para>
+		要使用BaseJdbcDomainDao需要有些命名规约，命名规约的体现通过ObjectMapper类体现。
+		如果用户不重载该类，那么默认的规约如下：
+		<orderedlist>
+		
+			<listitem><para>
+				数据库表名称和类名称一致，且表名的所有字母均大写。
+			</para></listitem>
+			<listitem><para>
+				数据库字段名称和类的属性名称一致，且数据库字段名称所有字母均大写。
+			</para></listitem>
+			<listitem><para>
+				主键字段在类中必须叫id，在数据库中的字段名称为ID。
+			</para></listitem>
+		</orderedlist>
+	</para>
+</sect2>

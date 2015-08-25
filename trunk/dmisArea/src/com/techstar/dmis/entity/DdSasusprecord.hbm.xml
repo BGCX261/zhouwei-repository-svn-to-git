@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="com.techstar.dmis.entity">
+	<class name="DdSasusprecord" table="DMIS_DD_SASuspRecord" dynamic-insert="true" dynamic-update="true" optimistic-lock="version">
+    <id name="fid" type="string">
+      <column name="fid" sql-type="varchar(32)" not-null="true"/>
+      <generator class="assigned"/>
+    </id>
+
+ 	<version name="version" column="VERSION" unsaved-value="undefined"/>
+  
+   <property name="fstationname" type="string"  not-null="false">
+    <column name="fstationname"  
+		length="40"               
+    />
+</property>	
+    <property name="fsuspswitchno" type="string"  not-null="false">
+    <column name="fsuspswitchno"  
+		length="40"               
+    />
+</property>	
+    <property name="fratedcurrent" type="integer"  not-null="false">
+    <column name="fratedcurrent"  
+		               
+    />
+</property>	
+    <property name="fncurrent" type="integer"  not-null="false">
+    <column name="fncurrent"  
+		               
+    />
+</property>	
+    <property name="fnloadrate" type="integer"  not-null="false">
+    <column name="fnloadrate"  
+		length="14"               
+    />
+</property>	
+    <property name="fsusptime" type="timestamp"  not-null="false">
+    <column name="fsusptime"  
+		               
+    />
+</property>	
+    <property name="frestoretime" type="timestamp"  not-null="false">
+    <column name="frestoretime"  
+		               
+    />
+</property>	
+    <property name="fkeeptime" type="integer"  not-null="false">
+    <column name="fkeeptime"  
+		length="14"               
+    />
+</property>	
+    <property name="fstationid" type="string"  not-null="false">
+    <column name="fstationid"  
+		length="40"               
+    />
+</property>	
+    <property name="sys_fille" type="string"  not-null="false">
+    <column name="sys_fille"  
+		length="40"               
+    />
+</property>	
+    <property name="sys_filldept" type="string"  not-null="false">
+    <column name="sys_filldept"  
+		length="80"               
+    />
+</property>	
+    <property name="sys_filltime" type="timestamp"  not-null="false">
+    <column name="sys_filltime"  
+		               
+    />
+</property>	
+    <property name="sys_isvalid" type="integer"  not-null="false">
+    <column name="sys_isvalid"  
+		               
+    />
+</property>	
+    <property name="sys_dataowner" type="string"  not-null="false">
+    <column name="sys_dataowner"  
+		length="40"               
+    />
+</property>	
+    <property name="fsuspreason" type="string"  >
+    <column name="fsuspreason"  
+		length="200"               
+    />
+</property>	
+    <property name="fiswritelog" type="string"  >
+    <column name="fiswritelog"  
+		length="200"               
+    />
+</property>	
+    <property name="fiswriteinwglog" type="string"  >
+    <column name="fiswriteinwglog"  
+		length="200"               
+    />
+</property>	
+  
+	
+    <many-to-one name="zddsasusprecord2" class="EtsEquipment"   column="FeqpID" cascade="none"></many-to-one>
+         <many-to-one name="zddsasusprecord3" class="DdClassondutylog"   column="FCurLogNO" cascade="none"></many-to-one>
+     </class>
+
+</hibernate-mapping>
+

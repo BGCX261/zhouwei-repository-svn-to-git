@@ -1,0 +1,336 @@
+--------------------------------------------------------------------------------
+|
+| SpringSource dm Server 
+|
+--------------------------------------------------------------------------------
+[2009-02-23 15:21:45.578] nnection(4)-172.20.80.37                                          course_memcached_osgi-1 I Trace configuration: {*=INFO, com.springsource.server.*=WARN}
+[2009-02-23 15:21:45.609] server-dm-7              pringframework.beans.factory.xml.XmlBeanDefinitionReader.unknown I Loading XML bean definitions from URL [bundleentry://124/META-INF/spring/spring.xml]
+[2009-02-23 15:21:45.640] server-dm-7              ingsource.management.adapter.jmx.ManagedResourceExporter.unknown I Registered MBean: spring.application:application=course_memcached_osgi-1,type=ApplicationContext,name=GenericModuleOsgiBundleXmlApplicationContext(bundlecourse_memcached_osgi configosgibundle/META-INF/spring/.xml)
+[2009-02-23 15:21:45.640] server-dm-7              ingsource.management.adapter.jmx.ManagedResourceExporter.unknown I Registered MBean: spring.application:application=course_memcached_osgi-1,type=BeanFactory,name=GenericModuleOsgiBundleXmlApplicationContext(bundlecourse_memcached_osgi configosgibundle/META-INF/spring/.xml).beanFactory
+[2009-02-23 15:21:45.687] server-dm-7              ncies.startup.DependencyWaiterApplicationContextExecutor.unknown I No outstanding OSGi service dependencies, completing initialization for GenericModuleOsgiBundleXmlApplicationContext(bundle=course_memcached_osgi, config=osgibundle:/META-INF/spring/*.xml)
+[2009-02-23 15:21:45.687] server-dm-5              amework.beans.factory.support.DefaultListableBeanFactory.unknown I Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@1a8bc4f: defining beans [org.springframework.aop.config.internalAutoProxyCreator,org.springframework.transaction.annotation.AnnotationTransactionAttributeSource#0,org.springframework.transaction.interceptor.TransactionInterceptor#0,org.springframework.transaction.config.internalTransactionAdvisor,dataSource,sessionFactory,transactionManager,courseDao,myJobBean,myJob,myTrigger,org.springframework.scheduling.quartz.SchedulerFactoryBean#0,test]; root of factory hierarchy
+[2009-02-23 15:21:45.750] server-dm-5                                 org.hibernate.cfg.annotations.Version.unknown I Hibernate Annotations 3.3.1.GA
+[2009-02-23 15:21:45.750] server-dm-5                                         org.hibernate.cfg.Environment.unknown I Hibernate 3.2.6
+[2009-02-23 15:21:45.765] server-dm-5                                         org.hibernate.cfg.Environment.unknown I hibernate.properties not found
+[2009-02-23 15:21:45.765] server-dm-5                                         org.hibernate.cfg.Environment.unknown I Bytecode provider name : cglib
+[2009-02-23 15:21:45.765] server-dm-5                                         org.hibernate.cfg.Environment.unknown I using JDK 1.4 java.sql.Timestamp handling
+[2009-02-23 15:21:45.843] server-dm-5                                    org.hibernate.cfg.AnnotationBinder.unknown I Binding entity from annotated class: com.apress.springrecipes.course.Course
+[2009-02-23 15:21:45.875] server-dm-5                            org.hibernate.cfg.annotations.EntityBinder.unknown I Bind entity com.apress.springrecipes.course.Course on table COURSE
+[2009-02-23 15:21:45.906] server-dm-5                             org.hibernate.cfg.AnnotationConfiguration.unknown I Hibernate Validator not found: ignoring
+[2009-02-23 15:21:45.906] server-dm-5              k.orm.hibernate3.annotation.AnnotationSessionFactoryBean.unknown I Building new Hibernate SessionFactory
+[2009-02-23 15:21:45.937] server-dm-5                    org.hibernate.connection.ConnectionProviderFactory.unknown I Initializing connection provider: org.springframework.orm.hibernate3.LocalDataSourceConnectionProvider
+[2009-02-23 15:21:46.093] server-dm-5                                     org.hibernate.cfg.SettingsFactory.unknown I RDBMS: HSQL Database Engine, version: 1.8.0
+[2009-02-23 15:21:46.093] server-dm-5                                     org.hibernate.cfg.SettingsFactory.unknown I JDBC driver: HSQL Database Engine Driver, version: 1.8.0
+[2009-02-23 15:21:46.093] server-dm-5                                         org.hibernate.dialect.Dialect.unknown I Using dialect: org.hibernate.dialect.HSQLDialect
+[2009-02-23 15:21:46.109] server-dm-5                   org.hibernate.transaction.TransactionFactoryFactory.unknown I Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+[2009-02-23 15:21:46.109] server-dm-5              rg.hibernate.transaction.TransactionManagerLookupFactory.unknown I No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+[2009-02-23 15:21:46.109] server-dm-5                                     org.hibernate.cfg.SettingsFactory.unknown I Automatic flush during beforeCompletion(): disabled
+[2009-02-23 15:21:46.109] server-dm-5                                     org.hibernate.cfg.SettingsFactory.unknown I Automatic session close at end of transaction: disabled
+[2009-02-23 15:21:46.109] server-dm-5                                     org.hibernate.cfg.SettingsFactory.unknown I JDBC batch size: 15
+[2009-02-23 15:21:46.109] server-dm-5                                     org.hibernate.cfg.SettingsFactory.unknown I JDBC batch updates for versioned data: disabled
+[2009-02-23 15:21:46.109] server-dm-5                                     org.hibernate.cfg.SettingsFactory.unknown I Scrollable result sets: enabled
+[2009-02-23 15:21:46.109] server-dm-5                                     org.hibernate.cfg.SettingsFactory.unknown I JDBC3 getGeneratedKeys(): disabled
+[2009-02-23 15:21:46.109] server-dm-5                                     org.hibernate.cfg.SettingsFactory.unknown I Connection release mode: auto
+[2009-02-23 15:21:46.109] server-dm-5                                     org.hibernate.cfg.SettingsFactory.unknown I Default batch fetch size: 1
+[2009-02-23 15:21:46.109] server-dm-5                                     org.hibernate.cfg.SettingsFactory.unknown I Generate SQL with comments: disabled
+[2009-02-23 15:21:46.109] server-dm-5                                     org.hibernate.cfg.SettingsFactory.unknown I Order SQL updates by primary key: disabled
+[2009-02-23 15:21:46.109] server-dm-5                                     org.hibernate.cfg.SettingsFactory.unknown I Order SQL inserts for batching: disabled
+[2009-02-23 15:21:46.109] server-dm-5                                     org.hibernate.cfg.SettingsFactory.unknown I Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+[2009-02-23 15:21:46.109] server-dm-5                       org.hibernate.hql.ast.ASTQueryTranslatorFactory.unknown I Using ASTQueryTranslatorFactory
+[2009-02-23 15:21:46.109] server-dm-5                                     org.hibernate.cfg.SettingsFactory.unknown I Query language substitutions: {}
+[2009-02-23 15:21:46.109] server-dm-5                                     org.hibernate.cfg.SettingsFactory.unknown I JPA-QL strict compliance: disabled
+[2009-02-23 15:21:46.109] server-dm-5                                     org.hibernate.cfg.SettingsFactory.unknown I Second-level cache: enabled
+[2009-02-23 15:21:46.109] server-dm-5                                     org.hibernate.cfg.SettingsFactory.unknown I Query cache: enabled
+[2009-02-23 15:21:46.109] server-dm-5                                     org.hibernate.cfg.SettingsFactory.unknown I Cache provider: com.sitechasia.webx.components.cache.memcached.MemcachedCacheProvider
+[2009-02-23 15:21:46.109] server-dm-5                                     org.hibernate.cfg.SettingsFactory.unknown I Optimize cache for minimal puts: disabled
+[2009-02-23 15:21:46.109] server-dm-5                                     org.hibernate.cfg.SettingsFactory.unknown I Cache region prefix: qq
+[2009-02-23 15:21:46.109] server-dm-5                                     org.hibernate.cfg.SettingsFactory.unknown I Structured second-level cache entries: enabled
+[2009-02-23 15:21:46.109] server-dm-5                                     org.hibernate.cfg.SettingsFactory.unknown I Query cache factory: org.hibernate.cache.StandardQueryCacheFactory
+[2009-02-23 15:21:46.109] server-dm-5                                     org.hibernate.cfg.SettingsFactory.unknown I Echoing all SQL to stdout
+[2009-02-23 15:21:46.109] server-dm-5                                     org.hibernate.cfg.SettingsFactory.unknown I Statistics: disabled
+[2009-02-23 15:21:46.109] server-dm-5                                     org.hibernate.cfg.SettingsFactory.unknown I Deleted entity synthetic identifier rollback: disabled
+[2009-02-23 15:21:46.109] server-dm-5                                     org.hibernate.cfg.SettingsFactory.unknown I Default entity-mode: pojo
+[2009-02-23 15:21:46.109] server-dm-5                                     org.hibernate.cfg.SettingsFactory.unknown I Named query checking : enabled
+[2009-02-23 15:21:46.140] server-dm-5                                 org.hibernate.impl.SessionFactoryImpl.unknown I building session factory
+[2009-02-23 15:21:46.140] server-dm-5              a.webx.components.cache.memcached.MemcachedCacheProvider.unknown I servers == localhost:11211
+[2009-02-23 15:21:46.437] server-dm-5              a.webx.components.cache.memcached.MemcachedCacheProvider.unknown I Building cache named qq.com.apress.springrecipes.course.Course using secondToLive is -1
+[2009-02-23 15:21:46.609] server-dm-5                        org.hibernate.impl.SessionFactoryObjectFactory.unknown I Not binding factory to JNDI, no JNDI name configured
+[2009-02-23 15:21:46.609] server-dm-5                               org.hibernate.tool.hbm2ddl.SchemaUpdate.unknown I Running hbm2ddl schema update
+[2009-02-23 15:21:46.609] server-dm-5                               org.hibernate.tool.hbm2ddl.SchemaUpdate.unknown I fetching database metadata
+[2009-02-23 15:21:46.625] server-dm-5                               org.hibernate.tool.hbm2ddl.SchemaUpdate.unknown I updating schema
+[2009-02-23 15:21:46.640] server-dm-5                           org.hibernate.tool.hbm2ddl.DatabaseMetadata.unknown I table not found: COURSE
+[2009-02-23 15:21:46.640] server-dm-5                           org.hibernate.tool.hbm2ddl.DatabaseMetadata.unknown I table not found: COURSE
+[2009-02-23 15:21:46.640] server-dm-5                               org.hibernate.tool.hbm2ddl.SchemaUpdate.unknown I schema update complete
+[2009-02-23 15:21:46.640] server-dm-5                             org.hibernate.cache.UpdateTimestampsCache.unknown I starting update timestamps cache at region: qq.org.hibernate.cache.UpdateTimestampsCache
+[2009-02-23 15:21:46.640] server-dm-5              a.webx.components.cache.memcached.MemcachedCacheProvider.unknown I Building cache named qq.org.hibernate.cache.UpdateTimestampsCache using secondToLive is -1
+[2009-02-23 15:21:46.640] server-dm-5                                org.hibernate.cache.StandardQueryCache.unknown I starting query cache at region: qq.org.hibernate.cache.StandardQueryCache
+[2009-02-23 15:21:46.640] server-dm-5              a.webx.components.cache.memcached.MemcachedCacheProvider.unknown I Building cache named qq.org.hibernate.cache.StandardQueryCache using secondToLive is -1
+[2009-02-23 15:21:46.656] server-dm-5              ingsource.management.adapter.jmx.ManagedResourceExporter.unknown I Registered MBean: spring.application:application=course_memcached_osgi-1,type=HibernateSessionFactory,name=sessionFactory
+[2009-02-23 15:21:46.656] server-dm-5              ringframework.orm.hibernate3.HibernateTransactionManager.unknown I Using DataSource [org.apache.commons.dbcp.BasicDataSource@13fb657] of Hibernate SessionFactory for HibernateTransactionManager
+[2009-02-23 15:21:46.671] server-dm-5              ingsource.management.adapter.jmx.ManagedResourceExporter.unknown I Registered MBean: spring.application:application=course_memcached_osgi-1,type=PlatformTransactionManager,name=transactionManager
+[2009-02-23 15:21:46.687] server-dm-5              ingsource.management.adapter.jmx.ManagedResourceExporter.unknown I Registered MBean: spring.application:application=course_memcached_osgi-1,type=Repository,name=courseDao
+[2009-02-23 15:21:46.796] server-dm-5                                       org.quartz.core.QuartzScheduler.unknown I Quartz Scheduler v.1.6.0 created.
+[2009-02-23 15:21:46.796] server-dm-5                                          org.quartz.simpl.RAMJobStore.unknown I RAMJobStore initialized.
+[2009-02-23 15:21:46.796] server-dm-5                                   org.quartz.impl.StdSchedulerFactory.unknown I Quartz scheduler 'QuartzScheduler' initialized from an externally provided properties instance.
+[2009-02-23 15:21:46.796] server-dm-5                                   org.quartz.impl.StdSchedulerFactory.unknown I Quartz scheduler version: 1.6.0
+[2009-02-23 15:21:46.796] server-dm-5                                       org.quartz.core.QuartzScheduler.unknown I JobFactory set to: org.springframework.scheduling.quartz.AdaptableJobFactory@61865c
+[2009-02-23 15:21:46.796] server-dm-5              g.springframework.scheduling.quartz.SchedulerFactoryBean.unknown I Starting Quartz Scheduler now
+[2009-02-23 15:21:46.796] server-dm-5                                       org.quartz.core.QuartzScheduler.unknown I Scheduler QuartzScheduler_$_NON_CLUSTERED started.
+[2009-02-23 15:21:46.875] server-dm-5               com.sitechasia.webx.components.cache.memcached.MemCache.unknown I put key == COURSE
+[2009-02-23 15:21:46.875] server-dm-5                                   com.danga.MemCached.MemCachedClient.unknown I Storing with native handler...
+[2009-02-23 15:21:46.875] server-dm-5                                   com.danga.MemCached.MemCachedClient.unknown I ++++ memcache cmd (result code): set COURSE 0 0 9
+ (STORED)
+[2009-02-23 15:21:46.875] server-dm-5                                   com.danga.MemCached.MemCachedClient.unknown I ++++ data successfully stored for key: COURSE
+[2009-02-23 15:21:46.875] server-dm-5                                                                    System.out I Hibernate: insert into COURSE (ID, BEGIN_DATE, END_DATE, FEE, TITLE) values (null, ?, ?, ?, ?)
+[2009-02-23 15:21:46.875] server-dm-5                                                                    System.out I Hibernate: call identity()
+[2009-02-23 15:21:46.890] server-dm-5               com.sitechasia.webx.components.cache.memcached.MemCache.unknown I put key == COURSE
+[2009-02-23 15:21:46.890] server-dm-5                                   com.danga.MemCached.MemCachedClient.unknown I Storing with native handler...
+[2009-02-23 15:21:46.890] server-dm-5                                   com.danga.MemCached.MemCachedClient.unknown I ++++ memcache cmd (result code): set COURSE 0 0 9
+ (STORED)
+[2009-02-23 15:21:46.890] server-dm-5                                   com.danga.MemCached.MemCachedClient.unknown I ++++ data successfully stored for key: COURSE
+[2009-02-23 15:21:50.015] QuartzScheduler_Worker-1                                                       System.out I ********************************************************************
+[2009-02-23 15:21:50.234] QuartzScheduler_Worker-1  com.sitechasia.webx.components.cache.memcached.MemCache.unknown I get key == sql: select course0_.ID as ID0_, course0_.BEGIN_DATE as BEGIN2_0_, course0_.END_DATE as END3_0_, course0_.FEE as FEE0_, course0_.TITLE as TITLE0_ from COURSE course0_; parameters: ; named parameters: {}
+[2009-02-23 15:21:50.250] QuartzScheduler_Worker-1                      com.danga.MemCached.MemCachedClient.unknown I ++++ deserializing class java.util.ArrayList
+[2009-02-23 15:21:50.250] QuartzScheduler_Worker-1  com.sitechasia.webx.components.cache.memcached.MemCache.unknown I get key == COURSE
+[2009-02-23 15:21:50.250] QuartzScheduler_Worker-1                                                       System.out I Hibernate: select course0_.ID as ID0_, course0_.BEGIN_DATE as BEGIN2_0_, course0_.END_DATE as END3_0_, course0_.FEE as FEE0_, course0_.TITLE as TITLE0_ from COURSE course0_
+[2009-02-23 15:21:50.265] QuartzScheduler_Worker-1  com.sitechasia.webx.components.cache.memcached.MemCache.unknown I get key == com.apress.springrecipes.course.Course#1
+[2009-02-23 15:21:50.281] QuartzScheduler_Worker-1                      com.danga.MemCached.MemCachedClient.unknown I ++++ deserializing class org.hibernate.cache.ReadWriteCache$Item
+[2009-02-23 15:21:50.281] QuartzScheduler_Worker-1  com.sitechasia.webx.components.cache.memcached.MemCache.unknown I put key == sql: select course0_.ID as ID0_, course0_.BEGIN_DATE as BEGIN2_0_, course0_.END_DATE as END3_0_, course0_.FEE as FEE0_, course0_.TITLE as TITLE0_ from COURSE course0_; parameters: ; named parameters: {}
+[2009-02-23 15:21:50.281] QuartzScheduler_Worker-1                      com.danga.MemCached.MemCachedClient.unknown I ++++ serializing for key: sql%3A+select+course0_.ID+as+ID0_%2C+course0_.BEGIN_DATE+as+BEGIN2_0_%2C+course0_.END_DATE+as+END3_0_%2C+course0_.FEE+as+FEE0_%2C+course0_.TITLE+as+TITLE0_+from+COURSE+course0_%3B+parameters%3A+%3B+named+parameters%3A+%7B%7D for class: java.util.ArrayList
+[2009-02-23 15:21:50.281] QuartzScheduler_Worker-1                      com.danga.MemCached.MemCachedClient.unknown I ++++ memcache cmd (result code): set sql%3A+select+course0_.ID+as+ID0_%2C+course0_.BEGIN_DATE+as+BEGIN2_0_%2C+course0_.END_DATE+as+END3_0_%2C+course0_.FEE+as+FEE0_%2C+course0_.TITLE+as+TITLE0_+from+COURSE+course0_%3B+parameters%3A+%3B+named+parameters%3A+%7B%7D 8 0 150
+ (STORED)
+[2009-02-23 15:21:50.281] QuartzScheduler_Worker-1                      com.danga.MemCached.MemCachedClient.unknown I ++++ data successfully stored for key: sql%3A+select+course0_.ID+as+ID0_%2C+course0_.BEGIN_DATE+as+BEGIN2_0_%2C+course0_.END_DATE+as+END3_0_%2C+course0_.FEE+as+FEE0_%2C+course0_.TITLE+as+TITLE0_+from+COURSE+course0_%3B+parameters%3A+%3B+named+parameters%3A+%7B%7D
+[2009-02-23 15:21:50.281] QuartzScheduler_Worker-1  com.sitechasia.webx.components.cache.memcached.MemCache.unknown I get key == com.apress.springrecipes.course.Course#1
+[2009-02-23 15:21:50.281] QuartzScheduler_Worker-1                      com.danga.MemCached.MemCachedClient.unknown I ++++ deserializing class org.hibernate.cache.ReadWriteCache$Item
+[2009-02-23 15:21:50.281] QuartzScheduler_Worker-1                                                       System.out I Course Title: Core Spring
+[2009-02-23 15:21:50.281] QuartzScheduler_Worker-1                                                       System.out I Begin Date: 2007-09-01 00:00:00.0
+[2009-02-23 15:21:50.281] QuartzScheduler_Worker-1                                                       System.out I End Date: 2007-10-01 00:00:00.0
+[2009-02-23 15:21:50.281] QuartzScheduler_Worker-1                                                       System.out I Fee: 1000
+[2009-02-23 15:22:00.015] QuartzScheduler_Worker-2                                                       System.out I ********************************************************************
+[2009-02-23 15:22:00.015] QuartzScheduler_Worker-2  com.sitechasia.webx.components.cache.memcached.MemCache.unknown I get key == sql: select course0_.ID as ID0_, course0_.BEGIN_DATE as BEGIN2_0_, course0_.END_DATE as END3_0_, course0_.FEE as FEE0_, course0_.TITLE as TITLE0_ from COURSE course0_; parameters: ; named parameters: {}
+[2009-02-23 15:22:00.015] QuartzScheduler_Worker-2                      com.danga.MemCached.MemCachedClient.unknown I ++++ deserializing class java.util.ArrayList
+[2009-02-23 15:22:00.015] QuartzScheduler_Worker-2  com.sitechasia.webx.components.cache.memcached.MemCache.unknown I get key == COURSE
+[2009-02-23 15:22:00.015] QuartzScheduler_Worker-2  com.sitechasia.webx.components.cache.memcached.MemCache.unknown I get key == com.apress.springrecipes.course.Course#1
+[2009-02-23 15:22:00.031] QuartzScheduler_Worker-2                      com.danga.MemCached.MemCachedClient.unknown I ++++ deserializing class org.hibernate.cache.ReadWriteCache$Item
+[2009-02-23 15:22:00.031] QuartzScheduler_Worker-2  com.sitechasia.webx.components.cache.memcached.MemCache.unknown I get key == com.apress.springrecipes.course.Course#1
+[2009-02-23 15:22:00.031] QuartzScheduler_Worker-2                      com.danga.MemCached.MemCachedClient.unknown I ++++ deserializing class org.hibernate.cache.ReadWriteCache$Item
+[2009-02-23 15:22:00.031] QuartzScheduler_Worker-2                                                       System.out I Course Title: Core Spring
+[2009-02-23 15:22:00.031] QuartzScheduler_Worker-2                                                       System.out I Begin Date: 2007-09-01 00:00:00.0
+[2009-02-23 15:22:00.031] QuartzScheduler_Worker-2                                                       System.out I End Date: 2007-10-01 00:00:00.0
+[2009-02-23 15:22:00.031] QuartzScheduler_Worker-2                                                       System.out I Fee: 1000
+[2009-02-23 15:22:10.015] QuartzScheduler_Worker-3                                                       System.out I ********************************************************************
+[2009-02-23 15:22:10.015] QuartzScheduler_Worker-3  com.sitechasia.webx.components.cache.memcached.MemCache.unknown I get key == sql: select course0_.ID as ID0_, course0_.BEGIN_DATE as BEGIN2_0_, course0_.END_DATE as END3_0_, course0_.FEE as FEE0_, course0_.TITLE as TITLE0_ from COURSE course0_; parameters: ; named parameters: {}
+[2009-02-23 15:22:10.015] QuartzScheduler_Worker-3                      com.danga.MemCached.MemCachedClient.unknown I ++++ deserializing class java.util.ArrayList
+[2009-02-23 15:22:10.015] QuartzScheduler_Worker-3  com.sitechasia.webx.components.cache.memcached.MemCache.unknown I get key == COURSE
+[2009-02-23 15:22:10.015] QuartzScheduler_Worker-3  com.sitechasia.webx.components.cache.memcached.MemCache.unknown I get key == com.apress.springrecipes.course.Course#1
+[2009-02-23 15:22:10.031] QuartzScheduler_Worker-3                      com.danga.MemCached.MemCachedClient.unknown I ++++ deserializing class org.hibernate.cache.ReadWriteCache$Item
+[2009-02-23 15:22:10.031] QuartzScheduler_Worker-3  com.sitechasia.webx.components.cache.memcached.MemCache.unknown I get key == com.apress.springrecipes.course.Course#1
+[2009-02-23 15:22:10.031] QuartzScheduler_Worker-3                      com.danga.MemCached.MemCachedClient.unknown I ++++ deserializing class org.hibernate.cache.ReadWriteCache$Item
+[2009-02-23 15:22:10.031] QuartzScheduler_Worker-3                                                       System.out I Course Title: Core Spring
+[2009-02-23 15:22:10.031] QuartzScheduler_Worker-3                                                       System.out I Begin Date: 2007-09-01 00:00:00.0
+[2009-02-23 15:22:10.031] QuartzScheduler_Worker-3                                                       System.out I End Date: 2007-10-01 00:00:00.0
+[2009-02-23 15:22:10.031] QuartzScheduler_Worker-3                                                       System.out I Fee: 1000
+[2009-02-23 15:22:20.015] QuartzScheduler_Worker-4                                                       System.out I ********************************************************************
+[2009-02-23 15:22:20.015] QuartzScheduler_Worker-4  com.sitechasia.webx.components.cache.memcached.MemCache.unknown I get key == sql: select course0_.ID as ID0_, course0_.BEGIN_DATE as BEGIN2_0_, course0_.END_DATE as END3_0_, course0_.FEE as FEE0_, course0_.TITLE as TITLE0_ from COURSE course0_; parameters: ; named parameters: {}
+[2009-02-23 15:22:20.015] QuartzScheduler_Worker-4                      com.danga.MemCached.MemCachedClient.unknown I ++++ deserializing class java.util.ArrayList
+[2009-02-23 15:22:20.015] QuartzScheduler_Worker-4  com.sitechasia.webx.components.cache.memcached.MemCache.unknown I get key == COURSE
+[2009-02-23 15:22:20.015] QuartzScheduler_Worker-4  com.sitechasia.webx.components.cache.memcached.MemCache.unknown I get key == com.apress.springrecipes.course.Course#1
+[2009-02-23 15:22:20.015] QuartzScheduler_Worker-4                      com.danga.MemCached.MemCachedClient.unknown I ++++ deserializing class org.hibernate.cache.ReadWriteCache$Item
+[2009-02-23 15:22:20.031] QuartzScheduler_Worker-4  com.sitechasia.webx.components.cache.memcached.MemCache.unknown I get key == com.apress.springrecipes.course.Course#1
+[2009-02-23 15:22:20.031] QuartzScheduler_Worker-4                      com.danga.MemCached.MemCachedClient.unknown I ++++ deserializing class org.hibernate.cache.ReadWriteCache$Item
+[2009-02-23 15:22:20.031] QuartzScheduler_Worker-4                                                       System.out I Course Title: Core Spring
+[2009-02-23 15:22:20.031] QuartzScheduler_Worker-4                                                       System.out I Begin Date: 2007-09-01 00:00:00.0
+[2009-02-23 15:22:20.031] QuartzScheduler_Worker-4                                                       System.out I End Date: 2007-10-01 00:00:00.0
+[2009-02-23 15:22:20.031] QuartzScheduler_Worker-4                                                       System.out I Fee: 1000
+[2009-02-23 15:22:30.015] QuartzScheduler_Worker-5                                                       System.out I ********************************************************************
+[2009-02-23 15:22:30.015] QuartzScheduler_Worker-5  com.sitechasia.webx.components.cache.memcached.MemCache.unknown I get key == sql: select course0_.ID as ID0_, course0_.BEGIN_DATE as BEGIN2_0_, course0_.END_DATE as END3_0_, course0_.FEE as FEE0_, course0_.TITLE as TITLE0_ from COURSE course0_; parameters: ; named parameters: {}
+[2009-02-23 15:22:30.015] QuartzScheduler_Worker-5                      com.danga.MemCached.MemCachedClient.unknown I ++++ deserializing class java.util.ArrayList
+[2009-02-23 15:22:30.015] QuartzScheduler_Worker-5  com.sitechasia.webx.components.cache.memcached.MemCache.unknown I get key == COURSE
+[2009-02-23 15:22:30.015] QuartzScheduler_Worker-5  com.sitechasia.webx.components.cache.memcached.MemCache.unknown I get key == com.apress.springrecipes.course.Course#1
+[2009-02-23 15:22:30.015] QuartzScheduler_Worker-5                      com.danga.MemCached.MemCachedClient.unknown I ++++ deserializing class org.hibernate.cache.ReadWriteCache$Item
+[2009-02-23 15:22:30.031] QuartzScheduler_Worker-5  com.sitechasia.webx.components.cache.memcached.MemCache.unknown I get key == com.apress.springrecipes.course.Course#1
+[2009-02-23 15:22:30.031] QuartzScheduler_Worker-5                      com.danga.MemCached.MemCachedClient.unknown I ++++ deserializing class org.hibernate.cache.ReadWriteCache$Item
+[2009-02-23 15:22:30.046] QuartzScheduler_Worker-5                                                       System.out I Course Title: Core Spring
+[2009-02-23 15:22:30.046] QuartzScheduler_Worker-5                                                       System.out I Begin Date: 2007-09-01 00:00:00.0
+[2009-02-23 15:22:30.046] QuartzScheduler_Worker-5                                                       System.out I End Date: 2007-10-01 00:00:00.0
+[2009-02-23 15:22:30.046] QuartzScheduler_Worker-5                                                       System.out I Fee: 1000
+[2009-02-23 15:22:40.015] QuartzScheduler_Worker-6                                                       System.out I ********************************************************************
+[2009-02-23 15:22:40.015] QuartzScheduler_Worker-6  com.sitechasia.webx.components.cache.memcached.MemCache.unknown I get key == sql: select course0_.ID as ID0_, course0_.BEGIN_DATE as BEGIN2_0_, course0_.END_DATE as END3_0_, course0_.FEE as FEE0_, course0_.TITLE as TITLE0_ from COURSE course0_; parameters: ; named parameters: {}
+[2009-02-23 15:22:40.015] QuartzScheduler_Worker-6                      com.danga.MemCached.MemCachedClient.unknown I ++++ deserializing class java.util.ArrayList
+[2009-02-23 15:22:40.015] QuartzScheduler_Worker-6  com.sitechasia.webx.components.cache.memcached.MemCache.unknown I get key == COURSE
+[2009-02-23 15:22:40.015] QuartzScheduler_Worker-6  com.sitechasia.webx.components.cache.memcached.MemCache.unknown I get key == com.apress.springrecipes.course.Course#1
+[2009-02-23 15:22:40.015] QuartzScheduler_Worker-6                      com.danga.MemCached.MemCachedClient.unknown I ++++ deserializing class org.hibernate.cache.ReadWriteCache$Item
+[2009-02-23 15:22:40.015] QuartzScheduler_Worker-6  com.sitechasia.webx.components.cache.memcached.MemCache.unknown I get key == com.apress.springrecipes.course.Course#1
+[2009-02-23 15:22:40.031] QuartzScheduler_Worker-6                      com.danga.MemCached.MemCachedClient.unknown I ++++ deserializing class org.hibernate.cache.ReadWriteCache$Item
+[2009-02-23 15:22:40.031] QuartzScheduler_Worker-6                                                       System.out I Course Title: Core Spring
+[2009-02-23 15:22:40.031] QuartzScheduler_Worker-6                                                       System.out I Begin Date: 2007-09-01 00:00:00.0
+[2009-02-23 15:22:40.031] QuartzScheduler_Worker-6                                                       System.out I End Date: 2007-10-01 00:00:00.0
+[2009-02-23 15:22:40.031] QuartzScheduler_Worker-6                                                       System.out I Fee: 1000
+[2009-02-23 15:22:50.015] QuartzScheduler_Worker-7                                                       System.out I ********************************************************************
+[2009-02-23 15:22:50.015] QuartzScheduler_Worker-7  com.sitechasia.webx.components.cache.memcached.MemCache.unknown I get key == sql: select course0_.ID as ID0_, course0_.BEGIN_DATE as BEGIN2_0_, course0_.END_DATE as END3_0_, course0_.FEE as FEE0_, course0_.TITLE as TITLE0_ from COURSE course0_; parameters: ; named parameters: {}
+[2009-02-23 15:22:50.015] QuartzScheduler_Worker-7                      com.danga.MemCached.MemCachedClient.unknown I ++++ deserializing class java.util.ArrayList
+[2009-02-23 15:22:50.015] QuartzScheduler_Worker-7  com.sitechasia.webx.components.cache.memcached.MemCache.unknown I get key == COURSE
+[2009-02-23 15:22:50.015] QuartzScheduler_Worker-7  com.sitechasia.webx.components.cache.memcached.MemCache.unknown I get key == com.apress.springrecipes.course.Course#1
+[2009-02-23 15:22:50.031] QuartzScheduler_Worker-7                      com.danga.MemCached.MemCachedClient.unknown I ++++ deserializing class org.hibernate.cache.ReadWriteCache$Item
+[2009-02-23 15:22:50.031] QuartzScheduler_Worker-7  com.sitechasia.webx.components.cache.memcached.MemCache.unknown I get key == com.apress.springrecipes.course.Course#1
+[2009-02-23 15:22:50.031] QuartzScheduler_Worker-7                      com.danga.MemCached.MemCachedClient.unknown I ++++ deserializing class org.hibernate.cache.ReadWriteCache$Item
+[2009-02-23 15:22:50.031] QuartzScheduler_Worker-7                                                       System.out I Course Title: Core Spring
+[2009-02-23 15:22:50.031] QuartzScheduler_Worker-7                                                       System.out I Begin Date: 2007-09-01 00:00:00.0
+[2009-02-23 15:22:50.031] QuartzScheduler_Worker-7                                                       System.out I End Date: 2007-10-01 00:00:00.0
+[2009-02-23 15:22:50.031] QuartzScheduler_Worker-7                                                       System.out I Fee: 1000
+[2009-02-23 15:23:00.015] QuartzScheduler_Worker-8                                                       System.out I ********************************************************************
+[2009-02-23 15:23:00.015] QuartzScheduler_Worker-8  com.sitechasia.webx.components.cache.memcached.MemCache.unknown I get key == sql: select course0_.ID as ID0_, course0_.BEGIN_DATE as BEGIN2_0_, course0_.END_DATE as END3_0_, course0_.FEE as FEE0_, course0_.TITLE as TITLE0_ from COURSE course0_; parameters: ; named parameters: {}
+[2009-02-23 15:23:00.015] QuartzScheduler_Worker-8                      com.danga.MemCached.MemCachedClient.unknown I ++++ deserializing class java.util.ArrayList
+[2009-02-23 15:23:00.015] QuartzScheduler_Worker-8  com.sitechasia.webx.components.cache.memcached.MemCache.unknown I get key == COURSE
+[2009-02-23 15:23:00.015] QuartzScheduler_Worker-8  com.sitechasia.webx.components.cache.memcached.MemCache.unknown I get key == com.apress.springrecipes.course.Course#1
+[2009-02-23 15:23:00.015] QuartzScheduler_Worker-8                      com.danga.MemCached.MemCachedClient.unknown I ++++ deserializing class org.hibernate.cache.ReadWriteCache$Item
+[2009-02-23 15:23:00.031] QuartzScheduler_Worker-8  com.sitechasia.webx.components.cache.memcached.MemCache.unknown I get key == com.apress.springrecipes.course.Course#1
+[2009-02-23 15:23:00.031] QuartzScheduler_Worker-8                      com.danga.MemCached.MemCachedClient.unknown I ++++ deserializing class org.hibernate.cache.ReadWriteCache$Item
+[2009-02-23 15:23:00.031] QuartzScheduler_Worker-8                                                       System.out I Course Title: Core Spring
+[2009-02-23 15:23:00.031] QuartzScheduler_Worker-8                                                       System.out I Begin Date: 2007-09-01 00:00:00.0
+[2009-02-23 15:23:00.031] QuartzScheduler_Worker-8                                                       System.out I End Date: 2007-10-01 00:00:00.0
+[2009-02-23 15:23:00.031] QuartzScheduler_Worker-8                                                       System.out I Fee: 1000
+[2009-02-23 15:23:10.015] QuartzScheduler_Worker-9                                                       System.out I ********************************************************************
+[2009-02-23 15:23:10.015] QuartzScheduler_Worker-9  com.sitechasia.webx.components.cache.memcached.MemCache.unknown I get key == sql: select course0_.ID as ID0_, course0_.BEGIN_DATE as BEGIN2_0_, course0_.END_DATE as END3_0_, course0_.FEE as FEE0_, course0_.TITLE as TITLE0_ from COURSE course0_; parameters: ; named parameters: {}
+[2009-02-23 15:23:10.015] QuartzScheduler_Worker-9                      com.danga.MemCached.MemCachedClient.unknown I ++++ deserializing class java.util.ArrayList
+[2009-02-23 15:23:10.015] QuartzScheduler_Worker-9  com.sitechasia.webx.components.cache.memcached.MemCache.unknown I get key == COURSE
+[2009-02-23 15:23:10.015] QuartzScheduler_Worker-9  com.sitechasia.webx.components.cache.memcached.MemCache.unknown I get key == com.apress.springrecipes.course.Course#1
+[2009-02-23 15:23:10.015] QuartzScheduler_Worker-9                      com.danga.MemCached.MemCachedClient.unknown I ++++ deserializing class org.hibernate.cache.ReadWriteCache$Item
+[2009-02-23 15:23:10.031] QuartzScheduler_Worker-9  com.sitechasia.webx.components.cache.memcached.MemCache.unknown I get key == com.apress.springrecipes.course.Course#1
+[2009-02-23 15:23:10.031] QuartzScheduler_Worker-9                      com.danga.MemCached.MemCachedClient.unknown I ++++ deserializing class org.hibernate.cache.ReadWriteCache$Item
+[2009-02-23 15:23:10.031] QuartzScheduler_Worker-9                                                       System.out I Course Title: Core Spring
+[2009-02-23 15:23:10.031] QuartzScheduler_Worker-9                                                       System.out I Begin Date: 2007-09-01 00:00:00.0
+[2009-02-23 15:23:10.031] QuartzScheduler_Worker-9                                                       System.out I End Date: 2007-10-01 00:00:00.0
+[2009-02-23 15:23:10.031] QuartzScheduler_Worker-9                                                       System.out I Fee: 1000
+[2009-02-23 15:23:20.015] uartzScheduler_Worker-10                                                       System.out I ********************************************************************
+[2009-02-23 15:23:20.015] uartzScheduler_Worker-10  com.sitechasia.webx.components.cache.memcached.MemCache.unknown I get key == sql: select course0_.ID as ID0_, course0_.BEGIN_DATE as BEGIN2_0_, course0_.END_DATE as END3_0_, course0_.FEE as FEE0_, course0_.TITLE as TITLE0_ from COURSE course0_; parameters: ; named parameters: {}
+[2009-02-23 15:23:20.015] uartzScheduler_Worker-10                      com.danga.MemCached.MemCachedClient.unknown I ++++ deserializing class java.util.ArrayList
+[2009-02-23 15:23:20.015] uartzScheduler_Worker-10  com.sitechasia.webx.components.cache.memcached.MemCache.unknown I get key == COURSE
+[2009-02-23 15:23:20.015] uartzScheduler_Worker-10  com.sitechasia.webx.components.cache.memcached.MemCache.unknown I get key == com.apress.springrecipes.course.Course#1
+[2009-02-23 15:23:20.015] uartzScheduler_Worker-10                      com.danga.MemCached.MemCachedClient.unknown I ++++ deserializing class org.hibernate.cache.ReadWriteCache$Item
+[2009-02-23 15:23:20.031] uartzScheduler_Worker-10  com.sitechasia.webx.components.cache.memcached.MemCache.unknown I get key == com.apress.springrecipes.course.Course#1
+[2009-02-23 15:23:20.031] uartzScheduler_Worker-10                      com.danga.MemCached.MemCachedClient.unknown I ++++ deserializing class org.hibernate.cache.ReadWriteCache$Item
+[2009-02-23 15:23:20.031] uartzScheduler_Worker-10                                                       System.out I Course Title: Core Spring
+[2009-02-23 15:23:20.031] uartzScheduler_Worker-10                                                       System.out I Begin Date: 2007-09-01 00:00:00.0
+[2009-02-23 15:23:20.031] uartzScheduler_Worker-10                                                       System.out I End Date: 2007-10-01 00:00:00.0
+[2009-02-23 15:23:20.031] uartzScheduler_Worker-10                                                       System.out I Fee: 1000
+[2009-02-23 15:23:30.015] QuartzScheduler_Worker-1                                                       System.out I ********************************************************************
+[2009-02-23 15:23:30.015] QuartzScheduler_Worker-1  com.sitechasia.webx.components.cache.memcached.MemCache.unknown I get key == sql: select course0_.ID as ID0_, course0_.BEGIN_DATE as BEGIN2_0_, course0_.END_DATE as END3_0_, course0_.FEE as FEE0_, course0_.TITLE as TITLE0_ from COURSE course0_; parameters: ; named parameters: {}
+[2009-02-23 15:23:30.015] QuartzScheduler_Worker-1                      com.danga.MemCached.MemCachedClient.unknown I ++++ deserializing class java.util.ArrayList
+[2009-02-23 15:23:30.015] QuartzScheduler_Worker-1  com.sitechasia.webx.components.cache.memcached.MemCache.unknown I get key == COURSE
+[2009-02-23 15:23:30.015] QuartzScheduler_Worker-1  com.sitechasia.webx.components.cache.memcached.MemCache.unknown I get key == com.apress.springrecipes.course.Course#1
+[2009-02-23 15:23:30.015] QuartzScheduler_Worker-1                      com.danga.MemCached.MemCachedClient.unknown I ++++ deserializing class org.hibernate.cache.ReadWriteCache$Item
+[2009-02-23 15:23:30.031] QuartzScheduler_Worker-1  com.sitechasia.webx.components.cache.memcached.MemCache.unknown I get key == com.apress.springrecipes.course.Course#1
+[2009-02-23 15:23:30.031] QuartzScheduler_Worker-1                      com.danga.MemCached.MemCachedClient.unknown I ++++ deserializing class org.hibernate.cache.ReadWriteCache$Item
+[2009-02-23 15:23:30.031] QuartzScheduler_Worker-1                                                       System.out I Course Title: Core Spring
+[2009-02-23 15:23:30.031] QuartzScheduler_Worker-1                                                       System.out I Begin Date: 2007-09-01 00:00:00.0
+[2009-02-23 15:23:30.031] QuartzScheduler_Worker-1                                                       System.out I End Date: 2007-10-01 00:00:00.0
+[2009-02-23 15:23:30.031] QuartzScheduler_Worker-1                                                       System.out I Fee: 1000
+[2009-02-23 15:23:40.015] QuartzScheduler_Worker-2                                                       System.out I ********************************************************************
+[2009-02-23 15:23:40.015] QuartzScheduler_Worker-2  com.sitechasia.webx.components.cache.memcached.MemCache.unknown I get key == sql: select course0_.ID as ID0_, course0_.BEGIN_DATE as BEGIN2_0_, course0_.END_DATE as END3_0_, course0_.FEE as FEE0_, course0_.TITLE as TITLE0_ from COURSE course0_; parameters: ; named parameters: {}
+[2009-02-23 15:23:40.015] QuartzScheduler_Worker-2                      com.danga.MemCached.MemCachedClient.unknown I ++++ deserializing class java.util.ArrayList
+[2009-02-23 15:23:40.015] QuartzScheduler_Worker-2  com.sitechasia.webx.components.cache.memcached.MemCache.unknown I get key == COURSE
+[2009-02-23 15:23:40.015] QuartzScheduler_Worker-2  com.sitechasia.webx.components.cache.memcached.MemCache.unknown I get key == com.apress.springrecipes.course.Course#1
+[2009-02-23 15:23:40.015] QuartzScheduler_Worker-2                      com.danga.MemCached.MemCachedClient.unknown I ++++ deserializing class org.hibernate.cache.ReadWriteCache$Item
+[2009-02-23 15:23:40.031] QuartzScheduler_Worker-2  com.sitechasia.webx.components.cache.memcached.MemCache.unknown I get key == com.apress.springrecipes.course.Course#1
+[2009-02-23 15:23:40.031] QuartzScheduler_Worker-2                      com.danga.MemCached.MemCachedClient.unknown I ++++ deserializing class org.hibernate.cache.ReadWriteCache$Item
+[2009-02-23 15:23:40.031] QuartzScheduler_Worker-2                                                       System.out I Course Title: Core Spring
+[2009-02-23 15:23:40.031] QuartzScheduler_Worker-2                                                       System.out I Begin Date: 2007-09-01 00:00:00.0
+[2009-02-23 15:23:40.031] QuartzScheduler_Worker-2                                                       System.out I End Date: 2007-10-01 00:00:00.0
+[2009-02-23 15:23:40.031] QuartzScheduler_Worker-2                                                       System.out I Fee: 1000
+[2009-02-23 15:23:50.015] QuartzScheduler_Worker-3                                                       System.out I ********************************************************************
+[2009-02-23 15:23:50.015] QuartzScheduler_Worker-3  com.sitechasia.webx.components.cache.memcached.MemCache.unknown I get key == sql: select course0_.ID as ID0_, course0_.BEGIN_DATE as BEGIN2_0_, course0_.END_DATE as END3_0_, course0_.FEE as FEE0_, course0_.TITLE as TITLE0_ from COURSE course0_; parameters: ; named parameters: {}
+[2009-02-23 15:23:50.015] QuartzScheduler_Worker-3                      com.danga.MemCached.MemCachedClient.unknown I ++++ deserializing class java.util.ArrayList
+[2009-02-23 15:23:50.015] QuartzScheduler_Worker-3  com.sitechasia.webx.components.cache.memcached.MemCache.unknown I get key == COURSE
+[2009-02-23 15:23:50.015] QuartzScheduler_Worker-3  com.sitechasia.webx.components.cache.memcached.MemCache.unknown I get key == com.apress.springrecipes.course.Course#1
+[2009-02-23 15:23:50.015] QuartzScheduler_Worker-3                      com.danga.MemCached.MemCachedClient.unknown I ++++ deserializing class org.hibernate.cache.ReadWriteCache$Item
+[2009-02-23 15:23:50.031] QuartzScheduler_Worker-3  com.sitechasia.webx.components.cache.memcached.MemCache.unknown I get key == com.apress.springrecipes.course.Course#1
+[2009-02-23 15:23:50.031] QuartzScheduler_Worker-3                      com.danga.MemCached.MemCachedClient.unknown I ++++ deserializing class org.hibernate.cache.ReadWriteCache$Item
+[2009-02-23 15:23:50.031] QuartzScheduler_Worker-3                                                       System.out I Course Title: Core Spring
+[2009-02-23 15:23:50.031] QuartzScheduler_Worker-3                                                       System.out I Begin Date: 2007-09-01 00:00:00.0
+[2009-02-23 15:23:50.031] QuartzScheduler_Worker-3                                                       System.out I End Date: 2007-10-01 00:00:00.0
+[2009-02-23 15:23:50.031] QuartzScheduler_Worker-3                                                       System.out I Fee: 1000
+[2009-02-23 15:24:00.015] QuartzScheduler_Worker-4                                                       System.out I ********************************************************************
+[2009-02-23 15:24:00.015] QuartzScheduler_Worker-4  com.sitechasia.webx.components.cache.memcached.MemCache.unknown I get key == sql: select course0_.ID as ID0_, course0_.BEGIN_DATE as BEGIN2_0_, course0_.END_DATE as END3_0_, course0_.FEE as FEE0_, course0_.TITLE as TITLE0_ from COURSE course0_; parameters: ; named parameters: {}
+[2009-02-23 15:24:00.015] QuartzScheduler_Worker-4                      com.danga.MemCached.MemCachedClient.unknown I ++++ deserializing class java.util.ArrayList
+[2009-02-23 15:24:00.015] QuartzScheduler_Worker-4  com.sitechasia.webx.components.cache.memcached.MemCache.unknown I get key == COURSE
+[2009-02-23 15:24:00.015] QuartzScheduler_Worker-4  com.sitechasia.webx.components.cache.memcached.MemCache.unknown I get key == com.apress.springrecipes.course.Course#1
+[2009-02-23 15:24:00.015] QuartzScheduler_Worker-4                      com.danga.MemCached.MemCachedClient.unknown I ++++ deserializing class org.hibernate.cache.ReadWriteCache$Item
+[2009-02-23 15:24:00.031] QuartzScheduler_Worker-4  com.sitechasia.webx.components.cache.memcached.MemCache.unknown I get key == com.apress.springrecipes.course.Course#1
+[2009-02-23 15:24:00.031] QuartzScheduler_Worker-4                      com.danga.MemCached.MemCachedClient.unknown I ++++ deserializing class org.hibernate.cache.ReadWriteCache$Item
+[2009-02-23 15:24:00.031] QuartzScheduler_Worker-4                                                       System.out I Course Title: Core Spring
+[2009-02-23 15:24:00.031] QuartzScheduler_Worker-4                                                       System.out I Begin Date: 2007-09-01 00:00:00.0
+[2009-02-23 15:24:00.031] QuartzScheduler_Worker-4                                                       System.out I End Date: 2007-10-01 00:00:00.0
+[2009-02-23 15:24:00.031] QuartzScheduler_Worker-4                                                       System.out I Fee: 1000
+[2009-02-23 15:24:10.015] QuartzScheduler_Worker-5                                                       System.out I ********************************************************************
+[2009-02-23 15:24:10.015] QuartzScheduler_Worker-5  com.sitechasia.webx.components.cache.memcached.MemCache.unknown I get key == sql: select course0_.ID as ID0_, course0_.BEGIN_DATE as BEGIN2_0_, course0_.END_DATE as END3_0_, course0_.FEE as FEE0_, course0_.TITLE as TITLE0_ from COURSE course0_; parameters: ; named parameters: {}
+[2009-02-23 15:24:10.015] QuartzScheduler_Worker-5                      com.danga.MemCached.MemCachedClient.unknown I ++++ deserializing class java.util.ArrayList
+[2009-02-23 15:24:10.015] QuartzScheduler_Worker-5  com.sitechasia.webx.components.cache.memcached.MemCache.unknown I get key == COURSE
+[2009-02-23 15:24:10.015] QuartzScheduler_Worker-5  com.sitechasia.webx.components.cache.memcached.MemCache.unknown I get key == com.apress.springrecipes.course.Course#1
+[2009-02-23 15:24:10.015] QuartzScheduler_Worker-5                      com.danga.MemCached.MemCachedClient.unknown I ++++ deserializing class org.hibernate.cache.ReadWriteCache$Item
+[2009-02-23 15:24:10.031] QuartzScheduler_Worker-5  com.sitechasia.webx.components.cache.memcached.MemCache.unknown I get key == com.apress.springrecipes.course.Course#1
+[2009-02-23 15:24:10.031] QuartzScheduler_Worker-5                      com.danga.MemCached.MemCachedClient.unknown I ++++ deserializing class org.hibernate.cache.ReadWriteCache$Item
+[2009-02-23 15:24:10.031] QuartzScheduler_Worker-5                                                       System.out I Course Title: Core Spring
+[2009-02-23 15:24:10.031] QuartzScheduler_Worker-5                                                       System.out I Begin Date: 2007-09-01 00:00:00.0
+[2009-02-23 15:24:10.031] QuartzScheduler_Worker-5                                                       System.out I End Date: 2007-10-01 00:00:00.0
+[2009-02-23 15:24:10.031] QuartzScheduler_Worker-5                                                       System.out I Fee: 1000
+[2009-02-23 15:24:20.015] QuartzScheduler_Worker-6                                                       System.out I ********************************************************************
+[2009-02-23 15:24:20.015] QuartzScheduler_Worker-6  com.sitechasia.webx.components.cache.memcached.MemCache.unknown I get key == sql: select course0_.ID as ID0_, course0_.BEGIN_DATE as BEGIN2_0_, course0_.END_DATE as END3_0_, course0_.FEE as FEE0_, course0_.TITLE as TITLE0_ from COURSE course0_; parameters: ; named parameters: {}
+[2009-02-23 15:24:20.015] QuartzScheduler_Worker-6                      com.danga.MemCached.MemCachedClient.unknown I ++++ deserializing class java.util.ArrayList
+[2009-02-23 15:24:20.015] QuartzScheduler_Worker-6  com.sitechasia.webx.components.cache.memcached.MemCache.unknown I get key == COURSE
+[2009-02-23 15:24:20.015] QuartzScheduler_Worker-6  com.sitechasia.webx.components.cache.memcached.MemCache.unknown I get key == com.apress.springrecipes.course.Course#1
+[2009-02-23 15:24:20.031] QuartzScheduler_Worker-6                      com.danga.MemCached.MemCachedClient.unknown I ++++ deserializing class org.hibernate.cache.ReadWriteCache$Item
+[2009-02-23 15:24:20.031] QuartzScheduler_Worker-6  com.sitechasia.webx.components.cache.memcached.MemCache.unknown I get key == com.apress.springrecipes.course.Course#1
+[2009-02-23 15:24:20.031] QuartzScheduler_Worker-6                      com.danga.MemCached.MemCachedClient.unknown I ++++ deserializing class org.hibernate.cache.ReadWriteCache$Item
+[2009-02-23 15:24:20.031] QuartzScheduler_Worker-6                                                       System.out I Course Title: Core Spring
+[2009-02-23 15:24:20.031] QuartzScheduler_Worker-6                                                       System.out I Begin Date: 2007-09-01 00:00:00.0
+[2009-02-23 15:24:20.031] QuartzScheduler_Worker-6                                                       System.out I End Date: 2007-10-01 00:00:00.0
+[2009-02-23 15:24:20.031] QuartzScheduler_Worker-6                                                       System.out I Fee: 1000
+[2009-02-23 15:24:30.015] QuartzScheduler_Worker-7                                                       System.out I ********************************************************************
+[2009-02-23 15:24:30.015] QuartzScheduler_Worker-7  com.sitechasia.webx.components.cache.memcached.MemCache.unknown I get key == sql: select course0_.ID as ID0_, course0_.BEGIN_DATE as BEGIN2_0_, course0_.END_DATE as END3_0_, course0_.FEE as FEE0_, course0_.TITLE as TITLE0_ from COURSE course0_; parameters: ; named parameters: {}
+[2009-02-23 15:24:30.015] QuartzScheduler_Worker-7                      com.danga.MemCached.MemCachedClient.unknown I ++++ deserializing class java.util.ArrayList
+[2009-02-23 15:24:30.015] QuartzScheduler_Worker-7  com.sitechasia.webx.components.cache.memcached.MemCache.unknown I get key == COURSE
+[2009-02-23 15:24:30.015] QuartzScheduler_Worker-7  com.sitechasia.webx.components.cache.memcached.MemCache.unknown I get key == com.apress.springrecipes.course.Course#1
+[2009-02-23 15:24:30.015] QuartzScheduler_Worker-7                      com.danga.MemCached.MemCachedClient.unknown I ++++ deserializing class org.hibernate.cache.ReadWriteCache$Item
+[2009-02-23 15:24:30.031] QuartzScheduler_Worker-7  com.sitechasia.webx.components.cache.memcached.MemCache.unknown I get key == com.apress.springrecipes.course.Course#1
+[2009-02-23 15:24:30.031] QuartzScheduler_Worker-7                      com.danga.MemCached.MemCachedClient.unknown I ++++ deserializing class org.hibernate.cache.ReadWriteCache$Item
+[2009-02-23 15:24:30.031] QuartzScheduler_Worker-7                                                       System.out I Course Title: Core Spring
+[2009-02-23 15:24:30.031] QuartzScheduler_Worker-7                                                       System.out I Begin Date: 2007-09-01 00:00:00.0
+[2009-02-23 15:24:30.031] QuartzScheduler_Worker-7                                                       System.out I End Date: 2007-10-01 00:00:00.0
+[2009-02-23 15:24:30.031] QuartzScheduler_Worker-7                                                       System.out I Fee: 1000
+[2009-02-23 15:24:40.015] QuartzScheduler_Worker-8                                                       System.out I ********************************************************************
+[2009-02-23 15:24:40.015] QuartzScheduler_Worker-8  com.sitechasia.webx.components.cache.memcached.MemCache.unknown I get key == sql: select course0_.ID as ID0_, course0_.BEGIN_DATE as BEGIN2_0_, course0_.END_DATE as END3_0_, course0_.FEE as FEE0_, course0_.TITLE as TITLE0_ from COURSE course0_; parameters: ; named parameters: {}
+[2009-02-23 15:24:40.015] QuartzScheduler_Worker-8                      com.danga.MemCached.MemCachedClient.unknown I ++++ deserializing class java.util.ArrayList
+[2009-02-23 15:24:40.015] QuartzScheduler_Worker-8  com.sitechasia.webx.components.cache.memcached.MemCache.unknown I get key == COURSE
+[2009-02-23 15:24:40.015] QuartzScheduler_Worker-8  com.sitechasia.webx.components.cache.memcached.MemCache.unknown I get key == com.apress.springrecipes.course.Course#1
+[2009-02-23 15:24:40.015] QuartzScheduler_Worker-8                      com.danga.MemCached.MemCachedClient.unknown I ++++ deserializing class org.hibernate.cache.ReadWriteCache$Item
+[2009-02-23 15:24:40.015] QuartzScheduler_Worker-8  com.sitechasia.webx.components.cache.memcached.MemCache.unknown I get key == com.apress.springrecipes.course.Course#1
+[2009-02-23 15:24:40.031] QuartzScheduler_Worker-8                      com.danga.MemCached.MemCachedClient.unknown I ++++ deserializing class org.hibernate.cache.ReadWriteCache$Item
+[2009-02-23 15:24:40.031] QuartzScheduler_Worker-8                                                       System.out I Course Title: Core Spring
+[2009-02-23 15:24:40.031] QuartzScheduler_Worker-8                                                       System.out I Begin Date: 2007-09-01 00:00:00.0
+[2009-02-23 15:24:40.031] QuartzScheduler_Worker-8                                                       System.out I End Date: 2007-10-01 00:00:00.0
+[2009-02-23 15:24:40.031] QuartzScheduler_Worker-8                                                       System.out I Fee: 1000
+[2009-02-23 15:24:50.015] QuartzScheduler_Worker-9                                                       System.out I ********************************************************************
+[2009-02-23 15:24:50.015] QuartzScheduler_Worker-9  com.sitechasia.webx.components.cache.memcached.MemCache.unknown I get key == sql: select course0_.ID as ID0_, course0_.BEGIN_DATE as BEGIN2_0_, course0_.END_DATE as END3_0_, course0_.FEE as FEE0_, course0_.TITLE as TITLE0_ from COURSE course0_; parameters: ; named parameters: {}
+[2009-02-23 15:24:50.015] QuartzScheduler_Worker-9                      com.danga.MemCached.MemCachedClient.unknown I ++++ deserializing class java.util.ArrayList
+[2009-02-23 15:24:50.015] QuartzScheduler_Worker-9  com.sitechasia.webx.components.cache.memcached.MemCache.unknown I get key == COURSE
+[2009-02-23 15:24:50.015] QuartzScheduler_Worker-9  com.sitechasia.webx.components.cache.memcached.MemCache.unknown I get key == com.apress.springrecipes.course.Course#1
+[2009-02-23 15:24:50.015] QuartzScheduler_Worker-9                      com.danga.MemCached.MemCachedClient.unknown I ++++ deserializing class org.hibernate.cache.ReadWriteCache$Item
+[2009-02-23 15:24:50.015] QuartzScheduler_Worker-9  com.sitechasia.webx.components.cache.memcached.MemCache.unknown I get key == com.apress.springrecipes.course.Course#1
+[2009-02-23 15:24:50.031] QuartzScheduler_Worker-9                      com.danga.MemCached.MemCachedClient.unknown I ++++ deserializing class org.hibernate.cache.ReadWriteCache$Item
+[2009-02-23 15:24:50.031] QuartzScheduler_Worker-9                                                       System.out I Course Title: Core Spring
+[2009-02-23 15:24:50.031] QuartzScheduler_Worker-9                                                       System.out I Begin Date: 2007-09-01 00:00:00.0
+[2009-02-23 15:24:50.031] QuartzScheduler_Worker-9                                                       System.out I End Date: 2007-10-01 00:00:00.0
+[2009-02-23 15:24:50.031] QuartzScheduler_Worker-9                                                       System.out I Fee: 1000
+[2009-02-23 15:25:00.015] uartzScheduler_Worker-10                                                       System.out I ********************************************************************
+[2009-02-23 15:25:00.015] uartzScheduler_Worker-10  com.sitechasia.webx.components.cache.memcached.MemCache.unknown I get key == sql: select course0_.ID as ID0_, course0_.BEGIN_DATE as BEGIN2_0_, course0_.END_DATE as END3_0_, course0_.FEE as FEE0_, course0_.TITLE as TITLE0_ from COURSE course0_; parameters: ; named parameters: {}
+[2009-02-23 15:25:00.015] uartzScheduler_Worker-10                      com.danga.MemCached.MemCachedClient.unknown I ++++ deserializing class java.util.ArrayList
+[2009-02-23 15:25:00.015] uartzScheduler_Worker-10  com.sitechasia.webx.components.cache.memcached.MemCache.unknown I get key == COURSE
+[2009-02-23 15:25:00.031] uartzScheduler_Worker-10  com.sitechasia.webx.components.cache.memcached.MemCache.unknown I get key == com.apress.springrecipes.course.Course#1
+[2009-02-23 15:25:00.031] uartzScheduler_Worker-10                      com.danga.MemCached.MemCachedClient.unknown I ++++ deserializing class org.hibernate.cache.ReadWriteCache$Item
+[2009-02-23 15:25:00.031] uartzScheduler_Worker-10  com.sitechasia.webx.components.cache.memcached.MemCache.unknown I get key == com.apress.springrecipes.course.Course#1
+[2009-02-23 15:25:00.031] uartzScheduler_Worker-10                      com.danga.MemCached.MemCachedClient.unknown I ++++ deserializing class org.hibernate.cache.ReadWriteCache$Item
+[2009-02-23 15:25:00.031] uartzScheduler_Worker-10                                                       System.out I Course Title: Core Spring
+[2009-02-23 15:25:00.031] uartzScheduler_Worker-10                                                       System.out I Begin Date: 2007-09-01 00:00:00.0
+[2009-02-23 15:25:00.031] uartzScheduler_Worker-10                                                       System.out I End Date: 2007-10-01 00:00:00.0
+[2009-02-23 15:25:00.031] uartzScheduler_Worker-10                                                       System.out I Fee: 1000

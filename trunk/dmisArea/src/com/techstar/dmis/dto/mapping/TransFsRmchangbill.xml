@@ -1,0 +1,14 @@
+<!DOCTYPE mappings PUBLIC "-//DOZER//DTD MAPPINGS//EN"
+"http://dozer.sourceforge.net/dtd/dozerbeanmapping.dtd">
+<mappings>
+   <mapping>
+   <class-a>com.techstar.dmis.dto.FsRmchangbillDto</class-a>
+   <class-b>com.techstar.dmis.dto.transfer.TransFsRmchangbillDto</class-b>
+   <field>
+      <a>fddfsmodechangelist5</a>
+      <b>fddfsmodechangelist5</b>
+      <a-hint>com.techstar.dmis.dto.DdfsModechangelistDto</a-hint>
+      <b-hint>com.techstar.dmis.dto.transfer.TransDdfsModechangelistDto</b-hint>
+   </field>
+   </mapping>
+</mappings>

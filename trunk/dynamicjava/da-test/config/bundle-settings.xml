@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<!-- Bundle Settings in DA-Launcher -->
+<bundle-settings>
+	
+	<!-- Settings of Application Bundles -->
+	<application-bundle-settings>
+		<!--
+		Bundle setup settings. Supported attributes:
+			auto-start - Determines whether automatically start a bundle after being installed. Default is 'true'.
+			ignore-install-errors - If an error occured while installing a bundle, the bundle will be uninstalled and the application will continue to function. Default is 'true'.
+			ignore-start-errors - If an error occured while staring a bundle, the bundle will be uninstalled and the application will continue to function. Default is 'true'.
+		-->
+		<setup-settings auto-start="true" ignore-install-errors="true" ignore-start-errors="true" />
+	</application-bundle-settings>
+	
+	<!--
+	You can uncomment if you want to costumize the default behavior of system bundles. The commented 'system-bundle-settings' element represents the default configuration.
+	<system-bundle-settings>
+		<setup-settings auto-start="true" ignore-install-errors="false" ignore-start-errors="false" />
+	</system-bundle-settings>
+	-->
+	
+	<!--
+	You can uncomment if you want to costumize the default behavior of non-bundled libraries. The commented 'non-bundled libraries' element represents the default configuration.
+	<non-bundled-library-settings>
+		<setup-settings auto-start="true" ignore-install-errors="false" ignore-start-errors="false" />
+	</non-bundled-library-settings>
+	-->
+	
+</bundle-settings>

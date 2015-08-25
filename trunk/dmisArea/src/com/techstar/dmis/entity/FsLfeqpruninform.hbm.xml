@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="com.techstar.dmis.entity">
+	<class name="FsLfeqpruninform" table="DMIS_FS_LFEqpRunInform" dynamic-insert="true" dynamic-update="true" optimistic-lock="version">
+    <id name="lfeqpruninformid" type="string">
+      <column name="lfeqpruninformid" sql-type="varchar(40)" not-null="true"/>
+      <generator class="assigned"/>
+    </id>
+
+ 	<version name="version" column="VERSION" unsaved-value="undefined"/>
+  
+   <property name="frundate" type="date"  not-null="true">
+    <column name="frundate"  
+		               
+    />
+</property>	
+    <property name="fstationid" type="string"  not-null="true">
+    <column name="fstationid"  
+		length="40"               
+    />
+</property>	
+    <property name="fstationname" type="string"  not-null="true">
+    <column name="fstationname"  
+		length="80"               
+    />
+</property>	
+    <property name="frunmark" type="string"  not-null="false">
+    <column name="frunmark"  
+		length="40"               
+    />
+</property>	
+    <property name="finformer" type="string"  not-null="false">
+    <column name="finformer"  
+		length="40"               
+    />
+</property>	
+    <property name="fprocess" type="org.springframework.orm.hibernate3.support.BlobByteArrayType"  not-null="false">
+    <column name="fprocess"  
+		               
+    />
+</property>	
+    <property name="fremark" type="string"  not-null="false">
+    <column name="fremark"  
+		length="100"               
+    />
+</property>	
+    <property name="lfruninformno" type="string"  not-null="false">
+    <column name="lfruninformno"  
+		length="40"               
+    />
+</property>	
+    <property name="sys_fille" type="string"  not-null="false">
+    <column name="sys_fille"  
+		length="40"               
+    />
+</property>	
+    <property name="sys_filldept" type="string"  not-null="false">
+    <column name="sys_filldept"  
+		length="80"               
+    />
+</property>	
+    <property name="sys_filltime" type="timestamp"  not-null="false">
+    <column name="sys_filltime"  
+		               
+    />
+</property>	
+    <property name="sys_isvalid" type="integer"  not-null="false">
+    <column name="sys_isvalid"  
+		               
+    />
+</property>	
+    <property name="sys_dataowner" type="string"  not-null="false">
+    <column name="sys_dataowner"  
+		length="40"               
+    />
+</property>	
+  
+	
+ <many-to-one name="zfslfeqpruninform2" class="FsLfeqpfixinform"   column="FixInformID" cascade="delete-orphan"></many-to-one>
+     </class>
+
+</hibernate-mapping>
+

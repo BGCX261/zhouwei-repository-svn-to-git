@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<validate name="test">
+	<field name="custom_id">
+		<func name="isNotNull"> 
+			 <mes>用户id不能为空</mes>
+		</func>
+	</field>
+	
+	<field name="custom_name">
+		<func name="isNotNull"> 
+			 <mes>用户名称不能为空</mes>
+		</func>
+	</field>
+<field name="begin_date">
+		<func name="isDate"> 
+			<params>yyyy-MM-dd</params>
+			 <mes>创建日期格式不对</mes>
+		</func>
+	</field>
+</validate>
+
+

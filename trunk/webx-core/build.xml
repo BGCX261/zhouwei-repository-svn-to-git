@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project default="usage" basedir="." name="${name}">
+
+	<property file="build.properties" />
+
+	<target name="usage">
+		<echo message="ant usage       	- Print this message" />
+		<echo message="ant init        	- Init the application build directories" />
+		<echo message="ant compile-java	- Compile main source tree java files " />
+		<echo message="ant compile		- Compile all java files " />
+		<echo message="ant clean       	- Clear the application build directories" />
+		<echo message="ant jar	    	- Create the jar file " />
+		<echo message="ant javadoc    	- Create API doc " />
+		<echo message="ant junit    	- Run JUnit test and create test reports" />
+		<echo message="ant emma	    	- Run Emma Coverage and create coverage reports" />
+		<echo message="ant dist	    	- distribute files which are distribution needed to dist directories." />
+		<echo message="ant checkout    	- export files from CVS." />
+		<echo message="ant fulldist    	- Run ant file of checkout from CVS,target is 'dist'" />
+	</target>
+	
+	<!-- 以下两个target是为了能“干净”地进行dist -->
+	<target name="checkout" description="${name}-${version} full_release">
+		<cvspass cvsroot="${cvs.root}"  password="${cvs.passwd}" />
+		<cvs command="export" tag="${cvs.tag}" cvsRoot="${cvs.root}" 
+			package="${cvs.package}" dest="${cvs.dest}"/>
+	</target>
+
+	<!-- full_release生成一个干净的dist。它实际上调用刚刚checkout出来的build.xml -->
+	<target name="fulldist" depends="checkout" description="${name}-${version} fulldist">
+		<ant dir="${cvs.dest}/${cvs.package}" inheritAll="no" target="dist" />
+	</target>
+
+	<!-- 校验编译目标 -->
+	<target name="check_target">
+		<condition property="mustang">
+			<equals arg1="${compiler.target}" arg2="1.6"/>
+		</condition>
+		<condition property="tiger">
+			<equals arg1="${compiler.target}" arg2="1.5" />
+		</condition>
+	</target>		
+
+	<!-- 编译目标为1.6时的初始化 -->
+	<target name="init_mustang" if="mustang" depends="check_target">
+		<path id="sourcepath">
+			<path location="${src}" />
+			<path location="${mustangsrc}" />
+		</path>
+		<fileset id="excludesfile">
+			<include name="**/*Mustang*.java" />
+		</fileset>
+	</target>
+			
+	<!-- 编译目标为1.5时的初始化 -->
+	<target name="init_tiger" if="tiger" depends="check_target">
+		<path id="sourcepath">
+			<path location="${src}" />
+		</path>
+	</target>
+
+
+	<target name="init" description="${name}-${version} init" depends="init_mustang,init_tiger">
+		<echo message="Initializing ${name}-${version}" />
+		<path id="classpath">
+			<fileset dir="${lib}">
+				<include name="**/*.jar" />
+			</fileset>
+			<path location="${build.dest}" />
+			<path location="${build.testdest}" />
+		</path>
+		<mkdir dir="${build}" />
+		<mkdir dir="${build.dest}" />
+		<mkdir dir="${dist}" />
+	</target>
+
+	<target name="clean" depends="init" description="${name}-${version} clean">
+		<delete dir="${build}" />
+		<delete dir="${dist}" />
+		<delete dir="${junit.report.dir}" />
+		<delete dir="${emma.coverage}" />
+		<delete dir="${cvs.dest}" />
+	</target>
+
+	<target name="compile-java" description="Compile main source tree java files">
+		<mkdir dir="${build.dest}" />
+		<javac destdir="${build.dest}" target="${compiler.target}" debug="${compiler.debug}" 
+			deprecation="${compiler.deprecation}" optimize="${compiler.optimize}" 
+			failonerror="true" encoding="UTF-8">
+			<src path="${src}"/>
+			<classpath refid="classpath" />
+		</javac>
+	</target>
+
+	
+	<target name="compile" depends="init" description="${name}-${version} compile">
+		<javac destdir="${build.dest}" source="${compiler.source}" target="${compiler.target}" 
+			debug="${compiler.debug}" deprecation="${compiler.deprecation}" optimize="${compiler.optimize}" 
+			failonerror="true" 	encoding="utf-8" >
+			<src refid="sourcepath" />
+			<excludesfile if="mustang" id="excludesfile"/>
+			<classpath refid="classpath" />
+		</javac>
+
+		<mkdir dir="${build.testdest}" />
+		<copy todir="${build.testdest}" includeEmptyDirs="no">
+			<fileset dir="${testsrc}">
+				<exclude name="**/*.java" />
+			</fileset>
+		</copy>
+		
+		<javac srcdir="${testsrc}" destdir="${build.testdest}" debug="${compiler.debug}"
+      			optimize="${compiler.optimize}" deprecation="${compiler.deprecation}"
+      			source="${compiler.source}"	target="${compiler.target}"	encoding="utf-8"
+      			classpathref="classpath" />
+	</target>
+	
+	<target name="jar" depends="compile" description="${name}-${version} jar">
+		<tstamp>
+			<format property="jar.time" pattern="yyyy-MM-dd HH:mm:ss" />
+		</tstamp>
+
+		<jar jarfile="${build}/${name}-${version}-jdk${compiler.target}.jar" basedir="${build.dest}">
+			<manifest>
+				<attribute name="Creator" value="webx-core dev" />
+				<attribute name="Product" value="${name}" />
+				<attribute name="Version" value="${version}" />
+				<attribute name="Create-Time" value="${jar.time}" />
+			</manifest>
+		</jar>
+		<jar jarfile="${build}/${name}-test-${version}.jar" basedir="${build.testdest}">
+			<manifest>
+				<attribute name="Creator" value="${cvs.user}" />
+				<attribute name="Product" value="${name}-test" />
+				<attribute name="Version" value="${version}" />
+				<attribute name="Create-Time" value="${jar.time}" />
+			</manifest>
+		</jar>
+		
+	</target>
+
+	<target name="javadoc" depends="init" description="${name}-${version} javadoc">
+		<mkdir dir="${build.docs.api}" />
+		<javadoc packagenames="${javadoc.packages}" destdir="${build.docs.api}" author="true"
+      version="true" use="true" package="true" windowtitle="${name} ${version}"
+      doctitle="${name} ${version} API Reference" bottom="${javadoc.copyright}"
+      verbose="false"
+			encoding="utf-8"
+			charset="utf-8"
+			locale="en_US"
+			classpathref="classpath">
+			<sourcepath>
+				<pathelement path="${src}" />
+			</sourcepath>
+			
+			<link href="http://java.sun.com/j2ee/1.4/docs/api" />
+			<link href="http://java.sun.com/j2se/1.5.0/docs/api"/>
+			<link href="http://static.springframework.org/spring/docs/2.0.x/api"/>
+			<link href="http://www.hibernate.org/hib_docs/v3/api"/>
+		</javadoc>
+
+		<copy todir="${build.docs.api}" includeEmptyDirs="no">
+			<fileset dir="${src}">
+				<include name="${javadoc.copyextras}" />
+			</fileset>
+		</copy>
+	</target>
+
+	<target name="junit" depends="compile">
+		<mkdir dir="${junit.report.dir}" />
+		<mkdir dir="${junit.report.html.dir}" />
+		<junit fork="yes" printsummary="yes" showoutput="yes" haltonfailure="no"
+        filtertrace="no" >
+			<classpath>
+				<pathelement location="${build.testdest}" />
+				<pathelement location="${build.dest}" />
+				<path refid="classpath" />
+			</classpath>
+			<formatter type="xml" />
+			<batchtest todir="${junit.report.dir}">
+				<fileset dir="${testsrc}">
+					<include name="${testcases}"/>
+				</fileset>
+			</batchtest>
+		</junit>
+		<mkdir dir="${junit.report.html.dir}" />
+		<junitreport todir="${junit.report.html.dir}">
+			<fileset dir="${junit.report.dir}">
+				<include name="TEST-*.xml" />
+			</fileset>
+			<report format="frames" todir="${junit.report.html.dir}" />
+		</junitreport>
+		<fail if="junitFail" />
+	</target>
+
+	<!-- EMMA使用。path element used by EMMA taskdef below，不必改变 -->
+	<path id="emma.lib">
+		<pathelement location="${emma.lib}/emma.jar" />
+		<pathelement location="${emma.lib}/emma_ant.jar" />
+	</path>
+	<!-- EMMA使用。this loads <emma> and <emmajava> custom tasks，不必改变 -->
+	<taskdef resource="emma_ant.properties" classpathref="emma.lib" />
+
+	<!-- EMMA使用。指定要对哪些类进行测试覆盖率分析。这儿包含了所有源程序。-->
+	<!-- 这里排除了测试程序本身。排除测试程序不能用emma instr filter，因为它是针对类名的 -->
+	<path id="instr_classpath">
+		<path location="${build.dest}" />
+	</path>
+
+	<!-- EMMA使用。为了使用EMMA获取单元测试的覆盖率数据而增加的。 -->
+	<target name="emma_instrument" depends="compile" description="turns on EMMA's instrumentation/reporting">
+		<!-- EMMA instr class output directory (it is important to create
+	       this property only when EMMA is enabled: -->
+		<mkdir dir="${emma.coverage}" />
+		<mkdir dir="${emma.instr}" />
+		<!-- 需要把运行测试所需要的配置文件拷贝到对应的目录下面-->
+		<copy todir="${emma.instr}" includeEmptyDirs="no">
+			<fileset dir="${src}">
+				<include name="**/*.xml" />
+				<include name="**/*.properties" />
+				<include name="**/*.html" />
+				<include name="**/*.dictionary" />
+			</fileset>
+		</copy>
+		<copy todir="${emma.instr}" includeEmptyDirs="no">
+			<fileset dir="${testsrc}">
+				<exclude name="**/*.java" />
+			</fileset>
+		</copy>
+		<emma enabled="${emma.enabled}">
+			<instr instrpathref="instr_classpath" destdir="${emma.instr}"
+	        metadatafile="${emma.coverage}/metadata.emma" merge="true">
+				<!-- EMMA使用。指定对instr_classpath中哪些包或源程序进行测试覆盖率分析。 -->
+				<!-- filter可以包含：
+	          includes="..."，表示包含引号中的内容，引号中可以包含用空格或者英文逗号分割的、
+	           含有*?-的类名或者包名，包名用.分隔。
+	          excludes="..."，表示包含除引号中内容之外的其它内容。引号中的格式同上。
+	          value="+..., -..."，其中，+表示包含，-表示排除。+-后面的内容同上。
+	           如果前面没有符号，缺省当作+。
+	          比如：<filter includes="com.foo.*" excludes="com.foo.test.*, com.foo.*Test*" />
+	          比如：<filter value="+com.foo.*, -com.foo.test.*, -com.foo.*Test*" /> -->
+				<filter value="${emma.filter}"/>
+			</instr>
+		</emma>
+	</target>
+
+	<!-- 运行单元测试程序，嵌入了EMMA的内容。 -->
+	<target name="emma_test_internal" depends="init, compile, emma_instrument">
+		<!-- run Main. In v2.0, EMMA coverage data is dumped on JVM exit. For
+	       this to happen the JVM must be forked: -->
+		<junit fork="yes" printsummary="yes" showoutput="yes" haltonfailure="no"
+	        filtertrace="no" failureproperty="junitFail">
+			<classpath>
+				<!-- EMMA使用。要先指定EMMA插装类的路径，再指定其它路径，保证插装类能够被先找到。 -->
+				<pathelement location="${emma.instr}" />
+				<pathelement location="${build.testdest}" />
+				<path refid="classpath" />
+			</classpath>
+			<!-- EMMA使用。指定EMMA中间数据文件存放的路径。不必改变。
+	            如果使用相对路径，有可能会在是相对于EMMA安装路径还是相对于project路径上搞混淆，
+	            所以，最好要明确相对于project的路径。-->
+			<jvmarg value="-Demma.coverage.out.file=${emma.coverage}/coverage.emma" />
+			<jvmarg value="-Demma.coverage.out.merge=true" />
+			<formatter type="xml" />
+
+			<!-- 运行单元测试程序。toDir是指定输出文件的目录，outfile是输出文件的名称，plain表示输出文本文件。-->
+			<batchtest todir="${emma.coverage}">
+				<fileset dir="${testsrc}">
+					<include name="${testcases}" />
+				</fileset>
+			</batchtest>
+		</junit>
+	</target>
+
+	<target name="emma_test" depends="emma_test_internal">
+		<fail if="junitFail" />
+	</target>
+
+	<!-- EMMA使用。根据EMMA开关决定是否产生测试覆盖率报告。 -->
+	<!-- 单独运行此target，根据当前coverage.emma生成报告 -->
+	<target name="emma_report">
+		<emma enabled="${emma.enabled}">
+			<report sourcepath="${src}" sort="+block,+name,+method,+class"
+	          metrics="method:60,block:70,line:70,class:90" encoding="UTF-8">
+				<fileset dir="${emma.coverage}">
+					<include name="*.emma*" />
+				</fileset>
+				<!-- 指定报告的形式和报告文件的名称。-->
+				<html outfile="${emma.coverage}/coverage-report.html" depth="method"
+	          columns="name,class,method,block,line" />
+			</report>
+		</emma>
+	</target>
+
+	<!-- 用这个target进行完整的emma测试-->
+	<target name="emma" depends="emma_test_internal, emma_report">
+		<fail if="junitFail" />
+	</target>
+	
+	<target name="dist-src" description="${name}-${version} java src dist">
+		<!-- Copy src -->
+		<mkdir dir="${dist}/${name}-${version}-src/java-src" />
+		<copy todir="${dist}/${name}-${version}-src/java-src" includeEmptyDirs="no">
+			<fileset dir="${src}" />
+		</copy>
+
+		<zip destfile="${dist}/${name}-${version}-src.zip" basedir="${dist}/${name}-${version}-src/java-src" />
+	</target>
+	
+	<target name="dist" depends="jar,javadoc" description="${name}-${version} dist">
+		<copy file="${build}/${name}-${version}.jar" todir="${dist}" />
+		<zip destfile="${dist}/${name}-${version}-docs.zip" basedir="${build.docs}" />
+	</target>
+
+</project>
+

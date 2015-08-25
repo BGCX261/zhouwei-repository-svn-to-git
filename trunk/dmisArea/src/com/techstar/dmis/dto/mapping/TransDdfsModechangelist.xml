@@ -1,0 +1,20 @@
+<!DOCTYPE mappings PUBLIC "-//DOZER//DTD MAPPINGS//EN"
+"http://dozer.sourceforge.net/dtd/dozerbeanmapping.dtd">
+<mappings>
+   <mapping>
+   <class-a>com.techstar.dmis.dto.DdfsModechangelistDto</class-a>
+   <class-b>com.techstar.dmis.dto.transfer.TransDdfsModechangelistDto</class-b>
+   <field>
+      <a>zddfsmodechangelist4.fdayplanno</a>
+      <b>trans_zddfsmodechangelist4</b>
+      <a-hint>com.techstar.dmis.dto.DdDoutageplanDto</a-hint>
+      <b-hint>java.lang.String</b-hint>
+   </field>
+   <field>
+      <a>zddfsmodechangelist5.fchangno</a>
+      <b>trans_zddfsmodechangelist5</b>
+      <a-hint>com.techstar.dmis.dto.FsRmchangbillDto</a-hint>
+      <b-hint>java.lang.String</b-hint>
+   </field>
+   </mapping>
+</mappings>

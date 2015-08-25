@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path=""/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="ldapfilt.jar"/>
+	<classpathentry kind="lib" path="ldapjdk.jar"/>
+	<classpathentry kind="lib" path="ldapsp.jar"/>
+	<classpathentry kind="lib" path="commons-configuration-1.2.jar"/>
+	<classpathentry kind="lib" path="commons-lang-2.1.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/3.8.1"/>
+	<classpathentry kind="lib" path="commons-collections-3.1.jar"/>
+	<classpathentry kind="lib" path="commons-logging.jar"/>
+	<classpathentry kind="lib" path="log4j-1.2.12.jar"/>
+	<classpathentry kind="output" path=""/>
+</classpath>

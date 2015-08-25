@@ -1,0 +1,20 @@
+<!DOCTYPE mappings PUBLIC "-//DOZER//DTD MAPPINGS//EN"
+"http://dozer.sourceforge.net/dtd/dozerbeanmapping.dtd">
+<mappings>
+   <mapping>
+   <class-a>com.techstar.dmis.dto.ZdhReceptioneqprelDto</class-a>
+   <class-b>com.techstar.dmis.dto.transfer.TransZdhReceptioneqprelDto</class-b>
+   <field>
+      <a>zzdhreceptioneqprel1.fapplicationid</a>
+      <b>trans_zzdhreceptioneqprel1</b>
+      <a-hint>com.techstar.dmis.dto.ZdhReceptionDto</a-hint>
+      <b-hint>java.lang.String</b-hint>
+   </field>
+   <field>
+      <a>zzdhreceptioneqprel2.feqpid</a>
+      <b>trans_zzdhreceptioneqprel2</b>
+      <a-hint>com.techstar.dmis.dto.EtsEquipmentDto</a-hint>
+      <b-hint>java.lang.String</b-hint>
+   </field>
+   </mapping>
+</mappings>

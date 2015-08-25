@@ -1,0 +1,12 @@
+<!--自动化值班日志-->
+<head>
+  <obj>ZdhAutoondutylogDto</obj>
+  <column  colName="ondutyno" propertyName="ondutyno" colType="string" dataTypeLen="32" isPrimary="1" visible="1" width="122" isEdit="0" textColor="#000000" className="ZdhAutoondutylogDto" refName="ondutyno" ></column>
+  <column  colName="fzdhfaultlist7.funitname" propertyName="fzdhfaultlist7" colType="string" dataTypeLen="80" isPrimary="0" visible="1" width="106" isEdit="0" textColor="#000000" className="ZdhFaultlistDto" refName="funitname" ></column>
+  <column  colName="fzdhfaultlist7.fsystemname" propertyName="fzdhfaultlist7" colType="string" dataTypeLen="80" isPrimary="0" visible="1" width="122" isEdit="0" textColor="#000000" className="ZdhFaultlistDto" refName="fsystemname" ></column>
+  <column  colName="fzdhfaultlist7.foccurredtime" propertyName="fzdhfaultlist7" colType="date" dataTypeLen="0" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="ZdhFaultlistDto" refName="foccurredtime" ></column>
+  <column  colName="fzdhfaultlist7.ffaultcontent" propertyName="fzdhfaultlist7" colType="string" dataTypeLen="2048" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="ZdhFaultlistDto" refName="ffaultcontent" ></column>
+  <column  colName="fzdhfaultlist7.frestoretime" propertyName="fzdhfaultlist7" colType="date" dataTypeLen="0" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="ZdhFaultlistDto" refName="frestoretime" ></column>
+  <column  colName="fzdhfaultlist7.freason" propertyName="fzdhfaultlist7" colType="string" dataTypeLen="2048" isPrimary="0" visible="1" width="122" isEdit="0" textColor="#000000" className="ZdhFaultlistDto" refName="freason" ></column>
+  <column  colName="fzdhfaultlist7.frepairunit" propertyName="fzdhfaultlist7" colType="string" dataTypeLen="80" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="ZdhFaultlistDto" refName="frepairunit" ></column>
+</head>

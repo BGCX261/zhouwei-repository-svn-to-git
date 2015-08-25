@@ -1,0 +1,10 @@
+<!--自动化值班日志-->
+<head>
+  <obj>ZdhAutoondutylogDto</obj>
+  <column  colName="ondutyno" propertyName="ondutyno" colType="string" dataTypeLen="32" isPrimary="1" visible="1" width="122" isEdit="0" textColor="#000000" className="ZdhAutoondutylogDto" refName="ondutyno" ></column>
+  <column  colName="zzdhrmrec2.modexplanation" propertyName="zzdhrmrec2" colType="string" dataTypeLen="400" isPrimary="0" visible="1" width="138" isEdit="0" textColor="#000000" className="ZdhCharalterrecordDto" refName="modexplanation" ></column>
+  <column  colName="zzdhrmrec2.linediagramamount" propertyName="zzdhrmrec2" colType="integer" dataTypeLen="0" isPrimary="0" visible="1" width="122" isEdit="0" textColor="#000000" className="ZdhCharalterrecordDto" refName="linediagramamount" ></column>
+  <column  colName="zzdhrmrec2.stationdiagramamount" propertyName="zzdhrmrec2" colType="integer" dataTypeLen="0" isPrimary="0" visible="1" width="122" isEdit="0" textColor="#000000" className="ZdhCharalterrecordDto" refName="stationdiagramamount" ></column>
+  <column  colName="zzdhrmrec2.sys_filltime" propertyName="zzdhrmrec2" colType="timestamp" dataTypeLen="" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="ZdhCharalterrecordDto" refName="sys_filltime" ></column>
+  <column  colName="zzdhrmrec2.sys_fille" propertyName="zzdhrmrec2" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="58" isEdit="0" textColor="#000000" className="ZdhCharalterrecordDto" refName="sys_fille" ></column>
+</head>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook V5.0//EN"
+"http://www.oasis-open.org/docbook/xml/5.0b5/dtd/docbook.dtd">
+<chapter version="5.0"
+	xmlns:xi="http://www.w3.org/2001/XInclude">
+	<title>DAO层</title>
+
+	<sect1>
+		<title>域对象DAO</title>
+		<para>域对象DAO针对域对象提供基本的增删改查接口</para>
+		<sect2>
+			<title>整体结构</title>
+
+			<graphic fileref="images/dao.jpg" format="jpg" />
+			<para>
+				引入IDomainDao接口，此接口所有方法均是通过泛型参数限定为操作某个域对象的。
+				针对不同的持久化技术，提供不同的BaseDao抽象类。上图中提供了两种BaseDao的抽象：
+				BaseHibernateDomainDao，BaseJdbcDomainDao。这些抽象类的方法，
+				都是将结果集造型为通过泛型参数指定的域对象（或域对象的集合）的。
+			</para>
+			<para>
+				IDomainDao接口除了提供基本CRUD操作外，还提供一些基本的查询方法。
+				其中会有一些查询方法是依赖于查询语句的。但是查询语句本身就是和底层数据存取技术紧密相关的，
+				所以不同的BaseDao会接收不同的查询语句，例如BaseHibernateDao接收hql查询语句，
+				而BaseJdbcDao接收sql查询语句，这个是无法避免的。
+			</para>
+		</sect2>
+		<sect2>
+			<title>接口方法描述</title>
+			<para>
+				IDomainDao接口中，主要分为了三类方法，这三类方法都是成组出现的
+				<orderedlist>
+					<listitem>countByXXX方法：count方法只针对查询条件返回统计数字，该类方法返回的是当前数据库
+					中符合指定查询条件的记录总数。</listitem>
+					<listitem>listByXXX方法：list方法返回符合查询条件的、指定页面的记录列表。</listitem>
+					<listitem>findByXXX方法：find方法是count方法和list方法的结合。find方法首先应用查询条件
+					调用count方法获得记录总数；再利用分页信息调用list方法查询指定页面的记录；最后将这两个信息包装为QueryResult
+					对象返回。</listitem>
+				</orderedlist>
+				在实际项目中，可根据具体需要调用相应的方法获取结果集。通常满足页面翻页显示时，调用findByXXX类方法直接获取带有翻页
+				信息的结果集；在其它内部业务方法查询记录时，可直接调用listByXXX类方法获取结果集，这样可以减少一次count查询，速度
+				上会有提高。
+			</para>
+		</sect2>
+		<sect2>
+			<title>分页信息类</title>
+			<para>
+				在DAO接口中，findByXXX的方法均返回一个QueryResult对象，该对象包含了分页信息及当页的结果集。结构示意图如下：
+			</para>
+			<graphic fileref="images/page.jpg" format="jpg" />
+		</sect2>
+		<xi:include href="hibernate_dao.xml" />
+		<xi:include href="jdbc_dao.xml" />
+		<sect2>
+			<title>使用方式</title>
+			<para>
+				下面通过一个简单的样例来描述一下在项目中如何规划DAO层。具体使用方式请参见Demo工程的文档。
+			</para>
+			<graphic fileref="images/dao_usage.jpg" format="jpg" />
+			<para>
+				上图中蓝绿底色区域中是一个针对域对象UserDO的演示。针对UserDO，会有一个IUserDao接口。
+				项目初期可能会基于Hibernate实现一个UserHibernateDao，此类从BaseHibernateDao
+				继承后就默认拥有了针对UserDO的基本CRUD操作，项目可以根据需要再扩展其它方法。
+			</para>
+			<para>
+				如果需要将Hibernate技术替换为JDBC技术，那么需要再针对IUserDao接口实现一个UserJdbcDao，
+				此类从BaseJdbcDao继承。此时基本的CRUD方法是相同的，只需要重新实现项目自定义的其它方法即可。
+			</para>
+			<para>这样就做到了以最小的代价实现可灵活替换DAO层。</para>
+		</sect2>
+	</sect1>
+
+
+</chapter>

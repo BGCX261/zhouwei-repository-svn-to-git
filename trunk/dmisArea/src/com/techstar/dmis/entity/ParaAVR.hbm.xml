@@ -1,0 +1,133 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="com.techstar.dmis.entity">
+	<class name="ParaAVR" table="DMIS_ParaAVR" dynamic-insert="true" dynamic-update="true" optimistic-lock="version">
+    <id name="feqpid" type="string">
+      <column name="feqpid" sql-type="varchar(80)" not-null="true"/>
+      <generator class="assigned"/>
+    </id>
+
+ 	<version name="version" column="VERSION" unsaved-value="undefined"/>
+  
+   <property name="fcorrectionstyle" type="integer"  not-null="false">
+    <column name="fcorrectionstyle"  
+		length="10"        precision="2"       
+    />
+</property>	
+    <property name="fratiogain" type="integer"  not-null="false">
+    <column name="fratiogain"  
+		length="10"        precision="2"       
+    />
+</property>	
+    <property name="fvolchecktimes" type="integer"  not-null="false">
+    <column name="fvolchecktimes"  
+		length="10"        precision="2"       
+    />
+</property>	
+    <property name="fdefinitegain" type="integer"  not-null="false">
+    <column name="fdefinitegain"  
+		length="10"        precision="2"       
+    />
+</property>	
+    <property name="fdifferentialgain" type="integer"  not-null="false">
+    <column name="fdifferentialgain"  
+		length="10"        precision="2"       
+    />
+</property>	
+    <property name="fdefinitetimes" type="integer"  not-null="false">
+    <column name="fdefinitetimes"  
+		length="10"        precision="2"       
+    />
+</property>	
+    <property name="fdifferentialtimes" type="integer"  not-null="false">
+    <column name="fdifferentialtimes"  
+		length="10"        precision="2"       
+    />
+</property>	
+    <property name="fencourageratio" type="integer"  not-null="false">
+    <column name="fencourageratio"  
+		length="10"        precision="2"       
+    />
+</property>	
+    <property name="fscrminlimitangle" type="integer"  not-null="false">
+    <column name="fscrminlimitangle"  
+		length="10"        precision="2"       
+    />
+</property>	
+    <property name="fscrmaxlimitangle" type="integer"  not-null="false">
+    <column name="fscrmaxlimitangle"  
+		length="10"        precision="2"       
+    />
+</property>	
+    <property name="fadoptcosinepri" type="string"  not-null="false">
+    <column name="fadoptcosinepri"  
+		length="2"               
+    />
+</property>	
+    <property name="fpssgain" type="integer"  not-null="false">
+    <column name="fpssgain"  
+		length="10"        precision="2"       
+    />
+</property>	
+    <property name="ffirstsepgain" type="integer"  not-null="false">
+    <column name="ffirstsepgain"  
+		length="10"        precision="2"       
+    />
+</property>	
+    <property name="ffirstseptimes" type="integer"  not-null="false">
+    <column name="ffirstseptimes"  
+		length="10"        precision="2"       
+    />
+</property>	
+    <property name="fsecondsepgain" type="integer"  not-null="false">
+    <column name="fsecondsepgain"  
+		length="10"        precision="2"       
+    />
+</property>	
+    <property name="fsecondseptimes" type="integer"  not-null="false">
+    <column name="fsecondseptimes"  
+		length="10"        precision="2"       
+    />
+</property>	
+    <property name="fleaddelaytimes1" type="integer"  not-null="false">
+    <column name="fleaddelaytimes1"  
+		length="10"        precision="2"       
+    />
+</property>	
+    <property name="fleaddelaytimes2" type="integer"  not-null="false">
+    <column name="fleaddelaytimes2"  
+		length="10"        precision="2"       
+    />
+</property>	
+    <property name="fleaddelaytimes3" type="integer"  not-null="false">
+    <column name="fleaddelaytimes3"  
+		length="10"        precision="2"       
+    />
+</property>	
+    <property name="fleaddelaytimes4" type="integer"  not-null="false">
+    <column name="fleaddelaytimes4"  
+		length="10"        precision="2"       
+    />
+</property>	
+    <property name="fleaddelaytimes5" type="integer"  not-null="false">
+    <column name="fleaddelaytimes5"  
+		length="10"        precision="2"       
+    />
+</property>	
+    <property name="fleaddelaytimes6" type="integer"  not-null="false">
+    <column name="fleaddelaytimes6"  
+		length="10"        precision="2"       
+    />
+</property>	
+    <property name="fpssoutlimit" type="integer"  not-null="false">
+    <column name="fpssoutlimit"  
+		length="10"        precision="2"       
+    />
+</property>	
+  
+	
+ <many-to-one name="zparaavr2" class="EtsEquipment"   column="FEqpID" cascade="delete-orphan"></many-to-one>
+     </class>
+
+</hibernate-mapping>
+

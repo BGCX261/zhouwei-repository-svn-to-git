@@ -1,0 +1,51 @@
+<!DOCTYPE mappings PUBLIC "-//DOZER//DTD MAPPINGS//EN"
+"http://dozer.sourceforge.net/dtd/dozerbeanmapping.dtd">
+<mappings>
+   <mapping>
+   <class-a>com.techstar.dmis.dto.DdDoutageplanDto</class-a>
+   <class-b>com.techstar.dmis.dto.transfer.TransDdDoutageplanDto</class-b>
+   <field>
+      <a>fddrepairdetail2</a>
+      <b>fddrepairdetail2</b>
+      <a-hint>com.techstar.dmis.dto.DdRepairdetailDto</a-hint>
+      <b-hint>com.techstar.dmis.dto.transfer.TransDdRepairdetailDto</b-hint>
+   </field>
+   <field>
+      <a>fdddayplandelaylist1</a>
+      <b>fdddayplandelaylist1</b>
+      <a-hint>com.techstar.dmis.dto.DdDayplandelaylistDto</a-hint>
+      <b-hint>com.techstar.dmis.dto.transfer.TransDdDayplandelaylistDto</b-hint>
+   </field>
+   <field>
+      <a>fdddayplanexcutelist1</a>
+      <b>fdddayplanexcutelist1</b>
+      <a-hint>com.techstar.dmis.dto.DdDayplanexcutelistDto</a-hint>
+      <b-hint>com.techstar.dmis.dto.transfer.TransDdDayplanexcutelistDto</b-hint>
+   </field>
+   <field>
+      <a>fddfsmodechangelist4</a>
+      <b>fddfsmodechangelist4</b>
+      <a-hint>com.techstar.dmis.dto.DdfsModechangelistDto</a-hint>
+      <b-hint>com.techstar.dmis.dto.transfer.TransDdfsModechangelistDto</b-hint>
+   </field>
+   <field>
+      <a>fdayplancoopraterel1</a>
+      <b>fdayplancoopraterel1</b>
+      <a-hint>com.techstar.dmis.dto.DayplancoopraterelDto</a-hint>
+      <b-hint>com.techstar.dmis.dto.transfer.TransDayplancoopraterelDto</b-hint>
+   </field>
+   <field>
+      <a>fdddayplanfixvaluerel2</a>
+      <b>fdddayplanfixvaluerel2</b>
+      <a-hint>com.techstar.dmis.dto.DdDayplanfixvaluerelDto</a-hint>
+      <b-hint>com.techstar.dmis.dto.transfer.TransDdDayplanfixvaluerelDto</b-hint>
+   </field>
+   <field>
+      <a>fzdhopexaminelist6</a>
+      <b>fzdhopexaminelist6</b>
+      <a-hint>com.techstar.dmis.dto.ZdhOpexaminelistDto</a-hint>
+      <b-hint>com.techstar.dmis.dto.transfer.TransZdhOpexaminelistDto</b-hint>
+   </field>
+ 
+   </mapping>
+</mappings>

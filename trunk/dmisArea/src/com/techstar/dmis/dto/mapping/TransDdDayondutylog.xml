@@ -1,0 +1,14 @@
+<!DOCTYPE mappings PUBLIC "-//DOZER//DTD MAPPINGS//EN"
+"http://dozer.sourceforge.net/dtd/dozerbeanmapping.dtd">
+<mappings>
+   <mapping>
+   <class-a>com.techstar.dmis.dto.DdDayondutylogDto</class-a>
+   <class-b>com.techstar.dmis.dto.transfer.TransDdDayondutylogDto</class-b>
+   <field>
+      <a>fddoperationnotebook5</a>
+      <b>fddoperationnotebook5</b>
+      <a-hint>com.techstar.dmis.dto.DdOperationnotebookDto</a-hint>
+      <b-hint>com.techstar.dmis.dto.transfer.TransDdOperationnotebookDto</b-hint>
+   </field>
+   </mapping>
+</mappings>

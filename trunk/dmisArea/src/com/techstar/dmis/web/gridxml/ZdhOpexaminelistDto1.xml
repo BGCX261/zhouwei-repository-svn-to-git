@@ -1,0 +1,11 @@
+<!--日计划核查表-->
+<head>
+  <obj>ZdhOpexaminelistDto</obj>
+  <column  colName="examinationid" propertyName="examinationid" colType="string" dataTypeLen="32" isPrimary="1" visible="1" width="106" isEdit="0" textColor="#000000" className="ZdhOpexaminelistDto" refName="examinationid" ></column>
+  <column  colName="zzdhopexaminelist6.fstationname" propertyName="zzdhopexaminelist6" colType="string" dataTypeLen="80" isPrimary="0" visible="1" width="58" isEdit="0" textColor="#000000" className="DdDoutageplanDto" refName="fstationname" ></column>
+  <column  colName="zzdhopexaminelist6.fworkarea" propertyName="zzdhopexaminelist6" colType="string" dataTypeLen="300" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="DdDoutageplanDto" refName="fworkarea" ></column>
+  <column  colName="zzdhopexaminelist6.fapplystime" propertyName="zzdhopexaminelist6" colType="timestamp" dataTypeLen="0" isPrimary="0" visible="1" width="138" isEdit="0" textColor="#000000" className="DdDoutageplanDto" refName="fapplystime" ></column>
+  <column  colName="zzdhopexaminelist6.fapplyetime" propertyName="zzdhopexaminelist6" colType="timestamp" dataTypeLen="0" isPrimary="0" visible="1" width="138" isEdit="0" textColor="#000000" className="DdDoutageplanDto" refName="fapplyetime" ></column>
+  <column  colName="zzdhopexaminelist6.fapplyunit" propertyName="zzdhopexaminelist6" colType="string" dataTypeLen="300" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="DdDoutageplanDto" refName="fapplyunit" ></column>
+  <column  colName="zzdhopexaminelist6.workcontent" propertyName="zzdhopexaminelist6" colType="string" dataTypeLen="600" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="DdDoutageplanDto" refName="workcontent" ></column>
+</head>

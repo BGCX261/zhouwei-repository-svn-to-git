@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-Version: 1.0.0
+Bundle-Name: Webx2_core_memcached Bundle
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: webx2_core_memcached
+Export-Package: com.sitechasia.webx.components.cache.memcached
+Import-Package: net.sf.ehcache;version="[1.5.0,1.5.0]",
+ org.apache.commons.lang;version="[2.1.0,2.1.0]",
+ org.apache.commons.logging;version="[1.1.1,1.1.1]",
+ org.apache.commons.logging.impl;version="[1.1.1,1.1.1]",
+ org.apache.log4j;version="[1.2.15,1.2.15]",
+ org.hibernate.cache
+
+

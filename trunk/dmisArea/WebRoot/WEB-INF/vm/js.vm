@@ -1,0 +1,19 @@
+//必须固定名称为onSaveForm，否则工具栏按钮将不执行任何动作
+
+function onSaveForm(contextPath){
+	if (!validate${mentity.entityBean.getUpEnName()}Form(document.${mentity.entityBean.getLowEnName()}Form)){
+		return false;
+	}
+	url = contextPath + "${url}.do?method=saveDetail";
+	document.all.${mentity.entityBean.getLowEnName()}Form.action = url;
+	document.all.${mentity.entityBean.getLowEnName()}Form.submit();
+}
+
+//必须固定名称为onResetForm，否则工具栏按钮将不执行任何动作
+function onResetForm(contextPath){
+	document.all.${mentity.entityBean.getLowEnName()}Form.reset();
+}
+
+#foreach($script in $scripts)
+	$script
+#end

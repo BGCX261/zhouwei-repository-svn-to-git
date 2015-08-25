@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN"
+    "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+    <!-- 词典使用-->
+    <bean name="/dictionary" class="com.techstar.framework.demo.dictionary.web.action.DictionaryBaseAction" singleton="false" autowire="byType" />
+	<bean name="/dmisdictionary" class="com.techstar.framework.demo.dictionary.web.action.DictionaryBaseAction" singleton="false" autowire="byType" />
+	<!-- 工作流管理 -->
+	<bean name="/workflow" class="com.techstar.framework.demo.workflow.web.action.WorkflowAction" singleton="false" autowire="byType"/>
+	<bean name="/wfmanager" class="com.techstar.framework.service.workflow.manager.WFManagerAction" singleton="false" autowire="byType"/>
+	<bean name="/resourcetree" class="com.techstar.framework.service.workflow.manager.ResourceTreeAction" singleton="false" autowire="byType"/>
+	<!-- 高 -->
+	<bean name="/ggPerson" class="com.techstar.dmis.web.action.GgPersonAction" singleton="false"
+		autowire="byType"/>
+	<bean name="/ggRelperson" class="com.techstar.dmis.web.action.GgRelpersonAction"
+		singleton="false" autowire="byType"/>
+	<bean name="/stdElectricstamp" class="com.techstar.dmis.web.action.StdElectricstampAction"
+		singleton="false" autowire="byType"/>
+
+	<bean name="/systemdic" class="com.techstar.dmis.web.action.SystemdicAction" singleton="false"
+		autowire="byType"/>
+	<bean name="/ddDoutageplan" class="com.techstar.dmis.web.action.DdDoutageplanAction"
+		singleton="false" autowire="byType"/>
+   
+	<bean name="/stdStation" class="com.techstar.dmis.web.action.StdStationAction" singleton="false"
+		autowire="byType"/>
+			<bean name="/stdDispatchunit"  class="com.techstar.dmis.web.action.StdDispatchunitAction" singleton="false" autowire="byType"/>
+	<!-- 高end -->
+	<bean name="/dmisdictionary" class="com.techstar.dmis.web.action.DictionaryBaseAction"
+		singleton="false" autowire="byType"/>
+	<bean name="/zdhCharalterrecord" class="com.techstar.dmis.web.action.ZdhCharalterrecordAction"
+		singleton="false" autowire="byType"/>
+	<!--周玮-->
+	<bean name="/ddCutofflist" class="com.techstar.dmis.web.action.DdCutofflistAction"
+		singleton="false" autowire="byType"/>
+	<bean name="/ddCutofftitle" class="com.techstar.dmis.web.action.DdCutofftitleAction"
+		singleton="false" autowire="byType"/>
+	<bean name="/ddMoutageplan" class="com.techstar.dmis.web.action.DdMoutageplanAction"
+		singleton="false" autowire="byType"/>
+	<bean name="/ddRepairrisklist" class="com.techstar.dmis.web.action.DdRepairrisklistAction"
+		singleton="false" autowire="byType"/>
+	<bean name="/ddAccidentbrief" class="com.techstar.dmis.web.action.DdAccidentbriefAction"
+		singleton="false" autowire="byType"/>
+	<bean name="/ddPremethod" class="com.techstar.dmis.web.action.DdPremethodAction"
+		singleton="false" autowire="byType"/>
+	<!--周玮end-->
+	<!-- gcy -->
+	<bean name="/ddClassondutylog" class="com.techstar.dmis.web.action.DdClassondutylogAction"
+		singleton="false" autowire="byType"/>
+	<!-- gcyend -->
+	<bean name="/zdhEligiblermrate" class="com.techstar.dmis.web.action.ZdhEligiblermrateAction"
+		singleton="false" autowire="byType"/>
+	<bean name="/zdhOpexaminelist" class="com.techstar.dmis.web.action.ZdhOpexaminelistAction"
+		singleton="false" autowire="byType"/>
+	<!-- gcy -->
+	<bean name="/ddWaterheight" class="com.techstar.dmis.web.action.DdWaterheightAction"
+		singleton="false" autowire="byType"/>
+	<bean name="/ddWaterproofplan" class="com.techstar.dmis.web.action.DdWaterproofplanAction"
+		singleton="false" autowire="byType"/>
+	<bean name="/ddPowerchangrecord" class="com.techstar.dmis.web.action.DdPowerchangrecordAction"
+		singleton="false" autowire="byType"/>
+	<!-- gcyend -->
+	<bean name="/zdhRmrec" class="com.techstar.dmis.web.action.ZdhRmrecAction" singleton="false"
+		autowire="byType"/>
+
+	<!-- gcy -->
+	<bean name="/ddSwitchseqbill" class="com.techstar.dmis.web.action.DdSwitchseqbillAction"
+		singleton="false" autowire="byType"/>
+	<!-- gcyend -->
+	<bean name="/fsLfparalist" class="com.techstar.dmis.web.action.FsLfparalistAction"
+		singleton="false" autowire="byType"/>
+	<!-- gcy -->
+	<bean name="/ddHloadrecord" class="com.techstar.dmis.web.action.DdHloadrecordAction"
+		singleton="false" autowire="byType"/>
+	<!-- gcyend -->
+	<bean name="/zdhReception" class="com.techstar.dmis.web.action.ZdhReceptionAction"
+		singleton="false" autowire="byType"/>
+	<bean name="/zdhMachineworklist" class="com.techstar.dmis.web.action.ZdhMachineworklistAction"
+		singleton="false" autowire="byType"/>
+	<bean name="/fsApprovebook" class="com.techstar.dmis.web.action.FsApprovebookAction"
+		singleton="false" autowire="byType"/>
+	<bean name="/zdhRsrecord" class="com.techstar.dmis.web.action.ZdhRsrecordAction"
+		singleton="false" autowire="byType"/>
+	<bean name="/ddEnsuringpsmanage" class="com.techstar.dmis.web.action.DdEnsuringpsmanageAction"
+		singleton="false" autowire="byType"/>
+	<bean name="/zdhWorkbill" class="com.techstar.dmis.web.action.ZdhWorkbillAction"
+		singleton="false" autowire="byType"/>
+	<!-- gcy -->
+	<bean name="/ddHpoweroperaterrd" class="com.techstar.dmis.web.action.DdHpoweroperaterrdAction"
+		singleton="false" autowire="byType"/>
+	<!-- gcyend -->
+	<bean name="/zdhSequencetable" class="com.techstar.dmis.web.action.ZdhSequencetableAction"
+		singleton="false" autowire="byType"/>
+	<bean name="/fsRmchangbill" class="com.techstar.dmis.web.action.FsRmchangbillAction"
+		singleton="false" autowire="byType"/>
+	<bean name="/zdhAutoondutylog" class="com.techstar.dmis.web.action.ZdhAutoondutylogAction"
+		singleton="false" autowire="byType"/>
+	<bean name="/zdhFaultlist" class="com.techstar.dmis.web.action.ZdhFaultlistAction"
+		singleton="false" autowire="byType"/>
+	<bean name="/zdhTransrecord" class="com.techstar.dmis.web.action.ZdhTransrecordAction"
+		singleton="false" autowire="byType"/>
+	<bean name="/zdhSrapplication" class="com.techstar.dmis.web.action.ZdhSrapplicationAction"
+		singleton="false" autowire="byType"/>
+	<!-- gcy -->
+	<bean name="/ddSasusprecord" class="com.techstar.dmis.web.action.DdSasusprecordAction"
+		singleton="false" autowire="byType"/>
+	<!-- gcyend -->
+	<!--   <bean name="/etsEquipment"  class="com.techstar.dmis.web.action.EtsEquipmentAction" singleton="false" autowire="byType"/>-->
+	<bean name="/repRepresult" class="com.techstar.dmis.web.action.RepRepresultAction"
+		singleton="false" autowire="byType"/>
+	<bean name="/ddDayondutylog" class="com.techstar.dmis.web.action.DdDayondutylogAction"
+		singleton="false" autowire="byType"/>
+	<bean name="/stdManufacturer" class="com.techstar.dmis.web.action.StdManufacturerAction"
+		singleton="false" autowire="byType"/>
+	<bean name="/ddWoutageplan" class="com.techstar.dmis.web.action.DdWoutageplanAction"
+		singleton="false" autowire="byType"/>
+	<bean name="/bhFaultlist" class="com.techstar.dmis.web.action.BhFaultlistAction"
+		singleton="false" autowire="byType"/>
+	<bean name="/fsLoaddatalist" class="com.techstar.dmis.web.action.FsLoaddatalistAction"
+		singleton="false" autowire="byType"/>
+	<bean name="/daymodeanalyse" class="com.techstar.dmis.web.action.DaymodeanalyseAction"
+		singleton="false" autowire="byType"/>
+	<!--  	 <bean name="/fsEqpreplace"  class="com.techstar.dmis.web.action.FsEqpreplaceAction" singleton="false" autowire="byType"/> -->
+	<bean name="/bhActionrecord" class="com.techstar.dmis.web.action.BhActionrecordAction"
+		singleton="false" autowire="byType"/>
+	<bean name="/stdLine" class="com.techstar.dmis.web.action.StdLineAction" singleton="false"
+		autowire="byType"/>
+	<bean name="/bhAsregulate" class="com.techstar.dmis.web.action.BhAsregulateAction"
+		singleton="false" autowire="byType"/>
+	<bean name="/stdModel" class="com.techstar.dmis.web.action.StdModelAction" singleton="false"
+		autowire="byType"/>
+	<bean name="/bhFixedvaluebill" class="com.techstar.dmis.web.action.BhFixedvaluebillAction"
+		singleton="false" autowire="byType"/>
+	<bean name="/todolist" class="com.techstar.dmis.web.action.TodolistAction" singleton="false"
+		autowire="byType"/>
+</beans>

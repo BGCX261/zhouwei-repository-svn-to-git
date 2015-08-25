@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee web-app_2_4.xsd"
+    version="2.4">
+    <!-- modify by caojian version2.3~version2.4 -->
+	<display-name>framework</display-name>
+	<!-- 加载spring配置文件 -->
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>
+			/WEB-INF/spring/applicationContext.xml,
+			/WEB-INF/spring/applicationContext_${proname}_dao.xml,
+			/WEB-INF/spring/applicationContext_${proname}_service.xml
+		</param-value>
+	</context-param>
+
+
+		<!--由Sprng载入的Log4j配置文件位置-->
+	<context-param>
+		<param-name>log4jConfigLocation</param-name>
+		<param-value>/WEB-INF/resources/log4j.xml</param-value>
+	</context-param>
+         <!-- web异常统一处理的filter -->
+
+	<filter>
+		<filter-name>exceptionAndCharsetEncodingFilter</filter-name>
+		<filter-class>
+			com.techstar.framework.web.servlet.WebExceptionAndCharsetEncodingFilter
+		</filter-class>
+		<init-param>
+				<param-name>Charset</param-name>
+				<param-value>utf-8</param-value>
+        </init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>exceptionAndCharsetEncodingFilter</filter-name>
+		<url-pattern>*.do</url-pattern>
+	</filter-mapping>
+
+	<listener>
+		<listener-class>
+			org.springframework.web.context.ContextLoaderListener
+		</listener-class>
+	</listener>
+
+	<!-- Web 项目 Spring 加载 Log4j 的监听 -->
+	<listener>
+		<listener-class>
+			org.springframework.web.util.Log4jConfigListener
+		</listener-class>
+	</listener>
+
+	<!-- struts ActionServlet-->
+	<servlet>
+		<servlet-name>action</servlet-name>
+		<servlet-class>
+			org.apache.struts.action.ActionServlet
+		</servlet-class>
+		<init-param>
+			<param-name>config</param-name>
+			<param-value>
+				/WEB-INF/struts/struts-config.xml,
+				/WEB-INF/struts/struts-config-${proname}.xml
+			</param-value>
+		</init-param>
+		<init-param>
+			<param-name>validate</param-name>
+			<param-value>true</param-value>
+		</init-param>
+		<load-on-startup>2</load-on-startup>
+	</servlet>
+
+	<!-- DWR(version1.1.3)调用处理servlet -->
+	<servlet>
+		<servlet-name>dwr-invoker</servlet-name>
+		<display-name>DWR Servlet</display-name>
+		<servlet-class>uk.ltd.getahead.dwr.DWRServlet</servlet-class>
+		<init-param> 
+			<param-name>config-globel</param-name> 
+			<param-value>WEB-INF/spring/dwr.xml</param-value> 
+		</init-param> 
+		<init-param>
+			<param-name>debug</param-name>
+			<param-value>true</param-value>
+		</init-param>
+		<init-param>
+			<param-name>scriptCompressed</param-name>
+			<param-value>false</param-value>
+		</init-param>
+		<load-on-startup>3</load-on-startup>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>action</servlet-name>
+		<url-pattern>*.do</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>dwr-invoker</servlet-name>
+		<url-pattern>/dwr/*</url-pattern>
+	</servlet-mapping>
+
+	<mime-mapping>
+		<extension>wsdl</extension>
+		<mime-type>text/xml</mime-type>
+	</mime-mapping>
+	<mime-mapping>
+		<extension>xsd</extension>
+		<mime-type>text/xml</mime-type>
+	</mime-mapping>
+	
+	<welcome-file-list>
+		<welcome-file>application/main.jsp</welcome-file>
+	</welcome-file-list>
+	
+	<taglib>
+		<taglib-uri>struts-bean.tld</taglib-uri>
+		<taglib-location>
+			/WEB-INF/tlds/struts/struts-bean.tld
+		</taglib-location>
+	</taglib>
+	<taglib>
+		<taglib-uri>struts-html.tld</taglib-uri>
+		<taglib-location>
+			/WEB-INF/tlds/struts/struts-html.tld
+		</taglib-location>
+	</taglib>
+	<taglib>
+		<taglib-uri>struts-logic.tld</taglib-uri>
+		<taglib-location>
+			/WEB-INF/tlds/struts/struts-logic.tld
+		</taglib-location>
+	</taglib>
+	<taglib>
+		<taglib-uri>struts-nested.tld</taglib-uri>
+		<taglib-location>
+			/WEB-INF/tlds/struts/struts-nested.tld
+		</taglib-location>
+	</taglib>
+
+	<taglib>
+		<taglib-uri>struts-tiles.tld</taglib-uri>
+		<taglib-location>
+			/WEB-INF/tlds/struts/struts-tiles.tld
+		</taglib-location>
+	</taglib>
+	<taglib>
+		<taglib-uri>http://java.sun.com/jsp/jstl/core</taglib-uri>
+		<taglib-location>/WEB-INF/tlds/jstl/c.tld</taglib-location>
+	</taglib>
+	<taglib>
+		<taglib-uri>http://java.sun.com/jsp/jstl/fmt</taglib-uri>
+		<taglib-location>/WEB-INF/tlds/jstl/fmt.tld</taglib-location>
+	</taglib>
+	<taglib>
+		<taglib-uri>jhop-tag.tld</taglib-uri>
+		<taglib-location>/WEB-INF/tlds/jhop/jhop-tag.tld</taglib-location>
+	</taglib>
+	<taglib>
+		<taglib-uri>http://displaytag.sf.net</taglib-uri>
+		<taglib-location>
+			/WEB-INF/tlds/displaytag/displaytag-12.tld
+		</taglib-location>
+	</taglib>
+
+</web-app>

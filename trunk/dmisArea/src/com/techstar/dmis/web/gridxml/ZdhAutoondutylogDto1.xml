@@ -1,0 +1,13 @@
+<!--自动化值班日志-->
+<head>
+  <obj>ZdhAutoondutylogDto</obj>
+  <column  colName="ondutyno" propertyName="ondutyno" colType="string" dataTypeLen="32" isPrimary="1" visible="0" width="122" isEdit="0" textColor="#000000" className="ZdhAutoondutylogDto" refName="ondutyno" ></column>
+  <column  colName="fzdhmachineworklist1.jobid" propertyName="fzdhmachineworklist1" colType="string" dataTypeLen="32" isPrimary="1" visible="0" width="74" isEdit="0" textColor="#000000" className="ZdhMachineworklistDto" refName="jobid" ></column>
+  <column  colName="fzdhmachineworklist1.workingtime" propertyName="fzdhmachineworklist1" colType="date" dataTypeLen="0" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="ZdhMachineworklistDto" refName="workingtime" ></column>
+  <column  colName="fzdhmachineworklist1.content" propertyName="fzdhmachineworklist1" colType="string" dataTypeLen="200" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="ZdhMachineworklistDto" refName="content" ></column>
+  <column  colName="fzdhmachineworklist1.workingsources" propertyName="fzdhmachineworklist1" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="ZdhMachineworklistDto" refName="workingsources" ></column>
+  <column  colName="fzdhmachineworklist1.sys_fille" propertyName="fzdhmachineworklist1" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="58" isEdit="0" textColor="#000000" className="ZdhMachineworklistDto" refName="sys_fille" ></column>
+  <column  colName="fzdhmachineworklist1.sys_filltime" propertyName="fzdhmachineworklist1" colType="timestamp" dataTypeLen="" isPrimary="0" visible="0" width="74" isEdit="0" textColor="#000000" className="ZdhMachineworklistDto" refName="sys_filltime" ></column>
+  <column  colName="fzdhmachineworklist1.jobcategory" propertyName="fzdhmachineworklist1" colType="string" dataTypeLen="64" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="ZdhMachineworklistDto" refName="jobcategory" ></column>
+  <column  colName="fzdhmachineworklist1.fexcutestatus" propertyName="fzdhmachineworklist1" colType="string" dataTypeLen="64" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="ZdhMachineworklistDto" refName="fexcutestatus" ></column>
+</head>

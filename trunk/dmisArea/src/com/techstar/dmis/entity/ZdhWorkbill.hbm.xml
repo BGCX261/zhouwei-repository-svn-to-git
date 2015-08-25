@@ -1,0 +1,176 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="com.techstar.dmis.entity">
+	<class name="ZdhWorkbill" table="DMIS_ZDH_WorkBill" dynamic-insert="true" dynamic-update="true" optimistic-lock="version">
+    <id name="workbillid" type="string">
+      <column name="workbillid" sql-type="varchar(32)" not-null="true"/>
+      <generator class="assigned"/>
+    </id>
+
+ 	<version name="version" column="VERSION" unsaved-value="undefined"/>
+ 	
+ 
+    <property name="workingbillno" type="string"  not-null="true">
+    <column name="workingbillno"  
+		length="40"               
+    />
+</property>	
+    <property name="applicationunit" type="string"  not-null="false">
+    <column name="applicationunit"  
+		length="40"               
+    />
+</property>	
+    <property name="applicantedtime" type="timestamp"  not-null="false">
+    <column name="applicantedtime"  
+		               
+    />
+</property>	
+    <property name="applicants" type="string"  not-null="false">
+    <column name="applicants"  
+		length="40"               
+    />
+</property>	
+    <property name="applicantsnum" type="integer"  not-null="false">
+    <column name="applicantsnum"  
+    	               
+    />
+</property>	
+    <property name="workingcharge" type="string"  not-null="false">
+    <column name="workingcharge"  
+		length="40"               
+    />
+</property>	
+    <property name="worktime" type="date"  not-null="false">
+    <column name="worktime"  
+		               
+    />
+</property>	
+    <property name="workcontent" type="string"  not-null="false">
+    <column name="workcontent"  
+		length="1000"               
+    />
+</property>	
+    <property name="relativesystem" type="string"  not-null="false">
+    <column name="relativesystem"  
+		length="80"               
+    />
+</property>	
+    <property name="relativeequipment" type="string"  not-null="false">
+    <column name="relativeequipment"  
+		length="80"               
+    />
+</property>	
+    <property name="dangerouspoint" type="string"  not-null="false">
+    <column name="dangerouspoint"  
+		length="1000"               
+    />
+</property>	
+    <property name="safetyremarks" type="org.springframework.orm.hibernate3.support.BlobByteArrayType"  not-null="true">
+    <column name="safetyremarks"  
+		length="1000"               
+    />
+</property>	
+    <property name="remarks" type="string"  not-null="false">
+    <column name="remarks"  
+		length="200"               
+    />
+</property>	
+    <property name="workingbilltype" type="string"  not-null="false">
+    <column name="workingbilltype"  
+		length="40"               
+    />
+</property>	
+    <property name="workingbillreason" type="string"  not-null="false">
+    <column name="workingbillreason"  
+		length="40"               
+    />
+</property>	
+    <property name="workingbillresponsdept" type="string"  not-null="false">
+    <column name="workingbillresponsdept"  
+		length="40"               
+    />
+</property>	
+    <property name="analysereport" type="org.springframework.orm.hibernate3.support.BlobByteArrayType"  not-null="false">
+    <column name="analysereport"  
+		               
+    />
+</property>	
+    <property name="reason" type="string"  not-null="false">
+    <column name="reason"  
+		length="100"               
+    />
+</property>	
+    <property name="workbegintime" type="timestamp"  not-null="false">
+    <column name="workbegintime"  
+		               
+    />
+</property>	
+    <property name="passchecker" type="string"  not-null="false">
+    <column name="passchecker"  
+		length="40"               
+    />
+</property>	
+    <property name="passchecktime" type="date"  not-null="false">
+    <column name="passchecktime"  
+		               
+    />
+</property>	
+    <property name="fapprover" type="string"  not-null="false">
+    <column name="fapprover"  
+		length="40"               
+    />
+</property>	
+    <property name="fallower" type="string"  not-null="false">
+    <column name="fallower"  
+		length="40"               
+    />
+</property>	
+    <property name="sys_fille" type="string"  not-null="false">
+    <column name="sys_fille"  
+		length="40"               
+    />
+</property>	
+    <property name="sys_filldept" type="string"  not-null="false">
+    <column name="sys_filldept"  
+		length="80"               
+    />
+</property>	
+    <property name="sys_filltime" type="timestamp"  not-null="false">
+    <column name="sys_filltime"  
+		               
+    />
+</property>	
+    <property name="sys_isvalid" type="integer"  not-null="false">
+    <column name="sys_isvalid"  
+		               
+    />
+</property>	
+    <property name="sys_dataowner" type="string"  not-null="false">
+    <column name="sys_dataowner"  
+		length="40"               
+    />
+</property>	
+    <property name="fexcutestatus" type="string"  >
+    <column name="fexcutestatus"  
+		length="200"               
+    />
+</property>	
+<property name="fstatus" type="string"  >
+    <column name="fstatus"  
+		length="40"               
+    />
+</property>	
+    <property name="ispassed" type="string"  >
+    <column name="ispassed"  
+		length="200"               
+    />
+</property>	
+  
+	
+     <many-to-one name="zzdhworkbill2" class="ZdhAutoondutylog"   column="OndutyNo" cascade="none"></many-to-one>
+    
+      <many-to-one name="zzdhworkbill4" class="EtsEquipment"   column="autosystemid" cascade="none"></many-to-one>
+     </class>
+
+</hibernate-mapping>
+

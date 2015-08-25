@@ -1,0 +1,14 @@
+<!DOCTYPE mappings PUBLIC "-//DOZER//DTD MAPPINGS//EN"
+"http://dozer.sourceforge.net/dtd/dozerbeanmapping.dtd">
+<mappings>
+   <mapping>
+   <class-a>com.techstar.dmis.dto.DdCutofftitleDto</class-a>
+   <class-b>com.techstar.dmis.dto.transfer.TransDdCutofftitleDto</class-b>
+   <field>
+      <a>fddcutoffsequence5</a>
+      <b>fddcutoffsequence5</b>
+      <a-hint>com.techstar.dmis.dto.DdCutoffsequenceDto</a-hint>
+      <b-hint>com.techstar.dmis.dto.transfer.TransDdCutoffsequenceDto</b-hint>
+   </field>
+   </mapping>
+</mappings>

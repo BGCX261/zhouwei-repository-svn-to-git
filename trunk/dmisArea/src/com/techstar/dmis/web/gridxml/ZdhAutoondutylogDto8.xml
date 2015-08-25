@@ -1,0 +1,13 @@
+<!--自动化值班日志-->
+<head>
+  <obj>ZdhAutoondutylogDto</obj>
+  <column  colName="ondutyno" propertyName="ondutyno" colType="string" dataTypeLen="32" isPrimary="1" visible="0" width="122" isEdit="0" textColor="#000000" className="ZdhAutoondutylogDto" refName="ondutyno" ></column>
+  <column  colName="fzdhtransrecord3.transrecordno" propertyName="fzdhtransrecord3" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="138" isEdit="0" textColor="#000000" className="ZdhTransrecordDto" refName="transrecordno" ></column>
+  <column  colName="fzdhtransrecord3.fstationname" propertyName="fzdhtransrecord3" colType="string" dataTypeLen="80" isPrimary="0" visible="1" width="42" isEdit="0" textColor="#000000" className="ZdhTransrecordDto" refName="fstationname" ></column>
+  <column  colName="fzdhtransrecord3.transreason" propertyName="fzdhtransrecord3" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="ZdhTransrecordDto" refName="transreason" ></column>
+  <column  colName="fzdhtransrecord3.transdate" propertyName="fzdhtransrecord3" colType="date" dataTypeLen="0" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="ZdhTransrecordDto" refName="transdate" ></column>
+  <column  colName="fzdhtransrecord3.transunit" propertyName="fzdhtransrecord3" colType="string" dataTypeLen="80" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="ZdhTransrecordDto" refName="transunit" ></column>
+  <column  colName="fzdhtransrecord3.explanation" propertyName="fzdhtransrecord3" colType="string" dataTypeLen="1000" isPrimary="0" visible="1" width="106" isEdit="0" textColor="#000000" className="ZdhTransrecordDto" refName="explanation" ></column>
+  <column  colName="fzdhtransrecord3.tasksource" propertyName="fzdhtransrecord3" colType="string" dataTypeLen="64" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="ZdhTransrecordDto" refName="tasksource" ></column>
+  <column  colName="fzdhtransrecord3.sourcetaskno" propertyName="fzdhtransrecord3" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="106" isEdit="0" textColor="#000000" className="ZdhTransrecordDto" refName="sourcetaskno" ></column>
+</head>

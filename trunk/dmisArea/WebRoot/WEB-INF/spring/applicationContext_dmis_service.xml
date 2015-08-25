@@ -1,0 +1,1472 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+	<!-- 高 -->
+	<bean id="iGgPersonService" parent="baseTransaction">
+		<property name="target">
+			<bean class="com.techstar.dmis.service.impl.GgPersonServiceImpl">
+				<property name="ggPersonDao" ref="iGgPersonDao"/>
+
+			</bean>
+		</property>
+
+	</bean>
+	<bean id="ggPersonFacade" parent="baseTransaction">
+		<property name="target">
+			<bean class="com.techstar.dmis.web.facade.GgPersonFacade">
+				<property name="ggPersonService" ref="iGgPersonService"> </property>
+			</bean>
+		</property>
+	</bean>
+
+	<bean id="iGgRelpersonService" parent="baseTransaction">
+		<property name="target">
+			<bean class="com.techstar.dmis.service.impl.GgRelpersonServiceImpl">
+				<property name="ggRelpersonDao" ref="iGgRelpersonDao"/>
+
+			</bean>
+		</property>
+	</bean>
+
+
+
+	<bean id="ggRelpersonFacade" parent="baseTransaction">
+		<property name="target">
+			<bean class="com.techstar.dmis.web.facade.GgRelpersonFacade">
+				<property name="ggRelpersonService" ref="iGgRelpersonService"> </property>
+			</bean>
+		</property>
+	</bean>
+
+
+
+	<bean id="iStdElectricstampService" parent="baseTransaction">
+		<property name="target">
+			<bean class="com.techstar.dmis.service.impl.StdElectricstampServiceImpl">
+				<property name="stdElectricstampDao" ref="iStdElectricstampDao"> </property>
+
+			</bean>
+		</property>
+	</bean>
+
+
+	<bean id="stdElectricstampFacade" parent="baseTransaction">
+		<property name="target">
+			<bean class="com.techstar.dmis.web.facade.StdElectricstampFacade">
+				<property name="stdElectricstampService" ref="iStdElectricstampService"> </property>
+			</bean>
+		</property>
+	</bean>
+
+
+	<bean id="iSystemdicService" parent="baseTransaction">
+		<property name="target">
+			<bean class="com.techstar.dmis.service.impl.SystemdicServiceImpl">
+				<property name="systemdicdao" ref="iSystemdicDao"> </property>
+
+			</bean>
+		</property>
+	</bean>
+
+
+	<bean id="systemFacade" parent="baseTransaction">
+		<property name="target">
+			<bean class="com.techstar.dmis.web.facade.SystemdicFacade">
+				<property name="systemdicservice" ref="iSystemdicService"> </property>
+			</bean>
+		</property>
+	</bean>
+
+	<bean id="iDdDoutageplanService" parent="baseTransaction">
+		<property name="target">
+			<bean class="com.techstar.dmis.service.impl.DdDoutageplanServiceImpl">
+				<property name="ddDoutageplanDao" ref="iDdDoutageplanDao"> </property>
+
+				<property name="ddDoutageplanWFService" ref="iDdDoutageplanWFService"> </property>
+
+				<property name="ddDayplandelaylistDao" ref="iDdDayplandelaylistDao"> </property>
+				<property name="ddDayplanexcutelistDao" ref="iDdDayplanexcutelistDao"> </property>
+				<property name="ddfsModechangelistDao" ref="iDdfsModechangelistDao"> </property>
+				<property name="dayplancoopraterelDao" ref="iDayplancoopraterelDao"> </property>
+
+				<property name="zdhOpexaminelistDao" ref="iZdhOpexaminelistDao"> </property>
+
+				<property name="ddAccidentbriefService" ref="iDdAccidentbriefService"> </property>
+
+				<property name="ddMoutageplanService" ref="iDdMoutageplanService"> </property>
+				
+			    <property name="workFlowDao" ref="iWorkflowDao"> </property>
+				
+				<property name="ctrlWflentityrelDao" ref="iCtrlWflentityrelDao"></property>
+				
+			</bean>
+		</property>
+	</bean>
+
+
+
+	<bean id="ddDoutageplanFacade" parent="baseTransaction">
+		<property name="target">
+			<bean class="com.techstar.dmis.web.facade.DdDoutageplanFacade">
+				<property name="ddDoutageplanService" ref="iDdDoutageplanService"> </property>
+			</bean>
+		</property>
+	</bean>
+
+
+	<bean id="iStdStationService" parent="baseTransaction">
+		<property name="target">
+			<bean class="com.techstar.dmis.service.impl.StdStationServiceImpl">
+				<property name="stdStationDao" ref="iStdStationDao"/>
+				<!--  
+				<property name="zdhTransrecordDao"
+					ref="iZdhTransrecordDao">
+				</property>
+				<property name="ddHpoweroperaterrdDao"
+					ref="iDdHpoweroperaterrdDao">
+				</property>
+				<property name="ddWaterheightDao"
+					ref="iDdWaterheightDao">
+				</property>
+				<property name="bhAsregulateDao"
+					ref="iBhAsregulateDao">
+				</property>
+				<property name="ddPowerchangrecordDao"
+					ref="iDdPowerchangrecordDao">
+				</property>
+				<property name="zdhRmrecDao" ref="iZdhRmrecDao">
+				</property>
+				-->
+			</bean>
+		</property>
+	</bean>
+
+
+
+	<bean id="stdStationFacade" parent="baseTransaction">
+		<property name="target">
+			<bean class="com.techstar.dmis.web.facade.StdStationFacade">
+				<property name="stdStationService" ref="iStdStationService"> </property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iStdDispatchunitService" parent="baseTransaction">
+		<property name="target">
+			<bean class="com.techstar.dmis.service.impl.StdDispatchunitServiceImpl">
+				<property name="stdDispatchunitDao" ref="iStdDispatchunitDao"></property>
+		
+							</bean>
+		</property>
+	</bean>	
+	
+	<bean id="stdDispatchunitFacade" parent="baseTransaction">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.web.facade.StdDispatchunitFacade">
+				<property name="stdDispatchunitService" ref="iStdDispatchunitService"></property>
+			</bean>
+		</property>
+	</bean>
+	<!-- 高end -->
+	
+	<!--周玮 开始-->
+	<!--拉路序位-->
+	<bean id="iDdCutoffsequenceService" parent="baseTransaction">
+		<property name="target">
+			<bean class="com.techstar.dmis.service.impl.DdCutoffsequenceServiceImpl">
+				<property name="ddCutoffsequenceDao" ref="iDdCutoffsequenceDao"> </property>
+
+				<property name="stdLineDao" ref="iStdLineDao"> </property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="ddCutoffsequenceFacade" parent="baseTransaction">
+		<property name="target">
+			<bean class="com.techstar.dmis.web.facade.DdCutoffsequenceFacade">
+				<property name="ddCutoffsequenceService" ref="iDdCutoffsequenceService"> </property>
+			</bean>
+		</property>
+	</bean>
+	<!--拉路序位end-->
+	<!--拉路序位信息-->
+	<bean id="iDdCutofftitleService" parent="baseTransaction">
+		<property name="target">
+			<bean class="com.techstar.dmis.service.impl.DdCutofftitleServiceImpl">
+				<property name="ddCutofftitleDao" ref="iDdCutofftitleDao"> </property>
+
+				<property name="ddCutoffsequenceDao" ref="iDdCutoffsequenceDao"> </property>
+
+				<property name="ddCutofftitleWFService" ref="iDdCutofftitleWFService"> </property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="ddCutofftitleFacade" parent="baseTransaction">
+		<property name="target">
+			<bean class="com.techstar.dmis.web.facade.DdCutofftitleFacade">
+				<property name="ddCutofftitleService" ref="iDdCutofftitleService"> </property>
+			</bean>
+		</property>
+	</bean>
+	<!--拉路序位信息end-->
+	<!--月计划-->
+	<bean id="iDdMoutageplanService" parent="baseTransaction">
+		<property name="target">
+			<bean class="com.techstar.dmis.service.impl.DdMoutageplanServiceImpl">
+				<property name="ddMoutageplanDao" ref="iDdMoutageplanDao"> </property>
+				<property name="ddMoutageplanWFService" ref="iDdMoutageplanWFService"> </property>
+				<property name="ddRepairdetailDao" ref="iDdRepairdetailDao"> </property>
+				<property name="ddPremethodDao" ref="iDdPremethodDao"/>
+			</bean>
+		</property>
+	</bean>
+	<bean id="ddMoutageplanFacade" parent="baseTransaction">
+		<property name="target">
+			<bean class="com.techstar.dmis.web.facade.DdMoutageplanFacade">
+				<property name="ddMoutageplanService" ref="iDdMoutageplanService"> </property>
+			</bean>
+		</property>
+	</bean>
+	<!--月计划end-->
+	<!--故障简报-->
+	<bean id="iDdAccidentbriefService" parent="baseTransaction">
+		<property name="target">
+			<bean class="com.techstar.dmis.service.impl.DdAccidentbriefServiceImpl">
+				<property name="ddAccidentbriefDao" ref="iDdAccidentbriefDao"> </property>
+
+				<property name="ddAccidentbriefWFService" ref="iDdAccidentbriefWFService"> </property>
+				<property name="bhActionrecordDao" ref="iBhActionrecordDao"> </property>
+				<property name="ddAccidentbriefprocessDao" ref="iDdAccidentbriefprocessDao"
+				> </property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="ddAccidentbriefFacade" parent="baseTransaction">
+		<property name="target">
+			<bean class="com.techstar.dmis.web.facade.DdAccidentbriefFacade">
+				<property name="ddAccidentbriefService" ref="iDdAccidentbriefService"> </property>
+			</bean>
+		</property>
+	</bean>
+	<!--故障简报end-->
+	<!--拉路方案-->
+	<bean id="iDdCutofflistService" parent="baseTransaction">
+		<property name="target">
+			<bean class="com.techstar.dmis.service.impl.DdCutofflistServiceImpl">
+				<property name="ddCutofflistDao" ref="iDdCutofflistDao"> </property>
+				<property name="ddCutoffdetaillistDao" ref="iDdCutoffdetaillistDao"> </property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="ddCutofflistFacade" parent="baseTransaction">
+		<property name="target">
+			<bean class="com.techstar.dmis.web.facade.DdCutofflistFacade">
+				<property name="ddCutofflistService" ref="iDdCutofflistService"> </property>
+			</bean>
+		</property>
+	</bean>
+	<!--拉路方案end-->
+	<!--风险分析-->
+	<bean id="iDdRepairrisklistService" parent="baseTransaction">
+		<property name="target">
+			<bean class="com.techstar.dmis.service.impl.DdRepairrisklistServiceImpl">
+				<property name="ddRepairrisklistDao" ref="iDdRepairrisklistDao"> </property>
+
+				<property name="ddRepairrisklistWFService" ref="iDdRepairrisklistWFService"> </property>
+				<property name="ddMoutageplanDao" ref="iDdMoutageplanDao"> </property>
+
+				<property name="ddMoutageplanService" ref="iDdMoutageplanService"> </property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="ddRepairrisklistFacade" parent="baseTransaction">
+		<property name="target">
+			<bean class="com.techstar.dmis.web.facade.DdRepairrisklistFacade">
+				<property name="ddRepairrisklistService" ref="iDdRepairrisklistService"> </property>
+			</bean>
+		</property>
+	</bean>
+	<!--风险分析end-->
+	<!--周玮 结束-->
+<!-- gcy -->
+	<bean id="iDdClassondutylogService" parent="baseTransaction">
+		<property name="target">
+			<bean class="com.techstar.dmis.service.impl.DdClassondutylogServiceImpl">
+				<property name="ddClassondutylogDao" ref="iDdClassondutylogDao"> </property>
+
+				<property name="ddPowerplantoperlogDao" ref="iDdPowerplantoperlogDao"> </property>
+				<property name="ddOperationnotebookDao" ref="iDdOperationnotebookDao"> </property>
+				<property name="ddSasusprecordDao" ref="iDdSasusprecordDao"> </property>
+				<property name="ddWaterheightDao" ref="iDdWaterheightDao"> </property>
+				<property name="ddWaterproofplanDao" ref="iDdWaterproofplanDao"> </property>
+				<property name="ddHloadrecordDao" ref="iDdHloadrecordDao"> </property>
+				<property name="ddPowerchangrecordDao" ref="iDdPowerchangrecordDao"> </property>
+				<property name="ddHpoweroperaterrdDao" ref="iDdHpoweroperaterrdDao"> </property>
+			</bean>
+		</property>
+	</bean>
+
+
+
+	<bean id="ddClassondutylogFacade" parent="baseTransaction">
+		<property name="target">
+			<bean class="com.techstar.dmis.web.facade.DdClassondutylogFacade">
+				<property name="ddClassondutylogService" ref="iDdClassondutylogService"> </property>
+			</bean>
+		</property>
+	</bean>
+	<!-- gcy结束 -->
+	
+	<!-- gcy -->
+	<bean id="iDdWaterheightService" parent="baseTransaction">
+		<property name="target">
+			<bean class="com.techstar.dmis.service.impl.DdWaterheightServiceImpl">
+				<property name="ddWaterheightDao" ref="iDdWaterheightDao"> </property>
+
+				<property name="stdStationDao" ref="iStdStationDao"> </property>
+				<property name="ddClassondutylogDao" ref="iDdClassondutylogDao"> </property>
+			</bean>
+		</property>
+	</bean>
+
+
+	<bean id="ddWaterheightFacade" parent="baseTransaction">
+		<property name="target">
+			<bean class="com.techstar.dmis.web.facade.DdWaterheightFacade">
+				<property name="ddWaterheightService" ref="iDdWaterheightService"> </property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iDdWaterproofplanService" parent="baseTransaction">
+		<property name="target">
+			<bean class="com.techstar.dmis.service.impl.DdWaterproofplanServiceImpl">
+				<property name="ddWaterproofplanDao" ref="iDdWaterproofplanDao"> </property>
+
+				<property name="ddClassondutylogDao" ref="iDdClassondutylogDao"> </property>
+			</bean>
+		</property>
+	</bean>
+
+
+
+	<bean id="ddWaterproofplanFacade" parent="baseTransaction">
+		<property name="target">
+			<bean class="com.techstar.dmis.web.facade.DdWaterproofplanFacade">
+				<property name="ddWaterproofplanService" ref="iDdWaterproofplanService"> </property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iDdPowerchangrecordService" parent="baseTransaction">
+		<property name="target">
+			<bean class="com.techstar.dmis.service.impl.DdPowerchangrecordServiceImpl">
+				<property name="ddPowerchangrecordDao" ref="iDdPowerchangrecordDao"> </property>
+
+				<property name="ddClassondutylogDao" ref="iDdClassondutylogDao"> </property>
+				<property name="stdStationDao" ref="iStdStationDao"> </property>
+			</bean>
+		</property>
+	</bean>
+
+
+
+	<bean id="ddPowerchangrecordFacade" parent="baseTransaction">
+		<property name="target">
+			<bean class="com.techstar.dmis.web.facade.DdPowerchangrecordFacade">
+				<property name="ddPowerchangrecordService" ref="iDdPowerchangrecordService"
+				> </property>
+			</bean>
+		</property>
+	</bean>
+	<!-- gcy结束 -->
+	
+	<!-- gcy -->
+	<bean id="iDdSwitchseqbillService" parent="baseTransaction">
+		<property name="target">
+			<bean class="com.techstar.dmis.service.impl.DdSwitchseqbillServiceImpl">
+				<property name="ddSwitchseqbillDao" ref="iDdSwitchseqbillDao"> </property>
+				<property name="baseJdbcDao" ref="iBaseJdbcDao"/>
+				<property name="ddSwitchseqbillWFService" ref="iDdSwitchseqbillWFService"> </property>
+				<property name="ddSeqbilldetailDao" ref="iDdSeqbilldetailDao"> </property>
+			</bean>
+		</property>
+	</bean>
+
+
+
+	<bean id="ddSwitchseqbillFacade" parent="baseTransaction">
+		<property name="target">
+			<bean class="com.techstar.dmis.web.facade.DdSwitchseqbillFacade">
+				<property name="ddSwitchseqbillService" ref="iDdSwitchseqbillService"> </property>
+			</bean>
+		</property>
+	</bean>
+	<!-- gcy结束 -->
+	
+	<!-- gcy -->
+	<bean id="iDdHloadrecordService" parent="baseTransaction">
+		<property name="target">
+			<bean class="com.techstar.dmis.service.impl.DdHloadrecordServiceImpl">
+				<property name="ddHloadrecordDao" ref="iDdHloadrecordDao"> </property>
+
+				<property name="ddClassondutylogDao" ref="iDdClassondutylogDao"> </property>
+				<property name="etsEquipmentDao" ref="iEtsEquipmentDao"> </property>
+			</bean>
+		</property>
+	</bean>
+
+
+
+	<bean id="ddHloadrecordFacade" parent="baseTransaction">
+		<property name="target">
+			<bean class="com.techstar.dmis.web.facade.DdHloadrecordFacade">
+				<property name="ddHloadrecordService" ref="iDdHloadrecordService"> </property>
+			</bean>
+		</property>
+	</bean>
+	<!-- gcy结束 -->
+	
+		<!-- gcy -->
+	<bean id="iDdHpoweroperaterrdService" parent="baseTransaction">
+		<property name="target">
+			<bean class="com.techstar.dmis.service.impl.DdHpoweroperaterrdServiceImpl">
+				<property name="ddHpoweroperaterrdDao" ref="iDdHpoweroperaterrdDao"> </property>
+
+				<property name="ddClassondutylogDao" ref="iDdClassondutylogDao"> </property>
+				<property name="stdStationDao" ref="iStdStationDao"> </property>
+			</bean>
+		</property>
+	</bean>
+
+
+
+	<bean id="ddHpoweroperaterrdFacade" parent="baseTransaction">
+		<property name="target">
+			<bean class="com.techstar.dmis.web.facade.DdHpoweroperaterrdFacade">
+				<property name="ddHpoweroperaterrdService" ref="iDdHpoweroperaterrdService"
+				> </property>
+			</bean>
+		</property>
+	</bean>
+	<!-- gcy结束 -->
+	
+	
+	<!-- gcy -->
+	<bean id="iDdSasusprecordService" parent="baseTransaction">
+		<property name="target">
+			<bean class="com.techstar.dmis.service.impl.DdSasusprecordServiceImpl">
+				<property name="ddSasusprecordDao" ref="iDdSasusprecordDao"> </property>
+
+				<property name="ddClassondutylogDao" ref="iDdClassondutylogDao"> </property>
+			</bean>
+		</property>
+	</bean>
+
+
+
+	<bean id="ddSasusprecordFacade" parent="baseTransaction">
+		<property name="target">
+			<bean class="com.techstar.dmis.web.facade.DdSasusprecordFacade">
+				<property name="ddSasusprecordService" ref="iDdSasusprecordService"> </property>
+			</bean>
+		</property>
+	</bean>
+	<!-- gcy结束 -->
+	
+	<!--  yjb-->
+	<bean id="iDdEnsuringpsmanageService" parent="baseTransaction">
+		<property name="target">
+			<bean class="com.techstar.dmis.service.impl.DdEnsuringpsmanageServiceImpl">
+				<property name="ddEnsuringpsmanageDao" ref="iDdEnsuringpsmanageDao"> </property>
+
+				<property name="ddEnsuringpsmanageWFService" ref="iDdEnsuringpsmanageWFService"> </property>
+				
+			</bean>
+		</property>
+	</bean>
+
+
+
+	<bean id="ddEnsuringpsmanageFacade" parent="baseTransaction">
+		<property name="target">
+			<bean class="com.techstar.dmis.web.facade.DdEnsuringpsmanageFacade">
+				<property name="ddEnsuringpsmanageService" ref="iDdEnsuringpsmanageService"> </property>
+			</bean>
+		</property>
+	</bean>
+	<!--  yjbend-->
+	<bean id="iZdhCharalterrecordService" parent="baseTransaction">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.service.impl.ZdhCharalterrecordServiceImpl">
+				<property name="zdhCharalterrecordDao"
+					ref="iZdhCharalterrecordDao">
+				</property>
+
+				<property name="zdhRmrecDao" ref="iZdhRmrecDao"></property>
+				<property name="fsApprovebookDao" ref="iFsApprovebookDao"></property>
+				<property name="zdhAutoondutylogDao" ref="iZdhAutoondutylogDao"></property>
+				<property name="zdhCharalterrecordWFService" ref="iZdhCharalterrecordWFService"></property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="zdhCharalterrecordFacade" parent="baseTransaction">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.web.facade.ZdhCharalterrecordFacade">
+				<property name="zdhCharalterrecordService"
+					ref="iZdhCharalterrecordService">
+				</property>
+			</bean>
+		</property>
+	</bean>
+	
+
+
+
+	
+	<bean id="iRepRepresultService" parent="baseTransaction">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.service.impl.RepRepresultServiceImpl">
+				<property name="repRepresultDao"
+					ref="iRepRepresultDao">
+				</property>
+
+				<property name="repTree2resultDao"
+					ref="iRepTree2resultDao">
+				</property>
+				<property name="repReptemplateDao"
+					ref="iRepReptemplateDao">
+				</property>
+				<property name="repResdataDao" ref="iRepResdataDao">
+				</property>
+			</bean>
+		</property>
+	</bean>
+
+
+
+	<bean id="repRepresultFacade" parent="baseTransaction">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.web.facade.RepRepresultFacade">
+				<property name="repRepresultService"
+					ref="iRepRepresultService">
+				</property>
+			</bean>
+		</property>
+	</bean>
+	
+
+
+
+	
+	<bean id="iDdDayondutylogService" parent="baseTransaction">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.service.impl.DdDayondutylogServiceImpl">
+				<property name="ddDayondutylogDao"
+					ref="iDdDayondutylogDao">
+				</property>
+
+				<property name="ddOperationnotebookDao"
+					ref="iDdOperationnotebookDao">
+				</property>
+			</bean>
+		</property>
+	</bean>
+
+
+
+	<bean id="ddDayondutylogFacade" parent="baseTransaction">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.web.facade.DdDayondutylogFacade">
+				<property name="ddDayondutylogService"
+					ref="iDdDayondutylogService">
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iStdManufacturerService" parent="baseTransaction">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.service.impl.StdManufacturerServiceImpl">
+				<property name="stdManufacturerDao"
+					ref="iStdManufacturerDao">
+				</property>
+
+				<property name="etsEquipmentDao"
+					ref="iEtsEquipmentDao">
+				</property>
+			</bean>
+		</property>
+	</bean>
+
+
+
+	<bean id="stdManufacturerFacade" parent="baseTransaction">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.web.facade.StdManufacturerFacade">
+				<property name="stdManufacturerService"
+					ref="iStdManufacturerService">
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iDdWoutageplanService" parent="baseTransaction">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.service.impl.DdWoutageplanServiceImpl">
+				<property name="ddWoutageplanDao"
+					ref="iDdWoutageplanDao">
+				</property>
+
+				<property name="ddRepairdetailDao"
+					ref="iDdRepairdetailDao">
+				</property>
+				<property name="ddMoutageplanDao"
+					ref="iDdMoutageplanDao">
+				</property>
+			</bean>
+		</property>
+	</bean>
+
+
+
+	<bean id="ddWoutageplanFacade" parent="baseTransaction">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.web.facade.DdWoutageplanFacade">
+				<property name="ddWoutageplanService"
+					ref="iDdWoutageplanService">
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iZdhEligiblermrateService" parent="baseTransaction">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.service.impl.ZdhEligiblermrateServiceImpl">
+				<property name="zdhEligiblermrateDao"
+					ref="iZdhEligiblermrateDao">
+				</property>
+
+				<property name="zdhAutoondutylogDao"
+					ref="iZdhAutoondutylogDao">
+				</property>
+			</bean>
+		</property>
+	</bean>
+
+
+
+	<bean id="zdhEligiblermrateFacade" parent="baseTransaction">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.web.facade.ZdhEligiblermrateFacade">
+				<property name="zdhEligiblermrateService"
+					ref="iZdhEligiblermrateService">
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iZdhOpexaminelistService" parent="baseTransaction">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.service.impl.ZdhOpexaminelistServiceImpl">
+				<property name="zdhOpexaminelistDao"
+					ref="iZdhOpexaminelistDao">
+				</property>
+
+				<property name="zdhAutoondutylogDao"
+					ref="iZdhAutoondutylogDao">
+				</property>
+				<property name="ddDoutageplanDao"
+					ref="iDdDoutageplanDao">
+				</property>
+				<property name="ddDoutageplanService"
+					ref="iDdDoutageplanService">
+				</property>
+			</bean>
+		</property>
+	</bean>
+
+
+
+	<bean id="zdhOpexaminelistFacade" parent="baseTransaction">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.web.facade.ZdhOpexaminelistFacade">
+				<property name="zdhOpexaminelistService"
+					ref="iZdhOpexaminelistService">
+				</property>
+			</bean>
+		</property>
+	</bean>
+	
+	<bean id="iBhFaultlistService" parent="baseTransaction">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.service.impl.BhFaultlistServiceImpl">
+				<property name="bhFaultlistDao" ref="iBhFaultlistDao"></property>
+
+			</bean>
+		</property>
+	</bean>
+
+
+
+	<bean id="bhFaultlistFacade" parent="baseTransaction">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.web.facade.BhFaultlistFacade">
+				<property name="bhFaultlistService"
+					ref="iBhFaultlistService">
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iZdhRmrecService" parent="baseTransaction">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.service.impl.ZdhRmrecServiceImpl">
+				<property name="zdhRmrecDao" ref="iZdhRmrecDao"></property>
+
+				<property name="zdhAutoondutylogDao"
+					ref="iZdhAutoondutylogDao">
+				</property>
+				<property name="stdStationDao" ref="iStdStationDao"></property>
+				<property name="zdhCharalterrecordDao"
+					ref="iZdhCharalterrecordDao">
+				</property>
+			</bean>
+		</property>
+	</bean>
+
+
+
+	<bean id="zdhRmrecFacade" parent="baseTransaction">
+		<property name="target">
+			<bean class="com.techstar.dmis.web.facade.ZdhRmrecFacade">
+				<property name="zdhRmrecService"
+					ref="iZdhRmrecService">
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iFsLoaddatalistService" parent="baseTransaction">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.service.impl.FsLoaddatalistServiceImpl">
+				<property name="fsLoaddatalistDao"
+					ref="iFsLoaddatalistDao">
+				</property>
+
+				<property name="fsLfparalistDao"
+					ref="iFsLfparalistDao">
+				</property>
+			</bean>
+		</property>
+	</bean>
+
+
+
+	<bean id="fsLoaddatalistFacade" parent="baseTransaction">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.web.facade.FsLoaddatalistFacade">
+				<property name="fsLoaddatalistService"
+					ref="iFsLoaddatalistService">
+				</property>
+			</bean>
+		</property>
+	</bean>
+	
+	
+<bean id="iFsLfparalistService" parent="baseTransaction">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.service.impl.FsLfparalistServiceImpl">
+				<property name="fsLfparalistDao"
+					ref="iFsLfparalistDao">
+				</property>
+
+				<property name="fsLoaddatalistDao"
+					ref="iFsLoaddatalistDao">
+				</property>
+				<property name="stdLfroundDao" ref="iStdLfroundDao">
+				</property>
+			</bean>
+		</property>
+	</bean>
+
+
+
+	<bean id="fsLfparalistFacade" parent="baseTransaction">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.web.facade.FsLfparalistFacade">
+				<property name="fsLfparalistService"
+					ref="iFsLfparalistService">
+				</property>
+			</bean>
+		</property>
+	</bean>
+
+
+
+
+	<bean id="iZdhReceptionService" parent="baseTransaction">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.service.impl.ZdhReceptionServiceImpl">
+				<property name="zdhReceptionDao"
+					ref="iZdhReceptionDao">
+				</property>
+
+				<property name="zdhReceptioneqprelDao"
+					ref="iZdhReceptioneqprelDao">
+				</property>
+				<property name="zdhReceptionWFService" ref="iZdhReceptionWFService">
+				</property>
+				<property name="zdhTransrecordDao" ref="iZdhTransrecordDao">
+				</property>
+				<property name="ctrlWflentityrelDao" ref="iCtrlWflentityrelDao">
+				</property>
+			</bean>
+		</property>
+	</bean>
+
+
+
+	<bean id="zdhReceptionFacade" parent="baseTransaction">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.web.facade.ZdhReceptionFacade">
+				<property name="zdhReceptionService"
+					ref="iZdhReceptionService">
+				</property>
+			</bean>
+		</property>
+	</bean>
+	
+	<bean id="iZdhMachineworklistService" parent="baseTransaction">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.service.impl.ZdhMachineworklistServiceImpl">
+				<property name="zdhMachineworklistDao"
+					ref="iZdhMachineworklistDao">
+				</property>
+
+				<property name="zdhAutoondutylogDao"
+					ref="iZdhAutoondutylogDao">
+				</property>
+			</bean>
+		</property>
+	</bean>
+
+
+
+	<bean id="zdhMachineworklistFacade" parent="baseTransaction">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.web.facade.ZdhMachineworklistFacade">
+				<property name="zdhMachineworklistService"
+					ref="iZdhMachineworklistService">
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iDaymodeanalyseService" parent="baseTransaction">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.service.impl.DaymodeanalyseServiceImpl">
+				<property name="daymodeanalyseDao"
+					ref="iDaymodeanalyseDao">
+				</property>
+
+			</bean>
+		</property>
+	</bean>
+
+
+
+	<bean id="daymodeanalyseFacade" parent="baseTransaction">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.web.facade.DaymodeanalyseFacade">
+				<property name="daymodeanalyseService"
+					ref="iDaymodeanalyseService">
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iDdPremethodService" parent="baseTransaction">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.service.impl.DdPremethodServiceImpl">
+				<property name="ddPremethodDao" ref="iDdPremethodDao"></property>
+
+				<property name="ddMoutageplanDao"
+					ref="iDdMoutageplanDao">
+				</property>
+				<property name="ddEnsuringpsmanageDao"
+					ref="iDdEnsuringpsmanageDao">
+				</property>
+			</bean>
+		</property>
+	</bean>
+
+
+
+	<bean id="ddPremethodFacade" parent="baseTransaction">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.web.facade.DdPremethodFacade">
+				<property name="ddPremethodService"
+					ref="iDdPremethodService">
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iFsApprovebookService" parent="baseTransaction">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.service.impl.FsApprovebookServiceImpl">
+				<property name="fsApprovebookDao"
+					ref="iFsApprovebookDao">
+				</property>
+
+				<property name="fsApprovebookdetailDao"
+					ref="iFsApprovebookdetailDao">
+				</property>
+				<property name="fsAfrelDao" ref="iFsAfrelDao">
+				</property>
+				<property name="fsApproveeqprelDao"
+					ref="iFsApproveeqprelDao">
+				</property>
+				<property name="fsAllappendixDao"
+					ref="iFsAllappendixDao">
+				</property>
+				<property name="bhAsregulateDao"
+					ref="iBhAsregulateDao">
+				</property>
+			</bean>
+		</property>
+	</bean>
+
+
+
+	<bean id="fsApprovebookFacade" parent="baseTransaction">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.web.facade.FsApprovebookFacade">
+				<property name="fsApprovebookService"
+					ref="iFsApprovebookService">
+				</property>
+			</bean>
+		</property>
+	</bean>
+	
+
+
+	<bean id="iZdhRsrecordService" parent="baseTransaction">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.service.impl.ZdhRsrecordServiceImpl">
+
+				<property name="zdhWorkbillService"
+					ref="iZdhWorkbillService">
+				</property>
+
+				<property name="zdhRsrecordDao" ref="iZdhRsrecordDao"></property>
+
+				<property name="ddAccidentbriefService"
+					ref="iDdAccidentbriefService">
+				</property>
+
+				<property name="ddAccidentbriefDao"
+					ref="iDdAccidentbriefDao">
+
+				</property>
+
+				<property name="zdhAutoondutylogDao"
+					ref="iZdhAutoondutylogDao">
+
+				</property>
+
+			</bean>
+
+		</property>
+
+	</bean>
+
+
+
+
+	<bean id="zdhRsrecordFacade" parent="baseTransaction">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.web.facade.ZdhRsrecordFacade">
+				<property name="zdhRsrecordService"
+					ref="iZdhRsrecordService">
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iBhActionrecordService" parent="baseTransaction">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.service.impl.BhActionrecordServiceImpl">
+				<property name="bhActionrecordDao"
+					ref="iBhActionrecordDao">
+				</property>
+
+				<property name="stdBhtresponseDao"
+					ref="iStdBhtresponseDao">
+				</property>
+				<property name="stdPreasontypeDao"
+					ref="iStdPreasontypeDao">
+				</property>
+				<property name="stdBheqpfaultDao"
+					ref="iStdBheqpfaultDao">
+				</property>
+				<property name="ddAccidentbriefDao"
+					ref="iDdAccidentbriefDao">
+				</property>
+			</bean>
+		</property>
+	</bean>
+
+
+
+	<bean id="bhActionrecordFacade" parent="baseTransaction">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.web.facade.BhActionrecordFacade">
+				<property name="bhActionrecordService"
+					ref="iBhActionrecordService">
+				</property>
+			</bean>
+		</property>
+	</bean>
+
+	<bean id="iZdhWorkbillService" parent="baseTransaction">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.service.impl.ZdhWorkbillServiceImpl">
+				<property name="zdhWorkbillDao" ref="iZdhWorkbillDao"></property>
+				<property name="zdhAutoondutylogDao"
+					ref="iZdhAutoondutylogDao">
+				</property>
+				<property name="etsEquipmentDao"
+					ref="iEtsEquipmentDao">
+				</property>
+				<property name="zdhMachineworklistService"
+					ref="iZdhMachineworklistService">
+				</property>
+				<property name="zdhWorkbillWFServiceImpl"
+					ref="iZdhWorkbillWFService">
+				</property>
+			</bean>
+		</property>
+	</bean>
+
+
+
+	<bean id="zdhWorkbillFacade" parent="baseTransaction">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.web.facade.ZdhWorkbillFacade">
+				<property name="zdhWorkbillService"
+					ref="iZdhWorkbillService">
+				</property>
+			</bean>
+		</property>
+	</bean>
+	
+
+
+
+	
+	<bean id="iZdhSequencetableService" parent="baseTransaction">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.service.impl.ZdhSequencetableServiceImpl">
+				<property name="zdhSequencetableDao"
+					ref="iZdhSequencetableDao">
+				</property>
+				<property name="baseJdbcDao" ref="iBaseJdbcDao">
+				</property>
+			</bean>
+		</property>
+	</bean>
+
+
+
+	<bean id="zdhSequencetableFacade" parent="baseTransaction">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.web.facade.ZdhSequencetableFacade">
+				<property name="zdhSequencetableService"
+					ref="iZdhSequencetableService">
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iStdLineService" parent="baseTransaction">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.service.impl.StdLineServiceImpl">
+				<property name="stdLineDao" ref="iStdLineDao"></property>
+
+			</bean>
+		</property>
+	</bean>
+
+
+
+	<bean id="stdLineFacade" parent="baseTransaction">
+		<property name="target">
+			<bean class="com.techstar.dmis.web.facade.StdLineFacade">
+				<property name="stdLineService" ref="iStdLineService"></property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iFsRmchangbillService" parent="baseTransaction">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.service.impl.FsRmchangbillServiceImpl">
+				<property name="fsRmchangbillDao"
+					ref="iFsRmchangbillDao">
+				</property>
+
+				<property name="ddfsModechangelistDao"
+					ref="iDdfsModechangelistDao">
+				</property>
+			</bean>
+		</property>
+	</bean>
+
+
+
+	<bean id="fsRmchangbillFacade" parent="baseTransaction">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.web.facade.FsRmchangbillFacade">
+				<property name="fsRmchangbillService"
+					ref="iFsRmchangbillService">
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iBhAsregulateService" parent="baseTransaction">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.service.impl.BhAsregulateServiceImpl">
+				<property name="bhAsregulateDao"
+					ref="iBhAsregulateDao">
+				</property>
+
+				<property name="bhAsregulatedetailDao"
+					ref="iBhAsregulatedetailDao">
+				</property>
+				<property name="stdStationDao" ref="iStdStationDao">
+				</property>
+			</bean>
+		</property>
+	</bean>
+
+
+
+	<bean id="bhAsregulateFacade" parent="baseTransaction">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.web.facade.BhAsregulateFacade">
+				<property name="bhAsregulateService"
+					ref="iBhAsregulateService">
+				</property>
+			</bean>
+		</property>
+	</bean>
+
+	<bean id="iZdhAutoondutylogService" parent="baseTransaction">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.service.impl.ZdhAutoondutylogServiceImpl">
+				<property name="zdhAutoondutylogDao"
+					ref="iZdhAutoondutylogDao">
+				</property>
+
+				<property name="zdhWorkbillDao" ref="iZdhWorkbillDao">
+				</property>
+				<property name="zdhMachineworklistDao"
+					ref="iZdhMachineworklistDao">
+				</property>
+				<property name="zdhRmrecDao" ref="iZdhRmrecDao">
+				</property>
+				<property name="zdhRsrecordDao" ref="iZdhRsrecordDao">
+				</property>
+				<property name="zdhCharalterrecordDao"
+					ref="iZdhCharalterrecordDao">
+				</property>
+				<property name="zdhFaultlistDao"
+					ref="iZdhFaultlistDao">
+				</property>
+				<property name="zdhTransrecordDao"
+					ref="iZdhTransrecordDao">
+				</property>
+				<property name="zdhOpexaminelistDao"
+					ref="iZdhOpexaminelistDao">
+				</property>
+			</bean>
+		</property>
+	</bean>
+
+
+
+	<bean id="zdhAutoondutylogFacade" parent="baseTransaction">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.web.facade.ZdhAutoondutylogFacade">
+				<property name="zdhAutoondutylogService"
+					ref="iZdhAutoondutylogService">
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iStdModelService" parent="baseTransaction">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.service.impl.StdModelServiceImpl">
+				<property name="stdModelDao" ref="iStdModelDao"></property>
+
+			</bean>
+		</property>
+	</bean>
+
+
+
+	<bean id="stdModelFacade" parent="baseTransaction">
+		<property name="target">
+			<bean class="com.techstar.dmis.web.facade.StdModelFacade">
+				<property name="stdModelService"
+					ref="iStdModelService">
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iZdhFaultlistService" parent="baseTransaction">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.service.impl.ZdhFaultlistServiceImpl">
+				<property name="zdhFaultlistDao"
+					ref="iZdhFaultlistDao">
+				</property>
+				<property name="baseJdbcDao"
+					ref="iBaseJdbcDao">
+				</property>
+				<property name="zdhAutoondutylogDao"
+					ref="iZdhAutoondutylogDao">
+				</property>
+				
+				<property name="zdhMachineworklistService"
+					ref="iZdhMachineworklistService">
+				</property>
+				
+				<property name="zdhMachineworklistDao"
+					ref="iZdhMachineworklistDao">
+				</property>
+			</bean>
+		</property>
+	</bean>
+
+
+
+	<bean id="zdhFaultlistFacade" parent="baseTransaction">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.web.facade.ZdhFaultlistFacade">
+				<property name="zdhFaultlistService"
+					ref="iZdhFaultlistService">
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iZdhTransrecordService" parent="baseTransaction">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.service.impl.ZdhTransrecordServiceImpl">
+				<property name="zdhTransrecordDao"
+					ref="iZdhTransrecordDao">
+				</property>
+
+				<property name="stdStationDao" ref="iStdStationDao">
+				</property>
+				<property name="zdhAutoondutylogDao"
+					ref="iZdhAutoondutylogDao">
+				</property>
+				<property name="zdhReceptionDao" ref="iZdhReceptionDao"></property>
+				<property name="zdhSrapplicationDao" ref="iZdhSrapplicationDao"></property>
+				<property name="workFlowDao" ref="iWorkflowDao"></property>
+			</bean>
+		</property>
+	</bean>
+
+
+
+	<bean id="zdhTransrecordFacade" parent="baseTransaction">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.web.facade.ZdhTransrecordFacade">
+				<property name="zdhTransrecordService"
+					ref="iZdhTransrecordService">
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iBhFixedvaluebillService" parent="baseTransaction">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.service.impl.BhFixedvaluebillServiceImpl">
+				<property name="bhFixedvaluebillDao"
+					ref="iBhFixedvaluebillDao">
+				</property>
+
+				<property name="bhFixedvaluebilldetailDao"
+					ref="iBhFixedvaluebilldetailDao">
+				</property>
+			</bean>
+		</property>
+	</bean>
+
+
+
+	<bean id="bhFixedvaluebillFacade" parent="baseTransaction">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.web.facade.BhFixedvaluebillFacade">
+				<property name="bhFixedvaluebillService"
+					ref="iBhFixedvaluebillService">
+				</property>
+			</bean>
+		</property>
+	</bean>
+	
+	<bean id="iZdhSrapplicationService" parent="baseTransaction">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.service.impl.ZdhSrapplicationServiceImpl">
+				<property name="zdhSrapplicationDao"
+					ref="iZdhSrapplicationDao">
+				</property>
+
+				<property name="zdhSrappeqprelDao"
+					ref="iZdhSrappeqprelDao">
+				</property>
+				
+				<property name="zdhSrapplicationWFServiceImpl"
+					ref="iZdhSrapplicationWFService">
+				</property>				
+				
+				<property name="zdhTransrecordService"
+					ref="iZdhTransrecordService">
+				</property>
+				<property name="ctrlWflentityrelDao"
+					ref="iCtrlWflentityrelDao">
+				</property>
+				
+			</bean>
+		</property>
+	</bean>
+
+
+
+	<bean id="zdhSrapplicationFacade" parent="baseTransaction">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.web.facade.ZdhSrapplicationFacade">
+				<property name="zdhSrapplicationService"
+					ref="iZdhSrapplicationService">
+				</property>
+			</bean>
+		</property>
+	</bean>
+	
+
+
+
+
+	<bean id="systemDicHunter" parent="baseTransaction">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.web.hunter.SystemDicHunter">
+				<property name="commonQueryService"
+					ref="iCommonQueryService">
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<!-- 业务字典-->
+	<bean id="businessDicHunter" parent="baseTransaction">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.web.hunter.BusinessDicHunter">
+				<property name="commonQueryService"
+					ref="iCommonQueryService">
+				</property>
+			</bean>
+		</property>
+	</bean>
+
+	<!-- 通用查询DWR -->
+	<bean id="commonQueryHunter" parent="baseTransaction">
+		<property name="target">
+			<bean
+				class="com.techstar.framework.web.hunter.CommonQueryHunter">
+				<property name="commonQueryService"
+					ref="iCommonQueryService">
+				</property>
+			</bean>
+		</property>
+	</bean>
+
+	<bean id="iSysUiGridService" parent="baseTransaction">
+		<property name="target">
+			<bean
+				class="com.techstar.framework.ui.service.impl.SysUiGridServiceImpl">
+				<property name="sysUiGridDao" ref="iSysUiGridDao"></property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="sysUiGridFacade" parent="baseTransaction">
+		<property name="target">
+			<bean
+				class="com.techstar.framework.ui.web.facade.SysUiGridFacade">
+				<property name="sysUiGridService"
+					ref="iSysUiGridService">
+				</property>
+			</bean>
+		</property>
+	</bean>
+
+	<bean id="iDictionaryService" parent="baseTransaction">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.service.impl.DictionaryServiceImpl">
+				<property name="baseHbnDao" ref="iBaseHbnDao"></property>
+			</bean>
+		</property>
+	</bean>
+
+	<bean id="dictionaryBaseFacade" parent="baseTransaction">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.web.facade.DictionaryBaseFacade">
+				<property name="dicService" ref="iDictionaryService"></property>
+			</bean>
+		</property>
+	</bean>
+</beans>

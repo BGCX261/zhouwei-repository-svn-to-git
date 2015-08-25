@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<frame>
+	<menu id="category" name="category" image="images/frame/0734.gif">
+		<menuitem id="category" name="category" image="">
+			<menuleaf id="category_list" name="查看" image="images/frame/0220.gif" url="categoryAction.do?method=list"/>
+			<menuleaf id="category_add" name="增加" image="images/frame/0705.gif" url="categoryAction.do?method=doAdd"/>
+		</menuitem>
+	</menu>	
+</frame>

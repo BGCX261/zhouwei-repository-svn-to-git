@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="com.techstar.dmis.entity">
+	<class name="CtrlWflentityrel" table="DMIS_CTRL_WFLENTITYREL" dynamic-insert="true" dynamic-update="true" optimistic-lock="version">
+	    <id name="frelid" type="string">
+	      <column name="frelid" sql-type="varchar(40)" not-null="true"/>
+	      <generator class="assigned"/>
+	    </id>
+	
+	 	<version name="version" column="VERSION" unsaved-value="undefined"/>
+	  
+	    <property name="entityname" type="string"  not-null="false">
+	    <column name="entityname"  
+			length="40"               
+	    />
+		</property>	
+		    <property name="entityid" type="string"  not-null="false">
+		    <column name="entityid"  
+				length="40"               
+		    />
+		</property>	
+		    <property name="taskid" type="string"  not-null="false">
+		    <column name="taskid"  
+				length="40"               
+		    />
+		</property>
+  
+</class>
+
+</hibernate-mapping>
+

@@ -1,0 +1,221 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="com.techstar.dmis.entity">
+	<class name="EtsEquipment" table="DMIS_EtsEquipment" dynamic-insert="true" dynamic-update="true" optimistic-lock="version">
+    <id name="feqpid" type="string">
+      <column name="feqpid" sql-type="varchar(80)" not-null="true"/>
+      <generator class="assigned"/>
+    </id>
+
+ 	<version name="version" column="VERSION" unsaved-value="undefined"/>
+  
+   <property name="fstorelocation" type="string"  not-null="false">
+    <column name="fstorelocation"  
+		length="80"               
+    />
+</property>	
+    <property name="fstationname" type="string"  not-null="false">
+    <column name="fstationname"  
+		length="40"               
+    />
+</property>	
+    <property name="fscheduleno" type="string"  not-null="false">
+    <column name="fscheduleno"  
+		length="40"               
+    />
+</property>	
+    <property name="fdevsequence" type="string"  not-null="false">
+    <column name="fdevsequence"  
+		length="40"               
+    />
+</property>	
+    <property name="fdevclassname" type="string"  not-null="false">
+    <column name="fdevclassname"  
+		length="100"               
+    />
+</property>	
+    <property name="fdevicetype" type="string"  not-null="false">
+    <column name="fdevicetype"  
+		length="40"               
+    />
+</property>	
+    <property name="fdevicemodel" type="string"  not-null="false">
+    <column name="fdevicemodel"  
+		length="50"               
+    />
+</property>	
+    <property name="fschedulerange" type="string"  not-null="false">
+    <column name="fschedulerange"  
+		length="20"               
+    />
+</property>	
+    <property name="fdevfac" type="string"  not-null="false">
+    <column name="fdevfac"  
+		length="100"               
+    />
+</property>	
+    <property name="fmadecountry" type="string"  not-null="false">
+    <column name="fmadecountry"  
+		length="40"               
+    />
+</property>	
+    <property name="fleavefacno" type="string"  not-null="false">
+    <column name="fleavefacno"  
+		length="40"               
+    />
+</property>	
+    <property name="fleavefacdate" type="date"  not-null="false">
+    <column name="fleavefacdate"  
+		               
+    />
+</property>	
+    <property name="finstalldate" type="date"  not-null="false">
+    <column name="finstalldate"  
+		               
+    />
+</property>	
+    <property name="frunningdate" type="date"  not-null="false">
+    <column name="frunningdate"  
+		               
+    />
+</property>	
+    <property name="fdevicestatus" type="string"  not-null="false">
+    <column name="fdevicestatus"  
+		length="20"               
+    />
+</property>	
+    <property name="fdevicelevel" type="string"  not-null="false">
+    <column name="fdevicelevel"  
+		length="10"               
+    />
+</property>	
+    <property name="fratedvoltage" type="string"  not-null="false">
+    <column name="fratedvoltage"  
+		length="50"               
+    />
+</property>	
+    <property name="foperatingvoltage" type="string"  not-null="false">
+    <column name="foperatingvoltage"  
+		length="50"               
+    />
+</property>	
+    <property name="fneutralvoltage" type="string"  not-null="false">
+    <column name="fneutralvoltage"  
+		length="50"               
+    />
+</property>	
+    <property name="frecycled" type="string"  not-null="false">
+    <column name="frecycled"  
+		length="2"               
+    />
+</property>	
+    <property name="fstopdate" type="date"  not-null="false">
+    <column name="fstopdate"  
+		               
+    />
+</property>	
+    <property name="foperatingunit" type="string"  not-null="false">
+    <column name="foperatingunit"  
+		length="100"               
+    />
+</property>	
+    <property name="fmaintainunit" type="string"  not-null="false">
+    <column name="fmaintainunit"  
+		length="100"               
+    />
+</property>	
+    <property name="fupdatetime" type="date"  not-null="false">
+    <column name="fupdatetime"  
+		               
+    />
+</property>	
+    <property name="fisdelete" type="string"  not-null="false">
+    <column name="fisdelete"  
+		length="2"               
+    />
+</property>	
+    <property name="fstationid" type="string"  not-null="false">
+    <column name="fstationid"  
+		length="40"               
+    />
+</property>	
+    <property name="fdevbuyfac" type="string"  not-null="false">
+    <column name="fdevbuyfac"  
+		length="100"               
+    />
+</property>	
+    <property name="foverhaullife" type="integer"  not-null="false">
+    <column name="foverhaullife"  
+		               
+    />
+</property>	
+    <property name="fminoverhaullife" type="integer"  not-null="false">
+    <column name="fminoverhaullife"  
+		               
+    />
+</property>	
+    <property name="ftmprepairlife" type="integer"  not-null="false">
+    <column name="ftmprepairlife"  
+		               
+    />
+</property>	
+    <property name="fcompareversion" type="integer"  not-null="false">
+    <column name="fcompareversion"  
+		               
+    />
+</property>	
+    <property name="fbayname" type="string"  not-null="false">
+    <column name="fbayname"  
+		length="50"               
+    />
+</property>	
+    <property name="fbelstatype" type="string"  not-null="false">
+    <column name="fbelstatype"  
+		length="40"               
+    />
+</property>	
+    <property name="sys_fille" type="string"  not-null="false">
+    <column name="sys_fille"  
+		length="40"               
+    />
+</property>	
+    <property name="sys_filldept" type="string"  not-null="false">
+    <column name="sys_filldept"  
+		length="80"               
+    />
+</property>	
+    <property name="sys_filltime" type="timestamp"  not-null="false">
+    <column name="sys_filltime"  
+		               
+    />
+</property>	
+    <property name="sys_isvalid" type="integer"  not-null="false">
+    <column name="sys_isvalid"  
+		               
+    />
+</property>	
+    <property name="sys_dataowner" type="string"  not-null="false">
+    <column name="sys_dataowner"  
+		length="40"               
+    />
+</property>	
+    <property name="fvoltagelevel" type="string"  >
+    <column name="fvoltagelevel"  
+		length="200"               
+    />
+</property>	
+  
+	
+    <set name="fddhloadrecord6" inverse="true" cascade="none"><key column="FeqpID"/><one-to-many class="DdHloadrecord"/></set>
+         <set name="fzdhworkbill4" inverse="true" cascade="none"><key column="autosystemid"/><one-to-many class="ZdhWorkbill"/></set>
+         <set name="feqpattachment2" inverse="true" cascade="delete-orphan"><key column="FEqpID"/><one-to-many class="EqpAttachment"/></set>
+         <many-to-one name="zetsequipment3" class="StdManufacturer"   column="FDevFacID" cascade="none"></many-to-one>
+         <many-to-one name="zetsequipment5" class="StdUnit"   column="FOperatingUnitID" cascade="none"></many-to-one>
+         <many-to-one name="zetsequipment6" class="StdUnit"   column="FMaintainUnitID" cascade="none"></many-to-one>
+         <many-to-one name="zetsequipment4" class="StdManufacturer"   column="FDevBuyFacID" cascade="none"></many-to-one>
+         <many-to-one name="zetsequipment7" class="EQPType"   column="FDeviceTypeID" cascade="none"></many-to-one>
+         <many-to-one name="zetsequipment2" class="Mbay"   column="FBayID" cascade="none"></many-to-one>
+     </class>
+
+</hibernate-mapping>
+

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping>
+	<class
+		name="com.sitechasia.webx.components.datasource.context.model.Domain2d"
+		table="domain2ds" lazy="false">
+
+		<id name="domain" type="java.lang.String" column="domain">
+			<generator class="assigned" />
+		</id>
+
+		<property name="ds" type="java.lang.String" column="ds"
+			length="128" />
+	</class>
+</hibernate-mapping>

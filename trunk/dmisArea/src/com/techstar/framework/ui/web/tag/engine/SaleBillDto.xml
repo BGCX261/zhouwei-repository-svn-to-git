@@ -1,0 +1,14 @@
+<head>
+	<obj>SaleBillDto</obj>
+	<column colName="cre_date" propertyName="cre_date" colType="timestamp" dataTypeLen="30" isPrimary="0" visible="1" width="70" isEdit="" textColor="#ffffff" className="" refName=""></column>
+	<column colName="id" propertyName="id" colType="string" dataTypeLen="30" isPrimary="1" visible="0" width="70" isEdit="" textColor="#ffffff" className="" refName=""></column>
+	<column colName="custom_id" propertyName="custom_id" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="70" isEdit="" textColor="#ffffff" className="" refName=""></column>
+	<column colName="custom_name" propertyName="custom_name" colType="string" dataTypeLen="50" isPrimary="0" visible="1" width="70" isEdit="" textColor="#ffffff" className="" refName=""></column>
+	<column colName="sale_mode" propertyName="sale_mode" colType="string" dataTypeLen="60" isPrimary="0" visible="1" width="70" isEdit="" textColor="#ffffff" className="" refName=""></column>
+	<column colName="tranpriority" propertyName="tranpriority" colType="string" dataTypeLen="70" isPrimary="0" visible="1" width="70" isEdit="" textColor="#ffffff" className="" refName=""></column>
+	<column colName="total" propertyName="total" colType="integer" dataTypeLen="80" isPrimary="0" visible="1" width="60" isEdit="" textColor="#ffffff" className="" refName=""></column>
+	<column colName="memo" propertyName="memo" colType="string" dataTypeLen="90" isPrimary="0" visible="1" width="70" isEdit="" textColor="#ffffff" className="" refName=""></column>
+	<column colName="check_begin_date" propertyName="check_begin_date" colType="timestamp" dataTypeLen="90" isPrimary="0" visible="1" width="70" isEdit="" textColor="#ffffff" className="" refName=""></column>
+	<column colName="check_end_date" propertyName="check_end_date" colType="timestamp" dataTypeLen="90" isPrimary="0" visible="1" width="70" isEdit="" textColor="#ffffff" className="" refName=""></column>
+	<column colName="version" propertyName="version" colType="integer" dataTypeLen="90" isPrimary="0" visible="1" width="70" isEdit="" textColor="#ffffff" className="" refName=""></column>
+</head>	

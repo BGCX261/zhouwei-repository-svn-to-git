@@ -1,0 +1,56 @@
+<!DOCTYPE mappings PUBLIC "-//DOZER//DTD MAPPINGS//EN"
+"http://dozer.sourceforge.net/dtd/dozerbeanmapping.dtd">
+<mappings>
+   <mapping>
+   <class-a>com.techstar.dmis.dto.ZdhAutoondutylogDto</class-a>
+   <class-b>com.techstar.dmis.dto.transfer.TransZdhAutoondutylogDto</class-b>
+   <field>
+      <a>fzdhworkbill2</a>
+      <b>fzdhworkbill2</b>
+      <a-hint>com.techstar.dmis.dto.ZdhWorkbillDto</a-hint>
+      <b-hint>com.techstar.dmis.dto.transfer.TransZdhWorkbillDto</b-hint>
+   </field>
+   <field>
+      <a>fzdhmachineworklist1</a>
+      <b>fzdhmachineworklist1</b>
+      <a-hint>com.techstar.dmis.dto.ZdhMachineworklistDto</a-hint>
+      <b-hint>com.techstar.dmis.dto.transfer.TransZdhMachineworklistDto</b-hint>
+   </field>
+   <field>
+      <a>fzdhrmrec1</a>
+      <b>fzdhrmrec1</b>
+      <a-hint>com.techstar.dmis.dto.ZdhRmrecDto</a-hint>
+      <b-hint>com.techstar.dmis.dto.transfer.TransZdhRmrecDto</b-hint>
+   </field>
+   <field>
+      <a>fzdhrsrecord2</a>
+      <b>fzdhrsrecord2</b>
+      <a-hint>com.techstar.dmis.dto.ZdhRsrecordDto</a-hint>
+      <b-hint>com.techstar.dmis.dto.transfer.TransZdhRsrecordDto</b-hint>
+   </field>
+   <field>
+      <a>fzdhcharalterrecord2</a>
+      <b>fzdhcharalterrecord2</b>
+      <a-hint>com.techstar.dmis.dto.ZdhCharalterrecordDto</a-hint>
+      <b-hint>com.techstar.dmis.dto.transfer.TransZdhCharalterrecordDto</b-hint>
+   </field>
+   <field>
+      <a>fzdhfaultlist7</a>
+      <b>fzdhfaultlist7</b>
+      <a-hint>com.techstar.dmis.dto.ZdhFaultlistDto</a-hint>
+      <b-hint>com.techstar.dmis.dto.transfer.TransZdhFaultlistDto</b-hint>
+   </field>
+   <field>
+      <a>fzdhtransrecord3</a>
+      <b>fzdhtransrecord3</b>
+      <a-hint>com.techstar.dmis.dto.ZdhTransrecordDto</a-hint>
+      <b-hint>com.techstar.dmis.dto.transfer.TransZdhTransrecordDto</b-hint>
+   </field>
+   <field>
+      <a>fzdhopexaminelist5</a>
+      <b>fzdhopexaminelist5</b>
+      <a-hint>com.techstar.dmis.dto.ZdhOpexaminelistDto</a-hint>
+      <b-hint>com.techstar.dmis.dto.transfer.TransZdhOpexaminelistDto</b-hint>
+   </field>
+   </mapping>
+</mappings>

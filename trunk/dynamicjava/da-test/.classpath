@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="lib/da-launcher-1.0.0.jar"/>
+	<classpathentry kind="lib" path="lib/org.osgi.core-4.0.jar"/>
+	<classpathentry kind="lib" path="lib/osgi-commons-1.0.0.jar"/>
+	<classpathentry kind="lib" path="lib/cglib-asm-1.0.jar"/>
+	<classpathentry kind="lib" path="lib/date-service-1.0.0.jar"/>
+	<classpathentry kind="lib" path="lib/greetings-service-1.0.0.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/api_bridge"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

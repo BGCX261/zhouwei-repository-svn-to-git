@@ -1,0 +1,15 @@
+<!--拉路限电记录-->
+<head>
+  <obj>DdCutofflistDto</obj>
+  <column  colName="fid" propertyName="fid" colType="string" dataTypeLen="32" isPrimary="1" visible="0" width="122" isEdit="0" textColor="#000000" className="DdCutofflistDto" refName="fid" ></column>
+  <column  colName="fddcutoffdetaillist1.fstationname" propertyName="fddcutoffdetaillist1" colType="string" dataTypeLen="150" isPrimary="0" visible="1" width="58" isEdit="1" textColor="#000000" className="DdCutoffdetaillistDto" refName="fstationname" ></column>
+  <column  colName="fddcutoffdetaillist1.fswitchno" propertyName="fddcutoffdetaillist1" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="58" isEdit="1" textColor="#000000" className="DdCutoffdetaillistDto" refName="fswitchno" ></column>
+  <column  colName="fddcutoffdetaillist1.fdraggedtime" propertyName="fddcutoffdetaillist1" colType="timestamp" dataTypeLen="0" isPrimary="0" visible="1" width="74" isEdit="1" textColor="#000000" className="DdCutoffdetaillistDto" refName="fdraggedtime" ></column>
+  <column  colName="fddcutoffdetaillist1.fbusbarno" propertyName="fddcutoffdetaillist1" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="58" isEdit="1" textColor="#000000" className="DdCutoffdetaillistDto" refName="fbusbarno" ></column>
+  <column  colName="fddcutoffdetaillist1.froad" propertyName="fddcutoffdetaillist1" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="42" isEdit="1" textColor="#000000" className="DdCutoffdetaillistDto" refName="froad" ></column>
+  <column  colName="fddcutoffdetaillist1.fdraggedload" propertyName="fddcutoffdetaillist1" colType="float" dataTypeLen="14" isPrimary="0" visible="1" width="74" isEdit="1" textColor="#000000" className="DdCutoffdetaillistDto" refName="fdraggedload" ></column>
+  <column  colName="fddcutoffdetaillist1.flosselectricity" propertyName="fddcutoffdetaillist1" colType="float" dataTypeLen="14" isPrimary="0" visible="1" width="74" isEdit="1" textColor="#000000" className="DdCutoffdetaillistDto" refName="flosselectricity" ></column>
+  <column  colName="fddcutoffdetaillist1.frecoverytime" propertyName="fddcutoffdetaillist1" colType="timestamp" dataTypeLen="14" isPrimary="0" visible="1" width="74" isEdit="1" textColor="#000000" className="DdCutoffdetaillistDto" refName="frecoverytime" ></column>
+  <column  colName="fddcutoffdetaillist1.frecoveryload" propertyName="fddcutoffdetaillist1" colType="float" dataTypeLen="14" isPrimary="0" visible="1" width="106" isEdit="1" textColor="#000000" className="DdCutoffdetaillistDto" refName="frecoveryload" ></column>
+  <column  colName="fddcutoffdetaillist1.sys_dataowner" propertyName="fddcutoffdetaillist1" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="106" isEdit="0" textColor="#000000" className="DdCutoffdetaillistDto" refName="sys_dataowner" ></column>
+</head>

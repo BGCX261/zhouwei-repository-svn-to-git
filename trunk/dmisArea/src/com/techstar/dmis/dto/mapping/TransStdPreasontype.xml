@@ -1,0 +1,14 @@
+<!DOCTYPE mappings PUBLIC "-//DOZER//DTD MAPPINGS//EN"
+"http://dozer.sourceforge.net/dtd/dozerbeanmapping.dtd">
+<mappings>
+   <mapping>
+   <class-a>com.techstar.dmis.dto.StdPreasontypeDto</class-a>
+   <class-b>com.techstar.dmis.dto.transfer.TransStdPreasontypeDto</class-b>
+   <field>
+      <a>fbhactionrecord4</a>
+      <b>fbhactionrecord4</b>
+      <a-hint>com.techstar.dmis.dto.BhActionrecordDto</a-hint>
+      <b-hint>com.techstar.dmis.dto.transfer.TransBhActionrecordDto</b-hint>
+   </field>
+   </mapping>
+</mappings>

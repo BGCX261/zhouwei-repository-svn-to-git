@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<!-- 操作日志备份路径 -->
+	<backupLogFilePath>F:\\log\\</backupLogFilePath>
+
+	<!-- 默认的邮件服务器配置 -->
+	<mailHost>smtp.163.com</mailHost>
+
+	<!-- 默认的邮箱地址 -->
+	<mailUser>XXX@163.com</mailUser>
+
+	<!-- 默认的邮箱密码 -->
+	<mailPwd>XXXX</mailPwd>
+
+	<!-- 邮件发送附件上传路径 -->
+	<mailUploadFilePath>F:\\mailfiles\\</mailUploadFilePath>
+
+	<!-- tree配置文件-->
+	<treeDisFile>D:\\WORKSPACE\\dmisArea\\dmisArea\\WebRoot\\WEB-INF\\resources\\treeconfig\\*.xml</treeDisFile>
+	<!-- grid配置文件 -->
+	<gridDisFile>D:\\WORKSPACE\\dmisArea\\dmisArea\\WebRoot\\WEB-INF\\classes\\com\\techstar\\dmis\web\gridxml\\*.xml</gridDisFile>
+	<!-- webservice 地址配置 -->
+	<!-- 应用系统标识 -->
+	<SYSTEMID>99999</SYSTEMID>
+	<!-- webservice 地址配置 -->
+	<wSAddresses>
+		<wSAddress>
+			<name>security</name>
+			<!--
+			<address>http://localhost:8989/pow2org/services/TECHSTARPERMREMOTEINTERSERVICE3?wsdl</address>
+			-->
+
+			<address>http://122.122.109.142:8003/pow2org/services/TECHSTARPERMREMOTEINTERSERVICE3?wsdl</address>
+
+		     <!--
+		     <address>http://122.122.110.134:8088/pow2org/services/TECHSTARPERMREMOTEINTERSERVICE3?wsdl</address>
+		        -->
+		   <!--
+			<address>http://200.200.200.211:8883/pow2org/services/TECHSTARPERMREMOTEINTERSERVICE3?wsdl</address>
+		  -->
+		</wSAddress>
+		<wSAddress>
+			<name>name2</name>
+			<address>address2</address>
+		</wSAddress>
+	</wSAddresses>
+
+	<!-- 数据传输对象的包结构 -->
+	<dtoPackage>com.techstar.dmis.dto</dtoPackage>
+	<!-- 持久化对象的包结构 -->
+	<poPackage>com.techstar.dmis.dto</poPackage>
+
+	<!-- 数据库类型 sqlserver , oracle -->
+	<dbType>oracle</dbType>
+
+
+</config>

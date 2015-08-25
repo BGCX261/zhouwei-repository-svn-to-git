@@ -1,0 +1,95 @@
+<?xml version="1.0" ?>
+<rows>
+   <head>
+        <column width="40" type="link" align="center"  sort="na">img:[../themes/themes1/images/grid/config.gif]</column>
+        <column width="100" type="ed" align="center" sort="int">变更名称</column>
+        <column width="150" type="ed" align="left" sort="str">方式变更原因</column>
+        <column width="100" type="ed" align="left" sort="str">方式变更说明</column>
+        <column width="110" type="ed" align="center" sort="str">方式变更时间</column>
+        <column width="110" type="ed" align="left" sort="str">方式恢复时间</column>
+        <column width="150" type="ro" align="left" sort="str">变更安全隐患</column>
+        <column width="80" type="link" align="center" sort="str">执行情况</column>
+        <column width="80" type="link" align="center" sort="str">申请单位</column>
+        <column width="80" type="link" align="center" sort="str">变更单编号</column>
+        <settings>
+            <colwidth>px</colwidth>
+        </settings>
+    </head>
+   <row id ="1">
+      <cell>1</cell>
+      <cell>2006-03-22 10:56 </cell>
+      <cell>台湖</cell>
+      <cell>2＃TR </cell>
+      <cell>455 </cell>
+      <cell>380 </cell>
+      <cell>42 </cell>
+      <cell>加强监视</cell>
+      <cell>修改</cell>
+   </row>
+   <row id ="2">
+      <cell>2</cell>
+      <cell>2006-03-13 10:02 </cell>
+      <cell>台湖</cell>
+      <cell>2＃TR </cell>
+      <cell>455 </cell>
+      <cell>370 </cell>
+      <cell>42 </cell>
+      <cell>加强监视</cell>
+      <cell>修改</cell>
+   </row>
+   <row id ="3">
+      <cell>3</cell>
+      <cell>2006-03-14 10:01 </cell>
+      <cell>台湖</cell>
+      <cell>1＃TR </cell>
+      <cell>455 </cell>
+      <cell>380 </cell>
+      <cell>40 </cell>
+      <cell>加强监视</cell>
+      <cell>修改</cell>
+   </row>
+   <row id ="4">
+      <cell>4</cell>
+      <cell>2006-03-11 21:18 </cell>
+      <cell>东北旺</cell>
+      <cell>1＃TR </cell>
+      <cell>260 </cell>
+      <cell>213 </cell>
+      <cell>41 </cell>
+      <cell>加强监视</cell>
+      <cell>修改</cell>
+   </row>
+   <row id ="5">
+      <cell>5</cell>
+      <cell>2006-03-11 19:17 </cell>
+      <cell>西沙屯</cell>
+      <cell>西回一117</cell>
+      <cell>600 </cell>
+      <cell>520 </cell>
+      <cell>10 </cell>
+      <cell>加强监视</cell>
+      <cell>修改</cell>
+   </row>
+   <row id ="6">
+      <cell>6</cell>
+      <cell>2006-03-06 10:50 </cell>
+      <cell>大兴</cell>
+      <cell>1＃TR </cell>
+      <cell>455 </cell>
+      <cell>400 </cell>
+      <cell>34 </cell>
+      <cell>加强监视</cell>
+      <cell>修改</cell>
+   </row>
+   <row id ="7">
+      <cell>7</cell>
+      <cell>2006-02-20 17:58 </cell>
+      <cell>大兴</cell>
+      <cell>1＃TR </cell>
+      <cell>450 </cell>
+      <cell>380 </cell>
+      <cell>38 </cell>
+      <cell>加强监视</cell>
+      <cell>修改</cell>
+   </row>
+</rows>

@@ -1,0 +1,27 @@
+table {
+	border:#9CB2DE solid;border-width:1px 0px 0px 1px
+}
+table td{
+	font-size:9pt;
+	line-height:1.2;
+	padding:5px;
+	border:#9CB2DE solid;border-width:0px 1px 1px 0px;	
+	
+}
+INPUT {
+	font-family: "sans-serif";
+	font-size:12px;
+	background-color: #EEEEEF;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #333333;
+	border-right-color: #999999;
+	border-bottom-color: #999999;
+	border-left-color: #333333;
+}

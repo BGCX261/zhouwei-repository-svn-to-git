@@ -1,0 +1,114 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="com.techstar.dmis.entity">
+	<class name="BhAsregulate" table="DMIS_BH_ASRegulate" dynamic-insert="true" dynamic-update="true" optimistic-lock="version">
+    <id name="asregulateid" type="string">
+      <column name="asregulateid" sql-type="varchar(80)" not-null="true"/>
+      <generator class="assigned"/>
+    </id>
+
+ 	<version name="version" column="VERSION" unsaved-value="undefined"/>
+  
+   <property name="fstationname" type="string"  not-null="false">
+    <column name="fstationname"  
+		length="80"               
+    />
+</property>	
+    <property name="fwritedate" type="date"  not-null="false">
+    <column name="fwritedate"  
+		               
+    />
+</property>	
+    <property name="funitname" type="string"  not-null="false">
+    <column name="funitname"  
+		length="80"               
+    />
+</property>	
+    <property name="dispatchcenteropinion" type="string"  not-null="false">
+    <column name="dispatchcenteropinion"  
+		length="80"               
+    />
+</property>	
+    <property name="runmodedeptopinion" type="string"  not-null="false">
+    <column name="runmodedeptopinion"  
+		length="80"               
+    />
+</property>	
+    <property name="protectdeptopinion" type="string"  not-null="false">
+    <column name="protectdeptopinion"  
+		length="80"               
+    />
+</property>	
+    <property name="protectresponsor" type="string"  not-null="false">
+    <column name="protectresponsor"  
+		length="80"               
+    />
+</property>	
+    <property name="excutetime" type="string"  not-null="false">
+    <column name="excutetime"  
+		length="80"               
+    />
+</property>	
+    <property name="ondutyname" type="string"  not-null="false">
+    <column name="ondutyname"  
+		length="80"               
+    />
+</property>	
+    <property name="asregulateoriginal" type="org.springframework.orm.hibernate3.support.BlobByteArrayType"  not-null="false">
+    <column name="asregulateoriginal"  
+		               
+    />
+</property>	
+    <property name="runmodedigram" type="org.springframework.orm.hibernate3.support.BlobByteArrayType"  not-null="false">
+    <column name="runmodedigram"  
+		               
+    />
+</property>	
+    <property name="remarks" type="string"  not-null="false">
+    <column name="remarks"  
+		length="200"               
+    />
+</property>	
+    <property name="asregulateno" type="string"  not-null="false">
+    <column name="asregulateno"  
+		length="40"               
+    />
+</property>	
+    <property name="fiscancel" type="string"  not-null="false">
+    <column name="fiscancel"  
+		length="2"               
+    />
+</property>	
+    <property name="sys_fille" type="string"  not-null="false">
+    <column name="sys_fille"  
+		length="40"               
+    />
+</property>	
+    <property name="sys_filldept" type="string"  not-null="false">
+    <column name="sys_filldept"  
+		length="80"               
+    />
+</property>	
+    <property name="sys_filltime" type="timestamp"  not-null="false">
+    <column name="sys_filltime"  
+		               
+    />
+</property>	
+    <property name="sys_isvalid" type="integer"  not-null="false">
+    <column name="sys_isvalid"  
+		               
+    />
+</property>	
+    <property name="sys_dataowner" type="string"  not-null="false">
+    <column name="sys_dataowner"  
+		length="40"               
+    />
+</property>	
+  
+	
+    <set name="fbhasregulatedetail3" inverse="true" cascade="delete-orphan"><key column="ASRegulateID"/><one-to-many class="BhAsregulatedetail"/></set>
+         <many-to-one name="zbhasregulate2" class="StdStation"   column="FStationID" cascade="none"></many-to-one>
+     </class>
+
+</hibernate-mapping>
+

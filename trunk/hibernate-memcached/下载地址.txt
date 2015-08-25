@@ -1,0 +1,2 @@
+http://jehiah.cz/projects/memcached-win32/
+http://www.danga.com/memcached/

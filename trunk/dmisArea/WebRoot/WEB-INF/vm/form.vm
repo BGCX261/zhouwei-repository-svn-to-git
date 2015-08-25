@@ -1,0 +1,55 @@
+package ${formpackage};
+
+import java.util.ArrayList;
+import java.util.List;
+import org.apache.struts.upload.FormFile;
+import com.techstar.framework.web.form.BaseForm;
+import ${dtopackage}.${entity.getUpEnName()}Dto;
+//please add your business methods start
+	// to do it
+//add your business method end
+
+/**
+ * @author 
+ * @date
+ */
+public class ${entity.getUpEnName()}Form extends BaseForm {
+	
+	private ${entity.getUpEnName()}Dto ${entity.getLowEnName()}Dto = new ${entity.getUpEnName()}Dto();
+
+	
+	#if($entity.blobAttrbeans.size()>0)
+		#foreach($battr in $entity.blobAttrbeans)
+	      private FormFile $battr.enName;
+	   #end
+	#end
+	
+	public ${entity.getUpEnName()}Form() {
+
+	}
+
+	public ${entity.getUpEnName()}Dto get${entity.getUpEnName()}Dto() {
+		return ${entity.getLowEnName()}Dto;
+	}
+
+	public void set${entity.getUpEnName()}Dto(${entity.getUpEnName()}Dto ${entity.getLowEnName()}Dto) {
+		this.${entity.getLowEnName()}Dto = ${entity.getLowEnName()}Dto;
+	}
+
+	#if($entity.blobAttrbeans.size()>0)
+		#foreach($battr in $entity.blobAttrbeans)
+			
+	public FormFile get${battr.getUpEnName()}() {
+		return $battr.enName;
+	}
+
+	public void set${battr.getUpEnName()}(FormFile $battr.enName) {
+		this.$battr.enName = $battr.enName;
+	}
+	#end
+	#end
+	
+	//please add your business methods start
+	// to do it
+    //add your business method end
+}

@@ -1,0 +1,1032 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+
+	<form-beans>
+	    <form-bean name="dictionaryBaseForm" type="com.techstar.dmis.web.form.DictionaryBaseForm"/>
+	    
+		<!-- 高晶 -->
+		<form-bean name="ggPersonForm" type="com.techstar.dmis.web.form.GgPersonForm"/>
+		<form-bean name="ggRelpersonForm" type="com.techstar.dmis.web.form.GgRelpersonForm"/>
+
+		<form-bean name="stdElectricstampForm"
+			type="com.techstar.dmis.web.form.StdElectricstampForm"/>
+			<form-bean name="ddEnsuringpsmanageForm"
+			type="com.techstar.dmis.web.form.DdEnsuringpsmanageForm"/>
+			<form-bean name="stdDispatchunitForm"
+				type="com.techstar.dmis.web.form.StdDispatchunitForm" />
+		<!-- 高晶end -->
+		<!--周玮-->
+		<form-bean name="ddAccidentbriefForm" type="com.techstar.dmis.web.form.DdAccidentbriefForm"/>
+		<form-bean name="ddCutofflistForm" type="com.techstar.dmis.web.form.DdCutofflistForm"/>
+		<form-bean name="ddCutofftitleForm" type="com.techstar.dmis.web.form.DdCutofftitleForm"/>
+		<form-bean name="ddCutoffsequenceForm"
+			type="com.techstar.dmis.web.form.DdCutoffsequenceForm"/>
+		<form-bean name="ddRepairrisklistForm"
+			type="com.techstar.dmis.web.form.DdRepairrisklistForm"/>
+		<form-bean name="ddMoutageplanForm" type="com.techstar.dmis.web.form.DdMoutageplanForm"/>
+		<form-bean name="ddPremethodForm" type="com.techstar.dmis.web.form.DdPremethodForm"/>
+		<!--周玮end-->
+		<!-- gcy -->
+		<form-bean name="ddClassondutylogForm"
+			type="com.techstar.dmis.web.form.DdClassondutylogForm"/>
+		<!-- gcyend -->
+		<!-- gcy -->
+		<form-bean name="ddPowerchangrecordForm"
+			type="com.techstar.dmis.web.form.DdPowerchangrecordForm"/>
+		<!-- gcyend -->
+		<!-- gcy -->
+		<form-bean name="ddSwitchseqbillForm" type="com.techstar.dmis.web.form.DdSwitchseqbillForm"/>
+		<form-bean name="ddHloadrecordForm" type="com.techstar.dmis.web.form.DdHloadrecordForm"/>
+		<!-- gcyend -->
+		<!-- gcy -->
+		<form-bean name="ddHpoweroperaterrdForm"
+			type="com.techstar.dmis.web.form.DdHpoweroperaterrdForm"/>
+		<!-- gcyend -->
+		<!-- gcy -->
+		<form-bean name="ddSasusprecordForm" type="com.techstar.dmis.web.form.DdSasusprecordForm"/>
+		<!-- gcyend -->
+		<!-- gcy -->
+		<form-bean name="ddWaterheightForm" type="com.techstar.dmis.web.form.DdWaterheightForm"/>
+		<form-bean name="ddWaterproofplanForm"
+			type="com.techstar.dmis.web.form.DdWaterproofplanForm"/>
+		<!-- gcyend -->
+		
+		<form-bean name="repRepresultForm" type="com.techstar.dmis.web.form.RepRepresultForm"/>
+		<form-bean name="ddDayondutylogForm" type="com.techstar.dmis.web.form.DdDayondutylogForm"/>
+		<form-bean name="stdManufacturerForm" type="com.techstar.dmis.web.form.StdManufacturerForm"/>
+		<form-bean name="ddWoutageplanForm" type="com.techstar.dmis.web.form.DdWoutageplanForm"/>
+		<form-bean name="bhFaultlistForm" type="com.techstar.dmis.web.form.BhFaultlistForm"/>
+		<form-bean name="stdStationForm" type="com.techstar.dmis.web.form.StdStationForm"/>
+		<form-bean name="fsLfparalistForm" type="com.techstar.dmis.web.form.FsLfparalistForm"/>
+		<form-bean name="etsEquipmentForm" type="com.techstar.dmis.web.form.EtsEquipmentForm"/>
+		<form-bean name="fsApprovebookForm" type="com.techstar.dmis.web.form.FsApprovebookForm"/>
+		<form-bean name="bhActionrecordForm" type="com.techstar.dmis.web.form.BhActionrecordForm"/>
+		<form-bean name="stdLineForm" type="com.techstar.dmis.web.form.StdLineForm"/>
+		<form-bean name="fsRmchangbillForm" type="com.techstar.dmis.web.form.FsRmchangbillForm"/>
+		<form-bean name="bhAsregulateForm" type="com.techstar.dmis.web.form.BhAsregulateForm"/>
+		<form-bean name="ddRepairrisklistForm"	type="com.techstar.dmis.web.form.DdRepairrisklistForm" />
+		<form-bean name="ddDoutageplanForm" type="com.techstar.dmis.web.form.DdDoutageplanForm"/>
+		<form-bean name="stdModelForm" type="com.techstar.dmis.web.form.StdModelForm"/>
+		<form-bean name="bhFixedvaluebillForm"	type="com.techstar.dmis.web.form.BhFixedvaluebillForm" />
+		
+		
+		
+		<!--===============================================    自动化    ========================================================-->
+		<form-bean name="zdhReceptionForm" type="com.techstar.dmis.web.form.ZdhReceptionForm"/>
+		<form-bean name="zdhFaultlistForm" type="com.techstar.dmis.web.form.ZdhFaultlistForm"/>
+		<form-bean name="zdhTransrecordForm" type="com.techstar.dmis.web.form.ZdhTransrecordForm"/>
+		<form-bean name="zdhSrapplicationForm" type="com.techstar.dmis.web.form.ZdhSrapplicationForm"/>
+		<form-bean name="zdhAutoondutylogForm" type="com.techstar.dmis.web.form.ZdhAutoondutylogForm"/>
+		<form-bean name="zdhSequencetableForm" type="com.techstar.dmis.web.form.ZdhSequencetableForm"/>
+		<form-bean name="zdhWorkbillForm" type="com.techstar.dmis.web.form.ZdhWorkbillForm"/>
+		<form-bean name="zdhMachineworklistForm" type="com.techstar.dmis.web.form.ZdhMachineworklistForm"/>
+		<form-bean name="zdhRsrecordForm" type="com.techstar.dmis.web.form.ZdhRsrecordForm"/>
+		<form-bean name="zdhRmrecForm" type="com.techstar.dmis.web.form.ZdhRmrecForm"/>
+		<form-bean name="zdhOpexaminelistForm" type="com.techstar.dmis.web.form.ZdhOpexaminelistForm"/>
+		<form-bean name="zdhEligiblermrateForm" type="com.techstar.dmis.web.form.ZdhEligiblermrateForm"/>
+		<form-bean name="zdhCharalterrecordForm" type="com.techstar.dmis.web.form.ZdhCharalterrecordForm"/>
+		<!--===============================================    自动化    ========================================================-->
+	</form-beans>
+
+	<action-mappings>
+		<!--action path="/dmisdictionary" name="dictionaryBaseForm"
+			type="org.springframework.web.struts.DelegatingActionProxy" parameter="method"
+			scope="request">
+			<forward name="dmis_list" path="/demo/dictionary/companylist.jsp"/>
+			<forward name="dmis_add" path="/demo/dictionary/companyadd.jsp"/>
+		</action -->
+         <action path="/dmisdictionary" name="dictionaryBaseForm" type="org.springframework.web.struts.DelegatingActionProxy" parameter="method" scope="request">
+			<forward name="dmis_list" path="/demo/dictionary/companylist.jsp"/>
+			<forward name="dmis_add" path="/demo/dictionary/companyadd.jsp"/>	
+			<forward name="showselects" path="/demo/dictionary/showselects.jsp"/>
+		</action>
+        <action path="/dictionary" name="dictionaryBaseForm" type="org.springframework.web.struts.DelegatingActionProxy" parameter="method" scope="request">
+			<forward name="list" path="/demo/dictionary/companylist.jsp"/>
+			<forward name="add" path="/demo/dictionary/companyadd.jsp"/>	
+			<forward name="showselects" path="/demo/dictionary/showselects.jsp"/>
+		</action>
+		<action path="/workflow" name="workflowForm" type="org.springframework.web.struts.DelegatingActionProxy" parameter="method" scope="request">
+			<forward name="list" path="/demo/workflow/list.jsp"/>
+			<forward name="xml" path="/demo/workflow/svg.jsp"/>
+		</action>
+		<action path="/repRepresult" name="repRepresultForm"
+			type="org.springframework.web.struts.DelegatingActionProxy" parameter="method"
+			scope="request">
+
+
+			<forward name="repRepresultgrid" path="/application/reprepresult/grid.jsp"/>
+
+			<forward name="repRepresulttoolbar" path="repRepresulttoolbar"/>
+
+			<forward name="repRepresulttab" path="repRepresulttab"/>
+
+			<forward name="repRepresultframe" path="repRepresultframe"/>
+
+			<forward name="repRepresultdetail" path="/application/reprepresult/detail.jsp"/>
+		</action>
+		<!--周玮-->
+		<action path="/ddCutofftitle" name="ddCutofftitleForm"
+			type="org.springframework.web.struts.DelegatingActionProxy" parameter="method"
+			scope="request">
+
+
+			<forward name="ddCutofftitlegrid"
+				path="/application/ddcutofftitle/DdCutofftitle_defaultList_grid.jsp"/>
+
+			<forward name="ddCutofftitlegrid1"
+				path="/application/ddcutofftitle/DdCutofftitle_sequencedetail_grid.jsp"/>
+
+			<forward name="ddCutofftitletoolbar" path="ddCutofftitletoolbar"/>
+
+			<forward name="ddCutofftitletab" path="ddCutofftitletab"/>
+
+			<forward name="ddCutofftitleframe" path="ddCutofftitleframe"/>
+
+			<forward name="ddCutofftitledetail"
+				path="/application/ddcutofftitle/DdCutofftitle_defaultDetail_detail.jsp"/>
+		</action>
+		<action path="/ddCutoffsequence" name="ddCutoffsequenceForm"
+			type="org.springframework.web.struts.DelegatingActionProxy" parameter="method"
+			scope="request">
+			<forward name="ddCutoffsequencegrid" path="/application/ddcutoffsequence/grid.jsp"/>
+
+			<forward name="ddCutoffsequencetoolbar" path="ddCutoffsequencetoolbar"/>
+
+			<forward name="ddCutoffsequencetab" path="ddCutoffsequencetab"/>
+
+			<forward name="ddCutoffsequenceframe" path="ddCutoffsequenceframe"/>
+
+			<forward name="ddCutoffsequencedetail" path="/application/ddcutoffsequence/detail.jsp"/>
+		</action>
+		<action path="/ddCutofflist" name="ddCutofflistForm"
+			type="org.springframework.web.struts.DelegatingActionProxy" parameter="method"
+			scope="request">
+
+
+			<forward name="ddCutofflistgrid" path="/application/ddcutofflist/grid.jsp"/>
+
+			<forward name="ddCutofflisttoolbar" path="ddCutofflisttoolbar"/>
+
+			<forward name="ddCutofflisttab" path="ddCutofflisttab"/>
+
+			<forward name="ddCutofflistframe" path="ddCutofflistframe"/>
+
+			<forward name="ddCutofflistdetail" path="/application/ddcutofflist/detail.jsp"/>
+		</action>
+		<action path="/ddRepairrisklist" name="ddRepairrisklistForm"
+			type="org.springframework.web.struts.DelegatingActionProxy" parameter="method"
+			scope="request">
+
+
+			<forward name="ddRepairrisklistgrid"
+				path="/application/ddrepairrisklist/DdRepairrisklist_defaultList_grid.jsp"/>
+
+			<forward name="ddRepairrisklisttoolbar" path="ddRepairrisklisttoolbar"/>
+
+			<forward name="ddRepairrisklisttab" path="ddRepairrisklisttab"/>
+
+			<forward name="newByMplan_page"
+				path="/application/ddrepairrisklist/DDMonthplan_showModalDialog_grid.jsp"/>
+
+			<forward name="ddRepairrisklistframe" path="ddRepairrisklistframe"/>
+
+			<forward name="ddRepairrisklistdetail"
+				path="/application/ddrepairrisklist/DdRepairrisklist_defaultDetail_detail.jsp"/>
+		</action>
+
+		<action path="/ddPremethod" name="ddPremethodForm"
+			type="org.springframework.web.struts.DelegatingActionProxy" parameter="method"
+			scope="request">
+			<forward name="upload" path="/application/ddrepairrisklist/DdRepairrisklist_main.jsp"/>
+			<forward name="bottom" path="/application/ddrepairrisklist/bottom.jsp"/>
+			<forward name="bottom_doc" path="/application/ddrepairrisklist/bottom_doc.jsp"/>
+		</action>
+
+		<action path="/ddMoutageplan" name="ddMoutageplanForm"
+			type="org.springframework.web.struts.DelegatingActionProxy" parameter="method"
+			scope="request">
+
+
+			<forward name="ddMoutageplangrid"
+				path="/application/ddmoutageplan/DDMonthplan_defaultList_grid.jsp"/>
+
+			<forward name="ddMoutageplantoolbar" path="ddMoutageplantoolbar"/>
+
+			<forward name="ddMoutageplantab" path="ddMoutageplantab"/>
+
+			<forward name="ddMoutageplanframe" path="ddMoutageplanframe"/>
+
+			<forward name="unite_page" path="/application/ddmoutageplan/DDMonthplan_List_grid.jsp"/>
+
+			<forward name="showModalDialog_page"
+				path="/application/ddmoutageplan/DDMonthplan_showModalDialog_grid.jsp"/>
+
+			<forward name="initRiskanalyse_page"
+				path="/application/ddmoutageplan/DDMonthplan_Riskanalyse_detail.jsp"/>
+
+			<forward name="error_page" path="/application/pages/error.jsp"/>
+
+			<forward name="ddMoutageplandetail"
+				path="/application/ddmoutageplan/DDMonthplan_defaultDetail_detail.jsp"/>
+
+			<forward name="ddMoutageplandetail1"
+				path="/application/ddmoutageplan/DDMonthplan_Riskanalyse_detail.jsp"/>
+		</action>
+
+		<action path="/ddAccidentbrief" name="ddAccidentbriefForm"
+			type="org.springframework.web.struts.DelegatingActionProxy" parameter="method"
+			scope="request">
+
+			<forward name="ddAccidentbriefgrid"
+				path="/application/ddaccidentbrief/DdAccidentbrief_defaultList_grid.jsp"/>
+
+			<forward name="ddAccidentbrieftoolbar" path="ddAccidentbrieftoolbar"/>
+
+			<forward name="ddAccidentbrieftab" path="ddAccidentbrieftab"/>
+
+			<forward name="ddAccidentbriefframe" path="ddAccidentbriefframe"/>
+
+			<forward name="ddAccidentbriefdetail"
+				path="/application/ddaccidentbrief/DdAccidentbrief_defaultDetail_detail.jsp"/>
+		</action>
+		<!--周玮end-->
+
+
+
+		<!-- 顾 -->
+		<action path="/ddClassondutylog" name="ddClassondutylogForm"
+			type="org.springframework.web.struts.DelegatingActionProxy" parameter="method"
+			scope="request">
+			<forward name="index" path="/index.jsp"/>
+			<forward name="ddClassondutyloggrid"
+				path="/application/ddclassondutylog/DDclassonduty_defaultList_grid.jsp"/>
+			<forward name="ddClassondutyloggrid1"
+				path="/application/ddclassondutylog/DDclassonduty_DDHeavyload_grid.jsp"/>
+			<forward name="ddClassondutyloggrid2"
+				path="/application/ddclassondutylog/DDclassonduty_DDswitchautostop_grid.jsp"/>
+			<forward name="ddClassondutyloggrid3"
+				path="/application/ddclassondutylog/DDclassonduty_ddRunrecord_grid.jsp"/>
+			<forward name="ddClassondutyloggrid4"
+				path="/application/ddclassondutylog/DDclassonduty_powerplantschedule_grid.jsp"/>
+			<forward name="ddClassondutyloggrid5"
+				path="/application/ddclassondutylog/DDclassonduty_plantschedule_grid.jsp"/>
+			<forward name="ddClassondutyloggrid6"
+				path="/application/ddclassondutylog/DDclassonduty_DDwaterheight_grid.jsp"/>
+			<forward name="ddClassondutyloggrid7"
+				path="/application/ddclassondutylog/DDclassonduty_Planwater_grid.jsp"/>
+			<forward name="ddClassondutylogtoolbar" path="ddClassondutylogtoolbar"/>
+			<forward name="ddClassondutylogtab" path="ddClassondutylogtab"/>
+			<forward name="ddClassondutylogframe" path="ddClassondutylogframe"/>
+			<forward name="ddClassondutylogdetail"
+				path="/application/ddclassondutylog/DDclassonduty_defaultDetail_detail.jsp"/>
+			<forward name="ddClassondutylogdetail1"
+				path="/application/ddclassondutylog/DDclassonduty_DDdayloadcurve_detail.jsp"/>
+
+		</action>
+		<action path="/ddSwitchseqbill" name="ddSwitchseqbillForm"
+			type="org.springframework.web.struts.DelegatingActionProxy" parameter="method"
+			scope="request">
+			<forward name="ddSwitchseqbillgrid"
+				path="/application/ddswitchseqbill/DdSwitchseqbill_defaultList_grid.jsp"/>
+			<forward name="ddSwitchseqbillgrid1"
+				path="/application/ddswitchseqbill/DdSwitchseqbill_switchseqbillsteps_grid.jsp"/>
+			<forward name="ddSwitchseqbilltoolbar" path="ddSwitchseqbilltoolbar"/>
+			<forward name="ddSwitchseqbilltab" path="ddSwitchseqbilltab"/>
+			<forward name="ddSwitchseqbillframe" path="ddSwitchseqbillframe"/>
+			<forward name="ddSwitchseqbilldetail"
+				path="/application/ddswitchseqbill/DdSwitchseqbill_defaultDetail_detail.jsp"/>
+			<forward name="ddSwitchseqbilldetail1"
+				path="/application/ddswitchseqbill/DdSwitchseqbill_switchseqbillcheck_detail.jsp"/>
+			<forward name="ddSwitchseqbilldetail2"
+				path="/application/ddswitchseqbill/DdSwitchseqbill_switchseqbillstop_detail.jsp"/>
+			<forward name="ddSwitchseqbilldetail3"
+				path="/application/ddswitchseqbill/DdSwitchseqbill_switchseqbillExe_detail.jsp"/>
+		</action>
+		<action path="/ddWaterheight" name="ddWaterheightForm"
+			type="org.springframework.web.struts.DelegatingActionProxy" parameter="method"
+			scope="request">
+			<forward name="ddWaterheightgrid"
+				path="/application/ddwaterheight/DdWaterheight_defaultList_grid.jsp"/>
+			<forward name="ddWaterheighttoolbar" path="ddWaterheighttoolbar"/>
+			<forward name="ddWaterheighttab" path="ddWaterheighttab"/>
+			<forward name="ddWaterheightframe" path="ddWaterheightframe"/>
+			<forward name="ddWaterheightdetail"
+				path="/application/ddwaterheight/DdWaterheight_defaultDetail_detail.jsp"/>
+		</action>
+
+		<action path="/ddWaterproofplan" name="ddWaterproofplanForm"
+			type="org.springframework.web.struts.DelegatingActionProxy" parameter="method"
+			scope="request">
+			<forward name="ddWaterproofplangrid"
+				path="/application/ddwaterproofplan/DdWaterproofplan_defaultList_grid.jsp"/>
+			<forward name="ddWaterproofplantoolbar" path="ddWaterproofplantoolbar"/>
+			<forward name="ddWaterproofplantab" path="ddWaterproofplantab"/>
+			<forward name="ddWaterproofplanframe" path="ddWaterproofplanframe"/>
+			<forward name="ddWaterproofplandetail"
+				path="/application/ddwaterproofplan/DdWaterproofplan_defaultDetail_detail.jsp"/>
+		</action>
+		<action path="/ddPowerchangrecord" name="ddPowerchangrecordForm"
+			type="org.springframework.web.struts.DelegatingActionProxy" parameter="method"
+			scope="request">
+			<forward name="ddPowerchangrecordgrid"
+				path="/application/ddpowerchangrecord/DDpowerchangrecord_defaultList_grid.jsp"/>
+
+			<forward name="ddPowerchangrecordtoolbar" path="ddPowerchangrecordtoolbar"/>
+
+			<forward name="ddPowerchangrecordtab" path="ddPowerchangrecordtab"/>
+
+			<forward name="ddPowerchangrecordframe" path="ddPowerchangrecordframe"/>
+
+			<forward name="ddPowerchangrecorddetail"
+				path="/application/ddpowerchangrecord/DDpowerchangrecord_defaultDetail_detail.jsp"/>
+		</action>
+
+		<!-- 顾end -->
+
+       <!-- gcy -->
+		<action path="/ddHpoweroperaterrd" name="ddHpoweroperaterrdForm"
+			type="org.springframework.web.struts.DelegatingActionProxy" parameter="method"
+			scope="request">
+
+
+			<forward name="ddHpoweroperaterrdgrid"
+				path="/application/ddhpoweroperaterrd/DdHpoweroperaterrd_defaultList_grid.jsp"/>
+
+			<forward name="ddHpoweroperaterrdtoolbar" path="ddHpoweroperaterrdtoolbar"/>
+
+			<forward name="ddHpoweroperaterrdtab" path="ddHpoweroperaterrdtab"/>
+
+			<forward name="ddHpoweroperaterrdframe" path="ddHpoweroperaterrdframe"/>
+
+			<forward name="ddHpoweroperaterrddetail"
+				path="/application/ddhpoweroperaterrd/DdHpoweroperaterrd_defaultDetail_detail.jsp"/>
+		</action>
+
+		<!-- gcyend -->
+		<action path="/ddDayondutylog" name="ddDayondutylogForm"
+			type="org.springframework.web.struts.DelegatingActionProxy" parameter="method"
+			scope="request">
+
+
+			<forward name="ddDayondutyloggrid" path="/application/dddayondutylog/grid.jsp"/>
+
+			<forward name="ddDayondutylogtoolbar" path="ddDayondutylogtoolbar"/>
+
+			<forward name="ddDayondutylogtab" path="ddDayondutylogtab"/>
+
+			<forward name="ddDayondutylogframe" path="ddDayondutylogframe"/>
+
+			<forward name="ddDayondutylogdetail" path="/application/dddayondutylog/detail.jsp"/>
+		</action>
+
+
+		<action path="/stdManufacturer" name="stdManufacturerForm"
+			type="org.springframework.web.struts.DelegatingActionProxy" parameter="method"
+			scope="request">
+
+
+			<forward name="stdManufacturergrid" path="/application/stdmanufacturer/grid.jsp"/>
+
+			<forward name="stdManufacturertoolbar" path="stdManufacturertoolbar"/>
+
+			<forward name="stdManufacturertab" path="stdManufacturertab"/>
+
+			<forward name="stdManufacturerframe" path="stdManufacturerframe"/>
+
+			<forward name="stdManufacturerdetail" path="/application/stdmanufacturer/detail.jsp"/>
+		</action>
+
+
+		<action path="/ddWoutageplan" name="ddWoutageplanForm"
+			type="org.springframework.web.struts.DelegatingActionProxy" parameter="method"
+			scope="request">
+
+
+			<forward name="ddWoutageplangrid" path="/application/ddwoutageplan/grid.jsp"/>
+
+			<forward name="ddWoutageplantoolbar" path="ddWoutageplantoolbar"/>
+
+			<forward name="ddWoutageplantab" path="ddWoutageplantab"/>
+
+			<forward name="ddWoutageplanframe" path="ddWoutageplanframe"/>
+
+			<forward name="ddWoutageplandetail" path="/application/ddwoutageplan/detail.jsp"/>
+		</action>
+
+
+		
+
+
+
+
+		<action path="/bhFaultlist" name="bhFaultlistForm"
+			type="org.springframework.web.struts.DelegatingActionProxy" parameter="method"
+			scope="request">
+
+
+			<forward name="bhFaultlistgrid" path="/application/bhfaultlist/grid.jsp"/>
+
+			<forward name="bhFaultlisttoolbar" path="bhFaultlisttoolbar"/>
+
+			<forward name="bhFaultlisttab" path="bhFaultlisttab"/>
+
+			<forward name="bhFaultlistframe" path="bhFaultlistframe"/>
+
+			<forward name="bhFaultlistdetail" path="/application/bhfaultlist/detail.jsp"/>
+		</action>
+
+
+		
+		<action path="/fsLfparalist" name="fsLfparalistForm"
+			type="org.springframework.web.struts.DelegatingActionProxy" parameter="method"
+			scope="request">
+
+
+			<forward name="fsLfparalistgrid" path="/application/fslfparalist/grid.jsp"/>
+
+			<forward name="fsLfparalisttoolbar" path="fsLfparalisttoolbar"/>
+
+			<forward name="fsLfparalisttab" path="fsLfparalisttab"/>
+
+			<forward name="fsLfparalistframe" path="fsLfparalistframe"/>
+
+			<forward name="fsLfparalistdetail" path="/application/fslfparalist/detail.jsp"/>
+		</action>
+
+
+		<action path="/etsEquipment" name="etsEquipmentForm"
+			type="org.springframework.web.struts.DelegatingActionProxy" parameter="method"
+			scope="request">
+
+
+			<forward name="etsEquipmentgrid" path="/application/etsequipment/grid.jsp"/>
+
+			<forward name="etsEquipmenttoolbar" path="etsEquipmenttoolbar"/>
+
+			<forward name="etsEquipmenttab" path="etsEquipmenttab"/>
+
+			<forward name="etsEquipmentframe" path="etsEquipmentframe"/>
+
+			<forward name="etsEquipmentdetail" path="/application/etsequipment/detail.jsp"/>
+		</action>
+
+
+		<action path="/ddHloadrecord" name="ddHloadrecordForm"
+			type="org.springframework.web.struts.DelegatingActionProxy" parameter="method"
+			scope="request">
+
+
+			<forward name="ddHloadrecordgrid"
+				path="/application/ddhloadrecord/DDeqoheavyload_defaultList_grid.jsp"/>
+
+			<forward name="ddHloadrecordtoolbar" path="ddHloadrecordtoolbar"/>
+
+			<forward name="ddHloadrecordtab" path="ddHloadrecordtab"/>
+
+			<forward name="ddHloadrecordframe" path="ddHloadrecordframe"/>
+
+			<forward name="ddHloadrecorddetail"
+				path="/application/ddhloadrecord/DDeqoheavyload_defaultDetail_detail.jsp"/>
+		</action>
+
+
+
+
+		
+
+
+		<action path="/fsApprovebook" name="fsApprovebookForm"
+			type="org.springframework.web.struts.DelegatingActionProxy" parameter="method"
+			scope="request">
+
+
+			<forward name="fsApprovebookgrid" path="/application/fsapprovebook/grid.jsp"/>
+
+			<forward name="fsApprovebooktoolbar" path="fsApprovebooktoolbar"/>
+
+			<forward name="fsApprovebooktab" path="fsApprovebooktab"/>
+
+			<forward name="fsApprovebookframe" path="fsApprovebookframe"/>
+
+			<forward name="fsApprovebookdetail" path="/application/fsapprovebook/detail.jsp"/>
+		</action>
+
+
+
+
+
+		
+
+		<action path="/bhActionrecord" name="bhActionrecordForm"
+			type="org.springframework.web.struts.DelegatingActionProxy" parameter="method"
+			scope="request">
+
+			<forward name="bhActionrecordgrid" path="/application/bhactionrecord/grid.jsp"/>
+
+			<forward name="bhActionrecordtoolbar" path="bhActionrecordtoolbar"/>
+
+			<forward name="bhActionrecordtab" path="bhActionrecordtab"/>
+
+			<forward name="bhActionrecordframe" path="bhActionrecordframe"/>
+
+			<forward name="bhActionrecorddetail" path="/application/bhactionrecord/detail.jsp"/>
+		</action>
+
+
+		
+
+		
+
+
+		
+
+
+		<action path="/stdLine" name="stdLineForm"
+			type="org.springframework.web.struts.DelegatingActionProxy" parameter="method"
+			scope="request">
+
+
+			<forward name="stdLinegrid" path="/application/stdline/grid.jsp"/>
+
+			<forward name="stdLinetoolbar" path="stdLinetoolbar"/>
+
+			<forward name="stdLinetab" path="stdLinetab"/>
+
+			<forward name="stdLineframe" path="stdLineframe"/>
+
+			<forward name="stdLinedetail" path="/application/stdline/detail.jsp"/>
+		</action>
+
+
+		<action path="/fsRmchangbill" name="fsRmchangbillForm"
+			type="org.springframework.web.struts.DelegatingActionProxy" parameter="method"
+			scope="request">
+
+
+			<forward name="fsRmchangbillgrid" path="/application/fsrmchangbill/grid.jsp"/>
+
+			<forward name="fsRmchangbilltoolbar" path="fsRmchangbilltoolbar"/>
+
+			<forward name="fsRmchangbilltab" path="fsRmchangbilltab"/>
+
+			<forward name="fsRmchangbillframe" path="fsRmchangbillframe"/>
+
+			<forward name="fsRmchangbilldetail" path="/application/fsrmchangbill/detail.jsp"/>
+		</action>
+
+
+		<action path="/bhAsregulate" name="bhAsregulateForm"
+			type="org.springframework.web.struts.DelegatingActionProxy" parameter="method"
+			scope="request">
+
+
+			<forward name="bhAsregulategrid" path="/application/bhasregulate/grid.jsp"/>
+
+			<forward name="bhAsregulatetoolbar" path="bhAsregulatetoolbar"/>
+
+			<forward name="bhAsregulatetab" path="bhAsregulatetab"/>
+
+			<forward name="bhAsregulateframe" path="bhAsregulateframe"/>
+
+			<forward name="bhAsregulatedetail" path="/application/bhasregulate/detail.jsp"/>
+		</action>
+
+
+
+
+		<!-- 高 -->
+		<action path="/ddDoutageplan" name="ddDoutageplanForm"
+			type="org.springframework.web.struts.DelegatingActionProxy" parameter="method"
+			scope="request">
+
+
+			<forward name="ddDoutageplangrid"
+				path="/application/dddoutageplan/DDdayoutageplan_defaultList_grid.jsp"/>
+
+			<forward name="ddDoutageplangrid1"
+				path="/application/dddoutageplan/DDdayoutageplan_ddrmchang_grid.jsp"/>
+
+			<forward name="ddDoutageplangrid2"
+				path="/application/dddoutageplan/DDdayoutageplan_excutelist_grid.jsp"/>
+
+			<forward name="ddDoutageplangrid3"
+				path="/application/dddoutageplan/DDdayoutageplan_delaylist_grid.jsp"/>
+
+			<forward name="ddDoutageplantoolbar" path="ddDoutageplantoolbar"/>
+
+			<forward name="ddDoutageplantab" path="ddDoutageplantab"/>
+
+			<forward name="ddDoutageplanframe" path="ddDoutageplanframe"/>
+
+			<forward name="ddDoutageplandetail"
+				path="/application/dddoutageplan/DDdayoutageplan_defaultDetail_detail.jsp"/>
+
+			<forward name="image" path="/application/dddoutageplan/DDdayoutplan_image.jsp"/>
+			<forward name="dddexecute"
+				path="/application/dddoutageplan/DDdayoutageplan_execute_detail.jsp"/>
+			<forward name="showCopperateDetail"
+				path="/application/dddoutageplan/copperate_detail.jsp"/>
+			<forward name="copperatedispatchdayplan"
+				path="/application/dddoutageplan/copperate_dispatchdayplain_grid.jsp?name={0}&amp;date={1}"/>
+			<forward name="copperatedayplan"
+				path="/application/dddoutageplan/copperate_dayplan_grid.jsp?name={0}&amp;date={1}"/>
+			<forward name="executecopperatedayplan"
+				path="/application/dddoutageplan/DDdayoutageplan_copperate_grid.jsp?planid={0}"/>
+			<forward name="canclereason" path="/application/dddoutageplan/canclereason.jsp"/>
+			
+			<forward name="dayplanstamps" path="/application/dddoutageplan/grafe.jsp"/>
+		</action>
+
+		<action path="/ggPerson" name="ggPersonForm"
+			type="org.springframework.web.struts.DelegatingActionProxy" parameter="method"
+			scope="request">
+
+
+			<forward name="ggPersongrid" path="/application/ggperson/GgPerson_defaultList_grid.jsp"/>
+
+			<forward name="ggPersontoolbar" path="ggPersontoolbar"/>
+
+			<forward name="ggPersontab" path="ggPersontab"/>
+
+			<forward name="ggPersonframe" path="ggPersonframe"/>
+
+			<forward name="ggPersondetail"
+				path="/application/ggperson/GgPerson_defaultDetail_detail.jsp"/>
+		</action>
+
+		<action path="/ggRelperson" name="ggRelpersonForm"
+			type="org.springframework.web.struts.DelegatingActionProxy" parameter="method"
+			scope="request">
+
+
+			<forward name="ggRelpersongrid"
+				path="/application/ggrelperson/GgRelperson_defaultList_grid.jsp"/>
+
+			<forward name="ggRelpersontoolbar" path="ggRelpersontoolbar"/>
+
+			<forward name="ggRelpersontab" path="ggRelpersontab"/>
+
+			<forward name="ggRelpersonframe" path="ggRelpersonframe"/>
+
+			<forward name="ggRelpersondetail"
+				path="/application/ggrelperson/GgRelperson_defaultDetail_detail.jsp"/>
+		</action>
+
+
+		<action path="/stdElectricstamp" name="stdElectricstampForm"
+			type="org.springframework.web.struts.DelegatingActionProxy" parameter="method"
+			scope="request">
+
+
+			<forward name="stdElectricstampgrid"
+				path="/application/stdelectricstamp/StdElectricstamp_defaultList_grid.jsp"/>
+
+			<forward name="stdElectricstamptoolbar" path="stdElectricstamptoolbar"/>
+
+			<forward name="stdElectricstamptab" path="stdElectricstamptab"/>
+
+			<forward name="stdElectricstampframe" path="stdElectricstampframe"/>
+
+			<forward name="stdElectricstampdetail"
+				path="/application/stdelectricstamp/StdElectricstamp_defaultDetail_detail.jsp"/>
+
+			<forward name="dayplanstamps" path="/application/dddoutageplan/grafe.jsp"/>
+		</action>
+
+		<action path="/systemdic" type="org.springframework.web.struts.DelegatingActionProxy"
+			parameter="method" scope="request"> </action>
+			
+			<action path="/stdStation" name="stdStationForm"
+			type="org.springframework.web.struts.DelegatingActionProxy" parameter="method"
+			scope="request">
+
+
+			<forward name="stdStationgrid" path="/application/stdstation/grid.jsp"/>
+
+			<forward name="stdStationtoolbar" path="stdStationtoolbar"/>
+
+			<forward name="stdStationtab" path="stdStationtab"/>
+
+			<forward name="stdStationframe" path="stdStationframe"/>
+
+			<forward name="stdStationdetail" path="/application/stdstation/detail.jsp"/>
+		</action>
+			
+			
+			<action path="/ddEnsuringpsmanage" name="ddEnsuringpsmanageForm"
+			type="org.springframework.web.struts.DelegatingActionProxy" parameter="method"
+			scope="request">
+
+
+			<forward name="ddEnsuringpsmanagegrid"
+				path="/application/ddensuringpsmanage/powerensurmanage_defaultList_grid.jsp"/>
+
+			<forward name="ddEnsuringpsmanagetoolbar" path="ddEnsuringpsmanagetoolbar"/>
+
+			<forward name="ddEnsuringpsmanagetab" path="ddEnsuringpsmanagetab"/>
+
+			<forward name="ddEnsuringpsmanageframe" path="ddEnsuringpsmanageframe"/>
+
+			<forward name="ddEnsuringpsmanagedetail"
+				path="/application/ddensuringpsmanage/powerensurmanage_defaultDetail_detail.jsp"/>
+		</action>
+		
+		
+			 <action path="/stdDispatchunit" name="stdDispatchunitForm"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			parameter="method" scope="request">
+
+			<forward name="stdDispatchunitgrid"
+				path="/application/stddispatchunit/StdDispatchunit_defaultList_grid.jsp" />
+
+			<forward name="stdDispatchunittoolbar"
+				path="stdDispatchunittoolbar" />
+
+			<forward name="stdDispatchunittab"
+				path="stdDispatchunittab" />
+
+			<forward name="stdDispatchunitframe"
+				path="stdDispatchunitframe" />
+
+			<forward name="stdDispatchunitdetail"
+				path="/application/stddispatchunit/StdDispatchunit_defaultDetail_detail.jsp" />
+		</action>
+		<!-- 高end -->
+
+
+		
+
+
+		<action path="/stdModel" name="stdModelForm"
+			type="org.springframework.web.struts.DelegatingActionProxy" parameter="method"
+			scope="request">
+
+
+			<forward name="stdModelgrid" path="/application/stdmodel/grid.jsp"/>
+
+			<forward name="stdModeltoolbar" path="stdModeltoolbar"/>
+
+			<forward name="stdModeltab" path="stdModeltab"/>
+
+			<forward name="stdModelframe" path="stdModelframe"/>
+
+			<forward name="stdModeldetail" path="/application/stdmodel/detail.jsp"/>
+		</action>
+
+
+		
+
+
+		
+
+
+		<action path="/bhFixedvaluebill" name="bhFixedvaluebillForm"
+			type="org.springframework.web.struts.DelegatingActionProxy" parameter="method"
+			scope="request">
+
+
+			<forward name="bhFixedvaluebillgrid" path="/application/bhfixedvaluebill/grid.jsp"/>
+
+			<forward name="bhFixedvaluebilltoolbar" path="bhFixedvaluebilltoolbar"/>
+
+			<forward name="bhFixedvaluebilltab" path="bhFixedvaluebilltab"/>
+
+			<forward name="bhFixedvaluebillframe" path="bhFixedvaluebillframe"/>
+
+			<forward name="bhFixedvaluebilldetail" path="/application/bhfixedvaluebill/detail.jsp"/>
+		</action>
+
+
+		
+
+		<!-- gcy -->
+		<action path="/ddSasusprecord" name="ddSasusprecordForm"
+			type="org.springframework.web.struts.DelegatingActionProxy" parameter="method"
+			scope="request">
+
+
+			<forward name="ddSasusprecordgrid"
+				path="/application/ddsasusprecord/DDASstoprun_defaultList_grid.jsp"/>
+
+			<forward name="ddSasusprecordtoolbar" path="ddSasusprecordtoolbar"/>
+
+			<forward name="ddSasusprecordtab" path="ddSasusprecordtab"/>
+
+			<forward name="ddSasusprecordframe" path="ddSasusprecordframe"/>
+
+			<forward name="ddSasusprecorddetail"
+				path="/application/ddsasusprecord/DDASstoprun_defaultDetail_detail.jsp"/>
+		</action>
+		<!-- gcyend -->
+
+		
+
+		<action path="/todolist" type="org.springframework.web.struts.DelegatingActionProxy"
+			parameter="method" scope="request">
+			<forward name="todolistGrid" path="/application/todolist/wfTodolistGrid.jsp"/>
+			<forward name="svg" path="/application/todolist/showSvg.jsp"/>
+		</action>
+
+		<!--===============================================    自动化    ========================================================-->
+		<!-- 停复役 -->
+		<action path="/zdhSrapplication" name="zdhSrapplicationForm"
+			type="org.springframework.web.struts.DelegatingActionProxy" parameter="method"
+			scope="request">
+			<forward name="zdhSrapplicationgrid"
+				path="/application/zdhsrapplication/ZDHSrapplication_defaultList_grid.jsp"/>
+			<forward name="zdhSrapplicationgrid1"
+				path="/application/zdhsrapplication/ZDHSrapplication_releqplist_grid.jsp"/>
+			<forward name="zdhSrapplicationtoolbar" path="zdhSrapplicationtoolbar"/>
+			<forward name="zdhSrapplicationtab" path="zdhSrapplicationtab"/>
+			<forward name="zdhSrapplicationframe" path="zdhSrapplicationframe"/>
+			<forward name="zdhSrapplicationdetail"	path="/application/zdhsrapplication/ZDHSrapplication_defaultDetail_detail.jsp" />
+			<forward name="showInfo"	path="/application/zdhsrapplication/showInfo.jsp" />
+		    <forward name="zdhTransrecordshowSrapplicationdetail" path="/application/zdhtransrecord/zdhtransrec_showSrapplicationdetail.jsp" />
+		</action>
+		<!-- 缺陷 -->
+		<action path="/zdhFaultlist" name="zdhFaultlistForm"
+			type="org.springframework.web.struts.DelegatingActionProxy" parameter="method"
+			scope="request">
+			<forward name="zdhFaultlistgrid"
+				path="/application/zdhfaultlist/autoeqpfaultlist_defaultList_grid.jsp"/>
+			<forward name="zdhFaultlisttoolbar" path="zdhFaultlisttoolbar"/>
+			<forward name="zdhFaultlisttab" path="zdhFaultlisttab"/>
+			<forward name="zdhFaultlistframe" path="zdhFaultlistframe"/>
+			<forward name="zdhFaultlistdetail"	path="/application/zdhfaultlist/autoeqpfaultlist_defaultDetail_detail.jsp" />
+			<forward name="zdhFaultlistdetail1"	path="/application/zdhfaultlist/autoeqpfaultlist_EQpinfo_detail.jsp" />
+		    <forward name="extZdhFaultlistgrid" path="/application/zdhautoondutylog/zdhondutylog_zdhfaultlist_grid.jsp" />
+		    <forward name="zdhMachineworkshowFaultlistdetail" path="/application/zdhmachineworklist/zdhmachinehalllist_showFaultlistdetail.jsp"/>
+		</action>
+		<!-- 值班日志 -->
+		<action path="/zdhAutoondutylog" name="zdhAutoondutylogForm"
+			type="org.springframework.web.struts.DelegatingActionProxy" parameter="method"
+			scope="request">
+			<forward name="zdhAutoondutyloggrid" path="/application/zdhautoondutylog/zdhondutylog_defaultList_grid.jsp"/>
+			<forward name="zdhAutoondutyloggrid1" path="/application/zdhautoondutylog/zdhondutylog_machinehalllist_grid.jsp"/>			
+			<forward name="zdhAutoondutyloggrid2" path="/application/zdhautoondutylog/zdhondutylog_zdhworkbill_grid.jsp"/>			
+			<forward name="zdhAutoondutyloggrid3" path="/application/zdhautoondutylog/zdhondutylog_zdhdayplancheck_grid.jsp"/>
+            <forward name="zdhAutoondutyloggrid4" path="/application/zdhautoondutylog/zdhondutylog_zdhrsrec_grid.jsp"/>
+			<forward name="zdhAutoondutyloggrid5" path="/application/zdhautoondutylog/zdhondutylog_zdhfaultlist_grid.jsp"/>
+			<forward name="zdhAutoondutyloggrid6" path="/application/zdhautoondutylog/zdhondutylog_zdhsystemchartalter_grid.jsp"/>
+			<forward name="zdhAutoondutyloggrid7" path="/application/zdhautoondutylog/zdhondutylog_zdhrmdataalter_grid.jsp"/>
+			<forward name="zdhAutoondutyloggrid8" path="/application/zdhautoondutylog/zdhondutylog_zdhtransrec_grid.jsp"/>
+			<forward name="zdhAutoondutylogtoolbar" path="zdhAutoondutylogtoolbar"/>
+			<forward name="zdhAutoondutylogtab" path="zdhAutoondutylogtab"/>
+			<forward name="zdhAutoondutylogframe" path="zdhAutoondutylogframe"/>
+			<forward name="zdhAutoondutylogdetail" path="/application/zdhautoondutylog/zdhondutylog_defaultDetail_detail.jsp"/>
+			<forward name="zdhAutoondutylogdetail1" path="/application/zdhautoondutylog/zdhondutylog_zdhrmeliglerate_detail.jsp"/>
+		</action>
+		
+		<!-- 系统图 -->
+		<action path="/zdhCharalterrecord" name="zdhCharalterrecordForm"
+			type="org.springframework.web.struts.DelegatingActionProxy" parameter="method"
+			scope="request">
+			<forward name="zdhCharalterrecordgrid" path="/application/zdhcharalterrecord/ZdhCharalterrecord_defaultList_grid.jsp"/>
+			<forward name="zdhCharalterrecordtoolbar" path="zdhCharalterrecordtoolbar"/>
+			<forward name="zdhCharalterrecordtab"  path="zdhCharalterrecordtab"/>
+			<forward name="zdhCharalterrecordframe" path="zdhCharalterrecordframe"/>
+			<forward name="zdhCharalterrecorddetail" path="/application/zdhcharalterrecord/ZdhCharalterrecord_defaultDetail_detail.jsp"/>				
+		    <forward name="zdhCharalterrecordshowImg" path="/application/zdhcharalterrecord/ZdhCharalterrecord_showImg_img.jsp" />
+		</action>
+		<!-- 工作票 -->
+		<action path="/zdhWorkbill" name="zdhWorkbillForm"
+			type="org.springframework.web.struts.DelegatingActionProxy" parameter="method"
+			scope="request">
+            <forward name="zdhWorkbillgrid" path="/application/zdhworkbill/zdhworkbill_defaultList_grid.jsp"/>			  		    				
+		    <forward name="zdhWorkbilltoolbar" path="zdhWorkbilltoolbar"/>  		    				
+		    <forward name="zdhWorkbilltab" path="zdhWorkbilltab"/>  		    				
+		    <forward name="zdhWorkbillframe" path="zdhWorkbillframe"/>  		    				
+			<forward name="zdhWorkbilldetail" path="/application/zdhworkbill/zdhworkbill_defaultDetail_detail.jsp"/>
+		    <forward name="zdhMachineworkshowWorkbilldetail" path="/application/zdhmachineworklist/zdhmachinehalllist_showWorkbilldetail.jsp" />
+		</action>
+		<!-- 遥信记录 -->
+		<action path="/zdhRsrecord" name="zdhRsrecordForm"
+			type="org.springframework.web.struts.DelegatingActionProxy" parameter="method"
+			scope="request">
+			<forward name="zdhRsrecordgrid" path="/application/zdhrsrecord/zdhrsrec_defaultList_grid.jsp"/>			  		    				
+		    <forward name="zdhRsrecordtoolbar" path="zdhRsrecordtoolbar"/>  		    				
+		    <forward name="zdhRsrecordtab" path="zdhRsrecordtab"/>  		    				
+		    <forward name="zdhRsrecordframe" path="zdhRsrecordframe"/>  		    				
+			<forward name="zdhRsrecorddetail" path="/application/zdhrsrecord/zdhrsrec_defaultDetail_detail.jsp"/>
+		    <forward name="extZdhRsrecordgrid" path="/application/zdhautoondutylog/zdhondutylog_zdhrsrec_grid.jsp" />
+		</action>
+		<!-- 遥测记录 -->
+		<action path="/zdhEligiblermrate" name="zdhEligiblermrateForm"
+			type="org.springframework.web.struts.DelegatingActionProxy" parameter="method"
+			scope="request">			
+			<forward name="zdhEligiblermrategrid" path="/application/zdheligiblermrate/zdhrmeliglerate_defaultList_grid.jsp"/>
+ 		    <forward name="zdhEligiblermratetoolbar" path="zdhEligiblermratetoolbar"/>
+  		    <forward name="zdhEligiblermratetab" path="zdhEligiblermratetab"/>
+  		    <forward name="zdhEligiblermrateframe" path="zdhEligiblermrateframe"/>
+  		    <forward name="zdhEligiblermratedetail" path="/application/zdheligiblermrate/zdhrmeliglerate_defaultDetail_detail.jsp" />			  		            
+		    <forward name="extEligiblermratedetail" path="/application/zdhautoondutylog/zdhondutylog_zdheligiblermrate_detail.jsp" />
+		</action>
+
+		
+  		<!-- 遥测数据修改 -->
+  		<action path="/zdhRmrec" name="zdhRmrecForm"
+			type="org.springframework.web.struts.DelegatingActionProxy" parameter="method"
+			scope="request">
+			<forward name="zdhRmrecgrid" path="/application/zdhrmrec/ZdhRmrec_defaultList_grid.jsp"/>
+			<forward name="zdhRmrectoolbar" path="zdhRmrectoolbar"/>
+  		    <forward name="zdhRmrectab" path="zdhRmrectab"/>
+  		    <forward name="zdhRmrecframe" path="zdhRmrecframe"/>
+  		    <forward name="zdhRmrecdetail" path="/application/zdhrmrec/ZdhRmrec_defaultDetail_detail.jsp"/> 		             
+		</action>
+		<!-- 日计划核查 -->
+		<action path="/zdhOpexaminelist" name="zdhOpexaminelistForm"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			parameter="method" scope="request">
+
+			<forward name="zdhOpexaminelistgrid"
+				path="/application/zdhopexaminelist/ZdhOpexaminelist_defaultList_grid.jsp" />
+			<forward name="zdhOpexaminelisttoolbar"
+				path="zdhOpexaminelisttoolbar" />
+			<forward name="zdhOpexaminelisttab"
+				path="zdhOpexaminelisttab" />
+			<forward name="zdhOpexaminelistframe"
+				path="zdhOpexaminelistframe" />
+			<forward name="extZdhOpexaminelistgrid"
+				path="/application/zdhautoondutylog/zdhondutylog_zdhdayplancheck_grid.jsp" />
+			<forward name="zdhOpexaminelistdetail"
+				path="/application/zdhopexaminelist/ZdhOpexaminelist_defaultDetail_detail.jsp" />
+			<forward name="initDdDoutageplan"
+				path="/application/zdhopexaminelist/ZdhOpexaminelist_initDdDoutageplan_detail.jsp" />
+        </action>
+        <!-- 机房工作 -->
+		<action path="/zdhMachineworklist" name="zdhMachineworklistForm"
+			type="org.springframework.web.struts.DelegatingActionProxy" parameter="method"
+			scope="request">			
+			<forward name="zdhMachineworklistgrid"
+				path="/application/zdhmachineworklist/zdhmachinehalllist_defaultList_grid.jsp" />
+			<forward name="zdhMachineworklisttoolbar"
+				path="zdhMachineworklisttoolbar" />
+			<forward name="zdhMachineworklisttab"
+				path="zdhMachineworklisttab" />
+			<forward name="zdhMachineworklistframe"
+				path="zdhMachineworklistframe" />
+			<forward name="zdhMachineworklistdetail"
+				path="/application/zdhmachineworklist/zdhmachinehalllist_defaultDetail_detail.jsp" />
+			<forward name="zdhMachineworklistshowdetail"
+				path="/application/zdhmachineworklist/zdhmachinehalllist_showDetail_detail.jsp" />
+			<forward name="extZdhMachineworklistgrid"
+				path="/application/zdhautoondutylog/zdhondutylog_machinehalllist_grid.jsp" />
+		</action>
+		
+		<!-- 序位表 -->
+        <action path="/zdhSequencetable" name="zdhSequencetableForm"
+			type="org.springframework.web.struts.DelegatingActionProxy" parameter="method"
+			scope="request">
+			<forward name="zdhSequencetablegrid"
+				path="/application/zdhsequencetable/zdhsequencerec_defaultList_grid.jsp" />
+			<forward name="zdhSequencetabletoolbar"
+				path="zdhSequencetabletoolbar" />
+			<forward name="zdhSequencetabletab"
+				path="zdhSequencetabletab" />
+			<forward name="zdhSequencetableframe"
+				path="zdhSequencetableframe" />
+			<forward name="importExcel"
+				path="/application/zdhsequencetable/zdhsequencerec_importExcel.jsp" />
+			<forward name="zdhSequencetabledetail"
+				path="/application/zdhsequencetable/zdhsequencerec_defaultDetail_detail.jsp" />
+		</action>
+		<!-- 传动记录 -->
+		<action path="/zdhTransrecord" name="zdhTransrecordForm"
+			type="org.springframework.web.struts.DelegatingActionProxy" parameter="method"
+			scope="request">
+            <forward name="zdhTransrecordgrid"
+				path="/application/zdhtransrecord/zdhtransrec_defaultList_grid.jsp" />
+			<forward name="zdhTransrecordtoolbar"
+				path="zdhTransrecordtoolbar" />
+			<forward name="zdhTransrecordtab" path="zdhTransrecordtab" />
+			<forward name="zdhTransrecordframe"
+				path="zdhTransrecordframe" />
+			<forward name="zdhTransrecorddetail"
+				path="/application/zdhtransrecord/zdhtransrec_defaultDetail_detail.jsp" />
+			<forward name="zdhTransrecordshowdetail"
+				path="/application/zdhtransrecord/zdhtransrec_showDetail_detail.jsp" />
+			<forward name="extZdhTransrecordgrid"
+				path="/application/zdhautoondutylog/zdhondutylog_zdhtransrec_grid.jsp" />
+			<forward name="zdhTransrecordshowImg"
+				path="/application/zdhtransrecord/zdhtransrec_showImg_img.jsp" />
+		</action>
+		<!-- 基改建 -->
+        <action path="/zdhReception" name="zdhReceptionForm"
+			type="org.springframework.web.struts.DelegatingActionProxy" parameter="method"
+			scope="request">
+            <forward name="zdhReceptiongrid" path="/application/zdhreception/zdhprojectreception_defaultList_grid.jsp" />			  		    				
+			<forward name="zdhReceptiongrid1" path="/application/zdhreception/zdhprojectreception_eqplist_grid.jsp" /> 		    				
+		    <forward name="zdhReceptiontoolbar" path="zdhReceptiontoolbar"/>  		    				
+		    <forward name="zdhReceptiontab" path="zdhReceptiontab"/>
+  		    <forward name="zdhReceptionframe" path="zdhReceptionframe"/>  		    				
+			<forward name="zdhReceptiondetail" path="/application/zdhreception/zdhprojectreception_defaultDetail_detail.jsp" />
+			<forward name="zdhReceptionshowImg" path="/application/zdhreception/zdhprojectreception_showImg_img.jsp"/> 		   
+			<forward name="zdhReceptiondetail1" path="/application/zdhreception/zdhprojectreception_zdheqprunapply_detail.jsp" />
+			<forward name="zdhTransrecordshowReceptiondetail" path="/application/zdhtransrecord/zdhtransrec_showReceptiondetail.jsp" />	
+        </action>
+		
+		<!--===============================================    自动化    ========================================================-->
+	</action-mappings>
+</struts-config>

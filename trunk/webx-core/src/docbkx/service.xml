@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook V5.0//EN"
+"http://www.oasis-open.org/docbook/xml/5.0b5/dtd/docbook.dtd">
+<chapter version="5.0" xml:id="service"
+	xmlns:xi="http://www.w3.org/2001/XInclude">
+	<title>业务层</title>
+	<para>本次重构对原有业务层没有做修改，只对新的DAO层做了适应性的修改，使其可以支持原有的业务层。下图描述了DAO层针对Service
+	层的适应性修改。
+	</para>
+	<graphic fileref="images/service_dao.jpg" format="jpg" />
+	<para>
+		通过图中红色箭头标注的接口继承，可以使原有的Service层使用新的DAO方法。但是原有的Service中只使用了IDomainObjectDao
+		接口，该接口中并不包含1.5提供的DAO接口，需要在代码中将其强制转型为IDomainDao接口才可使用新的DAO接口方法。
+	</para>
+</chapter>	

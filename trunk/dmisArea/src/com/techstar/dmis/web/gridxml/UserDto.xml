@@ -1,0 +1,10 @@
+<head>
+	<obj>UserDto</obj>
+	<column colName="userName" propertyName="userName" colType="string" dataTypeLen="30" isPrimary="1" visible="1" width="70" isEdit="1" textColor="#ffffff" className="" refName=""></column>
+	<column colName="passWord" propertyName="passWord" colType="string" dataTypeLen="30" isPrimary="0" visible="0" width="70" isEdit="1" textColor="#ffffff" className="" refName=""></column>
+	<column colName="realName" propertyName="realName" colType="string" dataTypeLen="30" isPrimary="0" visible="1" width="70" isEdit="1" textColor="#ffffff" className="" refName=""></column>
+	<column colName="userAttr" propertyName="userAttr" colType="string" dataTypeLen="30" isPrimary="0" visible="0" width="70" isEdit="1" textColor="#ffffff" className="" refName=""></column>
+	<column colName="unitId" propertyName="unitId" colType="string" dataTypeLen="30" isPrimary="0" visible="1" width="70" isEdit="1" textColor="#ffffff" className="" refName=""></column>
+	<column colName="unitCode" propertyName="unitCode" colType="string" dataTypeLen="30" isPrimary="0" visible="0" width="70" isEdit="1" textColor="#ffffff" className="" refName=""></column>
+	
+</head>	

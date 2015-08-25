@@ -1,0 +1,66 @@
+<!--传动记录-->
+<head>
+	<obj>ZdhTransrecordDto</obj>
+	<column colName="transrecordid" propertyName="transrecordid"
+		colType="string" dataTypeLen="32" isPrimary="1" visible="1"
+		width="106" isEdit="0" textColor="#000000"
+		className="ZdhTransrecordDto" refName="transrecordid">
+	</column>
+	<column colName="fstationname" propertyName="fstationname"
+		colType="string" dataTypeLen="80" isPrimary="0" visible="1" width="42"
+		isEdit="0" textColor="#000000" className="ZdhTransrecordDto"
+		refName="fstationname">
+	</column>
+	<column colName="transreason" propertyName="transreason"
+		colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="74"
+		isEdit="0" textColor="#000000" className="ZdhTransrecordDto"
+		refName="transreason">
+	</column>
+	<column colName="transpeople" propertyName="transpeople"
+		colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="58"
+		isEdit="0" textColor="#000000" className="ZdhTransrecordDto"
+		refName="transpeople">
+	</column>
+	<column colName="transdate" propertyName="transdate" colType="date"
+		dataTypeLen="0" isPrimary="0" visible="1" width="74" isEdit="0"
+		textColor="#000000" className="ZdhTransrecordDto"
+		refName="transdate">
+	</column>
+	<column colName="transunit" propertyName="transunit"
+		colType="string" dataTypeLen="80" isPrimary="0" visible="1" width="74"
+		isEdit="0" textColor="#000000" className="ZdhTransrecordDto"
+		refName="transunit">
+	</column>
+	<column colName="explanation" propertyName="explanation"
+		colType="string" dataTypeLen="1000" isPrimary="0" visible="1"
+		width="106" isEdit="0" textColor="#000000"
+		className="ZdhTransrecordDto" refName="explanation">
+	</column>
+	<column colName="fexcutestatus" propertyName="fexcutestatus"
+		colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="90"
+		isEdit="0" textColor="#000000" className="ZdhTransrecordDto"
+		refName="fexcutestatus">
+	</column>
+	<column colName="version" propertyName="version" colType="string"
+		dataTypeLen="40" isPrimary="0" visible="1" width="90" isEdit="0"
+		textColor="#000000" className="ZdhTransrecordDto" refName="version">
+	</column>
+	<column colName="sourcetaskno" propertyName="sourcetaskno"
+		colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="90"
+		isEdit="0" textColor="#000000" className="ZdhTransrecordDto"
+		refName="sourcetaskno">
+	</column>
+	<column colName="tasksource" propertyName="tasksource"
+		colType="string" dataTypeLen="200" isPrimary="0" visible="1"
+		width="90" isEdit="0" textColor="#000000"
+		className="ZdhTransrecordDto" refName="tasksource">
+	</column>
+	<column colName="opButton_1" propertyName="opButton_1"
+		colType="string" dataTypeLen="0" isPrimary="0" visible="1" width="70"
+		isEdit="0" textColor="#000000" className="" refName="">
+	</column>
+		<column colName="opButton_2" propertyName="opButton_2"
+		colType="string" dataTypeLen="0" isPrimary="0" visible="1" width="70"
+		isEdit="0" textColor="#000000" className="" refName="">
+	</column>
+</head>

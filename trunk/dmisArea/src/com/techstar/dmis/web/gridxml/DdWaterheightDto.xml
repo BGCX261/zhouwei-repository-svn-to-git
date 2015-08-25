@@ -1,0 +1,12 @@
+<!--水电运行(水位)记录-->
+<head>
+  <obj>DdWaterheightDto</obj>
+  <column  colName="fid" propertyName="fid" colType="string" dataTypeLen="32" isPrimary="1" visible="1" width="74" isEdit="0" textColor="#000000" className="DdWaterheightDto" refName="fid" ></column>
+  <column  colName="version" propertyName="version" colType="integer" dataTypeLen="0" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="DdWaterheightDto" refName="version" ></column>
+  <column  colName="flogdate" propertyName="flogdate" colType="date" dataTypeLen="0" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="DdWaterheightDto" refName="flogdate" ></column>
+  <column  colName="fpowerplant" propertyName="fpowerplant" colType="string" dataTypeLen="150" isPrimary="0" visible="1" width="58" isEdit="0" textColor="#000000" className="DdWaterheightDto" refName="fpowerplant" ></column>
+  <column  colName="fwaterleveltime" propertyName="fwaterleveltime" colType="string" dataTypeLen="64" isPrimary="0" visible="1" width="42" isEdit="0" textColor="#000000" className="DdWaterheightDto" refName="fwaterleveltime" ></column>
+  <column  colName="fwaterlevel" propertyName="fwaterlevel" colType="float" dataTypeLen="14" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="DdWaterheightDto" refName="fwaterlevel" ></column>
+  <column  colName="sys_fille" propertyName="sys_fille" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="58" isEdit="0" textColor="#000000" className="DdWaterheightDto" refName="sys_fille" ></column>
+  <column  colName="sys_filltime" propertyName="sys_filltime" colType="timestamp" dataTypeLen="" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="DdWaterheightDto" refName="sys_filltime" ></column>
+</head>

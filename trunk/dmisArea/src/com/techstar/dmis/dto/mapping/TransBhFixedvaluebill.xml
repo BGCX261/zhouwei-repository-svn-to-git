@@ -1,0 +1,14 @@
+<!DOCTYPE mappings PUBLIC "-//DOZER//DTD MAPPINGS//EN"
+"http://dozer.sourceforge.net/dtd/dozerbeanmapping.dtd">
+<mappings>
+   <mapping>
+   <class-a>com.techstar.dmis.dto.BhFixedvaluebillDto</class-a>
+   <class-b>com.techstar.dmis.dto.transfer.TransBhFixedvaluebillDto</class-b>
+   <field>
+      <a>fbhfixedvaluebilldetail1</a>
+      <b>fbhfixedvaluebilldetail1</b>
+      <a-hint>com.techstar.dmis.dto.BhFixedvaluebilldetailDto</a-hint>
+      <b-hint>com.techstar.dmis.dto.transfer.TransBhFixedvaluebilldetailDto</b-hint>
+   </field>
+   </mapping>
+</mappings>

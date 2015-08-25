@@ -1,0 +1,22 @@
+<!--方式变更单-->
+<head>
+  <obj>FsRmchangbillDto</obj>
+  <column  colName="fchangno" propertyName="fchangno" colType="string" dataTypeLen="32" isPrimary="1" visible="1" width="90" isEdit="0" textColor="#000000" className="FsRmchangbillDto" refName="fchangno" ></column>
+  <column  colName="fstationname" propertyName="fstationname" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="58" isEdit="0" textColor="#000000" className="FsRmchangbillDto" refName="fstationname" ></column>
+  <column  colName="fchangetype" propertyName="fchangetype" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="FsRmchangbillDto" refName="fchangetype" ></column>
+  <column  colName="fchangename" propertyName="fchangename" colType="string" dataTypeLen="200" isPrimary="0" visible="1" width="106" isEdit="0" textColor="#000000" className="FsRmchangbillDto" refName="fchangename" ></column>
+  <column  colName="fchangetime" propertyName="fchangetime" colType="date" dataTypeLen="0" isPrimary="0" visible="1" width="106" isEdit="0" textColor="#000000" className="FsRmchangbillDto" refName="fchangetime" ></column>
+  <column  colName="fchangedirections" propertyName="fchangedirections" colType="string" dataTypeLen="200" isPrimary="0" visible="1" width="106" isEdit="0" textColor="#000000" className="FsRmchangbillDto" refName="fchangedirections" ></column>
+  <column  colName="fpotentialhazard" propertyName="fpotentialhazard" colType="string" dataTypeLen="200" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="FsRmchangbillDto" refName="fpotentialhazard" ></column>
+  <column  colName="frnormaltime" propertyName="frnormaltime" colType="date" dataTypeLen="0" isPrimary="0" visible="1" width="138" isEdit="0" textColor="#000000" className="FsRmchangbillDto" refName="frnormaltime" ></column>
+  <column  colName="fkeeptime" propertyName="fkeeptime" colType="float" dataTypeLen="0" isPrimary="0" visible="1" width="138" isEdit="0" textColor="#000000" className="FsRmchangbillDto" refName="fkeeptime" ></column>
+  <column  colName="fremark" propertyName="fremark" colType="string" dataTypeLen="100" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="FsRmchangbillDto" refName="fremark" ></column>
+  <column  colName="frelchangebillno" propertyName="frelchangebillno" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="122" isEdit="0" textColor="#000000" className="FsRmchangbillDto" refName="frelchangebillno" ></column>
+  <column  colName="fattribute" propertyName="fattribute" colType="string" dataTypeLen="20" isPrimary="0" visible="1" width="42" isEdit="0" textColor="#000000" className="FsRmchangbillDto" refName="fattribute" ></column>
+  <column  colName="fstatus" propertyName="fstatus" colType="string" dataTypeLen="80" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="FsRmchangbillDto" refName="fstatus" ></column>
+  <column  colName="rmchangbillno" propertyName="rmchangbillno" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="FsRmchangbillDto" refName="rmchangbillno" ></column>
+  <column  colName="fvoltage" propertyName="fvoltage" colType="string" dataTypeLen="64" isPrimary="0" visible="1" width="106" isEdit="0" textColor="#000000" className="FsRmchangbillDto" refName="fvoltage" ></column>
+  <column  colName="fchangereason" propertyName="fchangereason" colType="string" dataTypeLen="64" isPrimary="0" visible="1" width="106" isEdit="0" textColor="#000000" className="FsRmchangbillDto" refName="fchangereason" ></column>
+  <column  colName="fchangeperformance" propertyName="fchangeperformance" colType="string" dataTypeLen="64" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="FsRmchangbillDto" refName="fchangeperformance" ></column>
+  <column  colName="fisrenormal" propertyName="fisrenormal" colType="string" dataTypeLen="64" isPrimary="0" visible="1" width="122" isEdit="0" textColor="#000000" className="FsRmchangbillDto" refName="fisrenormal" ></column>
+</head>

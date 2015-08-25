@@ -1,0 +1,303 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="com.techstar.dmis.entity">
+	<class name="ParaGenerator" table="DMIS_ParaGenerator" dynamic-insert="true" dynamic-update="true" optimistic-lock="version">
+    <id name="feqpid" type="string">
+      <column name="feqpid" sql-type="varchar(80)" not-null="true"/>
+      <generator class="assigned"/>
+    </id>
+
+ 	<version name="version" column="VERSION" unsaved-value="undefined"/>
+  
+   <property name="fpowerplan" type="string"  not-null="false">
+    <column name="fpowerplan"  
+		length="100"               
+    />
+</property>	
+    <property name="fpowerunitno" type="string"  not-null="false">
+    <column name="fpowerunitno"  
+		length="40"               
+    />
+</property>	
+    <property name="fpowerunitcapa" type="integer"  not-null="false">
+    <column name="fpowerunitcapa"  
+		length="10"        precision="2"       
+    />
+</property>	
+    <property name="fgenmode" type="string"  not-null="false">
+    <column name="fgenmode"  
+		length="20"               
+    />
+</property>	
+    <property name="fgeninertia" type="integer"  not-null="false">
+    <column name="fgeninertia"  
+		length="10"        precision="2"       
+    />
+</property>	
+    <property name="fhavepower" type="integer"  not-null="false">
+    <column name="fhavepower"  
+		length="10"        precision="2"       
+    />
+</property>	
+    <property name="fidlepower" type="integer"  not-null="false">
+    <column name="fidlepower"  
+		length="10"        precision="2"       
+    />
+</property>	
+    <property name="fspecpower" type="integer"  not-null="false">
+    <column name="fspecpower"  
+		length="10"        precision="2"       
+    />
+</property>	
+    <property name="fspecvol" type="integer"  not-null="false">
+    <column name="fspecvol"  
+		length="10"        precision="2"       
+    />
+</property>	
+    <property name="fspeccurrent" type="integer"  not-null="false">
+    <column name="fspeccurrent"  
+		length="10"        precision="2"       
+    />
+</property>	
+    <property name="frotorspecpower" type="integer"  not-null="false">
+    <column name="frotorspecpower"  
+		length="10"        precision="2"       
+    />
+</property>	
+    <property name="frotorspeccur" type="integer"  not-null="false">
+    <column name="frotorspeccur"  
+		length="10"        precision="2"       
+    />
+</property>	
+    <property name="fidlerotorspecvol" type="integer"  not-null="false">
+    <column name="fidlerotorspecvol"  
+		length="10"        precision="2"       
+    />
+</property>	
+    <property name="fidlerotorspeccur" type="integer"  not-null="false">
+    <column name="fidlerotorspeccur"  
+		length="10"        precision="2"       
+    />
+</property>	
+    <property name="fdsynresistance" type="integer"  not-null="false">
+    <column name="fdsynresistance"  
+		length="10"        precision="2"       
+    />
+</property>	
+    <property name="fasynresistance" type="integer"  not-null="false">
+    <column name="fasynresistance"  
+		length="10"        precision="2"       
+    />
+</property>	
+    <property name="fatempresistance" type="integer"  not-null="false">
+    <column name="fatempresistance"  
+		length="10"        precision="2"       
+    />
+</property>	
+    <property name="fdtempresistance" type="integer"  not-null="false">
+    <column name="fdtempresistance"  
+		length="10"        precision="2"       
+    />
+</property>	
+    <property name="fasectempresistance" type="integer"  not-null="false">
+    <column name="fasectempresistance"  
+		length="10"        precision="2"       
+    />
+</property>	
+    <property name="fdsectempresistance" type="integer"  not-null="false">
+    <column name="fdsectempresistance"  
+		length="10"        precision="2"       
+    />
+</property>	
+    <property name="fpownegseqresi" type="integer"  not-null="false">
+    <column name="fpownegseqresi"  
+		length="10"        precision="2"       
+    />
+</property>	
+    <property name="fpowzerseqresi" type="integer"  not-null="false">
+    <column name="fpowzerseqresi"  
+		length="10"        precision="2"       
+    />
+</property>	
+    <property name="fatempresistancets" type="integer"  not-null="false">
+    <column name="fatempresistancets"  
+		length="10"        precision="2"       
+    />
+</property>	
+    <property name="fdtempresistancets" type="integer"  not-null="false">
+    <column name="fdtempresistancets"  
+		length="10"        precision="2"       
+    />
+</property>	
+    <property name="frotorresistance" type="integer"  not-null="false">
+    <column name="frotorresistance"  
+		length="10"        precision="2"       
+    />
+</property>	
+    <property name="faotempresistimes" type="integer"  not-null="false">
+    <column name="faotempresistimes"  
+		length="10"        precision="2"       
+    />
+</property>	
+    <property name="fdotempresistimes" type="integer"  not-null="false">
+    <column name="fdotempresistimes"  
+		length="10"        precision="2"       
+    />
+</property>	
+    <property name="fastempresistimes" type="integer"  not-null="false">
+    <column name="fastempresistimes"  
+		length="10"        precision="2"       
+    />
+</property>	
+    <property name="fdstempresistimes" type="integer"  not-null="false">
+    <column name="fdstempresistimes"  
+		length="10"        precision="2"       
+    />
+</property>	
+    <property name="fasstempresistimes" type="integer"  not-null="false">
+    <column name="fasstempresistimes"  
+		length="10"        precision="2"       
+    />
+</property>	
+    <property name="fdsstempresistimes" type="integer"  not-null="false">
+    <column name="fdsstempresistimes"  
+		length="10"        precision="2"       
+    />
+</property>	
+    <property name="fexcitationstyle" type="string"  not-null="false">
+    <column name="fexcitationstyle"  
+		length="20"               
+    />
+</property>	
+    <property name="fexcitationmode" type="string"  not-null="false">
+    <column name="fexcitationmode"  
+		length="20"               
+    />
+</property>	
+    <property name="fexcitationspeccapa" type="integer"  not-null="false">
+    <column name="fexcitationspeccapa"  
+		length="10"        precision="2"       
+    />
+</property>	
+    <property name="fexcitationrate" type="integer"  not-null="false">
+    <column name="fexcitationrate"  
+		length="10"        precision="2"       
+    />
+</property>	
+    <property name="fratefactor" type="integer"  not-null="false">
+    <column name="fratefactor"  
+		length="10"        precision="2"       
+    />
+</property>	
+    <property name="fspecoutputvol" type="integer"  not-null="false">
+    <column name="fspecoutputvol"  
+		length="10"        precision="2"       
+    />
+</property>	
+    <property name="fspecoutputcur" type="integer"  not-null="false">
+    <column name="fspecoutputcur"  
+		length="10"        precision="2"       
+    />
+</property>	
+    <property name="fspecfieldvol" type="integer"  not-null="false">
+    <column name="fspecfieldvol"  
+		length="10"        precision="2"       
+    />
+</property>	
+    <property name="fspecfieldcur" type="integer"  not-null="false">
+    <column name="fspecfieldcur"  
+		length="10"        precision="2"       
+    />
+</property>	
+    <property name="fexcitationresis" type="integer"  not-null="false">
+    <column name="fexcitationresis"  
+		length="10"        precision="2"       
+    />
+</property>	
+    <property name="ftempsynresis" type="integer"  not-null="false">
+    <column name="ftempsynresis"  
+		length="10"        precision="2"       
+    />
+</property>	
+    <property name="fsectempsynresis" type="integer"  not-null="false">
+    <column name="fsectempsynresis"  
+		length="10"        precision="2"       
+    />
+</property>	
+    <property name="fexcitationnsresis" type="integer"  not-null="false">
+    <column name="fexcitationnsresis"  
+		length="10"        precision="2"       
+    />
+</property>	
+    <property name="fexciwindstiff" type="integer"  not-null="false">
+    <column name="fexciwindstiff"  
+		length="10"        precision="2"       
+    />
+</property>	
+    <property name="frotortimes" type="integer"  not-null="false">
+    <column name="frotortimes"  
+		length="10"        precision="2"       
+    />
+</property>	
+    <property name="frotordiverratio" type="integer"  not-null="false">
+    <column name="frotordiverratio"  
+		length="10"        precision="2"       
+    />
+</property>	
+    <property name="fmagnetmode" type="string"  not-null="false">
+    <column name="fmagnetmode"  
+		length="20"               
+    />
+</property>	
+    <property name="fmagnetcapa" type="integer"  not-null="false">
+    <column name="fmagnetcapa"  
+		length="10"        precision="2"       
+    />
+</property>	
+    <property name="fmagnetspecratio" type="integer"  not-null="false">
+    <column name="fmagnetspecratio"  
+		length="10"        precision="2"       
+    />
+</property>	
+    <property name="fmagnetspecvol" type="integer"  not-null="false">
+    <column name="fmagnetspecvol"  
+		length="10"        precision="2"       
+    />
+</property>	
+    <property name="fmagnetspeccur" type="integer"  not-null="false">
+    <column name="fmagnetspeccur"  
+		length="10"        precision="2"       
+    />
+</property>	
+    <property name="fmagnetpowerratio" type="integer"  not-null="false">
+    <column name="fmagnetpowerratio"  
+		length="10"        precision="2"       
+    />
+</property>	
+    <property name="fgenfixtimeexcivol" type="integer"  not-null="false">
+    <column name="fgenfixtimeexcivol"  
+		length="10"        precision="2"       
+    />
+</property>	
+    <property name="fgenfixtimeexcicur" type="integer"  not-null="false">
+    <column name="fgenfixtimeexcicur"  
+		length="10"        precision="2"       
+    />
+</property>	
+    <property name="fexcifixtimevol" type="integer"  not-null="false">
+    <column name="fexcifixtimevol"  
+		length="10"        precision="2"       
+    />
+</property>	
+    <property name="fexcifixtimecur" type="integer"  not-null="false">
+    <column name="fexcifixtimecur"  
+		length="10"        precision="2"       
+    />
+</property>	
+  
+	
+ <many-to-one name="zparagenerator2" class="EtsEquipment"   column="FEqpID" cascade="delete-orphan"></many-to-one>
+     </class>
+
+</hibernate-mapping>
+

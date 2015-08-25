@@ -1,0 +1,155 @@
+1、客户端在与 memcached 服务建立连接之后，进行存取对象的操作,每个被存取的对象都有一个唯一的标识符 key，存取操作均通过这个 key 进行，保存到 memcached 中的对象实际上是放置内存中的，并不是保存在 cache 文件中的，这也是为什么 memcached 能够如此高效快速的原因。注意，这些对象并不是持久的，服务停止之后，里边的数据就会丢失。
+
+2、当存入cached的数据超过了cached的容量后会将最长时间没调用的对象挤出，这正好应征了cached的特征。
+
+3、利用memcached常用的做法：在每取得一次cached对象后，重新设置这个对象的cache时间，这样能够使得经常被调用的对象可以长期滞留在缓存中，使得效率增倍。
+
+ 
+
+memcached 技术配置参数研究
+
+failover表示对于服务器出现问题时的自动修复。
+initConn初始的时候连接数，
+minConn表示最小闲置连接数，
+maxConn最大连接数，
+maintSleep表示是否需要延时结束
+nagle是TCP对于socket创建的算法，
+socketTO是socket连接超时时间，
+aliveCheck表示心跳检查，确定服务器的状态。
+Servers是memcached服务端开的地址和ip列表字符串，
+weights是上面服务器的权重，必须数量一致，否则权重无效
+可从以下几方面考虑优化
+1. 重新设置配置参数。
+2. 尽量使用小容量的数据内容.
+3. 增加memcached提高服务获取的内存总量、提高命中率。
+4. 可以采用多个memcache服务进行侦听,分开处理,针对服务提供的频繁度划分服务内存
+5. 根据服务器的性能不同设置权重 weights
+6. 对需要使用memcache服务的机器ip,服务端做访问限制。
+避免memcached里的数据不会被别有心意的人再利用，或责保证服务器的内存不被漫天遍地的垃圾数据所堆积,造成命中极低
+7. 优化memcached客户端的代码。
+1. synchronized 的问题
+java memcached client源文件的大量方法里面都直接使用 synchronized 如 getConnection(), checkin() 等，而SockIOPool类似一个Singleton, 因此造成多线程失去了意义。同时 synchronized 方法里面又大量使用了 Hashtable 等synchronized保护的集合类。
+
+2. InputStream 不优化的用法：
+
+未加Buffer
+private DataInputStream in = new DataInputStream( sock.getInputStream() );
+
+一次读一字节
+while (in.read(b, 0, 1) != -1)...
+虽然说局域网的网速不存在问题，但是这样操作的话速度可想而知。
+
+
+#59.151.6.168:11213 Field       Value
+                   bytes   965623799
+              bytes_read 22404152833
+           bytes_written 238164862015
+                 cmd_get   212516055
+                 cmd_set    74288082
+   connection_structures        1351
+        curr_connections         316
+              curr_items     4943569
+               evictions       49964
+                get_hits   102206841
+              get_misses   110309214
+          limit_maxbytes  1073741824
+                     pid        3825
+            pointer_size          32
+           rusage_system 358294.510000
+             rusage_user 16239.670000
+                 threads           1
+                    time  1209023021
+       total_connections      135815
+             total_items    74288082
+                  uptime    20711187
+                 version       1.2.2
+
+0.48
+
+179==2008.05.04 统计
+stats
+STAT pid 4355
+STAT uptime 5004865
+STAT time 1209866040
+STAT version 1.2.2
+STAT pointer_size 32
+STAT rusage_user 197.590000
+STAT rusage_system 587.010000
+STAT curr_items 741989
+STAT total_items 3158492
+STAT bytes 922004468
+STAT curr_connections 20
+STAT total_connections 1380
+STAT connection_structures 52
+STAT cmd_get 3239347
+STAT cmd_set 3158492
+STAT get_hits 1765546
+STAT get_misses 1473801
+STAT evictions 1
+STAT bytes_read 3731783494
+STAT bytes_written 2126404906
+STAT limit_maxbytes 1073741824
+STAT threads 1
+END
+
+0.54
+
+
+memcached 1.2.0
+-p <num>            port number to listen on
+-s <file>               unix socket path to listen on (disables network support)
+-l <ip_addr>        interface to listen on, default is INDRR_ANY
+-d                          run as a daemon
+-r                           maximize core file limit
+-u <username> assume identity of <username> (only when run as root)
+-m <num>          max memory to use for items in megabytes, default is 64 MB
+-M                         return error on memory exhausted (rather than removing items)
+-c <num>            max simultaneous connections, default is 1024
+-k                          lock down all paged memory
+-v                          verbose (print errors/warnings while in event loop)
+-vv                        very verbose (also print client commands/reponses)
+-h                         print this help and exit
+-i                          print memcached and libevent license
+-b                         run a managed instanced (mnemonic: buckets)
+-P <file>             save PID in <file>, only used with -d option
+-f <factor>          chunk size growth factor, default 1.25  growth factor //chunk 块 增长系数
+-n <bytes>         minimum space allocated for key+value+flags, default 48
+                                  分配
+尝试：
+启用了PHP memcache_set()函数中的 MEMCACHE_COMPRESSED压缩选项，而memcache_get()可以在后续读取过程中自动对压缩的缓存对象进行解压缩。
+
+效果：
+测试了一下，对于博客大巴目前的应用来说，启用压缩后，相同的容量（2G）存储的对象数量增加了约一倍，缓存命中率从50%左右，提高到了60%左右。进一步提高命中率硬件投入还是必须的，又增加了2倍的内存后终于做到了缓存命中率提高到90%；
+
+前提0： 内存缓存有用，且命中率值得提升；
+从60%提高到90%，还是从90%提高到95%，要看hit后的性能能够提升是否值得；
+
+前提1：MemCached已经用满
+先用memcached-tool查看一下memcached的容量统计，看memcached是不是已经用满了。如果充分运行时MemCached的空间尚未用满，启用一下压缩是没有意义的； 而且：发现没有用满的MemCached，最好减少相应MemCached的容量，空余出更多内存给其他服务做缓存；
+
+前提2： 压缩率
+缓存的数据的确有大于几百字节的，如果都是小于100字节的键值对，压缩可能反而带来膨胀。由于缓存对象的大小在Memcached中都是按照固定大小分块存储的，最小也要88 B。所以对于过小数据带来的压缩膨胀并不是太大的问题；
+
+前台应用的CPU损耗：
+对数据的额外压缩CPU损耗远远低于缓存命中率提升减少后台数据库访问带来的性能提升，和http的gzip/deflate压缩类似，压缩后数据一般为原数据大小的30%左右，节省了70%的传输性能消耗所得会大于文件压缩带来的性能损耗；
+
+
+#  Item_Size   Max_age  1MB_pages Count   Full?
+  3     128 B   535047 s       1       2      no
+  4     160 B  19734117 s     196 1284388     yes
+  5     200 B  2753659 s     401 2102042     yes
+  6     252 B  1135150 s     321 1335680     yes
+  7     316 B  7923261 s       1    3318     yes
+  8     396 B  9449969 s       1    2647     yes
+  9     496 B  20639438 s     101  213502     yes
+ 10     620 B  20704497 s       1     509      no
+ 11     776 B  20711541 s       1     838      no
+ 12     972 B  20608682 s       1     642      no
+ 13     1.2 kB 15213297 s       1       7      no
+Item_Size是我们储蓄实体大小的范畴
+Max_age是所有实体存活的时间集合，单位是秒
+Count是实体数目
+1MB_pages？
+ Full?是存贮空间满了没？
+
+HTTP压缩对于纯文本内容可压缩至原大小的40％一下，从而提供60％以上的数据传输节约，虽然WEB服务器会因为压缩导致CPU占用的略微上升，但是可以节约大量用于传输的网络IO。对于数据压缩带来的用户浏览速度提升（让页面符合8秒定律），这点总体负载5%-10%上升是非常值得的。毕竟通过数据压缩会比通过不规范的HTML代码优化要方便得多。

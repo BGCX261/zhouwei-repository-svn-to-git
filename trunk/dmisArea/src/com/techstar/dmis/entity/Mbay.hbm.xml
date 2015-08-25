@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="com.techstar.dmis.entity">
+	<class name="Mbay" table="DMIS_MBAY" dynamic-insert="true" dynamic-update="true" optimistic-lock="version">
+    <id name="fid" type="string">
+      <column name="fid" sql-type="varchar(40)" not-null="true"/>
+      <generator class="assigned"/>
+    </id>
+
+ 	<version name="version" column="VERSION" unsaved-value="undefined"/>
+  
+   <property name="fname" type="string"  not-null="true">
+    <column name="fname"  
+		length="50"               
+    />
+</property>	
+    <property name="ftype" type="string"  not-null="false">
+    <column name="ftype"  
+		length="20"               
+    />
+</property>	
+    <property name="fvoltage" type="integer"  not-null="false">
+    <column name="fvoltage"  
+		length="14"        precision="2"       
+    />
+</property>	
+    <property name="fcontainer" type="string"  not-null="false">
+    <column name="fcontainer"  
+		length="40"               
+    />
+</property>	
+    <property name="fmainequipment" type="string"  not-null="false">
+    <column name="fmainequipment"  
+		length="20"               
+    />
+</property>	
+  
+	
+    <set name="fetsequipment2" inverse="true" cascade="none"><key column="FBayID"/><one-to-many class="EtsEquipment"/></set>
+         <set name="fmbay2grouprole2" inverse="true" cascade="delete"><key column="FBayId"/><one-to-many class="MBay2GroupRole"/></set>
+         <set name="fmbayeqpment2" inverse="true" cascade="delete"><key column="FBAYID"/><one-to-many class="Mbayeqpment"/></set>
+     </class>
+
+</hibernate-mapping>
+

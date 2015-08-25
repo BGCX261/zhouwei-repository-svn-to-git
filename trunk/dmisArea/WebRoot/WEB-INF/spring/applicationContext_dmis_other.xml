@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+	<!-- DAO -->
+	<bean id="iTodolistDao" parent="baseLogAOP">
+		<property name="target">
+			<bean class="com.techstar.dmis.dao.impl.TodolistDaoImpl">
+				<property name="sessionFactory">
+					<ref bean="dmisSessionFactory" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iHandleHistoryDao" parent="baseLogAOP">
+		<property name="target">
+			<bean class="com.techstar.dmis.dao.impl.HandleHistoryDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>	
+			</bean>
+		</property>
+	</bean>	
+	<!-- SERVICE -->
+	<bean id="iTodolistService" parent="baseTransaction">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.service.impl.TodolistServiceImpl">
+				<property name="todolistDao" ref="iTodolistDao"></property>
+				<property name="workFlowDao" ref="iWorkflowDao"></property>
+				<property name="handleHistoryDao" ref="iHandleHistoryDao"></property>
+			</bean>
+		</property>
+	</bean>
+	<!-- FACADE -->
+	<bean id="todolistFacade" parent="baseTransaction">
+		<property name="target">
+			<bean class="com.techstar.dmis.web.facade.TodolistFacade">
+				<property name="todolistService"
+					ref="iTodolistService">
+				</property>
+				
+			</bean>
+		</property>
+	</bean>
+</beans>

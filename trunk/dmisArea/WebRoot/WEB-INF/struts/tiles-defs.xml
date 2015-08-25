@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 1.1//EN"
+       "http://jakarta.apache.org/struts/dtds/tiles-config_1_1.dtd">
+<tiles-definitions>
+	<!-- 定义一个基本的FrameBaseLayout 水平分两层 -->
+	<definition name="base.queryframe.h.layout" path="/common/base_queryframe_h_layout.jsp"/>
+	
+	<!-- 定义一个基本的FrameBaseLayout 垂直分两层 -->
+	<definition name="base.queryframe.v.layout" path="/common/base_queryframe_v_layout.jsp"/>
+
+	<!-- 定义一个基本的ToolbarLayout -->
+	<definition name="base.toolbar.layout" path="/common/base_toolbar_layout.jsp"/>
+	
+	<!-- 定义一个基本的TabLayout -->
+	<definition name="base.tab.layout" path="/common/base_tab_layout.jsp"/>
+	<!-- 定义一个工作流的FrameBaseLayout 垂直分两层 -->
+	<definition name="base.wfframe.v.layout" path="/common/base_wfframe_v_layout.jsp"/>
+	
+	<definition name="base.userframe.v.layout" path="/common/base_userframe_v_layout.jsp"/>
+	
+	
+	<!-- 定义一个工作流的FrameBaseLayout 水平分两层 -->
+	<definition name="base.wfframe.h.layout" path="/common/base_wfframe_h_layout.jsp"/>
+	
+	<definition name="base.userframe.h.layout" path="/common/base_userframe_h_layout.jsp"/>
+	
+		<!-- 定义一个工作流的FrameBaseLayout 水平分两层 -->
+	<definition name="base.wfframe.h.v.layout" path="/common/base_wfframe_h_v_layout.jsp"/>
+
+
+ 	<definition name="wf.frame" extends="base.queryframe.h.layout">
+		<put name="initWFToolbar" value="/wfmanager.do?method=initToolbar"/>
+		<put name="initWFTab" value="/wfmanager.do?method=initTab"/>
+		<put name="downScroll" value="no"/>
+	</definition>
+	<!-- UI控件(工具栏) -->
+	<definition name="wf.toolbar" extends="base.toolbar.layout">
+		<put name="toolbar" value="/components/tag/grid/toolbar.jsp"/>
+	</definition>
+	<!-- UI控件(Tab页) -->
+	<definition name="wf.tab" extends="base.tab.layout">
+		<put name="tab" value="/components/tag/grid/tab.jsp"/>
+	</definition>	
+	
+	<definition name="wf.view" extends="base.wfframe.v.layout">
+		<put name="leftFrame" value="/wfmanager.do?method=getWFView_left"/>
+		<put name="rightFrame" value="/wfmanager.do?method=getWFView_right"/>	
+	</definition>
+	
+	<definition name="wf.instance.view2" extends="base.wfframe.h.layout">
+		<put name="upFrame" value="/wfmanager.do?method=getInstancesByProcess"/>
+		<put name="downFrame" value="/wfmanager.do?method=getCurrentWFTask"/>	
+		<put name="downScroll" value="no"/>
+	</definition>
+	
+	<definition name="wf.instance.view" extends="base.wfframe.h.v.layout">
+		<put name="up_leftFrame" value="/wfmanager.do?method=getInstancesByProcess"/>
+		<put name="up_rightFrame" value="/wfmanager.do?method=getTaskView_right"/>
+		<put name="downFrame" value="/wfmanager.do?method=getCurrentWFTask"/>	
+		<put name="downScroll" value="no"/>
+	</definition>
+	
+		<definition name="user.view" extends="base.userframe.v.layout">
+		<put name="leftFrame" value="/resourcetree.do?method=initOrgTree"/>
+		<put name="rightFrame" value="/resourcetree.do?method=getUserList"/>	
+	</definition>
+	
+	<definition name="wf.noteuser.view" extends="base.userframe.h.layout">
+		<put name="upFrame" value="/wfmanager.do?method=getWFView_Message"/>
+		<put name="downFrame" value="/resourcetree.do?method=initGetUserListByName"/>	
+		<put name="downScroll" value="yes"/>
+	</definition>
+	
+</tiles-definitions>

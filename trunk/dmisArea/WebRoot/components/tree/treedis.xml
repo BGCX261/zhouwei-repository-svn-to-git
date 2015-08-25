@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="GBK"?>
+<tree>
+	<treeobj-dis treename="tree2" datasSrc="table">  
+	
+	    <node-dis nodeName="doccolumnpro">
+			<tableName></tableName>
+			<idField>12</idField>
+			<textField>文档</textField>
+		</node-dis>
+		
+		
+		
+		<node-dis nodeName="doccolumn">
+			<tableName>DOCCOLUMN</tableName>
+			<idField>COLUMNID</idField>
+			<textField>COLUMNID|COLUMNNAME^(COLUMNID--)_COLUMNNAME</textField>
+			<userDataField>COLUMNID|COLUMNGRADE,number</userDataField>
+			<parentNodeDis>doccolumn,doccolumnpro</parentNodeDis>
+			<sqlObj  sqlName="doccosql" >
+				<sqlBody><![CDATA[select COLUMNID,COLUMNNAME,COLUMNGRADE from DOCCOLUMN where FATHERCOLUMNID = '?']]></sqlBody>
+				<sqlParamFrom>PARENTNODE.ID</sqlParamFrom>
+			</sqlObj>
+			
+		</node-dis>
+
+		<node-dis nodeName="doinfo">
+			<tableName>DOCINFO</tableName>
+			<idField>INFOID</idField>
+			<textField>INFOID|MAINTITLE^INFOID|MAINTITLE</textField>
+			<userDataField>INFOID|MAINTITLE</userDataField>
+			<parentNodeDis>doccolumn</parentNodeDis>
+			<sqlObj sqlName="docinfosql" >
+				<sqlBody><![CDATA[select INFOID,MAINTITLE from DOCINFO where COLUMNID = '?']]></sqlBody>
+				<sqlParamFrom>PARENTNODE.ID</sqlParamFrom>
+			</sqlObj>
+		</node-dis>
+	</treeobj-dis>
+	
+	
+	<treeobj-dis treename="tree3"> 
+	   <node-dis nodeName="proresource">
+			<tableName></tableName>
+			<idField>-1</idField>
+			<textField>资源树</textField>
+			<userDataField>-1|-1|-1</userDataField>
+		</node-dis>
+	
+		<node-dis nodeName="resource">
+			<tableName>tree_resources</tableName>
+			<idField>b,number</idField>
+			<textField>res_name</textField>
+			<userDataField>b,number|res_name|res_detail</userDataField>
+			<parentNodeDis>proresource,resource</parentNodeDis>
+			<sqlObj sqlName="resourcesql" >
+				<sqlBody><![CDATA[select a.reS_id as b,a.res_name,a.res_detail from tree_resources a where a.res_parent_id = '-1' ]]></sqlBody>
+				<sqlParamFrom></sqlParamFrom>
+			</sqlObj>
+		</node-dis>
+	</treeobj-dis>
+	
+	
+	
+   <treeobj-dis treename="bugtree" datasSrc="table"> 
+	   	<node-dis nodeName="t1">
+			<tableName></tableName>
+			<idField>-1</idField>
+			<textField>资源树</textField>
+			<userDataField></userDataField>
+		</node-dis>
+		<node-dis nodeName="t2">
+			<tableName>tree1</tableName>
+			<idField>treeid</idField>
+			<textField>title</textField>
+			<userDataField>title</userDataField>
+			<parentNodeDis>t1,t2</parentNodeDis>
+			<sqlObj sqlName="t2" >
+				<sqlBody><![CDATA[select treeid,title from tree1  where dis='?']]></sqlBody>
+				<sqlParamFrom>PARENTNODE.ID</sqlParamFrom>
+			</sqlObj>
+		</node-dis>
+	</treeobj-dis>
+	
+	
+	   <treeobj-dis treename="entitytree1" datasSrc="entity"> 
+	   	<node-dis nodeName="t1">
+			<entityClass></entityClass>
+			<idField>-1</idField>
+			<textField>资源树</textField>
+			<userDataField></userDataField>
+		</node-dis>
+		<node-dis nodeName="t2">
+			<entityClass>tree1</entityClass>
+			<idField>treeid</idField>
+			<textField>title</textField>
+			<userDataField>title</userDataField>
+			<parentNodeDis>t1</parentNodeDis>
+			<sqlObj sqlName="t2" >
+				<sqlBody><![CDATA[select treeid,title from tree1  where treeid='?']]></sqlBody>
+				<sqlParamFrom>PARENTNODE.ID</sqlParamFrom>
+			</sqlObj>
+		</node-dis>
+	</treeobj-dis>
+	
+	
+	 <treeobj-dis treename="test" datasSrc="List"> 
+	   	<node-dis nodeName="t1">
+			<poolcatch>1</poolcatch>
+		</node-dis>
+	</treeobj-dis>
+</tree>

@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="com.techstar.dmis.entity">
+	<class name="DdEnsuringpsusers" table="DMIS_DD_EnsuringPSUsers" dynamic-insert="true" dynamic-update="true" optimistic-lock="version">
+    <id name="fid" type="string">
+      <column name="fid" sql-type="varchar(40)" not-null="true"/>
+      <generator class="assigned"/>
+    </id>
+
+ 	<version name="version" column="VERSION" unsaved-value="undefined"/>
+  
+   <property name="fensuringbillid" type="string"  not-null="false">
+    <column name="fensuringbillid"  
+		length="40"               
+    />
+</property>	
+    <property name="fensuringpsuser" type="string"  not-null="false">
+    <column name="fensuringpsuser"  
+		length="300"               
+    />
+</property>	
+    <property name="fisimpuser" type="string"  not-null="false">
+    <column name="fisimpuser"  
+		length="2"               
+    />
+</property>	
+    <property name="fimpsuppowstypic" type="string"  not-null="false">
+    <column name="fimpsuppowstypic"  
+		length="40"               
+    />
+</property>	
+  
+</class>
+
+</hibernate-mapping>
+

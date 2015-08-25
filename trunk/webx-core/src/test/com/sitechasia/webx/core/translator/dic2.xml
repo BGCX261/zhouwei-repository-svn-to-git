@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dictionary>
+<!-- for some dictionary -->
+   <country>
+     <item>
+       <value>100</value>
+       <lable>中国</lable>
+     </item>
+     <item>
+       <value>101</value>
+       <lable>美国</lable>
+     </item>
+     <item>
+       <value>102</value>
+       <lable>韩国</lable>
+     </item>
+     <item>
+       <value>103</value>
+       <lable>日本</lable>
+     </item>
+     <item>
+       <value>104</value>
+       <lable>加拿大</lable>
+     </item>
+     <item>
+       <value>105</value>
+       <lable>英国</lable>
+     </item>
+     <item>
+       <value>106</value>
+       <lable>澳大利亚</lable>
+     </item>
+   </country>
+   <test>
+   	<item value="tt" lable="哈哈"/>
+   	<item value="xx" lable="嘻嘻"/>
+   </test>
+   
+</dictionary>

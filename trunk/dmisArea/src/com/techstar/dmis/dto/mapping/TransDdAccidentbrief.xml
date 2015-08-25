@@ -1,0 +1,26 @@
+<!DOCTYPE mappings PUBLIC "-//DOZER//DTD MAPPINGS//EN"
+"http://dozer.sourceforge.net/dtd/dozerbeanmapping.dtd">
+<mappings>
+   <mapping>
+   <class-a>com.techstar.dmis.dto.DdAccidentbriefDto</class-a>
+   <class-b>com.techstar.dmis.dto.transfer.TransDdAccidentbriefDto</class-b>
+   <field>
+      <a>fbhactionrecord10</a>
+      <b>fbhactionrecord10</b>
+      <a-hint>com.techstar.dmis.dto.BhActionrecordDto</a-hint>
+      <b-hint>com.techstar.dmis.dto.transfer.TransBhActionrecordDto</b-hint>
+   </field>
+   <field>
+      <a>fddaccidentbriefprocess1</a>
+      <b>fddaccidentbriefprocess1</b>
+      <a-hint>com.techstar.dmis.dto.DdAccidentbriefprocessDto</a-hint>
+      <b-hint>com.techstar.dmis.dto.transfer.TransDdAccidentbriefprocessDto</b-hint>
+   </field>
+   <field>
+      <a>zddaccidentbrief1.id</a>
+      <b>trans_zddaccidentbrief1</b>
+      <a-hint>com.techstar.dmis.dto.StdDdaccidentreasonDto</a-hint>
+      <b-hint>java.lang.String</b-hint>
+   </field>
+   </mapping>
+</mappings>

@@ -1,0 +1,27 @@
+package ${iwfpackagepath};
+
+import java.util.List;
+import java.util.Map;
+//please add your business methods start
+	// to do it
+//add your business method end
+
+/** 
+ * 业务对象工作流服务接口类
+ * @author 
+ * @date
+ */
+import org.springframework.dao.DataAccessException;
+
+public interface I${workflow.getUpEntityName()}WFService {
+    
+
+     #foreach($method in $workflow.getFunctions())
+	 ${method.accessType} ${method.returnType} ${method.enName} (${method.param}) throws DataAccessException;
+	 #end
+	 
+	 //please add your business methods start
+	 // to do it
+	//add your business method end
+	
+}

@@ -1,0 +1,26 @@
+<!--拉路序位信息-->
+<head>
+	<obj>DdCutofftitleDto</obj>
+	<column colName="fid" propertyName="fid" colType="string"
+		dataTypeLen="32" isPrimary="1" visible="1" width="42" isEdit="0"
+		textColor="#000000" className="DdCutofftitleDto" refName="fid">
+	</column>
+	<column colName="fyear" propertyName="fyear" colType="string"
+		dataTypeLen="8" isPrimary="0" visible="1" width="74" isEdit="0"
+		textColor="#000000" className="DdCutofftitleDto" refName="fyear">
+	</column>
+	<column colName="sys_dataowner" propertyName="sys_dataowner"
+		colType="string" dataTypeLen="40" isPrimary="0" visible="1"
+		width="106" isEdit="0" textColor="#000000"
+		className="DdCutofftitleDto" refName="sys_dataowner">
+	</column>
+	<column colName="sys_filltime" propertyName="sys_filltime"
+		colType="timestamp" dataTypeLen="" isPrimary="0" visible="1"
+		width="74" isEdit="0" textColor="#000000" className="DdCutofftitleDto"
+		refName="sys_filltime">
+	</column>
+	<column colName="fstatus" propertyName="fstatus" colType="string"
+		dataTypeLen="40" isPrimary="0" visible="1" width="42" isEdit="0"
+		textColor="#000000" className="DdCutofftitleDto" refName="fstatus">
+	</column>
+</head>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 1.1//EN"
+       "http://jakarta.apache.org/struts/dtds/tiles-config_1_1.dtd">
+<tiles-definitions>
+	<!-- 定义一个基本的FrameBaseLayout 水平分两层 -->
+	<definition name="base.queryframe.h.layout" path="/common/base_queryframe_h_layout.jsp"/>
+	
+	<!-- 定义一个基本的FrameBaseLayout 垂直分两层 -->
+	<definition name="base.queryframe.v.layout" path="/common/base_queryframe_v_layout.jsp"/>
+
+	<!-- 定义一个基本的ToolbarLayout -->
+	<definition name="base.toolbar.layout" path="/common/base_toolbar_layout.jsp"/>
+	
+	<!-- 定义一个基本的TabLayout -->
+	<definition name="base.tab.layout" path="/common/base_tab_layout.jsp"/>
+	
+</tiles-definitions>

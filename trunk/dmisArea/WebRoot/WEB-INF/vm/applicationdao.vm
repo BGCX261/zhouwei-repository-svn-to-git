@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+  
+  <!-- 直连配置 -->
+  <bean id="${proname}DataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+  		<property name="driverClassName">
+	      <value>${db.driverClassName}</value>
+	    </property>
+	    <property name="url">
+	      <value>${db.url}</value>
+	    </property>
+	    <property name="username">
+	      <value>${db.username}</value>
+	    </property>
+	    <property name="password">
+	      <value>${db.password}</value>
+	    </property>    
+  </bean>
+	
+
+  <!--<bean id="${proname}DataSource" class="org.springframework.jndi.JndiObjectFactoryBean">
+   <property name="jndiName">
+    	<value>${ds.jndiname}</value>
+    </property>
+  </bean>
+  -->
+  
+  <bean id="jdbcExceptionTranslator" class="org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator">
+    <property name="dataSource">
+      <ref bean="${proname}DataSource"/>
+    </property>
+  </bean>
+  
+  <bean id="transactionManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+	    <property name="sessionFactory">
+	      <ref bean="${proname}SessionFactory"/>
+	    </property>
+   </bean>
+   
+     <!-- 以下是： 处理Blob类型的特殊声明 //-->
+   	<bean id="nativeJdbcExtractor"
+		class="org.springframework.jdbc.support.nativejdbc.CommonsDbcpNativeJdbcExtractor"
+		lazy-init="true" />
+	<bean id="lobHandler"
+		class="org.springframework.jdbc.support.lob.OracleLobHandler"
+		lazy-init="true">
+		<property name="nativeJdbcExtractor">
+			<ref local="nativeJdbcExtractor" />
+		</property>
+	</bean>
+   
+ <!-- hibernate的sessionFactory配置 -->
+
+  <bean id="${proname}SessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+	    <property name="schemaUpdate">
+	      <value>false</value>
+	    </property>
+		<property name="lobHandler" ref="lobHandler" />
+		<property name="mappingDirectoryLocations">
+			<list>
+				<value>classpath:$mapping</value>
+			</list>
+		</property>
+		<property name="mappingResources">
+		   <list>
+		       <value>
+				  com/techstar/framework/ui/entity/SysUiGrid.hbm.xml
+			   </value>
+		   </list>
+		</property>
+	    <property name="mappingJarLocations">
+			<list>
+				<value>WEB-INF\lib\jbpm-3.1.2.jar</value>
+				<value>WEB-INF\lib\jbpm-identity-3.1.2.jar</value>
+			</list>
+		</property>
+
+	    <property name="hibernateProperties">
+	      <props>
+	        <prop key="hibernate.dialect">${db.dialect}</prop>
+	        <prop key="hibernate.cache.provider_class">org.hibernate.cache.EhCacheProvider</prop>
+	        <prop key="hibernate.show_sql">${show_sql}</prop>
+	      </props>
+	    </property>
+	    <property name="dataSource">
+	      <ref local="${proname}DataSource"/>
+	    </property>
+   </bean>
+
+  <!-- jdbc实现数据访问接口 -->
+  <bean id="iBaseJdbcDao"  parent="baseLogAOP">	
+		<property name="target">
+            <bean class="com.techstar.framework.dao.BaseJdbcDaoImpl">            	
+            	<property name="dataSource"><ref local="${proname}DataSource"/></property>
+            </bean>
+        </property>		
+  </bean>
+  
+  	<!-- hibernate实现数据访问接口 -->
+  <bean id="iBaseHbnDao"  parent="baseLogAOP">	
+		<property name="target">
+            <bean class="com.techstar.framework.dao.BaseHbnDaoImpl">            	
+            	<property name="sessionFactory"><ref local="${proname}SessionFactory"/></property>
+            </bean>
+        </property>		
+  </bean>
+  
+  
+  <!-- hibernate实现通用查询数据访问接口 -->
+  <bean id="iCommonQueryDao"  parent="baseLogAOP">	
+		<property name="target">
+            <bean class="com.techstar.framework.dao.CommonQueryDaoImpl">            	
+            	<property name="sessionFactory"><ref local="${proname}SessionFactory"/></property>
+            </bean>
+        </property>		
+  </bean>
+  
+  	<bean id="iSysUiGridDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.framework.ui.dao.impl.SysUiGridDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+  
+
+
+
+
+   <!-- 注册业务数据访问接口 -->
+   #foreach($dao in $daos)
+   <bean id="$dao.idaoName" parent="baseLogAOP">
+	<property name="target">
+	    <bean	class="$daopackage$dao.daoImplName">
+			<property name="baseHbnDao">
+				<ref bean="iBaseHbnDao" />
+			</property>		
+		</bean>
+	</property>
+   </bean>
+   #end
+</beans>

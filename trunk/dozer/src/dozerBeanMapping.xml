@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mappings PUBLIC "-//DOZER//DTD MAPPINGS//EN"
+   "http://dozer.sourceforge.net/dtd/dozerbeanmapping.dtd">
+<mappings>
+
+
+	<mapping>
+
+		<class-a>com.zhouwei.dozer.A</class-a>
+		<class-b>com.zhouwei.dozer.A1</class-b>
+		<field>
+			<a>str</a>
+			<b>str</b>
+		</field>
+		<field>
+			<a>B</a>
+			<b>B1</b>
+			<a-hint>com.zhouwei.dozer.B</a-hint>
+			<b-hint>com.zhouwei.dozer.B1</b-hint>
+		</field>
+		<field>
+			<a>B.c</a>
+			<b>B1.c1</b>
+			<a-hint>com.zhouwei.dozer.C</a-hint>
+			<b-hint>com.zhouwei.dozer.C1</b-hint>
+		</field>
+		<!--也可以不指定hint-->
+		<field>
+			<a>B.c.d</a>
+			<b>B1.c1.d1</b>
+		</field>
+	</mapping>
+
+	<mapping>
+		<class-a>com.zhouwei.dozer.D</class-a>
+		<class-b>com.zhouwei.dozer.D1</class-b>
+		<field>
+			<a>str</a>
+			<b>str1</b>
+		</field>
+	</mapping>
+
+</mappings>

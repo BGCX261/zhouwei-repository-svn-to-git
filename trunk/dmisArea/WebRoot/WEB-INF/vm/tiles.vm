@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 1.1//EN"
+       "http://jakarta.apache.org/struts/dtds/tiles-config_1_1.dtd">
+	   
+<tiles-definitions>
+
+
+#foreach($action in $actions)
+	
+	
+	
+#foreach($tile in $action.strutsTiles)
+#if($tile.type==201)
+	<definition name="${tile.definition_Name}" extends="base.tab.layout">
+		<put name="tab" value="/application/${action.mainentity.entityBean.getLowEnName().toLowerCase()}/$tile.pageName"/>
+	</definition>
+#end
+#if($tile.type==200)
+	<definition name="${tile.definition_Name}" extends="base.toolbar.layout">
+		<put name="toolbar" value="/application/${action.mainentity.entityBean.getLowEnName().toLowerCase()}/$tile.pageName"/>
+	</definition>
+#end
+#if($tile.type==11)
+	<definition name="${tile.definition_Name}" extends="base.queryframe.h.layout">
+		<put name="upFrame" value="/${action.mainentity.entityBean.getLowEnName()}.do?method=${tile.frame_toolbar_name}"/>
+		<put name="downFrame" value="/${action.mainentity.entityBean.getLowEnName()}.do?method=${tile.frame_tab_name}"/>
+		<put name="downScroll" value="no"/>
+	</definition>
+#end
+#end
+#end
+
+</tiles-definitions>

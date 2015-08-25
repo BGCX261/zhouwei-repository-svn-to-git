@@ -1,0 +1,11 @@
+<!--人员-->
+<head>
+  <obj>GgPersonDto</obj>
+  <column  colName="id" propertyName="id" colType="string" dataTypeLen="40" isPrimary="1" visible="0" width="58" isEdit="0" textColor="#000000" className="GgPersonDto" refName="id" ></column>
+  <column  colName="version" propertyName="version" colType="integer" dataTypeLen="" isPrimary="0" visible="0" width="122" isEdit="0" textColor="#000000" className="GgPersonDto" refName="version" ></column>
+  <column  colName="unitname" propertyName="unitname" colType="string" dataTypeLen="100" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="GgPersonDto" refName="unitname" ></column>
+  <column  colName="deptname" propertyName="deptname" colType="string" dataTypeLen="20" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="GgPersonDto" refName="deptname" ></column>
+  <column  colName="name" propertyName="name" colType="string" dataTypeLen="10" isPrimary="0" visible="1" width="90" isEdit="0" textColor="#000000" className="GgPersonDto" refName="name" ></column>
+  <column  colName="dutyname" propertyName="dutyname" colType="string" dataTypeLen="20" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="GgPersonDto" refName="dutyname" ></column>
+  <column  colName="fmajor" propertyName="fmajor" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="42" isEdit="0" textColor="#000000" className="GgPersonDto" refName="fmajor" ></column>
+</head>

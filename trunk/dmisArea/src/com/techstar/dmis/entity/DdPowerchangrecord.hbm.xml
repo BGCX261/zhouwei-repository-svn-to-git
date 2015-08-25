@@ -1,0 +1,109 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="com.techstar.dmis.entity">
+	<class name="DdPowerchangrecord" table="DMIS_DD_PowerchangRecord" dynamic-insert="true" dynamic-update="true" optimistic-lock="version">
+    <id name="fid" type="string">
+      <column name="fid" sql-type="varchar(32)" not-null="true"/>
+      <generator class="assigned"/>
+    </id>
+
+ 	<version name="version" column="VERSION" unsaved-value="undefined"/>
+  
+   <property name="fstationname" type="string"  not-null="true">
+    <column name="fstationname"  
+		length="80"               
+    />
+</property>	
+    <property name="fadjustreason" type="string"  not-null="false">
+    <column name="fadjustreason"  
+		length="80"               
+    />
+</property>	
+    <property name="fadjustcontent" type="string"  not-null="false">
+    <column name="fadjustcontent"  
+		length="500"               
+    />
+</property>	
+    <property name="fsendcmdtime" type="timestamp"  not-null="false">
+    <column name="fsendcmdtime"  
+		               
+    />
+</property>	
+    <property name="fsendcmder" type="string"  not-null="false">
+    <column name="fsendcmder"  
+		length="20"               
+    />
+</property>	
+    <property name="freccmder" type="string"  not-null="false">
+    <column name="freccmder"  
+		length="20"               
+    />
+</property>	
+    <property name="frestoretime" type="timestamp"  not-null="false">
+    <column name="frestoretime"  
+		               
+    />
+</property>	
+    <property name="fressendcmder" type="string"  not-null="false">
+    <column name="fressendcmder"  
+		length="40"               
+    />
+</property>	
+    <property name="fresreccmder" type="string"  not-null="false">
+    <column name="fresreccmder"  
+		length="40"               
+    />
+</property>	
+    <property name="fwriteinlog" type="string"  not-null="false">
+    <column name="fwriteinlog"  
+		length="40"               
+    />
+</property>	
+    <property name="fwriteinwglog" type="string"  not-null="false">
+    <column name="fwriteinwglog"  
+		length="40"               
+    />
+</property>	
+    <property name="fsrcno" type="string"  not-null="false">
+    <column name="fsrcno"  
+		length="40"               
+    />
+</property>	
+    <property name="flogtype" type="string"  not-null="false">
+    <column name="flogtype"  
+		length="20"               
+    />
+</property>	
+    <property name="sys_fille" type="string"  not-null="false">
+    <column name="sys_fille"  
+		length="40"               
+    />
+</property>	
+    <property name="sys_filldept" type="string"  not-null="false">
+    <column name="sys_filldept"  
+		length="80"               
+    />
+</property>	
+    <property name="sys_filltime" type="timestamp"  not-null="false">
+    <column name="sys_filltime"  
+		               
+    />
+</property>	
+    <property name="sys_isvalid" type="integer"  not-null="false">
+    <column name="sys_isvalid"  
+		               
+    />
+</property>	
+    <property name="sys_dataowner" type="string"  not-null="false">
+    <column name="sys_dataowner"  
+		length="40"               
+    />
+</property>	
+  
+	
+    <many-to-one name="zddpowerchangrecord4" class="DdClassondutylog"   column="FCurLogNO" cascade="none"></many-to-one>
+         <many-to-one name="zddpowerchangrecord6" class="StdStation"   column="FstationID" cascade="none"></many-to-one>
+     </class>
+
+</hibernate-mapping>
+

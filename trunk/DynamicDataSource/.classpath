@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+	<classpathentry kind="lib" path="spring.jar"/>
+	<classpathentry kind="lib" path="spring-test.jar"/>
+	<classpathentry kind="lib" path="hsqldb.jar"/>
+	<classpathentry kind="lib" path="commons-attributes-api.jar"/>
+	<classpathentry kind="lib" path="commons-attributes-compiler.jar"/>
+	<classpathentry kind="lib" path="commons-beanutils.jar"/>
+	<classpathentry kind="lib" path="commons-codec.jar"/>
+	<classpathentry kind="lib" path="commons-collections.jar"/>
+	<classpathentry kind="lib" path="commons-dbcp.jar"/>
+	<classpathentry kind="lib" path="commons-digester.jar"/>
+	<classpathentry kind="lib" path="commons-discovery.jar"/>
+	<classpathentry kind="lib" path="commons-fileupload.jar"/>
+	<classpathentry kind="lib" path="commons-httpclient.jar"/>
+	<classpathentry kind="lib" path="commons-io.jar"/>
+	<classpathentry kind="lib" path="commons-lang.jar"/>
+	<classpathentry kind="lib" path="commons-logging.jar"/>
+	<classpathentry kind="lib" path="commons-pool.jar"/>
+	<classpathentry kind="lib" path="commons-validator.jar"/>
+	<classpathentry kind="lib" path="c3p0-0.9.0.4.jar"/>
+	<classpathentry kind="lib" path="mysql-connector-java-5.0.4-bin.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

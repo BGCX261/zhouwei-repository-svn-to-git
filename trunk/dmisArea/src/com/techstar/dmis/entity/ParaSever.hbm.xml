@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="com.techstar.dmis.entity">
+	<class name="ParaSever" table="DMIS_ParaSever" dynamic-insert="true" dynamic-update="true" optimistic-lock="version">
+    <id name="feqpid" type="string">
+      <column name="feqpid" sql-type="varchar(80)" not-null="true"/>
+      <generator class="assigned"/>
+    </id>
+
+ 	<version name="version" column="VERSION" unsaved-value="undefined"/>
+  
+   <property name="fos" type="string"  not-null="false">
+    <column name="fos"  
+		length="40"               
+    />
+</property>	
+    <property name="fver" type="string"  not-null="false">
+    <column name="fver"  
+		length="40"               
+    />
+</property>	
+    <property name="fmainfrequent" type="integer"  not-null="false">
+    <column name="fmainfrequent"  
+		length="10"        precision="2"       
+    />
+</property>	
+    <property name="fmemory" type="integer"  not-null="false">
+    <column name="fmemory"  
+		length="10"        precision="4"       
+    />
+</property>	
+    <property name="fharddiskcapa" type="integer"  not-null="false">
+    <column name="fharddiskcapa"  
+		length="10"        precision="4"       
+    />
+</property>	
+    <property name="fother" type="string"  not-null="false">
+    <column name="fother"  
+		length="500"               
+    />
+</property>	
+  
+	
+ <many-to-one name="zparasever2" class="EtsEquipment"   column="FEqpID" cascade="delete-orphan"></many-to-one>
+     </class>
+
+</hibernate-mapping>
+

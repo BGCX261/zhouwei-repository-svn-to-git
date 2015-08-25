@@ -1,0 +1,103 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="com.techstar.dmis.entity">
+	<class name="BhFixedvaluebill" table="DMIS_BH_FixedValueBill" dynamic-insert="true" dynamic-update="true" optimistic-lock="version">
+    <id name="fixvaluebillno" type="string">
+      <column name="fixvaluebillno" sql-type="varchar(40)" not-null="true"/>
+      <generator class="assigned"/>
+    </id>
+
+ 	<version name="version" column="VERSION" unsaved-value="undefined"/>
+  
+   <property name="fixvaluedate" type="date"  not-null="false">
+    <column name="fixvaluedate"  
+		               
+    />
+</property>	
+    <property name="fstatus" type="string"  not-null="false">
+    <column name="fstatus"  
+		length="80"               
+    />
+</property>	
+    <property name="fapprover" type="string"  not-null="false">
+    <column name="fapprover"  
+		length="80"               
+    />
+</property>	
+    <property name="fchecker" type="string"  not-null="false">
+    <column name="fchecker"  
+		length="80"               
+    />
+</property>	
+    <property name="fcaculator" type="string"  not-null="false">
+    <column name="fcaculator"  
+		length="80"               
+    />
+</property>	
+    <property name="fremark" type="string"  not-null="false">
+    <column name="fremark"  
+		length="80"               
+    />
+</property>	
+    <property name="fexcutetime" type="date"  not-null="false">
+    <column name="fexcutetime"  
+		               
+    />
+</property>	
+    <property name="ondutymember" type="string"  not-null="false">
+    <column name="ondutymember"  
+		length="80"               
+    />
+</property>	
+    <property name="eqpid" type="string"  not-null="false">
+    <column name="eqpid"  
+		length="80"               
+    />
+</property>	
+    <property name="fixvalueoriginal" type="org.springframework.orm.hibernate3.support.BlobByteArrayType"  not-null="false">
+    <column name="fixvalueoriginal"  
+		               
+    />
+</property>	
+    <property name="fixvalueno" type="string"  not-null="false">
+    <column name="fixvalueno"  
+		length="40"               
+    />
+</property>	
+    <property name="sys_fille" type="string"  not-null="false">
+    <column name="sys_fille"  
+		length="40"               
+    />
+</property>	
+    <property name="sys_filldept" type="string"  not-null="false">
+    <column name="sys_filldept"  
+		length="80"               
+    />
+</property>	
+    <property name="sys_filltime" type="timestamp"  not-null="false">
+    <column name="sys_filltime"  
+		               
+    />
+</property>	
+    <property name="sys_isvalid" type="integer"  not-null="false">
+    <column name="sys_isvalid"  
+		               
+    />
+</property>	
+    <property name="sys_dataowner" type="string"  not-null="false">
+    <column name="sys_dataowner"  
+		length="40"               
+    />
+</property>	
+    <property name="fchangereason" type="string"  >
+    <column name="fchangereason"  
+		length="200"               
+    />
+</property>	
+  
+	
+    <set name="fbhfixedvaluebilldetail1" inverse="true" cascade="delete-orphan"><key column="FixvalueBillNo"/><one-to-many class="BhFixedvaluebilldetail"/></set>
+     </class>
+
+</hibernate-mapping>
+

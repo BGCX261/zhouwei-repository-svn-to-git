@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE form-validation PUBLIC "-//Apache Software Foundation//DTD Commons Validator Rules Configuration 1.1.3//EN" "http://jakarta.apache.org/commons/dtds/validator_1_1_3.dtd">
+<form-validation>
+  <global>
+    <constant>
+      <constant-name>phone</constant-name>
+      <constant-value>^\(?(\d{3})\)?[-| ]?(\d{3})[-| ]?(\d{4})$</constant-value>
+    </constant>
+    <constant>
+      <constant-name>zip</constant-name>
+      <constant-value>^\d{5}\d*$</constant-value>
+    </constant>
+  </global>
+
+  <!-- ========================= Default Formset ========================= -->
+  <formset>
+    <constant>
+      <constant-name>zip</constant-name>
+      <constant-value>^\d{5}(-\d{4})?$</constant-value>
+    </constant>
+	
+    #foreach($form in $velidators)   
+       $form.toFormXml()
+    #end
+	
+  </formset>  
+</form-validation>

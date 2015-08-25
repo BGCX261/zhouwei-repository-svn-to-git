@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xmlns:aop="http://www.springframework.org/schema/aop"
+	   xmlns:tx="http://www.springframework.org/schema/tx"
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+           http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.0.xsd
+           http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd"
+	   default-lazy-init="true">
+
+<!-- 属性文件读入 -->
+<bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+	<property name="locations">
+		<list>
+			<value>classpath*:i18n/exception-info.properties</value>
+		</list>
+	</property>
+</bean>
+<!--Base Info Area start-->
+  <bean id="baseExceptionInfo" class="com.sitechasia.webx.core.exception.support.ExceptionInfo">
+    <property name="clazz" value="com.sitechasia.webx.core.exception.DataAccessLayerException"/>
+    <property name="code" value="1000"/>
+    <property name="type" value="${exception.type.unknow}"/>
+	<property name="severity" value="1"/>
+	<property name="description" value="${exception.description.BaseExceptionInfo}"/>
+  </bean>
+  <bean id="infoDataAccessLayer" parent="baseExceptionInfo">
+    <property name="clazz" value="com.sitechasia.webx.core.exception.DataAccessLayerException"/>
+    <property name="code" value="1001"/>
+    <property name="type" value="${exception.type.dataaccess}"/>
+	<property name="description" value="${exception.description.DataAccessLayerException}"/>
+  </bean>
+    <bean id="infoBizLayer" parent="baseExceptionInfo">
+    <property name="clazz" value="com.sitechasia.webx.core.exception.BizLayerException"/>
+    <property name="code" value="2001"/>
+    <property name="type" value="${exception.type.businesslogic}"/>
+	<property name="description" value="${exception.description.BizLayerException}"/>
+  </bean>
+  <bean id="infoRemoteAccess" parent="baseExceptionInfo">
+    <property name="clazz" value="org.springframework.remoting.RemoteAccessException"/>
+    <property name="code" value="2001"/>
+    <property name="type" value="${exception.type.remoting}"/>
+	<property name="description" value="${exception.description.RemoteAccessException}"/>
+  </bean>
+  <bean id="infoUILayer" parent="baseExceptionInfo">
+    <property name="clazz" value="com.sitechasia.webx.core.exception.UILayerException"/>
+    <property name="code" value="4001"/>
+    <property name="type" value="${exception.type.ui}"/>
+	<property name="description" value="${exception.description.UILayerException}"/>
+  </bean>
+  <bean id="infoBaseChecked" parent="baseExceptionInfo">
+    <property name="clazz" value="com.sitechasia.webx.core.exception.BaseCheckedException"/>
+    <property name="code" value="6001"/>
+    <property name="type" value="${exception.type.system}"/>
+	<property name="description" value="${exception.description.UILayerException}"/>
+  </bean>
+  <bean id="infoThrowable" parent="baseExceptionInfo">
+    <property name="clazz" value="java.lang.Throwable"/>
+    <property name="code" value="9001"/>
+    <property name="type" value="${exception.type.unknow}"/>
+	<property name="description" value="${exception.description.Throwable}"/>
+  </bean>
+<!--Base Info Area end-->
+
+<!--DataAccessLayer Area start-->
+  <bean id="info1002" parent="infoDataAccessLayer">
+    <property name="clazz" value="org.springframework.dao.CleanupFailureDataAccessException"/>
+    <property name="code" value="1002"/>
+	<property name="description" value="${exception.description.CleanupFailureDataAccessException}"/>
+  </bean>
+  <bean id="info1003" parent="infoDataAccessLayer">
+    <property name="clazz" value="org.springframework.dao.ConcurrencyFailureException"/>
+    <property name="code" value="1003"/>
+	<property name="description" value="${exception.description.ConcurrencyFailureException}"/>
+  </bean>
+  <bean id="info1004" parent="infoDataAccessLayer">
+    <property name="clazz" value="org.springframework.dao.CannotAcquireLockException"/>
+    <property name="code" value="1003"/>
+	<property name="description" value="${exception.description.CannotAcquireLockException}"/>
+  </bean>
+  <bean id="info1005" parent="infoDataAccessLayer">
+    <property name="clazz" value="org.springframework.dao.DataIntegrityViolationException"/>
+    <property name="code" value="1005"/>
+	<property name="description" value="${exception.description.DataIntegrityViolationException}"/>
+  </bean>
+  <bean id="info1006" parent="infoDataAccessLayer">
+    <property name="clazz" value="org.springframework.dao.CannotSerializeTransactionException"/>
+    <property name="code" value="1006"/>
+	<property name="description" value="${exception.description.CannotSerializeTransactionException}"/>
+  </bean>
+  <bean id="info1007" parent="infoDataAccessLayer">
+    <property name="clazz" value="org.springframework.dao.OptimisticLockingFailureException"/>
+    <property name="code" value="1007"/>
+	<property name="description" value="${exception.description.OptimisticLockingFailureException}"/>
+  </bean>
+  <bean id="info1008" parent="infoDataAccessLayer">
+    <property name="clazz" value="org.springframework.orm.ObjectOptimisticLockingFailureException"/>
+    <property name="code" value="1008"/>
+	<property name="description" value="${exception.description.ObjectOptimisticLockingFailureException}"/>
+  </bean>
+  <bean id="info1009" parent="infoDataAccessLayer">
+    <property name="clazz" value="org.springframework.dao.DataAccessResourceFailureException"/>
+    <property name="code" value="1009"/>
+	<property name="description" value="${exception.description.DataAccessResourceFailureException}"/>
+  </bean>
+  <bean id="info1010" parent="infoDataAccessLayer">
+    <property name="clazz" value="org.springframework.jdbc.CannotGetJdbcConnectionException"/>
+    <property name="code" value="1010"/>
+	<property name="description" value="${exception.description.CannotGetJdbcConnectionException}"/>
+  </bean>
+  <bean id="info1011" parent="infoDataAccessLayer">
+    <property name="clazz" value="org.springframework.dao.DataRetrievalFailureException"/>
+    <property name="code" value="1011"/>
+	<property name="description" value="${exception.description.DataRetrievalFailureException}"/>
+  </bean>
+  <bean id="info1012" parent="infoDataAccessLayer">
+    <property name="clazz" value="org.springframework.jdbc.LobRetrievalFailureException"/>
+    <property name="code" value="1012"/>
+	<property name="description" value="${exception.description.LobRetrievalFailureException}"/>
+  </bean>
+  <bean id="info1013" parent="infoDataAccessLayer">
+    <property name="clazz" value="org.springframework.orm.ObjectRetrievalFailureException"/>
+    <property name="code" value="1013"/>
+	<property name="description" value="${exception.description.ObjectRetrievalFailureException}"/>
+  </bean>
+  <bean id="info1014" parent="infoDataAccessLayer">
+    <property name="clazz" value="org.springframework.dao.DeadlockLoserDataAccessException"/>
+    <property name="code" value="1014"/>
+	<property name="description" value="${exception.description.DeadlockLoserDataAccessException}"/>
+  </bean>
+  <bean id="info1015" parent="infoDataAccessLayer">
+    <property name="clazz" value="org.springframework.dao.InvalidDataAccessApiUsageException"/>
+    <property name="code" value="1015"/>
+	<property name="description" value="${exception.description.InvalidDataAccessApiUsageException}"/>
+  </bean>
+  <bean id="info1016" parent="infoDataAccessLayer">
+    <property name="clazz" value="org.springframework.dao.InvalidDataAccessResourceUsageException"/>
+    <property name="code" value="1016"/>
+	<property name="description" value="${exception.description.InvalidDataAccessResourceUsageException}"/>
+  </bean>
+  <bean id="info1017" parent="infoDataAccessLayer">
+    <property name="clazz" value="org.springframework.jdbc.BadSqlGrammarException"/>
+    <property name="code" value="1017"/>
+	<property name="description" value="${exception.description.BadSqlGrammarException}"/>
+  </bean>
+  <bean id="info1018" parent="infoDataAccessLayer">
+    <property name="clazz" value="org.springframework.dao.IncorrectUpdateSemanticsDataAccessException"/>
+    <property name="code" value="1018"/>
+	<property name="description" value="${exception.description.IncorrectUpdateSemanticsDataAccessException}"/>
+  </bean>
+  <bean id="info1019" parent="infoDataAccessLayer">
+    <property name="clazz" value="org.springframework.dao.TypeMismatchDataAccessException"/>
+    <property name="code" value="1019"/>
+	<property name="description" value="${exception.description.TypeMismatchDataAccessException}"/>
+  </bean>
+  <bean id="info1020" parent="infoDataAccessLayer">
+    <property name="clazz" value="org.springframework.dao.DataAccessException"/>
+    <property name="code" value="1020"/>
+	<property name="description" value="${exception.description.DataAccessException}"/>
+  </bean>
+<!--DataAccessLayer Area end-->
+<!--RemoteAccess Area start-->
+  <bean id="info3002" parent="infoRemoteAccess">
+    <property name="clazz" value="org.springframework.remoting.RemoteConnectFailureException"/>
+    <property name="code" value="3002"/>
+	<property name="description" value="${exception.description.RemoteConnectFailureException}"/>
+  </bean>
+  <bean id="info3003" parent="infoRemoteAccess">
+    <property name="clazz" value="org.springframework.remoting.RemoteLookupFailureException"/>
+    <property name="code" value="3003"/>
+	<property name="description" value="${exception.description.RemoteLookupFailureException}"/>
+  </bean>
+<!--RemoteAccess Area end-->
+
+
+</beans>

@@ -1,0 +1,16 @@
+<!--政治保电管理-->
+<head>
+  <obj>DdEnsuringpsmanageDto</obj>
+  <column  colName="fid" propertyName="fid" colType="string" dataTypeLen="32" isPrimary="1" visible="0" width="106" isEdit="0" textColor="#000000" className="DdEnsuringpsmanageDto" refName="fid" ></column>
+  <column  colName="fensuringps" propertyName="fensuringps" colType="string" dataTypeLen="300" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="DdEnsuringpsmanageDto" refName="fensuringps" ></column>
+  <column  colName="fensuringpsstime" propertyName="fensuringpsstime" colType="timestamp" dataTypeLen="0" isPrimary="0" visible="1" width="106" isEdit="0" textColor="#000000" className="DdEnsuringpsmanageDto" refName="fensuringpsstime" ></column>
+  <column  colName="fensuringpsetime" propertyName="fensuringpsetime" colType="timestamp" dataTypeLen="0" isPrimary="0" visible="1" width="106" isEdit="0" textColor="#000000" className="DdEnsuringpsmanageDto" refName="fensuringpsetime" ></column>
+  <column  colName="fensuringpsarea" propertyName="fensuringpsarea" colType="string" dataTypeLen="300" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="DdEnsuringpsmanageDto" refName="fensuringpsarea" ></column>
+  <column  colName="fstationname" propertyName="fstationname" colType="string" dataTypeLen="300" isPrimary="0" visible="1" width="90" isEdit="0" textColor="#000000" className="DdEnsuringpsmanageDto" refName="fstationname" ></column>
+  <column  colName="fmeasarule" propertyName="fmeasarule" colType="blob" dataTypeLen="500" isPrimary="0" visible="1" width="90" isEdit="0" textColor="#000000" className="DdEnsuringpsmanageDto" refName="fmeasarule" ></column>
+  <column  colName="fadditonal" propertyName="fadditonal" colType="blob" dataTypeLen="500" isPrimary="0" visible="1" width="90" isEdit="0" textColor="#000000" className="DdEnsuringpsmanageDto" refName="fadditonal" ></column>
+  <column  colName="fstatus" propertyName="fstatus" colType="string" dataTypeLen="20" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="DdEnsuringpsmanageDto" refName="fstatus" ></column>
+  <column  colName="fno" propertyName="fno" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="90" isEdit="0" textColor="#000000" className="DdEnsuringpsmanageDto" refName="fno" ></column>
+  <column  colName="sys_dataowner" propertyName="sys_dataowner" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="106" isEdit="0" textColor="#000000" className="DdEnsuringpsmanageDto" refName="sys_dataowner" ></column>
+  <column  colName="fexcutestatus" propertyName="fexcutestatus" colType="string" dataTypeLen="64" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="DdEnsuringpsmanageDto" refName="fexcutestatus" ></column>
+</head>

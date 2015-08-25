@@ -1,0 +1,17 @@
+<!--线路-->
+<head>
+  <obj>StdLineDto</obj>
+  <column  colName="id" propertyName="id" colType="string" dataTypeLen="32" isPrimary="1" visible="1" width="74" isEdit="0" textColor="#000000" className="StdLineDto" refName="id" ></column>
+  <column  colName="stationno" propertyName="stationno" colType="string" dataTypeLen="80" isPrimary="0" visible="1" width="122" isEdit="0" textColor="#000000" className="StdLineDto" refName="stationno" ></column>
+  <column  colName="linename" propertyName="linename" colType="string" dataTypeLen="80" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="StdLineDto" refName="linename" ></column>
+  <column  colName="manageunit" propertyName="manageunit" colType="string" dataTypeLen="80" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="StdLineDto" refName="manageunit" ></column>
+  <column  colName="voltagelevel" propertyName="voltagelevel" colType="string" dataTypeLen="80" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="StdLineDto" refName="voltagelevel" ></column>
+  <column  colName="stationendno" propertyName="stationendno" colType="string" dataTypeLen="80" isPrimary="0" visible="1" width="122" isEdit="0" textColor="#000000" className="StdLineDto" refName="stationendno" ></column>
+  <column  colName="switchno" propertyName="switchno" colType="string" dataTypeLen="80" isPrimary="0" visible="1" width="90" isEdit="0" textColor="#000000" className="StdLineDto" refName="switchno" ></column>
+  <column  colName="owner" propertyName="owner" colType="string" dataTypeLen="80" isPrimary="0" visible="1" width="42" isEdit="0" textColor="#000000" className="StdLineDto" refName="owner" ></column>
+  <column  colName="scheduleunit" propertyName="scheduleunit" colType="string" dataTypeLen="80" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="StdLineDto" refName="scheduleunit" ></column>
+  <column  colName="linetype" propertyName="linetype" colType="string" dataTypeLen="80" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="StdLineDto" refName="linetype" ></column>
+  <column  colName="isconnectline" propertyName="isconnectline" colType="string" dataTypeLen="2" isPrimary="0" visible="1" width="90" isEdit="0" textColor="#000000" className="StdLineDto" refName="isconnectline" ></column>
+  <column  colName="displayno" propertyName="displayno" colType="integer" dataTypeLen="0" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="StdLineDto" refName="displayno" ></column>
+  <column  colName="manageunitno" propertyName="manageunitno" colType="string" dataTypeLen="80" isPrimary="0" visible="1" width="106" isEdit="0" textColor="#000000" className="StdLineDto" refName="manageunitno" ></column>
+</head>

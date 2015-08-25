@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans default-lazy-init="true">
+	<!-- service实现类的配置 -->
+	<bean id="categoryIService"
+		class="com.sitechasia.webx.example.category.service.impl.CategoryServiceImpl">
+		<property name="categoryIDao" ref="aacategoryIDao" />
+		<property name="dozerConverter" ref="dozerConverter" />
+	</bean>
+</beans>

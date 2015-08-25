@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='GBK'?>
+<toolbar name="Demo toolbar" width="100%" disableType="image" absolutePosition="auto" toolbarAlign="auto">
+
+
+	<TextDivider id="div_text" text="" height="25" width="10" />
+	<!-- 检修计划文字显示 -->
+	<TextDivider id="div_text" text="检修计划: " height="25" width="70" />
+	<SelectButton id="0_select" width="150px" height="25">
+		<option value="0">Mode 0</option>
+		<option value="1">Mode 1</option>
+		<option value="2">Mode 2</option>
+		<option value="3">Mode 3</option>
+	</SelectButton>
+
+	<TextDivider id="div_text" text="" height="25" width="10" />
+	<TextDivider id="div_text" text="查找:" height="25" width="40" />
+	<InputText id="inputText" size="100"/>
+	<ImageButton src="../../images/find.gif" height="25" width="20" id="find" tooltip="查找"/>
+	<ImgDivider id="div_4" height="25" width="5" src="../../images/point_line.gif"/>
+	<ImageButton src="../../images/txt01.gif" height="25" width="30" id="new" tooltip="新建"/>
+	<ImageButton src="../../images/txt02.gif" height="25" width="30" id="copy" tooltip="复制"/>
+	<ImageButton src="../../images/as.gif" height="25" width="30" id="save" tooltip="保存"/>
+	<ImageButton src="../../images/delet.gif" height="25" width="30" id="delete" tooltip="删除"/>
+	<ImageButton src="../../images/qx.gif" height="25" width="30" id="cannel" tooltip="取消"/>
+
+	<ImgDivider id="div_5" height="25" width="5" src="../../images/point_line.gif"/>
+	<SelectButton id="1_select" width="150px" height="25">
+		<option value="0">Mode 0</option>
+		<option value="1">Mode 1</option>
+		<option value="2">Mode 2</option>
+		<option value="3">Mode 3</option>
+	</SelectButton>
+
+	<TextDivider id="div_text" text="" height="25" width="10" />
+	<ImageButton src="../../images/arrow_left.gif" height="25" width="30" id="lastRow" tooltip="上一条"/>
+	<ImageButton src="../../images/arrow_right.gif" height="25" width="30" id="nextRow" tooltip="下一条"/>
+	<TextDivider id="div_text" text="" height="25" width="400" />
+	<ImageButton src="../../images/tab.gif" height="25" width="25" id="report" tooltip="查看报表"/>
+	<TextDivider id="div_text" text="" height="25" width="10" />
+
+</toolbar>

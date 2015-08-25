@@ -1,0 +1,20 @@
+<!DOCTYPE mappings PUBLIC "-//DOZER//DTD MAPPINGS//EN"
+"http://dozer.sourceforge.net/dtd/dozerbeanmapping.dtd">
+<mappings>
+   <mapping>
+   <class-a>com.techstar.dmis.dto.RepReptemplateDto</class-a>
+   <class-b>com.techstar.dmis.dto.transfer.TransRepReptemplateDto</class-b>
+   <field>
+      <a>freprepresult1</a>
+      <b>freprepresult1</b>
+      <a-hint>com.techstar.dmis.dto.RepRepresultDto</a-hint>
+      <b-hint>com.techstar.dmis.dto.transfer.TransRepRepresultDto</b-hint>
+   </field>
+   <field>
+      <a>zrepreptemplate1.res_id</a>
+      <b>trans_zrepreptemplate1</b>
+      <a-hint>com.techstar.dmis.dto.RepResdataDto</a-hint>
+      <b-hint>java.lang.String</b-hint>
+   </field>
+   </mapping>
+</mappings>

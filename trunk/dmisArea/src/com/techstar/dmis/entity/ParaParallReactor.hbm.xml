@@ -1,0 +1,118 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="com.techstar.dmis.entity">
+	<class name="ParaParallReactor" table="DMIS_ParaParallReactor" dynamic-insert="true" dynamic-update="true" optimistic-lock="version">
+    <id name="feqpid" type="string">
+      <column name="feqpid" sql-type="varchar(80)" not-null="true"/>
+      <generator class="assigned"/>
+    </id>
+
+ 	<version name="version" column="VERSION" unsaved-value="undefined"/>
+  
+   <property name="fcoolmethod" type="string"  not-null="false">
+    <column name="fcoolmethod"  
+		length="40"               
+    />
+</property>	
+    <property name="fratedcurrent" type="integer"  not-null="false">
+    <column name="fratedcurrent"  
+		length="25"        precision="10"       
+    />
+</property>	
+    <property name="fratedcapacity" type="integer"  not-null="false">
+    <column name="fratedcapacity"  
+		length="25"        precision="10"       
+    />
+</property>	
+    <property name="freactorvalue" type="integer"  not-null="false">
+    <column name="freactorvalue"  
+		length="25"        precision="10"       
+    />
+</property>	
+    <property name="feqploss" type="integer"  not-null="false">
+    <column name="feqploss"  
+		length="25"        precision="10"       
+    />
+</property>	
+    <property name="ftotalweight" type="integer"  not-null="false">
+    <column name="ftotalweight"  
+		length="25"        precision="10"       
+    />
+</property>	
+    <property name="fmagnetizerstructure" type="string"  not-null="false">
+    <column name="fmagnetizerstructure"  
+		length="40"               
+    />
+</property>	
+    <property name="fphaseno" type="string"  not-null="false">
+    <column name="fphaseno"  
+		length="40"               
+    />
+</property>	
+    <property name="funtankweight" type="integer"  not-null="false">
+    <column name="funtankweight"  
+		length="25"        precision="10"       
+    />
+</property>	
+    <property name="foilweight" type="integer"  not-null="false">
+    <column name="foilweight"  
+		length="25"        precision="10"       
+    />
+</property>	
+    <property name="finsulatedielectric" type="string"  not-null="false">
+    <column name="finsulatedielectric"  
+		length="40"               
+    />
+</property>	
+    <property name="fisthermosyphon" type="string"  not-null="false">
+    <column name="fisthermosyphon"  
+		length="40"               
+    />
+</property>	
+    <property name="ftankstructure" type="string"  not-null="false">
+    <column name="ftankstructure"  
+		length="40"               
+    />
+</property>	
+    <property name="ftankstrength" type="string"  not-null="false">
+    <column name="ftankstrength"  
+		length="40"               
+    />
+</property>	
+    <property name="fspecdev" type="string"  not-null="false">
+    <column name="fspecdev"  
+		length="40"               
+    />
+</property>	
+    <property name="foilsealmethod" type="string"  not-null="false">
+    <column name="foilsealmethod"  
+		length="40"               
+    />
+</property>	
+    <property name="frtreactorvoldrop" type="integer"  not-null="false">
+    <column name="frtreactorvoldrop"  
+		length="25"        precision="10"       
+    />
+</property>	
+    <property name="ffixdate" type="date"  not-null="false">
+    <column name="ffixdate"  
+		               
+    />
+</property>	
+    <property name="fexamdate" type="date"  not-null="false">
+    <column name="fexamdate"  
+		               
+    />
+</property>	
+    <property name="fassaydate" type="date"  not-null="false">
+    <column name="fassaydate"  
+		               
+    />
+</property>	
+  
+	
+ <many-to-one name="zparaparallreactor2" class="EtsEquipment"   column="FEqpID" cascade="delete-orphan"></many-to-one>
+     </class>
+
+</hibernate-mapping>
+

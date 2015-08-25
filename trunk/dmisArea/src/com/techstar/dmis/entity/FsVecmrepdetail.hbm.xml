@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="com.techstar.dmis.entity">
+	<class name="FsVecmrepdetail" table="DMIS_FS_VECMRepDETail" dynamic-insert="true" dynamic-update="true" optimistic-lock="version">
+    <id name="monthrepdetailid" type="string">
+      <column name="monthrepdetailid" sql-type="varchar(40)" not-null="true"/>
+      <generator class="assigned"/>
+    </id>
+
+ 	<version name="version" column="VERSION" unsaved-value="undefined"/>
+  
+   <property name="unitname" type="string"  not-null="true">
+    <column name="unitname"  
+		length="40"               
+    />
+</property>	
+    <property name="monthrate" type="integer"  not-null="true">
+    <column name="monthrate"  
+		length="7"        precision="4"       
+    />
+</property>	
+    <property name="yearrate" type="integer"  not-null="true">
+    <column name="yearrate"  
+		length="7"        precision="4"       
+    />
+</property>	
+  
+	
+    <many-to-one name="zfsvecmrepdetail1" class="FsVecollectmonrep"   column="MONthREPID" cascade="delete-orphan"></many-to-one>
+     </class>
+
+</hibernate-mapping>
+

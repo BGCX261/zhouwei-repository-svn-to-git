@@ -1,0 +1,52 @@
+<!--月停电计划-->
+<head>
+	<obj>DdMoutageplanDto</obj>
+	<column colName="fmonthplanno" propertyName="fmonthplanno"
+		colType="string" dataTypeLen="32" isPrimary="1" visible="1" width="90"
+		isEdit="0" textColor="#000000" className="DdMoutageplanDto"
+		refName="fmonthplanno" />
+	<column colName="fworkcontent" propertyName="fworkcontent"
+		colType="string" dataTypeLen="500" isPrimary="0" visible="1"
+		width="74" isEdit="0" textColor="#000000" className="DdMoutageplanDto"
+		refName="fworkcontent" />
+	<column colName="foutagearea" propertyName="foutagearea"
+		colType="string" dataTypeLen="500" isPrimary="0" visible="1"
+		width="74" isEdit="0" textColor="#000000" className="DdMoutageplanDto"
+		refName="foutagearea" />
+	<column colName="fdispatchrange" propertyName="fdispatchrange"
+		colType="string" dataTypeLen="20" isPrimary="0" visible="1" width="74"
+		isEdit="0" textColor="#000000" className="DdMoutageplanDto"
+		refName="fdispatchrange" />
+	<column colName="fstarttime" propertyName="fstarttime"
+		colType="timestamp" dataTypeLen="0" isPrimary="0" visible="1"
+		width="138" isEdit="0" textColor="#000000"
+		className="DdMoutageplanDto" refName="fstarttime" />
+	<column colName="fendtime" propertyName="fendtime"
+		colType="timestamp" dataTypeLen="0" isPrimary="0" visible="1"
+		width="138" isEdit="0" textColor="#000000"
+		className="DdMoutageplanDto" refName="fendtime" />
+	<column colName="sys_dataowner" propertyName="sys_dataowner"
+		colType="string" dataTypeLen="40" isPrimary="0" visible="1"
+		width="106" isEdit="0" textColor="#000000"
+		className="DdMoutageplanDto" refName="sys_dataowner" />
+	<column colName="monthplantype" propertyName="monthplantype"
+		colType="string" dataTypeLen="64" isPrimary="0" visible="1" width="74"
+		isEdit="0" textColor="#000000" className="DdMoutageplanDto"
+		refName="monthplantype" />
+	<column colName="fexcutestatus" propertyName="fexcutestatus"
+		colType="string" dataTypeLen="64" isPrimary="0" visible="1" width="74"
+		isEdit="0" textColor="#000000" className="DdMoutageplanDto"
+		refName="fexcutestatus" />
+	<column colName="fvoltage" propertyName="fvoltage" colType="string"
+		dataTypeLen="64" isPrimary="0" visible="1" width="74" isEdit="0"
+		textColor="#000000" className="DdMoutageplanDto" refName="fvoltage" />
+	<column colName="version" propertyName="version" colType="string"
+		dataTypeLen="10" isPrimary="0" visible="0" width="74" isEdit="0"
+		textColor="#000000" className="DdMoutageplanDto" refName="version" />
+	<column colName="fstatus" propertyName="fstatus" colType="string"
+		dataTypeLen="10" isPrimary="0" visible="1" width="74" isEdit="0"
+		textColor="#000000" className="DdMoutageplanDto" refName="fstatus" />
+	<column colName="ismerge" propertyName="ismerge" colType="string"
+		dataTypeLen="10" isPrimary="0" visible="1" width="74" isEdit="0"
+		textColor="#000000" className="DdMoutageplanDto" refName="ismerge" />
+</head>

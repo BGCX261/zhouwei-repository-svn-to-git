@@ -1,0 +1,6 @@
+Manifest-Version: 1.0
+Bundle-Version: 1.0.0
+Bundle-Name: BundleContext Bundle
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: bundleContext
+Import-Package: org.osgi.framework

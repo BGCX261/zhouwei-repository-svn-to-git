@@ -1,0 +1,9 @@
+<!--系统字典描述-->
+<head>
+  <obj>SystemdicDto</obj>
+  <column  colName="systemdicid" propertyName="systemdicid" colType="string" dataTypeLen="32" isPrimary="1" visible="0" width="90" isEdit="0" textColor="#000000" className="" refName="systemdicid" ></column>
+  <column  colName="name" propertyName="name" colType="string" dataTypeLen="80" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="" refName="name" ></column>
+    <column  colName="classify_code" propertyName="classify_code" colType="string" dataTypeLen="80" isPrimary="0" visible="0" width="74" isEdit="0" textColor="#000000" className="" refName="classify_code" ></column>
+ <column  colName="version" propertyName="version" colType="integer" dataTypeLen="" isPrimary="0" visible="0" width="122" isEdit="0" textColor="#000000" className="GgRelpersonDto" refName="version" ></column>
+</head>
+ 

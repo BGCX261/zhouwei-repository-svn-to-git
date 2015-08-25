@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+
+	<bean id="defaultBindingErrorProcessor"
+		class="com.sitechasia.webx.validator.DefaultBindingErrorProcessor">
+		<property name="messageSource" ref="messageSource" />
+		<property name="validatorFactory" ref="validatorFactory" />
+	</bean>
+
+
+	<bean id="bindingErrorProcessorStrutsSupport"
+		class="com.sitechasia.webx.validator.BindingErrorProcessorStrutsSupport">
+		<property name="validatorFactory" ref="validatorFactory" />
+	</bean>
+
+	<!-- bean id="messageSource"
+		class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+		<property name="basenames">
+			<list>
+				<value>WEB-INF/classes/modules/validator/i18n/applicationResources</value>
+			</list>
+		</property>
+	</bean-->
+	
+	
+   <bean id="messageSource"
+		class="com.sitechasia.webx.support.RegexPropertyMessageResources">
+		<property name="basenames">
+			<list>
+				<value>WEB-INF/classes/modules/validator/i18n/*.properties</value>
+			</list>
+		</property>
+		<property name="cacheSeconds" value="0" />
+	</bean>
+
+	<bean id="validatorFactory" class="com.sitechasia.webx.validator.DefaultValidatorFactory">
+		<property name="validationConfigLocations">
+			<list>
+				<value>classpath*:com/sitechasia/webx/validator/test/validator*.xml</value>
+			</list>
+		</property>
+	</bean>
+
+</beans>

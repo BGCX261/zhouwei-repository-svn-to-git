@@ -1,0 +1,17 @@
+<!--调度操作票-->
+<head>
+  <obj>DdSeqbilldetailDto</obj>
+  <column  colName="zddseqbilldetail1.fcomputerno" propertyName="fddseqbilldetail1" colType="integer" dataTypeLen="0" isPrimary="0" visible="0" width="74" isEdit="0" textColor="#000000" className="DdSwitchseqbillDto" refName="fcomputerno" ></column>
+  <column  colName="foperationstepno" propertyName="foperationstepno" colType="string" dataTypeLen="40" isPrimary="1" visible="0" width="138" isEdit="0" textColor="#000000" className="" refName="foperationstepno" ></column>
+  <column  colName="version" propertyName="version" colType="integer" dataTypeLen="0" isPrimary="0" visible="0" width="138" isEdit="0" textColor="#000000" className="" refName="version" ></column>  
+  <column  colName="fserialno" propertyName="fserialno" colType="integer" dataTypeLen="0" isPrimary="0" visible="0" width="58" isEdit="0" textColor="#000000" className="" refName="fserialno" ></column>
+  <column  colName="fstationname" propertyName="fstationname" colType="string" dataTypeLen="80" isPrimary="0" visible="1" width="142" isEdit="1" textColor="#000000" className="" refName="fstationname" ></column>
+  <column  colName="fcontent" propertyName="fcontent" colType="string" dataTypeLen="500" isPrimary="0" visible="1" width="404" isEdit="1" textColor="#000000" className="" refName="fcontent" ></column>
+  <column  colName="fstep" propertyName="fstep" colType="integer" dataTypeLen="0" isPrimary="0" visible="1" width="90" isEdit="1" textColor="#000000" className="" refName="fstep" ></column>
+  <column  colName="fgiver" propertyName="fgiver" colType="string" dataTypeLen="20" isPrimary="0" visible="0" width="58" isEdit="1" textColor="#000000" className="" refName="fgiver" ></column>
+  <column  colName="faccepter" propertyName="faccepter" colType="string" dataTypeLen="20" isPrimary="0" visible="0" width="58" isEdit="1" textColor="#000000" className="" refName="faccepter" ></column>
+  <column  colName="fgivetime" propertyName="fgivetime" colType="timestamp" dataTypeLen="0" isPrimary="0" visible="0" width="74" isEdit="1" textColor="#000000" className="" refName="fgivetime" ></column>
+  <column  colName="fsummiter" propertyName="fsummiter" colType="string" dataTypeLen="20" isPrimary="0" visible="0" width="58" isEdit="1" textColor="#000000" className="" refName="fsummiter" ></column>
+  <column  colName="fsummittime" propertyName="fsummittime" colType="timestamp" dataTypeLen="0" isPrimary="0" visible="0" width="74" isEdit="1" textColor="#000000" className="" refName="fsummittime" ></column>
+  <column  colName="fstepstatus" propertyName="fstepstatus" colType="string" dataTypeLen="64" isPrimary="0" visible="0" width="74" isEdit="1" textColor="#000000" className="" refName="fstepstatus" ></column>
+</head>

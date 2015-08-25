@@ -1,0 +1,54 @@
+package ${handlerpackage};
+
+import org.jbpm.graph.exe.ExecutionContext;
+import org.jbpm.taskmgmt.exe.Assignable;
+import org.jbpm.context.exe.ContextInstance;
+import org.jbpm.graph.exe.Token;
+import org.jbpm.taskmgmt.exe.TaskInstance;
+import com.techstar.framework.service.workflow.${impltype};
+
+//please add your business methods start
+	// to do it
+//add your business method end
+
+/**
+ * 工作流操作类
+ * @author 
+ * @date
+ */
+public class ${classname} implements ${impltype} {
+
+ #if($type.equals("1"))
+   public void execute(ExecutionContext arg0) throws Exception {
+    //please add your business methods start
+	// to do it
+  //add your business method end
+   }
+  #elseif($type.equals("2"))
+   public void assign(Assignable arg0, ExecutionContext arg1) throws Exception {
+    //please add your business methods start
+	// to do it
+//add your business method end
+   }
+  #elseif($type.equals("3"))
+   public String decide(ExecutionContext arg0) throws Exception {
+   //please add your business methods start
+	// to do it
+//add your business method end
+   return null;
+   }
+  #else
+   public void initializeTaskVariables(TaskInstance arg0, ContextInstance arg1, Token arg2) {
+    //please add your business methods start
+	// to do it
+//add your business method end
+   }
+   public void submitTaskVariables(TaskInstance arg0, ContextInstance arg1, Token arg2) {
+    //please add your business methods start
+	// to do it
+//add your business method end
+   }
+ #end
+
+	
+}

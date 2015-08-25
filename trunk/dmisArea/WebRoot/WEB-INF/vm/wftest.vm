@@ -1,0 +1,43 @@
+package ${packagename};
+
+import org.springframework.beans.factory.BeanFactory;
+import junit.framework.TestCase;
+import org.springframework.dao.DataAccessException;
+import ${testpackage}.TestHelper;
+import ${servicenamepackage}.I${upproname}WFService;;
+//please add your business methods start
+	// to do it
+//add your business method end
+
+/**
+ * 工作流测试类
+ * @author 
+ * @date
+ */
+public class I${upproname}WFServiceTest extends TestCase {
+
+	private I${upproname}WFService ${lowproname}WFService;
+	public I${upproname}WFServiceTest(String name) {
+		super(name);
+		
+	}
+	
+	protected void setUp() throws Exception {
+		super.setUp();
+		BeanFactory factory = TestHelper.createBeanFactory("${proname}");
+		//factory.getBean("configurationHelper");
+		//factory.getBean("exceptionCacheHelper");
+		${lowproname}WFService = (I${upproname}WFService)factory.getBean("i${upproname}WFService");
+	}
+
+
+	#foreach($method in $workflow.getFunctions())
+	 ${method.accessType} ${method.returnType} test${method.enName} (${method.param}) throws DataAccessException{
+	  ${method.getReturnStr()}
+   }
+	 #end
+	//please add your business methods start
+	// to do it
+    //add your business method end
+
+}

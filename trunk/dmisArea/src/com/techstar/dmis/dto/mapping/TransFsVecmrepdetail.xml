@@ -1,0 +1,14 @@
+<!DOCTYPE mappings PUBLIC "-//DOZER//DTD MAPPINGS//EN"
+"http://dozer.sourceforge.net/dtd/dozerbeanmapping.dtd">
+<mappings>
+   <mapping>
+   <class-a>com.techstar.dmis.dto.FsVecmrepdetailDto</class-a>
+   <class-b>com.techstar.dmis.dto.transfer.TransFsVecmrepdetailDto</class-b>
+   <field>
+      <a>zfsvecmrepdetail1.reportid</a>
+      <b>trans_zfsvecmrepdetail1</b>
+      <a-hint>com.techstar.dmis.dto.FsVecollectmonrepDto</a-hint>
+      <b-hint>java.lang.String</b-hint>
+   </field>
+   </mapping>
+</mappings>

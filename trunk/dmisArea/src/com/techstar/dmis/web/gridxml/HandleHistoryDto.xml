@@ -1,0 +1,32 @@
+<!--低频装置负荷数据表的属性清单-->
+<head>
+	<obj>HandleHistoryDto</obj>
+	<column colName="id" propertyName="id" colType="string"
+		dataTypeLen="40" isPrimary="1" visible="1" width="74" isEdit="0"
+		textColor="#000000" className="HandleHistoryDto" refName="id">
+	</column>
+	<column colName="bus_id" propertyName="bus_id" colType="string"
+		dataTypeLen="0" isPrimary="0" visible="1" width="130" isEdit="0"
+		textColor="#000000" className="HandleHistoryDto" refName="bus_id">
+	</column>
+	<column colName="handle_comment" propertyName="handle_comment"
+		colType="string" dataTypeLen="0" isPrimary="0" visible="1" width="320"
+		isEdit="0" textColor="#000000" className="HandleHistoryDto"
+		refName="handle_comment">
+	</column>
+	<column colName="handle_time" propertyName="handle_time"
+		colType="date" dataTypeLen="0" isPrimary="0" visible="1" width="150"
+		isEdit="0" textColor="#000000" className="HandleHistoryDto"
+		refName="handle_time">
+	</column>
+	<column colName="handle_person" propertyName="handle_person"
+		colType="string" dataTypeLen="0" isPrimary="0" visible="1" width="150"
+		isEdit="0" textColor="#000000" className="HandleHistoryDto"
+		refName="handle_person">
+	</column>
+	<column colName="handle_result" propertyName="handle_result"
+		colType="string" dataTypeLen="0" isPrimary="0" visible="1" width="150"
+		isEdit="0" textColor="#000000" className="HandleHistoryDto"
+		refName="handle_result">
+	</column>
+</head>

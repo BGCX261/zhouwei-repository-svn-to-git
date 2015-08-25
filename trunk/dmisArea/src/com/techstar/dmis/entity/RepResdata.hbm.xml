@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="com.techstar.dmis.entity">
+	<class name="RepResdata" table="DMIS_REP_RESDATA" dynamic-insert="true" dynamic-update="true" optimistic-lock="version">
+    <id name="res_id" type="string">
+      <column name="res_id" sql-type="varchar(40)" not-null="true"/>
+      <generator class="assigned"/>
+    </id>
+
+ 	<version name="version" column="VERSION" unsaved-value="undefined"/>
+  
+   <property name="f_data" type="org.springframework.orm.hibernate3.support.BlobByteArrayType"  not-null="false">
+    <column name="f_data"  
+		               
+    />
+</property>	
+    <property name="f_datasize" type="integer"  not-null="false">
+    <column name="f_datasize"  
+		               
+    />
+</property>	
+    <property name="f_lastdate" type="date"  not-null="false">
+    <column name="f_lastdate"  
+		               
+    />
+</property>	
+  
+</class>
+
+</hibernate-mapping>
+

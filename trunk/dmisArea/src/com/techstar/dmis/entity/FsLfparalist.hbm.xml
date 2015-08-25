@@ -1,0 +1,164 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="com.techstar.dmis.entity">
+	<class name="FsLfparalist" table="DMIS_FS_LFParaList" dynamic-insert="true" dynamic-update="true" optimistic-lock="version">
+    <id name="flinesno" type="string">
+      <column name="flinesno" sql-type="varchar(40)" not-null="true"/>
+      <generator class="assigned"/>
+    </id>
+
+ 	<version name="version" column="VERSION" unsaved-value="undefined"/>
+  
+   <property name="fstationname" type="string"  not-null="true">
+    <column name="fstationname"  
+		length="80"               
+    />
+</property>	
+    <property name="fstationid" type="string"  not-null="true">
+    <column name="fstationid"  
+		length="40"               
+    />
+</property>	
+    <property name="fvoltage" type="integer"  not-null="true">
+    <column name="fvoltage"  
+		               
+    />
+</property>	
+    <property name="ftransformerno" type="string"  not-null="false">
+    <column name="ftransformerno"  
+		length="40"               
+    />
+</property>	
+    <property name="fbusno" type="string"  not-null="false">
+    <column name="fbusno"  
+		length="40"               
+    />
+</property>	
+    <property name="fswitchno" type="string"  not-null="false">
+    <column name="fswitchno"  
+		length="40"               
+    />
+</property>	
+    <property name="flinename" type="string"  not-null="false">
+    <column name="flinename"  
+		length="40"               
+    />
+</property>	
+    <property name="fpowerowner" type="string"  not-null="false">
+    <column name="fpowerowner"  
+		length="200"               
+    />
+</property>	
+    <property name="fownedunit" type="string"  not-null="false">
+    <column name="fownedunit"  
+		length="40"               
+    />
+</property>	
+    <property name="ffrequency" type="string"  not-null="false">
+    <column name="ffrequency"  
+		length="40"               
+    />
+</property>	
+    <property name="factiontime" type="integer"  not-null="false">
+    <column name="factiontime"  
+		               
+    />
+</property>	
+    <property name="fruntime" type="date"  not-null="false">
+    <column name="fruntime"  
+		               
+    />
+</property>	
+    <property name="flockoutvalue" type="integer"  not-null="false">
+    <column name="flockoutvalue"  
+		               
+    />
+</property>	
+    <property name="flinegenerationdate" type="date"  not-null="false">
+    <column name="flinegenerationdate"  
+		               
+    />
+</property>	
+    <property name="fcoefficient" type="integer"  not-null="false">
+    <column name="fcoefficient"  
+		               
+    />
+</property>	
+    <property name="fremark" type="string"  not-null="false">
+    <column name="fremark"  
+		length="100"               
+    />
+</property>	
+    <property name="eqpid" type="string"  not-null="false">
+    <column name="eqpid"  
+		length="80"               
+    />
+</property>	
+    <property name="fdevfac" type="string"  not-null="false">
+    <column name="fdevfac"  
+		length="100"               
+    />
+</property>	
+    <property name="fmodel" type="string"  not-null="false">
+    <column name="fmodel"  
+		length="100"               
+    />
+</property>	
+    <property name="fmodeltype" type="string"  not-null="false">
+    <column name="fmodeltype"  
+		length="40"               
+    />
+</property>	
+    <property name="fuowner" type="string"  not-null="false">
+    <column name="fuowner"  
+		length="100"               
+    />
+</property>	
+    <property name="sys_fille" type="string"  not-null="false">
+    <column name="sys_fille"  
+		length="40"               
+    />
+</property>	
+    <property name="sys_filldept" type="string"  not-null="false">
+    <column name="sys_filldept"  
+		length="80"               
+    />
+</property>	
+    <property name="sys_filltime" type="timestamp"  not-null="false">
+    <column name="sys_filltime"  
+		               
+    />
+</property>	
+    <property name="sys_isvalid" type="integer"  not-null="false">
+    <column name="sys_isvalid"  
+		               
+    />
+</property>	
+    <property name="sys_dataowner" type="string"  not-null="false">
+    <column name="sys_dataowner"  
+		length="40"               
+    />
+</property>	
+    <property name="fsmallarea" type="string"  >
+    <column name="fsmallarea"  
+		length="200"               
+    />
+</property>	
+    <property name="frunstatus" type="string"  >
+    <column name="frunstatus"  
+		length="200"               
+    />
+</property>	
+    <property name="flinevoltage" type="string"  >
+    <column name="flinevoltage"  
+		length="200"               
+    />
+</property>	
+  
+	
+    <set name="ffsloaddatalist1" inverse="true" cascade="delete-orphan"><key column="FLinesNo"/><one-to-many class="FsLoaddatalist"/></set>
+         <many-to-one name="zfslfparalist3" class="StdLfround"   column="FRoundNO" cascade="none"></many-to-one>
+     </class>
+
+</hibernate-mapping>
+

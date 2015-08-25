@@ -1,0 +1,41 @@
+<%@ page contentType="text/html; charset=utf-8" language="java"%>
+<%@ page import="java.util.Map" %>
+<%@ include file="/common/init_tag.jsp" %>
+<html>
+<head>
+<html:base/>
+<title>${mentity.entityBean.cnName}详情</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="../../themes/themes1/style.css" rel="stylesheet" type="text/css" />
+<%@ include file="/common/init_js.jsp" %>
+<%@ include file="/common/init_date.jsp" %>
+<script language="javascript" type="text/javascript" src="<%=request.getContextPath()%>/application/${mentity.entityBean.getLowEnName().toLowerCase()}/${jsname}"></script>
+</head>
+<body>
+<html:javascript formName="${mentity.entityBean.getLowEnName()}Form"/>
+<logic:messagesPresent message="true">
+	<html:messages id="message" message="true" header="messages.header" footer="messages.footer">
+		<script language="javascript">
+			dealMessage('<bean:write name="message" ignore="true" />');
+		</script>
+	</html:messages> 
+</logic:messagesPresent>
+ <form name="${mentity.entityBean.getLowEnName()}Form" action="" method="post" #if($mentity.entityBean.getBlobAttrbeans().size()>0) enctype="multipart/form-data" #end>
+<%--hidden--%>
+
+<input type="hidden" name="${mentity.entityBean.getLowEnName()}Dto.${mentity.entityBean.getPKInputType()}" value="${${mentity.entityBean.getLowEnName()}Form.${mentity.entityBean.getLowEnName()}Dto.${mentity.entityBean.getPKInputType()}}">
+<input type="hidden" name="${mentity.entityBean.getLowEnName()}Dto.version" value="${${mentity.entityBean.getLowEnName()}Form.${mentity.entityBean.getLowEnName()}Dto.version}">
+
+#foreach($group in $groups)
+$group.ctrlgrouphtml
+
+<table class="detailmain" cellspacing="0" cellpadding="0">
+	  <tr id="$group.ctrlId">
+		<td align="center">	
+		 $group.ctrlgroupcont
+	</td></tr>
+</table>
+	#end
+</form>
+</body>
+</html>

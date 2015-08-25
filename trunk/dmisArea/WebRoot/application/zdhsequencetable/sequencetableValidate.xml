@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<validate name="validateSequencerec">
+	<field name="fserialno">
+		<func name="isInt"> 
+			 <mes>是数值的</mes>
+		</func>
+	</field>
+	
+</validate>

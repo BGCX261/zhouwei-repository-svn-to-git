@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app version="2.4" xmlns="http://JAVA.sun.com/xml/ns/j2ee"
+	xmlns:xsi="http://www.w3.org/2001/xmlSchema-instance"
+	xsi:schemaLocation="http://JAVA.sun.com/xml/ns/j2ee
+	http://JAVA.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+
+	<!--
+		Spring ApplicationContext配置文件的路径,可使用通配符，多个路径用1,号分隔
+		此参数用于后面的Spring-Context loader
+	-->
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>
+			classpath*:modules/spring.xml;classpath*:modules/**/spring-conf/*.xml
+		</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>extremecomponentsPreferencesLocation</param-name>
+		<param-value>/config/extremetable.properties</param-value>
+	</context-param>
+	<context-param>
+		<param-name>extremecomponentsMessagesLocation</param-name>
+		<param-value>/i18n/extremetableResourceBundle</param-value>
+	</context-param>
+
+	<!-- Character Encoding filter 用于控制编码 -->
+	<filter>
+		<filter-name>encodingFilter</filter-name>
+		<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>UTF-8</param-value>
+		</init-param>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>encodingFilter</filter-name>
+		<url-pattern>*.do</url-pattern>
+	</filter-mapping>
+
+	<!--Spring ApplicationContext 载入 -->
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+
+	<servlet>
+		<servlet-name>action</servlet-name>
+		<servlet-class>
+			com.sitechasia.webx.core.web.struts1.servlet.MoudelConfigStrutsActionServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<!--
+		servlet> <servlet-name>action</servlet-name> <servlet-class>
+		org.apache.struts.action.ActionServlet </servlet-class> <init-param>
+		<param-name>config</param-name>
+		<param-value>/WEB-INF/classes/modules/struts.xml</param-value>
+		</init-param> </servlet
+	-->
+
+	<servlet-mapping>
+		<servlet-name>action</servlet-name>
+		<url-pattern>*.do</url-pattern>
+	</servlet-mapping>
+
+	<!-- 导出excel和pdf文件 -->
+	<filter>
+		<filter-name>extremeExport</filter-name>
+		<filter-class>org.extremecomponents.filter.ExtremeTableFilter</filter-class>
+
+		<init-param>
+			<param-name>useEncoding</param-name>
+			<param-value>true</param-value>
+		</init-param>
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>UTF-8</param-value>
+		</init-param>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>extremeExport</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+
+	<!-- session超时定义,单位为分钟 -->
+	<session-config>
+		<session-timeout>10</session-timeout>
+	</session-config>
+
+	<!-- 默认首页定义 -->
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+
+	<!-- DWR -->
+	<servlet>
+		<servlet-name>dwr-invoker</servlet-name>
+		<servlet-class>org.directwebremoting.servlet.DwrServlet</servlet-class>
+		<init-param>
+			<param-name>debug</param-name>
+			<param-value>true</param-value>
+		</init-param>
+		<init-param>
+			<param-name>pollAndCometEnabled</param-name>
+			<param-value>true</param-value>
+		</init-param>
+		<init-param>
+			<param-name>crossDomainSessionSecurity</param-name>
+			<param-value>false</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>dwr-invoker</servlet-name>
+		<url-pattern>/dwr/*</url-pattern>
+	</servlet-mapping>
+
+
+	<filter>
+		<display-name>UploadDelegatingFilter</display-name>
+		<filter-name>UploadDelegatingFilter</filter-name>
+		<filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
+		<init-param>
+			<param-name>targetBeanName</param-name>
+			<param-value>uploadFilter</param-value>
+		</init-param>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>UploadDelegatingFilter</filter-name>
+		<url-pattern>*.do</url-pattern>
+	</filter-mapping>
+
+
+
+
+</web-app>

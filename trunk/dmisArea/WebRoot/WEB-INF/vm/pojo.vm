@@ -1,0 +1,32 @@
+package  ${packageName};
+
+import java.io.Serializable;
+/**
+ * Domain classe for ${class.cnName}
+ * This classe is based on ValueObject Pattern
+ * @author 
+ * @date
+ */
+public class ${class.getUpEnName()} implements Serializable {
+    
+	public ${class.getUpEnName()}() {
+    }
+    #foreach($attrs in $class.attributes)
+		#if(${attrs.cnName.length()}>0)
+ private ${attrs.java_type} ${attrs.enName};//${attrs.cnName}
+		#else
+ private ${attrs.java_type} ${attrs.enName};
+	    #end
+	#end
+	
+   /**
+     * getters and setters
+     */
+    #foreach($attrs in $class.attributes)
+       ${attrs.setMethod}
+	   ${attrs.getMethod}
+    #end
+  
+  
+
+}

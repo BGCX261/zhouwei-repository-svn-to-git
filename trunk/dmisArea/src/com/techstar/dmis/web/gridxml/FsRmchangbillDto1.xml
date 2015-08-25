@@ -1,0 +1,16 @@
+<!--方式变更单-->
+<head>
+  <obj>FsRmchangbillDto</obj>
+  <column  colName="fchangno" propertyName="fchangno" colType="string" dataTypeLen="32" isPrimary="1" visible="0" width="90" isEdit="0" textColor="#000000" className="FsRmchangbillDto" refName="fchangno" ></column>
+  <column  colName="fddfsmodechangelist5.fstationname" propertyName="fddfsmodechangelist5" colType="string" dataTypeLen="40" isPrimary="0" visible="0" width="58" isEdit="1" textColor="#000000" className="DdfsModechangelistDto" refName="fstationname" ></column>
+  <column  colName="fddfsmodechangelist5.currentmode" propertyName="fddfsmodechangelist5" colType="string" dataTypeLen="200" isPrimary="0" visible="1" width="74" isEdit="1" textColor="#000000" className="DdfsModechangelistDto" refName="currentmode" ></column>
+  <column  colName="fddfsmodechangelist5.aftermode" propertyName="fddfsmodechangelist5" colType="string" dataTypeLen="200" isPrimary="0" visible="1" width="90" isEdit="1" textColor="#000000" className="DdfsModechangelistDto" refName="aftermode" ></column>
+  <column  colName="fddfsmodechangelist5.fid" propertyName="fddfsmodechangelist5" colType="string" dataTypeLen="32" isPrimary="1" visible="0" width="42" isEdit="1" textColor="#000000" className="DdfsModechangelistDto" refName="fid" ></column>
+  <column  colName="fddfsmodechangelist5.fstationid" propertyName="fddfsmodechangelist5" colType="string" dataTypeLen="40" isPrimary="0" visible="0" width="74" isEdit="1" textColor="#000000" className="DdfsModechangelistDto" refName="fstationid" ></column>
+  <column  colName="fddfsmodechangelist5.srctype" propertyName="fddfsmodechangelist5" colType="string" dataTypeLen="40" isPrimary="0" visible="0" width="74" isEdit="1" textColor="#000000" className="DdfsModechangelistDto" refName="srctype" ></column>
+  <column  colName="fddfsmodechangelist5.sys_fille" propertyName="fddfsmodechangelist5" colType="string" dataTypeLen="40" isPrimary="0" visible="0" width="58" isEdit="1" textColor="#000000" className="DdfsModechangelistDto" refName="sys_fille" ></column>
+  <column  colName="fddfsmodechangelist5.sys_filldept" propertyName="fddfsmodechangelist5" colType="string" dataTypeLen="80" isPrimary="0" visible="0" width="74" isEdit="1" textColor="#000000" className="DdfsModechangelistDto" refName="sys_filldept" ></column>
+  <column  colName="fddfsmodechangelist5.sys_filltime" propertyName="fddfsmodechangelist5" colType="timestamp" dataTypeLen="" isPrimary="0" visible="0" width="74" isEdit="1" textColor="#000000" className="DdfsModechangelistDto" refName="sys_filltime" ></column>
+  <column  colName="fddfsmodechangelist5.sys_isvalid" propertyName="fddfsmodechangelist5" colType="integer" dataTypeLen="0" isPrimary="0" visible="0" width="106" isEdit="1" textColor="#000000" className="DdfsModechangelistDto" refName="sys_isvalid" ></column>
+  <column  colName="fddfsmodechangelist5.sys_dataowner" propertyName="fddfsmodechangelist5" colType="string" dataTypeLen="40" isPrimary="0" visible="0" width="106" isEdit="1" textColor="#000000" className="DdfsModechangelistDto" refName="sys_dataowner" ></column>
+</head>

@@ -1,0 +1,10 @@
+<!--自动化值班日志-->
+<head>
+  <obj>ZdhAutoondutylogDto</obj>
+  <column  colName="ondutyno" propertyName="ondutyno" colType="string" dataTypeLen="32" isPrimary="1" visible="1" width="122" isEdit="0" textColor="#000000" className="ZdhAutoondutylogDto" refName="ondutyno" ></column>
+  <column  colName="fzdhrsrecord2.accidentname" propertyName="fzdhrsrecord2" colType="string" dataTypeLen="200" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="ZdhRsrecordDto" refName="accidentname" ></column>
+  <column  colName="fzdhrsrecord2.accidenttime" propertyName="fzdhrsrecord2" colType="timestamp" dataTypeLen="0" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="ZdhRsrecordDto" refName="accidenttime" ></column>
+  <column  colName="fzdhrsrecord2.righttimes" propertyName="fzdhrsrecord2" colType="integer" dataTypeLen="0" isPrimary="0" visible="1" width="90" isEdit="0" textColor="#000000" className="ZdhRsrecordDto" refName="righttimes" ></column>
+  <column  colName="fzdhrsrecord2.correcttimes" propertyName="fzdhrsrecord2" colType="integer" dataTypeLen="0" isPrimary="0" visible="1" width="106" isEdit="0" textColor="#000000" className="ZdhRsrecordDto" refName="correcttimes" ></column>
+  <column  colName="fzdhrsrecord2.actionnote" propertyName="fzdhrsrecord2" colType="string" dataTypeLen="100" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="ZdhRsrecordDto" refName="actionnote" ></column>
+</head>

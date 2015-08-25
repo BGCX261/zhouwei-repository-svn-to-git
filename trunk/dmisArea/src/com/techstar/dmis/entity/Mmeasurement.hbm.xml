@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="com.techstar.dmis.entity">
+	<class name="Mmeasurement" table="DMIS_MMEASUREMENT" dynamic-insert="true" dynamic-update="true" optimistic-lock="version">
+    <id name="fid" type="string">
+      <column name="fid" sql-type="varchar(40)" not-null="true"/>
+      <generator class="assigned"/>
+    </id>
+
+ 	<version name="version" column="VERSION" unsaved-value="undefined"/>
+  
+   <property name="fname" type="string"  not-null="false">
+    <column name="fname"  
+		length="40"               
+    />
+</property>	
+    <property name="fdescription" type="string"  not-null="false">
+    <column name="fdescription"  
+		length="40"               
+    />
+</property>	
+    <property name="faliasname" type="string"  not-null="false">
+    <column name="faliasname"  
+		length="40"               
+    />
+</property>	
+    <property name="fmemberof_psr" type="string"  not-null="false">
+    <column name="fmemberof_psr"  
+		length="40"               
+    />
+</property>	
+    <property name="fterminal" type="string"  not-null="false">
+    <column name="fterminal"  
+		length="40"               
+    />
+</property>	
+    <property name="fmeasurementtype" type="string"  not-null="false">
+    <column name="fmeasurementtype"  
+		length="100"               
+    />
+</property>	
+    <property name="funit" type="string"  not-null="false">
+    <column name="funit"  
+		length="40"               
+    />
+</property>	
+    <property name="flimitsets" type="string"  not-null="false">
+    <column name="flimitsets"  
+		length="500"               
+    />
+</property>	
+  
+</class>
+
+</hibernate-mapping>
+

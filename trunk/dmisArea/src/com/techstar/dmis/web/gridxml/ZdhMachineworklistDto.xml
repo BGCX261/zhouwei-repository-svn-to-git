@@ -1,0 +1,14 @@
+<!--机房工作-->
+<head>
+  <obj>ZdhMachineworklistDto</obj>
+  <column  colName="jobid" propertyName="jobid" colType="string" dataTypeLen="32" isPrimary="1" visible="1" width="74" isEdit="0" textColor="#000000" className="ZdhMachineworklistDto" refName="jobid" ></column>
+  <column  colName="workingtime" propertyName="workingtime" colType="date" dataTypeLen="0" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="ZdhMachineworklistDto" refName="workingtime" ></column>
+  <column  colName="content" propertyName="content" colType="string" dataTypeLen="200" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="ZdhMachineworklistDto" refName="content" ></column>
+  <column  colName="jobcategory" propertyName="jobcategory" colType="string" dataTypeLen="64" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="ZdhMachineworklistDto" refName="jobcategory" ></column>
+  <column  colName="fexcutestatus" propertyName="fexcutestatus" colType="string" dataTypeLen="64" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="ZdhMachineworklistDto" refName="fexcutestatus" ></column>
+  <column  colName="sys_fille" propertyName="sys_fille" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="58" isEdit="0" textColor="#000000" className="ZdhMachineworklistDto" refName="sys_fille" ></column>
+  <column  colName="sys_filldept" propertyName="sys_filldept" colType="string" dataTypeLen="80" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="ZdhMachineworklistDto" refName="sys_filldept" ></column>
+  <column  colName="workingsources" propertyName="workingsources" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="ZdhMachineworklistDto" refName="workingsources" ></column>
+  <column  colName="version" propertyName="version" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="ZdhMachineworklistDto" refName="version" ></column>
+   <column  colName="opButton_1" propertyName="opButton_1" colType="string" dataTypeLen="0" isPrimary="0" visible="1" width="70" isEdit="0" textColor="#000000" className="" refName="" ></column>
+</head>

@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="com.techstar.dmis.entity">
+	<class name="FsAfrel" table="DMIS_FS_Afrel" dynamic-insert="true" dynamic-update="true" optimistic-lock="version">
+    <id name="fapprovfixrelno" type="string">
+      <column name="fapprovfixrelno" sql-type="varchar(40)" not-null="true"/>
+      <generator class="assigned"/>
+    </id>
+
+ 	<version name="version" column="VERSION" unsaved-value="undefined"/>
+  
+ 
+	
+    <many-to-one name="zfsafrel1" class="FsApprovebook"   column="FApprovNo" cascade="delete-orphan"></many-to-one>
+      <many-to-one name="zfsafrel4" class="BhFixedvaluebill"   column="FixValueNO" cascade="none"></many-to-one>
+     </class>
+
+</hibernate-mapping>
+

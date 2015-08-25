@@ -1,0 +1,78 @@
+<!--拉路序位信息-->
+<head>
+	<obj>DdCutoffsequenceDto</obj>
+	<column colName="zddcutoffsequence5.fid" propertyName="zddcutoffsequence5.fid" colType="string"
+		dataTypeLen="32" isPrimary="0" visible="1" width="138" isEdit="0"
+		textColor="#000000" className="DdCutofftitleDto" refName="fid">
+	</column>
+	<column colName="fid" propertyName="fid" colType="string"
+		dataTypeLen="32" isPrimary="1" visible="0" width="138" isEdit="0"
+		textColor="#000000" className="" refName="fid">
+	</column>
+	<column colName="fround" propertyName="fround" colType="string"
+		dataTypeLen="40" isPrimary="0" visible="1" width="42" isEdit="0"
+		textColor="#000000" className=""
+		refName="fround">
+	</column>
+	<column colName="fstationname" propertyName="fstationname"
+		colType="string" dataTypeLen="150" isPrimary="0" visible="1"
+		width="42" isEdit="0" textColor="#000000"
+		className="" refName="fstationname">
+	</column>
+	<column colName="fno" propertyName="fno" colType="integer"
+		dataTypeLen="0" isPrimary="0" visible="1" width="42" isEdit="0"
+		textColor="#000000" className="" refName="fno">
+	</column>
+	<column colName="ftransformer" propertyName="ftransformer"
+		colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="58"
+		isEdit="0" textColor="#000000" className=""
+		refName="ftransformer">
+	</column>
+	<column colName="fbusbar" propertyName="fbusbar" colType="string"
+		dataTypeLen="40" isPrimary="0" visible="1" width="42" isEdit="0"
+		textColor="#000000" className=""
+		refName="fbusbar">
+	</column>
+	<column colName="fswitchno" propertyName="fswitchno"
+		colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="58"
+		isEdit="0" textColor="#000000" className=""
+		refName="fswitchno">
+	</column>
+	<column colName="froad" propertyName="froad" colType="string"
+		dataTypeLen="40" isPrimary="0" visible="1" width="42" isEdit="0"
+		textColor="#000000" className="" refName="froad">
+	</column>
+	<column colName="flineclass" propertyName="flineclass"
+		colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="74"
+		isEdit="0" textColor="#000000" className=""
+		refName="flineclass">
+	</column>
+	<column colName="fload" propertyName="fload" colType="float"
+		dataTypeLen="0" isPrimary="0" visible="1" width="42" isEdit="0"
+		textColor="#000000" className="" refName="fload">
+	</column>
+	<column colName="foutageareauser" propertyName="foutageareauser"
+		colType="string" dataTypeLen="300" isPrimary="0" visible="1"
+		width="154" isEdit="0" textColor="#000000"
+		className="" refName="foutageareauser">
+	</column>
+	<column colName="fdubleoutagestation"
+		propertyName="fdubleoutagestation" colType="string" dataTypeLen="300"
+		isPrimary="0" visible="1" width="186" isEdit="0" textColor="#000000"
+		className="" refName="fdubleoutagestation">
+	</column>
+	<column colName="fdubleoutageroad" propertyName="fdubleoutageroad"
+		colType="string" dataTypeLen="300" isPrimary="0" visible="1"
+		width="186" isEdit="0" textColor="#000000"
+		className="" refName="fdubleoutageroad">
+	</column>
+	<column colName="fdubleoutageuser" propertyName="fdubleoutageuser"
+		colType="string" dataTypeLen="300" isPrimary="0" visible="1"
+		width="202" isEdit="0" textColor="#000000"
+		className="" refName="fdubleoutageuser">
+	</column>
+	<column colName="version" propertyName="version" colType="string"
+		dataTypeLen="10" isPrimary="0" visible="0" width="74" isEdit="0"
+		textColor="#000000" className="" refName="version" />
+	
+</head>

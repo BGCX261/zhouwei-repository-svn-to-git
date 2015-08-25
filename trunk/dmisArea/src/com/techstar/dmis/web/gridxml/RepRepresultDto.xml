@@ -1,0 +1,18 @@
+<!--报表结果-->
+<head>
+  <obj>RepRepresultDto</obj>
+  <column  colName="f_represultid" propertyName="f_represultid" colType="string" dataTypeLen="32" isPrimary="1" visible="1" width="90" isEdit="0" textColor="#000000" className="RepRepresultDto" refName="f_represultid" ></column>
+  <column  colName="treeid" propertyName="treeid" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="58" isEdit="0" textColor="#000000" className="RepRepresultDto" refName="treeid" ></column>
+  <column  colName="f_name" propertyName="f_name" colType="string" dataTypeLen="60" isPrimary="0" visible="1" width="42" isEdit="0" textColor="#000000" className="RepRepresultDto" refName="f_name" ></column>
+  <column  colName="f_title" propertyName="f_title" colType="string" dataTypeLen="100" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="RepRepresultDto" refName="f_title" ></column>
+  <column  colName="f_reportyear" propertyName="f_reportyear" colType="integer" dataTypeLen="0" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="RepRepresultDto" refName="f_reportyear" ></column>
+  <column  colName="f_reportunit" propertyName="f_reportunit" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="RepRepresultDto" refName="f_reportunit" ></column>
+  <column  colName="f_rawdata" propertyName="f_rawdata" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="138" isEdit="0" textColor="#000000" className="RepRepresultDto" refName="f_rawdata" ></column>
+  <column  colName="f_otherinfo" propertyName="f_otherinfo" colType="string" dataTypeLen="4000" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="RepRepresultDto" refName="f_otherinfo" ></column>
+  <column  colName="f_description" propertyName="f_description" colType="string" dataTypeLen="300" isPrimary="0" visible="1" width="42" isEdit="0" textColor="#000000" className="RepRepresultDto" refName="f_description" ></column>
+  <column  colName="f_repmonth" propertyName="f_repmonth" colType="integer" dataTypeLen="0" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="RepRepresultDto" refName="f_repmonth" ></column>
+  <column  colName="f_repseason" propertyName="f_repseason" colType="integer" dataTypeLen="0" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="RepRepresultDto" refName="f_repseason" ></column>
+  <column  colName="sys_fille" propertyName="sys_fille" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="58" isEdit="0" textColor="#000000" className="RepRepresultDto" refName="sys_fille" ></column>
+  <column  colName="sys_filldept" propertyName="sys_filldept" colType="string" dataTypeLen="80" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="RepRepresultDto" refName="sys_filldept" ></column>
+  <column  colName="sys_filltime" propertyName="sys_filltime" colType="date" dataTypeLen="80" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="RepRepresultDto" refName="sys_filltime" ></column>
+</head>

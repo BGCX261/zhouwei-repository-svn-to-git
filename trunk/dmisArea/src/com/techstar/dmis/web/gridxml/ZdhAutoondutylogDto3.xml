@@ -1,0 +1,14 @@
+<!--自动化值班日志-->
+<head>
+  <obj>ZdhAutoondutylogDto</obj>
+  <column  colName="ondutyno" propertyName="ondutyno" colType="string" dataTypeLen="32" isPrimary="1" visible="1" width="122" isEdit="0" textColor="#000000" className="ZdhAutoondutylogDto" refName="ondutyno" ></column>
+  <column  colName="fzdhopexaminelist1.fapplystime" propertyName="fzdhopexaminelist1" colType="timestamp" dataTypeLen="0" isPrimary="0" visible="1" width="106" isEdit="0" textColor="#000000" className="ZdhOpexaminelistDto" refName="fapplystime" ></column>
+  <column  colName="fzdhopexaminelist1.fapplyetime" propertyName="fzdhopexaminelist1" colType="timestamp" dataTypeLen="0" isPrimary="0" visible="1" width="106" isEdit="0" textColor="#000000" className="ZdhOpexaminelistDto" refName="fapplyetime" ></column>
+  <column  colName="fzdhopexaminelist1.fworkcontent" propertyName="fzdhopexaminelist1" colType="string" dataTypeLen="300" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="ZdhOpexaminelistDto" refName="fworkcontent" ></column>
+  <column  colName="fzdhopexaminelist1.begincheck" propertyName="fzdhopexaminelist1" colType="string" dataTypeLen="100" isPrimary="0" visible="1" width="106" isEdit="0" textColor="#000000" className="ZdhOpexaminelistDto" refName="begincheck" ></column>
+  <column  colName="fzdhopexaminelist1.beginchecker" propertyName="fzdhopexaminelist1" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="90" isEdit="0" textColor="#000000" className="ZdhOpexaminelistDto" refName="beginchecker" ></column>
+  <column  colName="fzdhopexaminelist1.beginchecktime" propertyName="fzdhopexaminelist1" colType="date" dataTypeLen="0" isPrimary="0" visible="1" width="138" isEdit="0" textColor="#000000" className="ZdhOpexaminelistDto" refName="beginchecktime" ></column>
+  <column  colName="fzdhopexaminelist1.finishcheck" propertyName="fzdhopexaminelist1" colType="string" dataTypeLen="100" isPrimary="0" visible="1" width="106" isEdit="0" textColor="#000000" className="ZdhOpexaminelistDto" refName="finishcheck" ></column>
+  <column  colName="fzdhopexaminelist1.finishchecker" propertyName="fzdhopexaminelist1" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="90" isEdit="0" textColor="#000000" className="ZdhOpexaminelistDto" refName="finishchecker" ></column>
+  <column  colName="fzdhopexaminelist1.finishchecktime" propertyName="fzdhopexaminelist1" colType="date" dataTypeLen="0" isPrimary="0" visible="1" width="106" isEdit="0" textColor="#000000" className="ZdhOpexaminelistDto" refName="finishchecktime" ></column>
+</head>

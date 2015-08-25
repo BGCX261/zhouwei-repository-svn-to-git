@@ -1,0 +1,13 @@
+<!--日计划核查表-->
+<head>
+  <obj>ZdhOpexaminelistDto</obj>
+  <column  colName="examinationid" propertyName="examinationid" colType="string" dataTypeLen="32" isPrimary="1" visible="0" width="106" isEdit="0" textColor="#000000" className="ZdhOpexaminelistDto" refName="examinationid" ></column>
+  <column  colName="fapplystime" propertyName="fapplystime" colType="timestamp" dataTypeLen="0" isPrimary="0" visible="1" width="106" isEdit="0" textColor="#000000" className="ZdhOpexaminelistDto" refName="fapplystime" ></column>
+  <column  colName="fapplyetime" propertyName="fapplyetime" colType="timestamp" dataTypeLen="0" isPrimary="0" visible="1" width="106" isEdit="0" textColor="#000000" className="ZdhOpexaminelistDto" refName="fapplyetime" ></column>
+  <column  colName="fworkcontent" propertyName="fworkcontent" colType="string" dataTypeLen="300" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="ZdhOpexaminelistDto" refName="fworkcontent" ></column>
+  <column  colName="begincheck" propertyName="begincheck" colType="string" dataTypeLen="100" isPrimary="0" visible="1" width="106" isEdit="0" textColor="#000000" className="ZdhOpexaminelistDto" refName="begincheck" ></column>
+  <column  colName="beginchecker" propertyName="beginchecker" colType="timestamp" dataTypeLen="40" isPrimary="0" visible="1" width="90" isEdit="0" textColor="#000000" className="ZdhOpexaminelistDto" refName="beginchecker" ></column>
+  <column  colName="finishcheck" propertyName="finishcheck" colType="timestamp" dataTypeLen="100" isPrimary="0" visible="1" width="106" isEdit="0" textColor="#000000" className="ZdhOpexaminelistDto" refName="finishcheck" ></column>
+  <column  colName="finishchecker" propertyName="finishchecker" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="90" isEdit="0" textColor="#000000" className="ZdhOpexaminelistDto" refName="finishchecker" ></column>
+  <column  colName="version" propertyName="version" colType="string" dataTypeLen="40" isPrimary="0" visible="0" width="90" isEdit="0" textColor="#000000" className="ZdhOpexaminelistDto" refName="version" ></column>
+</head>

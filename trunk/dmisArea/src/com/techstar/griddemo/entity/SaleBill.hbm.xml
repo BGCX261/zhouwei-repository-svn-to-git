@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="com.techstar.griddemo.entity">
+	<class name="SaleBill" table="DMIS_SALE_BILL" dynamic-insert="true" dynamic-update="true" optimistic-lock="version">
+    <id name="id" type="string">
+      <column name="id" sql-type="varchar(32)" not-null="true"/>
+      <generator class="assigned"/>
+    </id>
+
+ 	<version name="version" column="VERSION" unsaved-value="undefined"/>
+  
+   <property name="cre_date" type="date"  not-null="false">
+    <column name="cre_date"  
+		                
+    />
+</property>	
+    <property name="custom_id" type="string"  not-null="false">
+    <column name="custom_id"  
+		length="32"                
+    />
+</property>	
+    <property name="custom_name" type="string"  not-null="false">
+    <column name="custom_name"  
+		length="40"                
+    />
+</property>	
+    <property name="sale_mode" type="string"  not-null="false">
+    <column name="sale_mode"  
+		length="10"                
+    />
+</property>	
+    <property name="tranpriority" type="string"  not-null="false">
+    <column name="tranpriority"  
+		length="4"                
+    />
+</property>	
+    <property name="total" type="integer"  not-null="false">
+    <column name="total"  
+		                
+    />
+</property>	
+    <property name="memo" type="string"  not-null="false">
+    <column name="memo"  
+		length="200"                
+    />
+</property>	
+    <property name="check_begin_date" type="date"  not-null="false">
+    <column name="check_begin_date"  
+		                
+    />
+</property>	
+    <property name="check_end_date" type="date"  not-null="false">
+    <column name="check_end_date"  
+		                
+    />
+</property>	
+    <property name="sale_doc" type="org.springframework.orm.hibernate3.support.BlobByteArrayType"  not-null="false">
+    <column name="sale_doc"  
+		                
+    />
+</property>	
+    
+     <many-to-one name="addr" class="SaleBillAddr"  column="addr" cascade="none"></many-to-one>
+    <set name="saledetails" inverse="false" lazy="true" cascade="delete-orphan"><key column="SALE_ID"/><one-to-many class="SaleDetail"/></set>
+     </class>
+
+</hibernate-mapping>
+

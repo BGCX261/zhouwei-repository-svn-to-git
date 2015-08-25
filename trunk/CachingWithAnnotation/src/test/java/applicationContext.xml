@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+        http://www.springframework.org/schema/aop
+        http://www.springframework.org/schema/aop/spring-aop-2.0.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context-2.0.xsd">
+
+	<bean id="myService"
+		class="org.christianschenk.reflect.caching.example.MyServiceImp" />
+
+	<bean id="cache" class="org.christianschenk.simplecache.SimpleCache"
+		scope="singleton">
+		<constructor-arg index="0" value="10"/>
+	</bean>
+
+	<bean id="cacheAdvice" class="org.christianschenk.reflect.caching.CacheAdvice">
+		<property name="cache" ref="cache" />
+	</bean>
+
+	<aop:config proxy-target-class="true">
+		<aop:aspect id="cacheableAdvice" ref="cacheAdvice">
+			<aop:pointcut id="cachePointCut"
+				expression="execution(* org.christianschenk.reflect.caching.example.MyServiceImp.*(..)) 
+                    and @annotation(org.christianschenk.reflect.caching.Cachable)" />
+			<aop:around method="doCache" pointcut-ref="cachePointCut" />
+		</aop:aspect>
+	</aop:config>
+</beans>

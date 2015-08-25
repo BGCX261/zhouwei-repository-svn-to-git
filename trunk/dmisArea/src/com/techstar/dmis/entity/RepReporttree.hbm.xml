@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="com.techstar.dmis.entity">
+	<class name="RepReporttree" table="DMIS_REP_REPORTTREE" dynamic-insert="true" dynamic-update="true" optimistic-lock="version">
+    <id name="f_treeid" type="string">
+      <column name="f_treeid" sql-type="varchar(40)" not-null="true"/>
+      <generator class="assigned"/>
+    </id>
+
+ 	<version name="version" column="VERSION" unsaved-value="undefined"/>
+  
+   <property name="f_name" type="string"  not-null="false">
+    <column name="f_name"  
+		length="60"               
+    />
+</property>	
+    <property name="f_parenttreeid" type="string"  not-null="false">
+    <column name="f_parenttreeid"  
+		length="40"               
+    />
+</property>	
+    <property name="f_description" type="string"  not-null="false">
+    <column name="f_description"  
+		length="300"               
+    />
+</property>	
+  
+	
+    <set name="freptree2result1" inverse="true" cascade="none"><key column="F_TREEID"/><one-to-many class="RepTree2result"/></set>
+     </class>
+
+</hibernate-mapping>
+

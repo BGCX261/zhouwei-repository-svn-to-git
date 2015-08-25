@@ -1,0 +1,1943 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+
+	<!-- 直连配置 -->
+	<bean id="dmisDataSource"
+		class="org.apache.commons.dbcp.BasicDataSource"
+		destroy-method="close">
+		<property name="driverClassName">
+			<value>${db.driverClassName}</value>
+		</property>
+		<property name="url">
+			<value>${db.url}</value>
+		</property>
+		<property name="username">
+			<value>${db.username}</value>
+		</property>
+		<property name="password">
+			<value>${db.password}</value>
+		</property>
+	</bean>
+
+
+	<!--<bean id="dmisDataSource" class="org.springframework.jndi.JndiObjectFactoryBean">
+		<property name="jndiName">
+		<value>${ds.jndiname}</value>
+		</property>
+		</bean>
+	-->
+
+	<bean id="jdbcExceptionTranslator"
+		class="org.springframework.jdbc.support.SQLErrorCodeSQLExceptionTranslator">
+		<property name="dataSource">
+			<ref bean="dmisDataSource" />
+		</property>
+	</bean>
+
+	<bean id="transactionManager"
+		class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory">
+			<ref bean="dmisSessionFactory" />
+		</property>
+	</bean>
+	
+	<!-- dispatch -->
+	<!-- gcy -->
+	<bean id="iDdClassondutylogDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.DdClassondutylogDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<!-- gcyend -->
+	
+		<!--周玮-->
+	<bean id="iDdCutofftitleDao" parent="baseLogAOP">
+		<property name="target">
+			<bean class="com.techstar.dmis.dao.impl.DdCutofftitleDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao"/>
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iDdMoutageplanDao" parent="baseLogAOP">
+		<property name="target">
+			<bean class="com.techstar.dmis.dao.impl.DdMoutageplanDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao"/>
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iDdPremethodDao" parent="baseLogAOP">
+		<property name="target">
+			<bean class="com.techstar.dmis.dao.impl.DdPremethodDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao"/>
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iDdAccidentbriefDao" parent="baseLogAOP">
+		<property name="target">
+			<bean class="com.techstar.dmis.dao.impl.DdAccidentbriefDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao"/>
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iDdCutofflistDao" parent="baseLogAOP">
+		<property name="target">
+			<bean class="com.techstar.dmis.dao.impl.DdCutofflistDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao"/>
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iDdRepairrisklistDao" parent="baseLogAOP">
+		<property name="target">
+			<bean class="com.techstar.dmis.dao.impl.DdRepairrisklistDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao"/>
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iDdCutoffdetaillistDao" parent="baseLogAOP">
+		<property name="target">
+			<bean class="com.techstar.dmis.dao.impl.DdCutoffdetaillistDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao"/>
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iDdAccidentbriefprocessDao" parent="baseLogAOP">
+		<property name="target">
+			<bean class="com.techstar.dmis.dao.impl.DdAccidentbriefprocessDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao"/>
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iDdCutoffsequenceDao" parent="baseLogAOP">
+		<property name="target">
+			<bean class="com.techstar.dmis.dao.impl.DdCutoffsequenceDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao"/>
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iDdRepairdetailDao" parent="baseLogAOP">
+		<property name="target">
+			<bean class="com.techstar.dmis.dao.impl.DdRepairdetailDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao"/>
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<!--周玮end-->
+	
+	<!-- gcy -->
+	<bean id="iDdWaterheightDao" parent="baseLogAOP">
+		<property name="target">
+			<bean class="com.techstar.dmis.dao.impl.DdWaterheightDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao"/>
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iDdWaterproofplanDao" parent="baseLogAOP">
+		<property name="target">
+			<bean class="com.techstar.dmis.dao.impl.DdWaterproofplanDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao"/>
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iDdPowerchangrecordDao" parent="baseLogAOP">
+		<property name="target">
+			<bean class="com.techstar.dmis.dao.impl.DdPowerchangrecordDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao"/>
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<!-- gcyend -->
+	
+	<!-- gcy -->
+	<bean id="iDdSwitchseqbillDao" parent="baseLogAOP">
+		<property name="target">
+			<bean class="com.techstar.dmis.dao.impl.DdSwitchseqbillDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao"/>
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<!-- gcyend -->
+	
+	<!-- gcy -->
+	<bean id="iDdHloadrecordDao" parent="baseLogAOP">
+		<property name="target">
+			<bean class="com.techstar.dmis.dao.impl.DdHloadrecordDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao"/>
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<!-- gcyend -->
+	
+	<!-- gcy -->
+	<bean id="iDdHpoweroperaterrdDao" parent="baseLogAOP">
+		<property name="target">
+			<bean class="com.techstar.dmis.dao.impl.DdHpoweroperaterrdDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao"/>
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<!-- gcyend -->
+	
+	
+	<!-- gcy -->
+	<bean id="iDdSasusprecordDao" parent="baseLogAOP">
+		<property name="target">
+			<bean class="com.techstar.dmis.dao.impl.DdSasusprecordDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao"/>
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<!-- gcye -->
+	
+	<!--  gaojing-->
+	<bean id="iDdDoutageplanDao" parent="baseLogAOP">
+		<property name="target">
+			<bean class="com.techstar.dmis.dao.impl.DdDoutageplanDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao"/>
+				</property>
+			</bean>
+		</property>
+	</bean>
+
+	<bean id="iDdDayplandelaylistDao" parent="baseLogAOP">
+		<property name="target">
+			<bean class="com.techstar.dmis.dao.impl.DdDayplandelaylistDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao"/>
+				</property>
+			</bean>
+		</property>
+	</bean>
+
+	<bean id="iDdDayplanexcutelistDao" parent="baseLogAOP">
+		<property name="target">
+			<bean class="com.techstar.dmis.dao.impl.DdDayplanexcutelistDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao"/>
+				</property>
+			</bean>
+		</property>
+	</bean>
+
+	<bean id="iDdfsModechangelistDao" parent="baseLogAOP">
+		<property name="target">
+			<bean class="com.techstar.dmis.dao.impl.DdfsModechangelistDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao"/>
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iDayplancoopraterelDao" parent="baseLogAOP">
+		<property name="target">
+			<bean class="com.techstar.dmis.dao.impl.DayplancoopraterelDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao"/>
+				</property>
+			</bean>
+		</property>
+	</bean>
+
+	<bean id="iGgPersonDao" parent="baseLogAOP">
+		<property name="target">
+			<bean class="com.techstar.dmis.dao.impl.GgPersonDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao"/>
+				</property>
+			</bean>
+		</property>
+	</bean>
+
+	<bean id="iGgRelpersonDao" parent="baseLogAOP">
+		<property name="target">
+			<bean class="com.techstar.dmis.dao.impl.GgRelpersonDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao"/>
+				</property>
+			</bean>
+		</property>
+	</bean>
+
+	<bean id="iStdElectricstampDao" parent="baseLogAOP">
+		<property name="target">
+			<bean class="com.techstar.dmis.dao.impl.StdElectricstampDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao"/>
+				</property>
+			</bean>
+		</property>
+	</bean>
+
+	<bean id="iSystemdicDao" parent="baseLogAOP">
+		<property name="target">
+			<bean class="com.techstar.dmis.dao.impl.SystemdicDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao"/>
+				</property>
+			</bean>
+		</property>
+	</bean>
+
+	<bean id="iStdStationDao" parent="baseLogAOP">
+		<property name="target">
+			<bean class="com.techstar.dmis.dao.impl.StdStationDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao"/>
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<!-- gaojing -->
+	<!-- yjb -->
+	<bean id="iDdEnsuringpsmanageDao" parent="baseLogAOP">
+		<property name="target">
+			<bean class="com.techstar.dmis.dao.impl.DdEnsuringpsmanageDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao"/>
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<!-- yjb -->
+
+	<!-- 以下是： 处理Blob类型的特殊声明 //-->
+	<bean id="nativeJdbcExtractor"
+		class="org.springframework.jdbc.support.nativejdbc.CommonsDbcpNativeJdbcExtractor"
+		lazy-init="true" />
+	<bean id="lobHandler"
+		class="org.springframework.jdbc.support.lob.OracleLobHandler"
+		lazy-init="true">
+		<property name="nativeJdbcExtractor">
+			<ref local="nativeJdbcExtractor" />
+		</property>
+	</bean>
+
+	<!-- hibernate的sessionFactory配置 -->
+
+	<bean id="dmisSessionFactory"
+		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="schemaUpdate">
+			<value>false</value>
+		</property>
+		<property name="lobHandler" ref="lobHandler" />
+		<property name="mappingDirectoryLocations">
+			<list>
+				<value>classpath:/com/techstar/dmis/entity</value>
+			</list>
+		</property>
+		<property name="mappingResources">
+			<list>
+				<value>
+					com/techstar/framework/ui/entity/SysUiGrid.hbm.xml
+				</value>
+			</list>
+		</property>
+		<property name="mappingJarLocations">
+			<list>
+				<value>file:${path.jbpm.jar}jbpm-3.1.2.jar</value>
+				<value>file:${path.jbpm.jar}jbpm-identity-3.1.2.jar</value>
+			</list>
+		</property>
+
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">${db.dialect}</prop>
+				<prop key="hibernate.cache.provider_class">
+					org.hibernate.cache.EhCacheProvider
+				</prop>
+				<prop key="hibernate.show_sql">${show_sql}</prop>
+			</props>
+		</property>
+		<property name="dataSource">
+			<ref local="dmisDataSource" />
+		</property>
+	</bean>
+
+	<!-- jdbc实现数据访问接口 -->
+	<bean id="iBaseJdbcDao" parent="baseLogAOP">
+		<property name="target">
+			<bean class="com.techstar.framework.dao.BaseJdbcDaoImpl">
+				<property name="dataSource">
+					<ref local="dmisDataSource" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+
+	<!-- hibernate实现数据访问接口 -->
+	<bean id="iBaseHbnDao" parent="baseLogAOP">
+		<property name="target">
+			<bean class="com.techstar.framework.dao.BaseHbnDaoImpl">
+				<property name="sessionFactory">
+					<ref local="dmisSessionFactory" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+
+
+	<!-- hibernate实现通用查询数据访问接口 -->
+	<bean id="iCommonQueryDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.framework.dao.CommonQueryDaoImpl">
+				<property name="sessionFactory">
+					<ref local="dmisSessionFactory" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+
+	<bean id="iSysUiGridDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.framework.ui.dao.impl.SysUiGridDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+
+
+
+
+
+	<!-- 注册业务数据访问接口 -->
+	<bean id="iZdhCharalterrecordDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.ZdhCharalterrecordDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	
+	<bean id="iRepRepresultDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.RepRepresultDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	
+	<bean id="iDdDayondutylogDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.DdDayondutylogDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iStdManufacturerDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.StdManufacturerDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iDdWoutageplanDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.DdWoutageplanDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iZdhEligiblermrateDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.ZdhEligiblermrateDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iZdhOpexaminelistDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.ZdhOpexaminelistDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+
+
+
+	<bean id="iBhFaultlistDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.BhFaultlistDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iZdhRmrecDao" parent="baseLogAOP">
+		<property name="target">
+			<bean class="com.techstar.dmis.dao.impl.ZdhRmrecDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iFsLoaddatalistDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.FsLoaddatalistDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+
+	
+	<bean id="iFsLfparalistDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.FsLfparalistDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	
+	<bean id="iZdhReceptionDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.ZdhReceptionDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	
+	<bean id="iZdhMachineworklistDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.ZdhMachineworklistDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iDaymodeanalyseDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.DaymodeanalyseDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	
+	<bean id="iFsApprovebookDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.FsApprovebookDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	
+	<bean id="iZdhRsrecordDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.ZdhRsrecordDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iBhActionrecordDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.BhActionrecordDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	
+	<bean id="iZdhWorkbillDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.ZdhWorkbillDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	
+	<bean id="iZdhSequencetableDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.ZdhSequencetableDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iStdLineDao" parent="baseLogAOP">
+		<property name="target">
+			<bean class="com.techstar.dmis.dao.impl.StdLineDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iFsRmchangbillDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.FsRmchangbillDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iBhAsregulateDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.BhAsregulateDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	
+
+	
+	<bean id="iZdhAutoondutylogDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.ZdhAutoondutylogDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iStdModelDao" parent="baseLogAOP">
+		<property name="target">
+			<bean class="com.techstar.dmis.dao.impl.StdModelDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iZdhFaultlistDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.ZdhFaultlistDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iZdhTransrecordDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.ZdhTransrecordDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iBhFixedvaluebillDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.BhFixedvaluebillDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iZdhSrapplicationDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.ZdhSrapplicationDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	
+	<bean id="iDdSuspprogramrateDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.DdSuspprogramrateDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	
+	<bean id="iFsArealoaddatalistDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.FsArealoaddatalistDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iFsVemonthrepdetailDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.FsVemonthrepdetailDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iFsLfeqpfixinformDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.FsLfeqpfixinformDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+
+	<bean id="iFsAfrelDao" parent="baseLogAOP">
+		<property name="target">
+			<bean class="com.techstar.dmis.dao.impl.FsAfrelDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iFsYearlfplanDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.FsYearlfplanDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iRepReporttreeDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.RepReporttreeDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iBhFixedvaluebilldetailDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.BhFixedvaluebilldetailDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	
+	
+	<bean id="iDdSeqbilldetailDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.DdSeqbilldetailDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iFsApprovebookdetailDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.FsApprovebookdetailDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	
+	<bean id="iFsLfeqpruninformDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.FsLfeqpruninformDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iBhFixedvaluetempDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.BhFixedvaluetempDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iFsVecollectmonrepDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.FsVecollectmonrepDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iBhMonthrepDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.BhMonthrepDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iDdPowerplantoperlogDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.DdPowerplantoperlogDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	
+	<bean id="iDdEnsuringpsusersDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.DdEnsuringpsusersDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iFsAllappendixDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.FsAllappendixDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iDdOperationnotebookDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.DdOperationnotebookDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iRepResdataDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.RepResdataDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iZdhAutomonthreportDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.ZdhAutomonthreportDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+
+	<bean id="iRepTree2resultDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.RepTree2resultDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iBhAsregulatedetailDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.BhAsregulatedetailDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iFsLfeqpfixinformdetailDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.FsLfeqpfixinformdetailDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iDdDaydangeanalysisDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.DdDaydangeanalysisDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iRepReptemplateDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.RepReptemplateDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iFsVecmrepdetailDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.FsVecmrepdetailDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iFsVemonthrepDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.FsVemonthrepDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iFsApproveeqprelDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.FsApproveeqprelDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iParaCAPBankDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.ParaCAPBankDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iParaRTUDao" parent="baseLogAOP">
+		<property name="target">
+			<bean class="com.techstar.dmis.dao.impl.ParaRTUDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iParaStoreEQPDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.ParaStoreEQPDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iAppOfAngleDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.AppOfAngleDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iParaParallReactorDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.ParaParallReactorDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iParaDryReactorDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.ParaDryReactorDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iParaTBHydroSysDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.ParaTBHydroSysDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iParaWaterTBDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.ParaWaterTBDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iParaVQCDao" parent="baseLogAOP">
+		<property name="target">
+			<bean class="com.techstar.dmis.dao.impl.ParaVQCDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iDevChangInfoDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.DevChangInfoDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iParaAuxProtectDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.ParaAuxProtectDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iParaTurBineAdjusterDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.ParaTurBineAdjusterDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iEQPLevelRegDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.EQPLevelRegDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iEQPParaDescDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.EQPParaDescDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iParaFaullistDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.ParaFaullistDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iParaMonitorStationDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.ParaMonitorStationDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iParaAuxTRFDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.ParaAuxTRFDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iEtsEquipmentDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.EtsEquipmentDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iParaDeliverDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.ParaDeliverDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iParaMainTRFDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.ParaMainTRFDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iParaUPSDao" parent="baseLogAOP">
+		<property name="target">
+			<bean class="com.techstar.dmis.dao.impl.ParaUPSDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iParaBigScreenDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.ParaBigScreenDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iParaTBPowCtrlSysDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.ParaTBPowCtrlSysDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iParaRelayProtecDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.ParaRelayProtecDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iStdConsumerDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.StdConsumerDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iParaGeneratorDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.ParaGeneratorDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iParaWaterTBSysDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.ParaWaterTBSysDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iStdUnitDao" parent="baseLogAOP">
+		<property name="target">
+			<bean class="com.techstar.dmis.dao.impl.StdUnitDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iParaAVRDao" parent="baseLogAOP">
+		<property name="target">
+			<bean class="com.techstar.dmis.dao.impl.ParaAVRDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iEQPEntRelationDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.EQPEntRelationDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iParaHISwitchDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.ParaHISwitchDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iStdDispatchunitDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.StdDispatchunitDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iParaSeverDao" parent="baseLogAOP">
+		<property name="target">
+			<bean class="com.techstar.dmis.dao.impl.ParaSeverDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iParaGroudTransferDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.ParaGroudTransferDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iParaDCSysInfoDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.ParaDCSysInfoDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iStdDdaccidentreasonDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.StdDdaccidentreasonDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iStdPreasontypeDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.StdPreasontypeDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iStdUnfinishreasonDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.StdUnfinishreasonDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iStdLfroundDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.StdLfroundDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iStdBheqpfaultDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.StdBheqpfaultDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iStdBhtresponseDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.StdBhtresponseDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+
+
+	<bean id="iZdhSrappeqprelDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.ZdhSrappeqprelDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+
+
+	<bean id="iDdDayplanfixvaluerelDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.DdDayplanfixvaluerelDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iStdCutoffpercentDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.StdCutoffpercentDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iStdLfmeasuretimeDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.StdLfmeasuretimeDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iDdDispatcherDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.DdDispatcherDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iDdGroupDao" parent="baseLogAOP">
+		<property name="target">
+			<bean class="com.techstar.dmis.dao.impl.DdGroupDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iDdGroupmemberDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.DdGroupmemberDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iParamStandardDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.ParamStandardDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iMequivalentloadDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.MequivalentloadDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iMSTDBaySSBillRoleDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.MSTDBaySSBillRoleDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iMsubcontrolareaDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.MsubcontrolareaDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iParaPMUDao" parent="baseLogAOP">
+		<property name="target">
+			<bean class="com.techstar.dmis.dao.impl.ParaPMUDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iMpowertransformerDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.MpowertransformerDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iMbreakerDao" parent="baseLogAOP">
+		<property name="target">
+			<bean class="com.techstar.dmis.dao.impl.MbreakerDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iParaSwitchDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.ParaSwitchDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iMdisconnectorDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.MdisconnectorDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iParaEngTermDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.ParaEngTermDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iParaIsoDevDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.ParaIsoDevDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iParaRouterDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.ParaRouterDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iMBayGraphDao" parent="baseLogAOP">
+		<property name="target">
+			<bean class="com.techstar.dmis.dao.impl.MBayGraphDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iEqpAttachmentDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.EqpAttachmentDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iParaTelCommWorkSTDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.ParaTelCommWorkSTDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iParaGPSDao" parent="baseLogAOP">
+		<property name="target">
+			<bean class="com.techstar.dmis.dao.impl.ParaGPSDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iMBayGroupDao" parent="baseLogAOP">
+		<property name="target">
+			<bean class="com.techstar.dmis.dao.impl.MBayGroupDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iMmeasurementDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.MmeasurementDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iMsubstationDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.MsubstationDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iMbayDao" parent="baseLogAOP">
+		<property name="target">
+			<bean class="com.techstar.dmis.dao.impl.MbayDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iMbayeqpmentDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.MbayeqpmentDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iMbasevoltageDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.MbasevoltageDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iMconnectivitynodeDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.MconnectivitynodeDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iMbusbarsectionDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.MbusbarsectionDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iMtransformerwindingDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.MtransformerwindingDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iMvoltagelevelDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.MvoltagelevelDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iParaFirewallDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.ParaFirewallDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iParaMonitorDevDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.ParaMonitorDevDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iParaPowerMeterDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.ParaPowerMeterDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iMaclinesegmentDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.MaclinesegmentDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iParaWaterMonEqpDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.ParaWaterMonEqpDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iParaLanEncDevDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.ParaLanEncDevDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iMterminalDao" parent="baseLogAOP">
+		<property name="target">
+			<bean class="com.techstar.dmis.dao.impl.MterminalDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iParaOthersDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.ParaOthersDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iMenergyconsumerDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.MenergyconsumerDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iMtapchangerDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.MtapchangerDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iEQPTypeDao" parent="baseLogAOP">
+		<property name="target">
+			<bean class="com.techstar.dmis.dao.impl.EQPTypeDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iZdhReceptioneqprelDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.ZdhReceptioneqprelDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iMSTDBayOutageDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.MSTDBayOutageDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<!--  
+	<bean id="iMBay2GroupRoleDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.MBay2GroupRoleDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	-->
+	<bean id="iFsLflinkeynumrelDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.FsLflinkeynumrelDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+
+	<bean id="iSystemdicTypeDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.SystemdicTypeDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iVZdSystemdicDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.VZdSystemdicDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="iCtrlWflentityrelDao" parent="baseLogAOP">
+		<property name="target">
+			<bean
+				class="com.techstar.dmis.dao.impl.CtrlWflentityrelDaoImpl">
+				<property name="baseHbnDao">
+					<ref bean="iBaseHbnDao" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+
+	
+
+</beans>

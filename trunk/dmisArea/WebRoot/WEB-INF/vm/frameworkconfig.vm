@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<!-- 操作日志备份路径 -->
+	<backupLogFilePath>E:\\log\\</backupLogFilePath>
+	
+	<!-- 默认的邮件服务器配置 -->	
+	<mailHost>smtp.163.com</mailHost>
+	
+	<!-- 默认的邮箱地址 -->
+	<mailUser>XXX@163.com</mailUser>
+	
+	<!-- 默认的邮箱密码 -->
+	<mailPwd>XXXX</mailPwd>
+	
+	<!-- 邮件发送附件上传路径 -->
+	<mailUploadFilePath>E:\\mailfiles\\</mailUploadFilePath>
+	
+	<!-- 应用系统标识 -->
+	<SYSTEMID>785</SYSTEMID>
+	
+	
+	<!-- tree配置文件-->
+	<treeDisFile>D:\\soft\\Tomcat 5.0\\webapps\\framework\\WEB-INF\\resources\\treeconfig\\*.xml</treeDisFile>
+	<!-- grid配置文件 -->
+	<gridDisFile>${gridpath}\\*.xml</gridDisFile>
+	<!-- webservice 地址配置 -->
+	<wSAddresses>
+		<wSAddress>
+			<name>security</name>
+			<address>http://localhost:8080/pow2org/services/TECHSTARPERMREMOTESERVICE?wsdl</address>
+		</wSAddress>
+		<wSAddress>
+			<name>name2</name>
+			<address>address2</address>
+		</wSAddress>
+	</wSAddresses>
+	
+	<!-- 数据传输对象的包结构 -->
+	<dtoPackage>${jdto}</dtoPackage>
+	<!-- 持久化对象的包结构 -->
+	<poPackage>${jentity}</poPackage>
+	
+	<!-- 数据库类型 sqlserver , oracle -->
+	<dbType>oracle</dbType>
+	
+	
+</config>

@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="com.techstar.dmis.entity">
+	<class name="DdPremethod" table="DMIS_DD_Premethod"
+		dynamic-insert="true" dynamic-update="true"
+		optimistic-lock="version">
+		<id name="fpremethodid" type="string">
+			<column name="fpremethodid" sql-type="varchar(40)"
+				not-null="true" />
+			<generator class="assigned" />
+		</id>
+
+		<version name="version" column="VERSION"
+			unsaved-value="undefined" />
+
+		<property name="fpremethodcontent"
+			type="org.springframework.orm.hibernate3.support.BlobByteArrayType"
+			not-null="false">
+			<column name="fpremethodcontent" />
+		</property>
+		<property name="src" type="string" not-null="false">
+			<column name="src" length="40" />
+		</property>
+		<property name="premethodtype" type="string" not-null="false">
+			<column name="premethodtype" length="40" />
+		</property>
+		<property name="premethodname" type="string" not-null="false">
+			<column name="premethodname" length="100" />
+		</property>
+		<property name="content1" type="string" not-null="false">
+			<column name="content1" length="40" />
+		</property>
+		<property name="content2" type="string" not-null="false">
+			<column name="content2" length="40" />
+		</property>
+		<property name="content3" type="string" not-null="false">
+			<column name="content3" length="400" />
+		</property>
+		<property name="fstatus" type="string" not-null="false">
+			<column name="fstatus" length="40" />
+		</property>
+		<property name="fexcutestatus" type="string" not-null="false">
+			<column name="fexcutestatus" length="40" />
+		</property>
+		<property name="f_appendixtype" type="string"
+			not-null="false">
+			<column name="f_appendixtype" length="40" />
+		</property>
+		<property name="sys_fille" type="string" not-null="false">
+			<column name="sys_fille" length="40" />
+		</property>
+		<property name="sys_filldept" type="string" not-null="false">
+			<column name="sys_filldept" length="80" />
+		</property>
+		<property name="sys_filltime" type="timestamp"
+			not-null="false">
+			<column name="sys_filltime" />
+		</property>
+		<property name="sys_isvalid" type="integer" not-null="false">
+			<column name="sys_isvalid" />
+		</property>
+		<property name="sys_dataowner" type="string" not-null="false">
+			<column name="sys_dataowner" length="40" />
+		</property>
+
+
+		<many-to-one name="zddpremethod5" class="DdMoutageplan" column="srcno" cascade="none">
+		</many-to-one>
+		<many-to-one name="zddpremethod4" class="DdEnsuringpsmanage" column="powerensurID" cascade="none">
+		</many-to-one>
+	</class>
+
+</hibernate-mapping>
+

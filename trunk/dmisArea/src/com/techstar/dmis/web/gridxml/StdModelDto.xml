@@ -1,0 +1,8 @@
+<!--型号-->
+<head>
+  <obj>StdModelDto</obj>
+  <column  colName="modelno" propertyName="modelno" colType="string" dataTypeLen="32" isPrimary="1" visible="1" width="74" isEdit="0" textColor="#000000" className="StdModelDto" refName="modelno" ></column>
+  <column  colName="modelname" propertyName="modelname" colType="string" dataTypeLen="80" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="StdModelDto" refName="modelname" ></column>
+  <column  colName="devclassid" propertyName="devclassid" colType="string" dataTypeLen="80" isPrimary="0" visible="1" width="106" isEdit="0" textColor="#000000" className="StdModelDto" refName="devclassid" ></column>
+  <column  colName="fmanufactureno" propertyName="fmanufactureno" colType="string" dataTypeLen="80" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="StdModelDto" refName="fmanufactureno" ></column>
+</head>

@@ -1,0 +1,116 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="com.techstar.dmis.entity">
+	<class name="GgPerson" table="DMIS_ZD_GG_Person" dynamic-insert="true" dynamic-update="true" optimistic-lock="version">
+    <id name="id" type="string">
+      <column name="id" sql-type="varchar(40)" not-null="true"/>
+      <generator class="assigned"/>
+    </id>
+
+ 	<version name="version" column="VERSION" unsaved-value="undefined"/>
+  
+   <property name="unitname" type="string"  not-null="true">
+    <column name="unitname"  
+		length="100"               
+    />
+</property>	
+    <property name="unitid" type="string"  not-null="true">
+    <column name="unitid"  
+		length="100"               
+    />
+</property>	
+    <property name="deptid" type="string"  not-null="true">
+    <column name="deptid"  
+		length="100"               
+    />
+</property>	
+    <property name="deptname" type="string"  not-null="true">
+    <column name="deptname"  
+		length="20"               
+    />
+</property>	
+    <property name="workid" type="string"  not-null="true">
+    <column name="workid"  
+		length="10"               
+    />
+</property>	
+    <property name="name" type="string"  not-null="true">
+    <column name="name"  
+		length="10"               
+    />
+</property>	
+    <property name="sex" type="string"  not-null="true">
+    <column name="sex"  
+		length="2"               
+    />
+</property>	
+    <property name="birthday" type="date"  not-null="true">
+    <column name="birthday"  
+		               
+    />
+</property>	
+    <property name="dutyname" type="string"  not-null="true">
+    <column name="dutyname"  
+		length="20"               
+    />
+</property>	
+    <property name="dutylevel" type="integer"  not-null="true">
+    <column name="dutylevel"  
+		               
+    />
+</property>	
+    <property name="nationality" type="string"  not-null="true">
+    <column name="nationality"  
+		length="10"               
+    />
+</property>	
+    <property name="politicalid" type="string"  not-null="true">
+    <column name="politicalid"  
+		length="10"               
+    />
+</property>	
+    <property name="workdate" type="date"  not-null="true">
+    <column name="workdate"  
+		               
+    />
+</property>	
+    <property name="degree" type="string"  not-null="true">
+    <column name="degree"  
+		length="10"               
+    />
+</property>	
+    <property name="title" type="string"  not-null="true">
+    <column name="title"  
+		length="10"               
+    />
+</property>	
+    <property name="telephone" type="string"  not-null="true">
+    <column name="telephone"  
+		length="11"               
+    />
+</property>	
+    <property name="idleader" type="string"  not-null="true">
+    <column name="idleader"  
+		length="2"               
+    />
+</property>	
+    <property name="remark" type="string"  not-null="true">
+    <column name="remark"  
+		length="300"               
+    />
+</property>	
+    <property name="ftelephoneo" type="string"  not-null="true">
+    <column name="ftelephoneo"  
+		length="8"               
+    />
+</property>	
+    <property name="fmajor" type="string"  not-null="true">
+    <column name="fmajor"  
+		length="40"               
+    />
+</property>	
+  
+</class>
+
+</hibernate-mapping>
+

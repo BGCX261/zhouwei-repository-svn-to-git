@@ -1,0 +1,553 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 1.1//EN"
+       "http://jakarta.apache.org/struts/dtds/tiles-config_1_1.dtd">
+	   
+<tiles-definitions>
+
+
+	
+	
+	<!--===============================================    自动化    ========================================================-->
+	<definition name="zdhCharalterrecordtoolbar" extends="base.toolbar.layout">
+		<put name="toolbar" value="/application/zdhcharalterrecord/ZdhCharalterrecord_defaultToolBar_toolbar.jsp"/>
+	</definition>
+	<definition name="zdhCharalterrecordtab" extends="base.tab.layout">
+		<put name="tab" value="/application/zdhcharalterrecord/ZdhCharalterrecord_defaultTabGroup_tab.jsp"/>
+	</definition>
+	<definition name="zdhCharalterrecordframe" extends="base.queryframe.h.layout">
+		<put name="upFrame" value="/zdhCharalterrecord.do?method=zdhCharalterrecordtoolbar"/>
+		<put name="downFrame" value="/zdhCharalterrecord.do?method=zdhCharalterrecordtab"/>
+		<put name="downScroll" value="no"/>
+	</definition>
+	
+	<definition name="zdhEligiblermratetoolbar" extends="base.toolbar.layout">
+		<put name="toolbar" value="/application/zdheligiblermrate/zdhrmeliglerate_defaultToolBar_toolbar.jsp"/>
+	</definition>
+	<definition name="zdhEligiblermratetab" extends="base.tab.layout">
+		<put name="tab" value="/application/zdheligiblermrate/zdhrmeliglerate_defaultTabGroup_tab.jsp"/>
+	</definition>
+	<definition name="zdhEligiblermrateframe" extends="base.queryframe.h.layout">
+		<put name="upFrame" value="/zdhEligiblermrate.do?method=zdhEligiblermratetoolbar"/>
+		<put name="downFrame" value="/zdhEligiblermrate.do?method=zdhEligiblermratetab"/>
+		<put name="downScroll" value="no"/>
+	</definition>
+	
+	<definition name="zdhOpexaminelisttoolbar" extends="base.toolbar.layout">
+		<put name="toolbar" value="/application/zdhopexaminelist/ZdhOpexaminelist_defaultToolBar_toolbar.jsp"/>
+	</definition>
+	<definition name="zdhOpexaminelisttab" extends="base.tab.layout">
+		<put name="tab" value="/application/zdhopexaminelist/ZdhOpexaminelist_defaultTabGroup_tab.jsp"/>
+	</definition>
+	<definition name="zdhOpexaminelistframe" extends="base.queryframe.h.layout">
+		<put name="upFrame" value="/zdhOpexaminelist.do?method=zdhOpexaminelisttoolbar"/>
+		<put name="downFrame" value="/zdhOpexaminelist.do?method=zdhOpexaminelisttab"/>
+		<put name="downScroll" value="no"/>
+	</definition>
+	
+	<definition name="zdhRmrectoolbar" extends="base.toolbar.layout">
+		<put name="toolbar" value="/application/zdhrmrec/ZdhRmrec_defaultToolBar_toolbar.jsp"/>
+	</definition>
+	<definition name="zdhRmrectab" extends="base.tab.layout">
+		<put name="tab" value="/application/zdhrmrec/ZdhRmrec_defaultTabGroup_tab.jsp"/>
+	</definition>
+	<definition name="zdhRmrecframe" extends="base.queryframe.h.layout">
+		<put name="upFrame" value="/zdhRmrec.do?method=zdhRmrectoolbar"/>
+		<put name="downFrame" value="/zdhRmrec.do?method=zdhRmrectab"/>
+		<put name="downScroll" value="no"/>
+	</definition>
+	
+	<definition name="zdhReceptiontoolbar" extends="base.toolbar.layout">
+		<put name="toolbar" value="/application/zdhreception/zdhprojectreception_defaultToolBar_toolbar.jsp"/>
+	</definition>
+	<definition name="zdhReceptiontab" extends="base.tab.layout">
+		<put name="tab" value="/application/zdhreception/zdhprojectreception_defaultTabGroup_tab.jsp"/>
+	</definition>
+	<definition name="zdhReceptionframe" extends="base.queryframe.h.layout">
+		<put name="upFrame" value="/zdhReception.do?method=zdhReceptiontoolbar"/>
+		<put name="downFrame" value="/zdhReception.do?method=zdhReceptiontab"/>
+		<put name="downScroll" value="no"/>
+	</definition>
+	
+	<definition name="zdhMachineworklisttoolbar" extends="base.toolbar.layout">
+		<put name="toolbar" value="/application/zdhmachineworklist/zdhmachinehalllist_defaultToolBar_toolbar.jsp"/>
+	</definition>
+	<definition name="zdhMachineworklisttab" extends="base.tab.layout">
+		<put name="tab" value="/application/zdhmachineworklist/zdhmachinehalllist_defaultTabGroup_tab.jsp"/>
+	</definition>
+	<definition name="zdhMachineworklistframe" extends="base.queryframe.h.layout">
+		<put name="upFrame" value="/zdhMachineworklist.do?method=zdhMachineworklisttoolbar"/>
+		<put name="downFrame" value="/zdhMachineworklist.do?method=zdhMachineworklisttab"/>
+		<put name="downScroll" value="no"/>
+	</definition>
+	
+	<definition name="zdhRsrecordtoolbar" extends="base.toolbar.layout">
+		<put name="toolbar" value="/application/zdhrsrecord/zdhrsrec_defaultToolBar_toolbar.jsp"/>
+	</definition>
+	<definition name="zdhRsrecordtab" extends="base.tab.layout">
+		<put name="tab" value="/application/zdhrsrecord/zdhrsrec_defaultTabGroup_tab.jsp"/>
+	</definition>
+	<definition name="zdhRsrecordframe" extends="base.queryframe.h.layout">
+		<put name="upFrame" value="/zdhRsrecord.do?method=zdhRsrecordtoolbar"/>
+		<put name="downFrame" value="/zdhRsrecord.do?method=zdhRsrecordtab"/>
+		<put name="downScroll" value="no"/>
+	</definition>
+	
+	<definition name="zdhWorkbilltoolbar" extends="base.toolbar.layout">
+		<put name="toolbar" value="/application/zdhworkbill/zdhworkbill_defaultToolBar_toolbar.jsp"/>
+	</definition>
+	<definition name="zdhWorkbilltab" extends="base.tab.layout">
+		<put name="tab" value="/application/zdhworkbill/zdhworkbill_defaultTabGroup_tab.jsp"/>
+	</definition>
+	<definition name="zdhWorkbillframe" extends="base.queryframe.h.layout">
+		<put name="upFrame" value="/zdhWorkbill.do?method=zdhWorkbilltoolbar"/>
+		<put name="downFrame" value="/zdhWorkbill.do?method=zdhWorkbilltab"/>
+		<put name="downScroll" value="no"/>
+	</definition>
+	
+	<definition name="zdhSequencetabletoolbar" extends="base.toolbar.layout">
+		<put name="toolbar" value="/application/zdhsequencetable/zdhsequencerec_defaultToolBar_toolbar.jsp"/>
+	</definition>
+	<definition name="zdhSequencetabletab" extends="base.tab.layout">
+		<put name="tab" value="/application/zdhsequencetable/zdhsequencerec_defaultTabGroup_tab.jsp"/>
+	</definition>
+	<definition name="zdhSequencetableframe" extends="base.queryframe.h.layout">
+		<put name="upFrame" value="/zdhSequencetable.do?method=zdhSequencetabletoolbar"/>
+		<put name="downFrame" value="/zdhSequencetable.do?method=zdhSequencetabletab"/>
+		<put name="downScroll" value="no"/>
+	</definition>
+	
+	<definition name="zdhAutoondutylogtoolbar" extends="base.toolbar.layout">
+		<put name="toolbar" value="/application/zdhautoondutylog/zdhondutylog_defaultToolBar_toolbar.jsp"/>
+	</definition>
+	<definition name="zdhAutoondutylogtab" extends="base.tab.layout">
+		<put name="tab" value="/application/zdhautoondutylog/zdhondutylog_defaultTabGroup_tab.jsp"/>
+	</definition>
+	<definition name="zdhAutoondutylogframe" extends="base.queryframe.h.layout">
+		<put name="upFrame" value="/zdhAutoondutylog.do?method=zdhAutoondutylogtoolbar"/>
+		<put name="downFrame" value="/zdhAutoondutylog.do?method=zdhAutoondutylogtab"/>
+		<put name="downScroll" value="no"/>
+	</definition>
+	
+	<definition name="zdhFaultlisttoolbar" extends="base.toolbar.layout">
+		<put name="toolbar" value="/application/zdhfaultlist/autoeqpfaultlist_defaultToolBar_toolbar.jsp"/>
+	</definition>
+	<definition name="zdhFaultlisttab" extends="base.tab.layout">
+		<put name="tab" value="/application/zdhfaultlist/autoeqpfaultlist_defaultTabGroup_tab.jsp"/>
+	</definition>
+	<definition name="zdhFaultlistframe" extends="base.queryframe.h.layout">
+		<put name="upFrame" value="/zdhFaultlist.do?method=zdhFaultlisttoolbar"/>
+		<put name="downFrame" value="/zdhFaultlist.do?method=zdhFaultlisttab"/>
+		<put name="downScroll" value="no"/>
+	</definition>
+	
+	<definition name="zdhTransrecordtoolbar" extends="base.toolbar.layout">
+		<put name="toolbar" value="/application/zdhtransrecord/zdhtransrec_defaultToolBar_toolbar.jsp"/>
+	</definition>
+	<definition name="zdhTransrecordtab" extends="base.tab.layout">
+		<put name="tab" value="/application/zdhtransrecord/zdhtransrec_defaultTabGroup_tab.jsp"/>
+	</definition>
+	<definition name="zdhTransrecordframe" extends="base.queryframe.h.layout">
+		<put name="upFrame" value="/zdhTransrecord.do?method=zdhTransrecordtoolbar"/>
+		<put name="downFrame" value="/zdhTransrecord.do?method=zdhTransrecordtab"/>
+		<put name="downScroll" value="no"/>
+	</definition>
+	
+	<definition name="zdhSrapplicationtoolbar" extends="base.toolbar.layout">
+		<put name="toolbar" value="/application/zdhsrapplication/ZDHSrapplication_defaultToolBar_toolbar.jsp"/>
+	</definition>
+	<definition name="zdhSrapplicationtab" extends="base.tab.layout">
+		<put name="tab" value="/application/zdhsrapplication/ZDHSrapplication_defaultTabGroup_tab.jsp"/>
+	</definition>
+	<definition name="zdhSrapplicationframe" extends="base.queryframe.h.layout">
+		<put name="upFrame" value="/zdhSrapplication.do?method=zdhSrapplicationtoolbar"/>
+		<put name="downFrame" value="/zdhSrapplication.do?method=zdhSrapplicationtab"/>
+		<put name="downScroll" value="no"/>
+	</definition>
+	<!--===============================================    自动化    ========================================================-->
+	
+	<definition name="ddCutofftitletoolbar" extends="base.toolbar.layout">
+		<put name="toolbar" value="/application/ddcutofftitle/DdCutofftitle_defaultToolBar_toolbar.jsp"/>
+	</definition>
+	<definition name="ddCutofftitletab" extends="base.tab.layout">
+		<put name="tab" value="/application/ddcutofftitle/DdCutofftitle_defaultTabGroup_tab.jsp"/>
+	</definition>
+	<definition name="ddCutofftitleframe" extends="base.queryframe.h.layout">
+		<put name="upFrame" value="/ddCutofftitle.do?method=ddCutofftitletoolbar"/>
+		<put name="downFrame" value="/ddCutofftitle.do?method=ddCutofftitletab"/>
+		<put name="downScroll" value="no"/>
+	</definition>
+	
+	<definition name="ddClassondutylogtoolbar" extends="base.toolbar.layout">
+		<put name="toolbar" value="/application/ddclassondutylog/DDclassonduty_defaultToolBar_toolbar.jsp"/>
+	</definition>
+	<definition name="ddClassondutylogtab" extends="base.tab.layout">
+		<put name="tab" value="/application/ddclassondutylog/DDclassonduty_defaultTabGroup_tab.jsp"/>
+	</definition>
+	<definition name="ddClassondutylogframe" extends="base.queryframe.h.layout">
+		<put name="upFrame" value="/ddClassondutylog.do?method=ddClassondutylogtoolbar"/>
+		<put name="downFrame" value="/ddClassondutylog.do?method=ddClassondutylogtab"/>
+		<put name="downScroll" value="no"/>
+	</definition>
+
+	<definition name="ddWaterheighttoolbar" extends="base.toolbar.layout">
+		<put name="toolbar" value="/application/ddwaterheight/DdWaterheight_defaultToolBar_toolbar.jsp"/>
+	</definition>
+	<definition name="ddWaterheighttab" extends="base.tab.layout">
+		<put name="tab" value="/application/ddwaterheight/DdWaterheight_defaultTabGroup_tab.jsp"/>
+	</definition>
+	<definition name="ddWaterheightframe" extends="base.queryframe.h.layout">
+		<put name="upFrame" value="/ddWaterheight.do?method=ddWaterheighttoolbar"/>
+		<put name="downFrame" value="/ddWaterheight.do?method=ddWaterheighttab"/>
+		<put name="downScroll" value="no"/>
+	</definition>
+	
+	<definition name="ddWaterproofplantoolbar" extends="base.toolbar.layout">
+		<put name="toolbar" value="/application/ddwaterproofplan/DdWaterproofplan_defaultToolBar_toolbar.jsp"/>
+	</definition>
+	<definition name="ddWaterproofplantab" extends="base.tab.layout">
+		<put name="tab" value="/application/ddwaterproofplan/DdWaterproofplan_defaultTabGroup_tab.jsp"/>
+	</definition>
+	<definition name="ddWaterproofplanframe" extends="base.queryframe.h.layout">
+		<put name="upFrame" value="/ddWaterproofplan.do?method=ddWaterproofplantoolbar"/>
+		<put name="downFrame" value="/ddWaterproofplan.do?method=ddWaterproofplantab"/>
+		<put name="downScroll" value="no"/>
+	</definition>
+	
+	<definition name="ddPowerchangrecordtoolbar" extends="base.toolbar.layout">
+		<put name="toolbar" value="/application/ddpowerchangrecord/DDpowerchangrecord_defaultToolBar_toolbar.jsp"/>
+	</definition>
+	<definition name="ddPowerchangrecordtab" extends="base.tab.layout">
+		<put name="tab" value="/application/ddpowerchangrecord/DDpowerchangrecord_defaultTabGroup_tab.jsp"/>
+	</definition>
+	<definition name="ddPowerchangrecordframe" extends="base.queryframe.h.layout">
+		<put name="upFrame" value="/ddPowerchangrecord.do?method=ddPowerchangrecordtoolbar"/>
+		<put name="downFrame" value="/ddPowerchangrecord.do?method=ddPowerchangrecordtab"/>
+		<put name="downScroll" value="no"/>
+	</definition>
+	
+	<definition name="stdStationtoolbar" extends="base.toolbar.layout">
+		<put name="toolbar" value="/application/stdstation/StdStation_defaultToolBar_toolbar.jsp"/>
+	</definition>
+	<definition name="stdStationtab" extends="base.tab.layout">
+		<put name="tab" value="/application/stdstation/StdStation_defaultTabGroup_tab.jsp"/>
+	</definition>
+	<definition name="stdStationframe" extends="base.queryframe.h.layout">
+		<put name="upFrame" value="/stdStation.do?method=stdStationtoolbar"/>
+		<put name="downFrame" value="/stdStation.do?method=stdStationtab"/>
+		<put name="downScroll" value="no"/>
+	</definition>
+	
+	<definition name="ddSwitchseqbilltoolbar" extends="base.toolbar.layout">
+		<put name="toolbar" value="/application/ddswitchseqbill/DdSwitchseqbill_defaultToolBar_toolbar.jsp"/>
+	</definition>
+	<definition name="ddSwitchseqbilltab" extends="base.tab.layout">
+		<put name="tab" value="/application/ddswitchseqbill/DdSwitchseqbill_defaultTabGroup_tab.jsp"/>
+	</definition>
+	<definition name="ddSwitchseqbillframe" extends="base.queryframe.h.layout">
+		<put name="upFrame" value="/ddSwitchseqbill.do?method=ddSwitchseqbilltoolbar"/>
+		<put name="downFrame" value="/ddSwitchseqbill.do?method=ddSwitchseqbilltab"/>
+		<put name="downScroll" value="no"/>
+	</definition>
+	
+	<definition name="fsLfparalisttoolbar" extends="base.toolbar.layout">
+		<put name="toolbar" value="/application/fslfparalist/FsLfparalist_defaultToolBar_toolbar.jsp"/>
+	</definition>
+	<definition name="fsLfparalisttab" extends="base.tab.layout">
+		<put name="tab" value="/application/fslfparalist/FsLfparalist_defaultTabGroup_tab.jsp"/>
+	</definition>
+	<definition name="fsLfparalistframe" extends="base.queryframe.h.layout">
+		<put name="upFrame" value="/fsLfparalist.do?method=fsLfparalisttoolbar"/>
+		<put name="downFrame" value="/fsLfparalist.do?method=fsLfparalisttab"/>
+		<put name="downScroll" value="no"/>
+	</definition>
+	
+	<definition name="ddHloadrecordtoolbar" extends="base.toolbar.layout">
+		<put name="toolbar" value="/application/ddhloadrecord/DDeqoheavyload_defaultToolBar_toolbar.jsp"/>
+	</definition>
+	<definition name="ddHloadrecordtab" extends="base.tab.layout">
+		<put name="tab" value="/application/ddhloadrecord/DDeqoheavyload_defaultTabGroup_tab.jsp"/>
+	</definition>
+	<definition name="ddHloadrecordframe" extends="base.queryframe.h.layout">
+		<put name="upFrame" value="/ddHloadrecord.do?method=ddHloadrecordtoolbar"/>
+		<put name="downFrame" value="/ddHloadrecord.do?method=ddHloadrecordtab"/>
+		<put name="downScroll" value="no"/>
+	</definition>
+	
+	<definition name="ddMoutageplantoolbar" extends="base.toolbar.layout">
+		<put name="toolbar" value="/application/ddmoutageplan/DDMonthplan_defaultToolBar_toolbar.jsp"/>
+	</definition>
+	<definition name="ddMoutageplantab" extends="base.tab.layout">
+		<put name="tab" value="/application/ddmoutageplan/DDMonthplan_defaultTabGroup_tab.jsp"/>
+	</definition>
+	<definition name="ddMoutageplanframe" extends="base.queryframe.h.layout">
+		<put name="upFrame" value="/ddMoutageplan.do?method=ddMoutageplantoolbar"/>
+		<put name="downFrame" value="/ddMoutageplan.do?method=ddMoutageplantab"/>
+		<put name="downScroll" value="no"/>
+	</definition>
+	
+	<definition name="fsApprovebooktoolbar" extends="base.toolbar.layout">
+		<put name="toolbar" value="/application/fsapprovebook/FSapprovebook_defaultToolBar_toolbar.jsp"/>
+	</definition>
+	<definition name="fsApprovebooktab" extends="base.tab.layout">
+		<put name="tab" value="/application/fsapprovebook/FSapprovebook_defaultTabGroup_tab.jsp"/>
+	</definition>
+	<definition name="fsApprovebookframe" extends="base.queryframe.h.layout">
+		<put name="upFrame" value="/fsApprovebook.do?method=fsApprovebooktoolbar"/>
+		<put name="downFrame" value="/fsApprovebook.do?method=fsApprovebooktab"/>
+		<put name="downScroll" value="no"/>
+	</definition>
+	
+	<definition name="ddAccidentbrieftoolbar" extends="base.toolbar.layout">
+		<put name="toolbar" value="/application/ddaccidentbrief/DdAccidentbrief_defaultToolBar_toolbar.jsp"/>
+	</definition>
+	<definition name="ddAccidentbrieftab" extends="base.tab.layout">
+		<put name="tab" value="/application/ddaccidentbrief/DdAccidentbrief_defaultTabGroup_tab.jsp"/>
+	</definition>
+	<definition name="ddAccidentbriefframe" extends="base.queryframe.h.layout">
+		<put name="upFrame" value="/ddAccidentbrief.do?method=ddAccidentbrieftoolbar"/>
+		<put name="downFrame" value="/ddAccidentbrief.do?method=ddAccidentbrieftab"/>
+		<put name="downScroll" value="no"/>
+	</definition>
+	
+	<definition name="ddEnsuringpsmanagetoolbar" extends="base.toolbar.layout">
+		<put name="toolbar" value="/application/ddensuringpsmanage/powerensurmanage_defaultToolBar_toolbar.jsp"/>
+	</definition>
+	<definition name="ddEnsuringpsmanagetab" extends="base.tab.layout">
+		<put name="tab" value="/application/ddensuringpsmanage/powerensurmanage_defaultTabGroup_tab.jsp"/>
+	</definition>
+	<definition name="ddEnsuringpsmanageframe" extends="base.queryframe.h.layout">
+		<put name="upFrame" value="/ddEnsuringpsmanage.do?method=ddEnsuringpsmanagetoolbar"/>
+		<put name="downFrame" value="/ddEnsuringpsmanage.do?method=ddEnsuringpsmanagetab"/>
+		<put name="downScroll" value="no"/>
+	</definition>
+	
+	<definition name="ddHpoweroperaterrdtoolbar" extends="base.toolbar.layout">
+		<put name="toolbar" value="/application/ddhpoweroperaterrd/DdHpoweroperaterrd_defaultToolBar_toolbar.jsp"/>
+	</definition>
+	<definition name="ddHpoweroperaterrdtab" extends="base.tab.layout">
+		<put name="tab" value="/application/ddhpoweroperaterrd/DdHpoweroperaterrd_defaultTabGroup_tab.jsp"/>
+	</definition>
+	<definition name="ddHpoweroperaterrdframe" extends="base.queryframe.h.layout">
+		<put name="upFrame" value="/ddHpoweroperaterrd.do?method=ddHpoweroperaterrdtoolbar"/>
+		<put name="downFrame" value="/ddHpoweroperaterrd.do?method=ddHpoweroperaterrdtab"/>
+		<put name="downScroll" value="no"/>
+	</definition>
+	
+	<definition name="fsRmchangbilltoolbar" extends="base.toolbar.layout">
+		<put name="toolbar" value="/application/fsrmchangbill/rmchangbill_defaultToolBar_toolbar.jsp"/>
+	</definition>
+	<definition name="fsRmchangbilltab" extends="base.tab.layout">
+		<put name="tab" value="/application/fsrmchangbill/rmchangbill_defaultTabGroup_tab.jsp"/>
+	</definition>
+	<definition name="fsRmchangbillframe" extends="base.queryframe.h.layout">
+		<put name="upFrame" value="/fsRmchangbill.do?method=fsRmchangbilltoolbar"/>
+		<put name="downFrame" value="/fsRmchangbill.do?method=fsRmchangbilltab"/>
+		<put name="downScroll" value="no"/>
+	</definition>
+
+	<definition name="ddCutofflisttoolbar" extends="base.toolbar.layout">
+		<put name="toolbar" value="/application/ddcutofflist/DdCutofflist_defaultToolBar_toolbar.jsp"/>
+	</definition>
+	<definition name="ddCutofflisttab" extends="base.tab.layout">
+		<put name="tab" value="/application/ddcutofflist/DdCutofflist_defaultTabGroup_tab.jsp"/>
+	</definition>
+	<definition name="ddCutofflistframe" extends="base.queryframe.h.layout">
+		<put name="upFrame" value="/ddCutofflist.do?method=ddCutofflisttoolbar"/>
+		<put name="downFrame" value="/ddCutofflist.do?method=ddCutofflisttab"/>
+		<put name="downScroll" value="no"/>
+	</definition>
+	
+	<definition name="ddRepairrisklisttoolbar" extends="base.toolbar.layout">
+		<put name="toolbar" value="/application/ddrepairrisklist/DdRepairrisklist_defaultToolBar_toolbar.jsp"/>
+	</definition>
+	<definition name="ddRepairrisklisttab" extends="base.tab.layout">
+		<put name="tab" value="/application/ddrepairrisklist/DdRepairrisklist_defaultTabGroup_tab.jsp"/>
+	</definition>
+	<definition name="ddRepairrisklistframe" extends="base.queryframe.h.layout">
+		<put name="upFrame" value="/ddRepairrisklist.do?method=ddRepairrisklisttoolbar"/>
+		<put name="downFrame" value="/ddRepairrisklist.do?method=ddRepairrisklisttab"/>
+		<put name="downScroll" value="no"/>
+	</definition>
+
+	<definition name="ddDoutageplantoolbar" extends="base.toolbar.layout">
+		<put name="toolbar" value="/application/dddoutageplan/DDdayoutageplan_defaultToolBar_toolbar.jsp"/>
+	</definition>
+	<definition name="ddDoutageplantab" extends="base.tab.layout">
+		<put name="tab" value="/application/dddoutageplan/DDdayoutageplan_defaultTabGroup_tab.jsp"/>
+	</definition>
+	<definition name="ddDoutageplanframe" extends="base.queryframe.h.layout">
+		<put name="upFrame" value="/ddDoutageplan.do?method=ddDoutageplantoolbar"/>
+		<put name="downFrame" value="/ddDoutageplan.do?method=ddDoutageplantab"/>
+		<put name="downScroll" value="no"/>
+	</definition>
+	
+	<definition name="ddSasusprecordtoolbar" extends="base.toolbar.layout">
+		<put name="toolbar" value="/application/ddsasusprecord/DDASstoprun_defaultToolBar_toolbar.jsp"/>
+	</definition>
+	<definition name="ddSasusprecordtab" extends="base.tab.layout">
+		<put name="tab" value="/application/ddsasusprecord/DDASstoprun_defaultTabGroup_tab.jsp"/>
+	</definition>
+	<definition name="ddSasusprecordframe" extends="base.queryframe.h.layout">
+		<put name="upFrame" value="/ddSasusprecord.do?method=ddSasusprecordtoolbar"/>
+		<put name="downFrame" value="/ddSasusprecord.do?method=ddSasusprecordtab"/>
+		<put name="downScroll" value="no"/>
+	</definition>
+	
+	<definition name="repRepresulttoolbar" extends="base.toolbar.layout">
+		<put name="toolbar" value="/application/reprepresult/toolbar.jsp"/>
+	</definition>
+	<definition name="repRepresulttab" extends="base.tab.layout">
+		<put name="tab" value="/application/reprepresult/tab.jsp"/>
+	</definition>
+	<definition name="repRepresultframe" extends="base.queryframe.h.layout">
+		<put name="upFrame" value="/repRepresult.do?method=repRepresulttoolbar"/>
+		<put name="downFrame" value="/repRepresult.do?method=repRepresulttab"/>
+		<put name="downScroll" value="no"/>
+	</definition>
+
+	<definition name="ddDayondutylogtoolbar" extends="base.toolbar.layout">
+		<put name="toolbar" value="/application/dddayondutylog/toolbar.jsp"/>
+	</definition>
+	<definition name="ddDayondutylogtab" extends="base.tab.layout">
+		<put name="tab" value="/application/dddayondutylog/tab.jsp"/>
+	</definition>
+	<definition name="ddDayondutylogframe" extends="base.queryframe.h.layout">
+		<put name="upFrame" value="/ddDayondutylog.do?method=ddDayondutylogtoolbar"/>
+		<put name="downFrame" value="/ddDayondutylog.do?method=ddDayondutylogtab"/>
+		<put name="downScroll" value="no"/>
+	</definition>
+
+	<definition name="stdManufacturertoolbar" extends="base.toolbar.layout">
+		<put name="toolbar" value="/application/stdmanufacturer/toolbar.jsp"/>
+	</definition>
+	<definition name="stdManufacturertab" extends="base.tab.layout">
+		<put name="tab" value="/application/stdmanufacturer/tab.jsp"/>
+	</definition>
+	<definition name="stdManufacturerframe" extends="base.queryframe.h.layout">
+		<put name="upFrame" value="/stdManufacturer.do?method=stdManufacturertoolbar"/>
+		<put name="downFrame" value="/stdManufacturer.do?method=stdManufacturertab"/>
+		<put name="downScroll" value="no"/>
+	</definition>
+
+	<definition name="ddWoutageplantoolbar" extends="base.toolbar.layout">
+		<put name="toolbar" value="/application/ddwoutageplan/toolbar.jsp"/>
+	</definition>
+	<definition name="ddWoutageplantab" extends="base.tab.layout">
+		<put name="tab" value="/application/ddwoutageplan/tab.jsp"/>
+	</definition>
+	<definition name="ddWoutageplanframe" extends="base.queryframe.h.layout">
+		<put name="upFrame" value="/ddWoutageplan.do?method=ddWoutageplantoolbar"/>
+		<put name="downFrame" value="/ddWoutageplan.do?method=ddWoutageplantab"/>
+		<put name="downScroll" value="no"/>
+	</definition>
+
+	<definition name="bhFaultlisttoolbar" extends="base.toolbar.layout">
+		<put name="toolbar" value="/application/bhfaultlist/toolbar.jsp"/>
+	</definition>
+	<definition name="bhFaultlisttab" extends="base.tab.layout">
+		<put name="tab" value="/application/bhfaultlist/tab.jsp"/>
+	</definition>
+	<definition name="bhFaultlistframe" extends="base.queryframe.h.layout">
+		<put name="upFrame" value="/bhFaultlist.do?method=bhFaultlisttoolbar"/>
+		<put name="downFrame" value="/bhFaultlist.do?method=bhFaultlisttab"/>
+		<put name="downScroll" value="no"/>
+	</definition>
+
+	<definition name="fsLoaddatalisttoolbar" extends="base.toolbar.layout">
+		<put name="toolbar" value="/application/fsloaddatalist/toolbar.jsp"/>
+	</definition>
+	<definition name="fsLoaddatalisttab" extends="base.tab.layout">
+		<put name="tab" value="/application/fsloaddatalist/tab.jsp"/>
+	</definition>
+	<definition name="fsLoaddatalistframe" extends="base.queryframe.h.layout">
+		<put name="upFrame" value="/fsLoaddatalist.do?method=fsLoaddatalisttoolbar"/>
+		<put name="downFrame" value="/fsLoaddatalist.do?method=fsLoaddatalisttab"/>
+		<put name="downScroll" value="no"/>
+	</definition>
+
+	<definition name="daymodeanalysetoolbar" extends="base.toolbar.layout">
+		<put name="toolbar" value="/application/daymodeanalyse/toolbar.jsp"/>
+	</definition>
+	<definition name="daymodeanalysetab" extends="base.tab.layout">
+		<put name="tab" value="/application/daymodeanalyse/tab.jsp"/>
+	</definition>
+	<definition name="daymodeanalyseframe" extends="base.queryframe.h.layout">
+		<put name="upFrame" value="/daymodeanalyse.do?method=daymodeanalysetoolbar"/>
+		<put name="downFrame" value="/daymodeanalyse.do?method=daymodeanalysetab"/>
+		<put name="downScroll" value="no"/>
+	</definition>
+
+	<definition name="ddPremethodtoolbar" extends="base.toolbar.layout">
+		<put name="toolbar" value="/application/ddpremethod/toolbar.jsp"/>
+	</definition>
+	<definition name="ddPremethodtab" extends="base.tab.layout">
+		<put name="tab" value="/application/ddpremethod/tab.jsp"/>
+	</definition>
+	<definition name="ddPremethodframe" extends="base.queryframe.h.layout">
+		<put name="upFrame" value="/ddPremethod.do?method=ddPremethodtoolbar"/>
+		<put name="downFrame" value="/ddPremethod.do?method=ddPremethodtab"/>
+		<put name="downScroll" value="no"/>
+	</definition>
+
+	<definition name="bhActionrecordtoolbar" extends="base.toolbar.layout">
+		<put name="toolbar" value="/application/bhactionrecord/toolbar.jsp"/>
+	</definition>
+	<definition name="bhActionrecordtab" extends="base.tab.layout">
+		<put name="tab" value="/application/bhactionrecord/tab.jsp"/>
+	</definition>
+	<definition name="bhActionrecordframe" extends="base.queryframe.h.layout">
+		<put name="upFrame" value="/bhActionrecord.do?method=bhActionrecordtoolbar"/>
+		<put name="downFrame" value="/bhActionrecord.do?method=bhActionrecordtab"/>
+		<put name="downScroll" value="no"/>
+	</definition>
+
+	<definition name="stdLinetoolbar" extends="base.toolbar.layout">
+		<put name="toolbar" value="/application/stdline/toolbar.jsp"/>
+	</definition>
+	<definition name="stdLinetab" extends="base.tab.layout">
+		<put name="tab" value="/application/stdline/tab.jsp"/>
+	</definition>
+	<definition name="stdLineframe" extends="base.queryframe.h.layout">
+		<put name="upFrame" value="/stdLine.do?method=stdLinetoolbar"/>
+		<put name="downFrame" value="/stdLine.do?method=stdLinetab"/>
+		<put name="downScroll" value="no"/>
+	</definition>
+
+	<definition name="bhAsregulatetoolbar" extends="base.toolbar.layout">
+		<put name="toolbar" value="/application/bhasregulate/toolbar.jsp"/>
+	</definition>
+	<definition name="bhAsregulatetab" extends="base.tab.layout">
+		<put name="tab" value="/application/bhasregulate/tab.jsp"/>
+	</definition>
+	<definition name="bhAsregulateframe" extends="base.queryframe.h.layout">
+		<put name="upFrame" value="/bhAsregulate.do?method=bhAsregulatetoolbar"/>
+		<put name="downFrame" value="/bhAsregulate.do?method=bhAsregulatetab"/>
+		<put name="downScroll" value="no"/>
+	</definition>
+
+	<definition name="stdModeltoolbar" extends="base.toolbar.layout">
+		<put name="toolbar" value="/application/stdmodel/toolbar.jsp"/>
+	</definition>
+	<definition name="stdModeltab" extends="base.tab.layout">
+		<put name="tab" value="/application/stdmodel/tab.jsp"/>
+	</definition>
+	<definition name="stdModelframe" extends="base.queryframe.h.layout">
+		<put name="upFrame" value="/stdModel.do?method=stdModeltoolbar"/>
+		<put name="downFrame" value="/stdModel.do?method=stdModeltab"/>
+		<put name="downScroll" value="no"/>
+	</definition>
+
+	<definition name="bhFixedvaluebilltoolbar" extends="base.toolbar.layout">
+		<put name="toolbar" value="/application/bhfixedvaluebill/toolbar.jsp"/>
+	</definition>
+	<definition name="bhFixedvaluebilltab" extends="base.tab.layout">
+		<put name="tab" value="/application/bhfixedvaluebill/tab.jsp"/>
+	</definition>
+	<definition name="bhFixedvaluebillframe" extends="base.queryframe.h.layout">
+		<put name="upFrame" value="/bhFixedvaluebill.do?method=bhFixedvaluebilltoolbar"/>
+		<put name="downFrame" value="/bhFixedvaluebill.do?method=bhFixedvaluebilltab"/>
+		<put name="downScroll" value="no"/>
+	</definition>
+
+</tiles-definitions>

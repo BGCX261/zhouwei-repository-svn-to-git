@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="com.techstar.dmis.entity">
+	<class name="FsYearlfplan" table="DMIS_FS_YearLFPlan" dynamic-insert="true" dynamic-update="true" optimistic-lock="version">
+    <id name="fprogramid" type="string">
+      <column name="fprogramid" sql-type="varchar(40)" not-null="true"/>
+      <generator class="assigned"/>
+    </id>
+
+ 	<version name="version" column="VERSION" unsaved-value="undefined"/>
+  
+   <property name="fannual" type="integer"  not-null="false">
+    <column name="fannual"  
+		               
+    />
+</property>	
+    <property name="fprogramclass" type="string"  not-null="false">
+    <column name="fprogramclass"  
+		length="40"               
+    />
+</property>	
+    <property name="funit" type="string"  not-null="false">
+    <column name="funit"  
+		length="40"               
+    />
+</property>	
+    <property name="ffirstvalue" type="integer"  not-null="false">
+    <column name="ffirstvalue"  
+		               
+    />
+</property>	
+    <property name="fsecondvalue" type="integer"  not-null="false">
+    <column name="fsecondvalue"  
+		               
+    />
+</property>	
+    <property name="fthirdvalue" type="integer"  not-null="false">
+    <column name="fthirdvalue"  
+		               
+    />
+</property>	
+    <property name="ffourthvalue" type="integer"  not-null="false">
+    <column name="ffourthvalue"  
+		               
+    />
+</property>	
+    <property name="ffifthvalue" type="integer"  not-null="false">
+    <column name="ffifthvalue"  
+		               
+    />
+</property>	
+    <property name="fsixthvalue" type="integer"  not-null="false">
+    <column name="fsixthvalue"  
+		               
+    />
+</property>	
+    <property name="fseventhvalue" type="integer"  not-null="false">
+    <column name="fseventhvalue"  
+		               
+    />
+</property>	
+    <property name="fspecialvalue" type="integer"  not-null="false">
+    <column name="fspecialvalue"  
+		               
+    />
+</property>	
+  
+</class>
+
+</hibernate-mapping>
+

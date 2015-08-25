@@ -1,0 +1,30 @@
+@CHARSET "UTF-8";
+
+.menu:link {
+	FONT-SIZE: 13pt;font:bold; COLOR: #000000; TEXT-DECORATION: none;
+}
+.menu:visited {
+	FONT-SIZE: 13pt;font:bold; COLOR: #000000; TEXT-DECORATION: none;
+}
+.menu:active {
+	FONT-SIZE: 13pt;font:bold; COLOR: #000000; TEXT-DECORATION: none;
+}
+.menu:hover {
+	FONT-SIZE: 13pt;font:bold; COLOR: #ff0000; TEXT-DECORATION: none;
+}
+
+.menu_node{
+	margin-top: 2px;
+}
+.menu_node:link {
+	FONT-SIZE: 10pt; COLOR: #295dad; TEXT-DECORATION: none;
+}
+.menu_node:visited {
+	FONT-SIZE: 10pt; COLOR: #295dad; TEXT-DECORATION: none;
+}
+.menu_node:active {
+	FONT-SIZE: 10pt; COLOR: #295dad; TEXT-DECORATION: none;
+}
+.menu_node:hover {
+	FONT-SIZE: 10pt; COLOR: #ff0000; TEXT-DECORATION: underline;
+}

@@ -1,0 +1,14 @@
+<!DOCTYPE mappings PUBLIC "-//DOZER//DTD MAPPINGS//EN"
+"http://dozer.sourceforge.net/dtd/dozerbeanmapping.dtd">
+<mappings>
+   <mapping>
+   <class-a>com.techstar.dmis.dto.EqpAttachmentDto</class-a>
+   <class-b>com.techstar.dmis.dto.transfer.TransEqpAttachmentDto</class-b>
+   <field>
+      <a>zeqpattachment2.feqpid</a>
+      <b>trans_zeqpattachment2</b>
+      <a-hint>com.techstar.dmis.dto.EtsEquipmentDto</a-hint>
+      <b-hint>java.lang.String</b-hint>
+   </field>
+   </mapping>
+</mappings>

@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="com.techstar.dmis.entity">
+	<class name="Mtransformerwinding" table="DMIS_MTRANSFORMERWINDING" dynamic-insert="true" dynamic-update="true" optimistic-lock="version">
+    <id name="fid" type="string">
+      <column name="fid" sql-type="varchar(40)" not-null="true"/>
+      <generator class="assigned"/>
+    </id>
+
+ 	<version name="version" column="VERSION" unsaved-value="undefined"/>
+  
+   <property name="fname" type="string"  not-null="false">
+    <column name="fname"  
+		length="40"               
+    />
+</property>	
+    <property name="fdescription" type="string"  not-null="false">
+    <column name="fdescription"  
+		length="40"               
+    />
+</property>	
+    <property name="faliasname" type="string"  not-null="false">
+    <column name="faliasname"  
+		length="40"               
+    />
+</property>	
+    <property name="fmemberof_powertransformer" type="string"  not-null="false">
+    <column name="fmemberof_powertransformer"  
+		length="40"               
+    />
+</property>	
+    <property name="fterminals" type="string"  not-null="false">
+    <column name="fterminals"  
+		length="500"               
+    />
+</property>	
+    <property name="fgrounded" type="string"  not-null="false">
+    <column name="fgrounded"  
+		length="5"               
+    />
+</property>	
+    <property name="fr" type="integer"  not-null="false">
+    <column name="fr"  
+		length="14"        precision="4"       
+    />
+</property>	
+    <property name="fratedkv" type="integer"  not-null="false">
+    <column name="fratedkv"  
+		length="14"        precision="4"       
+    />
+</property>	
+    <property name="fratedmva" type="integer"  not-null="false">
+    <column name="fratedmva"  
+		length="14"        precision="4"       
+    />
+</property>	
+    <property name="fwindingtype" type="string"  not-null="false">
+    <column name="fwindingtype"  
+		length="100"               
+    />
+</property>	
+    <property name="fx" type="integer"  not-null="false">
+    <column name="fx"  
+		length="14"        precision="4"       
+    />
+</property>	
+    <property name="fmemberof_equipmentcontainer" type="string"  not-null="false">
+    <column name="fmemberof_equipmentcontainer"  
+		length="40"               
+    />
+</property>	
+    <property name="ftapchangers" type="string"  not-null="false">
+    <column name="ftapchangers"  
+		length="200"               
+    />
+</property>	
+  
+</class>
+
+</hibernate-mapping>
+

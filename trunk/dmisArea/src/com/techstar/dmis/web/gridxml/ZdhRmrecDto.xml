@@ -1,0 +1,16 @@
+<!--遥测数据修改记录-->
+<head>
+  <obj>ZdhRmrecDto</obj>
+  <column  colName="recordno" propertyName="recordno" colType="string" dataTypeLen="32" isPrimary="1" visible="1" width="74" isEdit="0" textColor="#000000" className="ZdhRmrecDto" refName="recordno" ></column>
+  <column  colName="fstationname" propertyName="fstationname" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="90" isEdit="0" textColor="#000000" className="ZdhRmrecDto" refName="fstationname" ></column>
+  <column  colName="switchno" propertyName="switchno" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="58" isEdit="0" textColor="#000000" className="ZdhRmrecDto" refName="switchno" ></column>
+  <column  colName="changeexplanationo" propertyName="changeexplanationo" colType="string" dataTypeLen="400" isPrimary="0" visible="1" width="106" isEdit="0" textColor="#000000" className="ZdhRmrecDto" refName="changeexplanationo" ></column>
+  <column  colName="modificationdatano" propertyName="modificationdatano" colType="integer" dataTypeLen="0" isPrimary="0" visible="1" width="122" isEdit="0" textColor="#000000" className="ZdhRmrecDto" refName="modificationdatano" ></column>
+  <column  colName="modificationreason" propertyName="modificationreason" colType="string" dataTypeLen="400" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="ZdhRmrecDto" refName="modificationreason" ></column>
+  <column  colName="modificationdate" propertyName="modificationdate" colType="date" dataTypeLen="10" isPrimary="0" visible="1" width="106" isEdit="0" textColor="#000000" className="ZdhRmrecDto" refName="modificationdate" ></column>
+  <column  colName="version" propertyName="version" colType="integer" dataTypeLen="0" isPrimary="0" visible="1" width="0" isEdit="0" textColor="#000000" className="ZdhRmrecDto" refName="version" ></column>
+  <!--column  colName="opButton_1" propertyName="opButton_1" colType="string" dataTypeLen="0" isPrimary="0" visible="1" width="70" isEdit="0" textColor="#000000" className="" refName="" ></column>
+  <column  colName="opButton_2" propertyName="opButton_2" colType="string" dataTypeLen="0" isPrimary="0" visible="1" width="70" isEdit="0" textColor="#000000" className="" refName="" ></column>
+  <column  colName="opButton_3" propertyName="opButton_3" colType="string" dataTypeLen="0" isPrimary="0" visible="1" width="70" isEdit="0" textColor="#000000" className="" refName="" ></column>
+  <column  colName="opButton_4" propertyName="opButton_4" colType="string" dataTypeLen="0" isPrimary="0" visible="1" width="70" isEdit="0" textColor="#000000" className="" refName="" ></column-->
+</head>

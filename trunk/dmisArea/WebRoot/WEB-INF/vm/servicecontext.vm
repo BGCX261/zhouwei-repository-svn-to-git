@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+	
+	
+	#foreach($service in $services)
+		<bean id="i${service.entityBean.getUpEnName()}Service" parent="baseTransaction">
+		<property name="target">
+			<bean class="${serviceimplpackage}.${service.entityBean.getUpEnName()}ServiceImpl">
+				<property name="${service.entityBean.getLowEnName()}Dao" ref="i${service.entityBean.getUpEnName()}Dao"></property>
+		
+		#foreach($something in $wfServices )	 
+		  #if(${something.entityName}==${service.entityBean.enName})
+		    <property name="${service.entityBean.getLowEnName()}WFService" ref="i${service.entityBean.getUpEnName()}WFService"></property>
+		  #end
+		#end
+		#if($service.entityBean.getDistinctRef().size()>0)
+			  #foreach($rdao in $service.entityBean.getDistinctRef())
+				<property name="${rdao.getLowEnName()}Dao" ref="i${rdao.getUpEnName()}Dao">
+				</property>
+			  #end
+		#end
+			</bean>
+		</property>
+	</bean>
+	
+	
+	
+	<bean id="${service.entityBean.getLowEnName()}Facade" parent="baseTransaction">
+		<property name="target">
+			<bean
+				class="${facadepackage}.${service.entityBean.getUpEnName()}Facade">
+				<property name="${service.entityBean.getLowEnName()}Service" ref="i${service.entityBean.getUpEnName()}Service"></property>
+			</bean>
+		</property>
+	</bean>
+	#end
+	
+	<bean id="systemDicHunter" parent="baseTransaction">
+		<property name="target">
+			<bean
+				class="${hunterpackage}.SystemDicHunter">
+				<property name="commonQueryService" ref="iCommonQueryService"></property>				
+			</bean>
+		</property>
+	</bean>
+	<!-- 业务字典-->
+	<bean id="businessDicHunter" parent="baseTransaction">
+		<property name="target">
+			<bean
+				class="${hunterpackage}.BusinessDicHunter">
+				<property name="commonQueryService" ref="iCommonQueryService"></property>				
+			</bean>
+		</property>
+	</bean>
+	
+	<!-- 通用查询DWR -->
+      <bean id="commonQueryHunter" parent="baseTransaction">
+            <property name="target">
+	          <bean	  class="com.techstar.framework.web.hunter.CommonQueryHunter">
+	                 <property name="commonQueryService" ref="iCommonQueryService"></property>			
+	          </bean>
+            </property>
+     </bean>
+	 
+<bean id="iSysUiGridService" parent="baseTransaction">
+		<property name="target">
+			<bean
+				class="com.techstar.framework.ui.service.impl.SysUiGridServiceImpl">
+				<property name="sysUiGridDao" ref="iSysUiGridDao"></property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="sysUiGridFacade" parent="baseTransaction">
+		<property name="target">
+			<bean
+				class="com.techstar.framework.ui.web.facade.SysUiGridFacade">
+				<property name="sysUiGridService"
+					ref="iSysUiGridService">
+				</property>
+			</bean>
+		</property>
+	</bean>
+
+#if($dictionarys.size()>0)
+	<bean id="iDictionaryService" parent="baseTransaction">
+		<property name="target">
+			<bean
+				class="${dictionary}.impl.DictionaryServiceImpl">
+				<property name="baseHbnDao" ref="iBaseHbnDao"></property>
+			</bean>
+		</property>
+	</bean>
+	
+	<bean id="dictionaryBaseFacade" parent="baseTransaction">
+		<property name="target">
+			<bean
+				class="${dictionaryfacade}.DictionaryBaseFacade">
+				<property name="dicService" ref="iDictionaryService"></property>
+			</bean>
+		</property>
+	</bean>
+	#end
+</beans>

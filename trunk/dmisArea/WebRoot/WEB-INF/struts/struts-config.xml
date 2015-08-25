@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN"
+          "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+    
+    <form-beans>
+        <form-bean name="workflowForm" type="com.techstar.framework.demo.workflow.web.form.WorkflowForm" />
+		<form-bean name="workflowmanagerForm" type="com.techstar.framework.service.workflow.manager.WFManagerForm"/>
+	</form-beans>
+
+	<global-forwards>
+	      <forward name="success" path="/common/wfmanage/wf_return.jsp"/>
+	</global-forwards>
+
+	<action-mappings>
+     <action path="/wfmanager" name="workflowmanagerForm" type="org.springframework.web.struts.DelegatingActionProxy" parameter="method" scope="request">
+     
+		  <forward name="initWFFrame" path="wf.frame"/>
+			<forward name="initWFTab" path="wf.tab"/>
+			<forward name="initWFToolbar" path="wf.toolbar"/>
+			
+			<forward name="listRunningWF" path="/common/wfmanage/wfList.jsp"/>
+			<forward name="wfview" path="wf.view"/>
+			
+			<forward name="wfviewleft" path="/common/wfmanage/wfView_left.jsp"/>
+			<forward name="wfviewright" path="/common/wfmanage/wfView_right.jsp"/>
+			<forward name="startWF" path="/common/wfmanage/wf_detail_content.jsp"/>
+			<forward name="getWFView_Task" path="/common/wfmanage/wfView_task.jsp"/>
+			
+			<forward name="getWFView_Detail" path="/common/wfmanage/wfView_detail.jsp"/>
+			<forward name="getWFView_Message" path="/common/wfmanage/wfView_message.jsp"/>
+			
+			
+			<forward name="ProcessInstancesview" path="wf.instance.view"/>
+			<forward name="getProcessInstance" path="/common/wfmanage/instanceView_up.jsp"/>
+			<forward name="currenttask" path="/common/wfmanage/instanceView_down.jsp"/>
+			
+			
+			<forward name="startWF" path="startWF"/>
+			<forward name="initWFTab" path="wf.tab"/>
+			<forward name="initWFToolbar" path="wf.toolbar"/>
+			<forward name="importcmsinfo" path="/common/wfmanage/importcms.jsp"/>
+			<forward name="noteview" path="wf.noteuser.view"/>
+			<forward name="messageinit" path="/common/wfmanage/messageinit.jsp"/>
+			
+			
+		</action>
+		
+		<action path="/resourcetree" name="workflowmanagerForm" type="org.springframework.web.struts.DelegatingActionProxy" parameter="method" scope="request">
+		  <forward name="initOrgTree" path="/common/wfmanage/listOrgTree.jsp"></forward>
+			<forward name="initRoleTree" path="/common/wfmanage/listRoleTree.jsp"></forward>
+			<forward name="userlist" path="/common/wfmanage/listUser.jsp"></forward>
+			<forward name="useralllist" path="/common/wfmanage/listAllUser.jsp"></forward>
+			<forward name="initUser" path="user.view"></forward>
+		</action>
+	</action-mappings>
+	<message-resources parameter="ApplicationResources"/>
+	<plug-in
+		className="org.springframework.web.struts.ContextLoaderPlugIn">
+		<set-property property="contextConfigLocation"
+			value="/WEB-INF/struts/action-servlet-dmis.xml" />
+	</plug-in>
+	<plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+		<set-property property="pathnames"
+			value="/WEB-INF/struts/validator-rules.xml,	              
+	              /WEB-INF/struts/validator-rules-dmis.xml" />
+	</plug-in>
+
+	<plug-in className="org.apache.struts.tiles.TilesPlugin">
+		<set-property property="definitions-config"
+			value="/WEB-INF/struts/tiles-defs.xml,
+		           /WEB-INF/struts/tiles-defs_dmis.xml" />
+		<set-property property="definitions-debug" value="1"/>
+		<set-property property="definitions-parser-details" value="0"/>
+		<set-property property="definitions-parser-validate" value="true"/>		
+	</plug-in>
+
+</struts-config>

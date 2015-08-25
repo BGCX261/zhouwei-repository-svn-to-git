@@ -1,0 +1,233 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="com.techstar.dmis.entity">
+	<class name="ParaGroudTransfer" table="DMIS_ParaGroudTransfer" dynamic-insert="true" dynamic-update="true" optimistic-lock="version">
+    <id name="ffeqpid" type="string">
+      <column name="ffeqpid" sql-type="varchar(80)" not-null="true"/>
+      <generator class="assigned"/>
+    </id>
+
+ 	<version name="version" column="VERSION" unsaved-value="undefined"/>
+  
+   <property name="fvoltageratio" type="string"  not-null="false">
+    <column name="fvoltageratio"  
+		length="60"               
+    />
+</property>	
+    <property name="fcurrentratio" type="string"  not-null="false">
+    <column name="fcurrentratio"  
+		length="60"               
+    />
+</property>	
+    <property name="fwiregroup" type="string"  not-null="false">
+    <column name="fwiregroup"  
+		length="15"               
+    />
+</property>	
+    <property name="fratedcapacity" type="integer"  not-null="false">
+    <column name="fratedcapacity"  
+		               
+    />
+</property>	
+    <property name="fratedcapacity2" type="integer"  not-null="false">
+    <column name="fratedcapacity2"  
+		               
+    />
+</property>	
+    <property name="ftransuse" type="string"  not-null="false">
+    <column name="ftransuse"  
+		length="16"               
+    />
+</property>	
+    <property name="fcoolmethod" type="string"  not-null="false">
+    <column name="fcoolmethod"  
+		length="16"               
+    />
+</property>	
+    <property name="floadvolregulation" type="string"  not-null="false">
+    <column name="floadvolregulation"  
+		length="2"               
+    />
+</property>	
+    <property name="fnoloadcurrent" type="integer"  not-null="false">
+    <column name="fnoloadcurrent"  
+		length="25"        precision="10"       
+    />
+</property>	
+    <property name="fnoloadloss" type="integer"  not-null="false">
+    <column name="fnoloadloss"  
+		length="25"        precision="10"       
+    />
+</property>	
+    <property name="fshortcimpedance" type="integer"  not-null="false">
+    <column name="fshortcimpedance"  
+		length="25"        precision="10"       
+    />
+</property>	
+    <property name="fshortcloss" type="integer"  not-null="false">
+    <column name="fshortcloss"  
+		length="25"        precision="10"       
+    />
+</property>	
+    <property name="ftotalweight" type="integer"  not-null="false">
+    <column name="ftotalweight"  
+		length="25"        precision="10"       
+    />
+</property>	
+    <property name="fzeroseqimpedance" type="integer"  not-null="false">
+    <column name="fzeroseqimpedance"  
+		length="25"        precision="10"       
+    />
+</property>	
+    <property name="fswitchno" type="string"  not-null="false">
+    <column name="fswitchno"  
+		length="20"               
+    />
+</property>	
+    <property name="fphaseno" type="string"  not-null="false">
+    <column name="fphaseno"  
+		length="2"               
+    />
+</property>	
+    <property name="floadfanmotor" type="string"  not-null="false">
+    <column name="floadfanmotor"  
+		length="2"               
+    />
+</property>	
+    <property name="ffanmotorfac" type="string"  not-null="false">
+    <column name="ffanmotorfac"  
+		length="40"               
+    />
+</property>	
+    <property name="funtankweight" type="integer"  not-null="false">
+    <column name="funtankweight"  
+		length="25"        precision="10"       
+    />
+</property>	
+    <property name="ffanmotormodel" type="string"  not-null="false">
+    <column name="ffanmotormodel"  
+		length="20"               
+    />
+</property>	
+    <property name="finsulatedielectric" type="string"  not-null="false">
+    <column name="finsulatedielectric"  
+		length="10"               
+    />
+</property>	
+    <property name="fcableoutlet" type="string"  not-null="false">
+    <column name="fcableoutlet"  
+		length="2"               
+    />
+</property>	
+    <property name="foilsealmethod" type="string"  not-null="false">
+    <column name="foilsealmethod"  
+		length="12"               
+    />
+</property>	
+    <property name="foilconservatortype" type="string"  not-null="false">
+    <column name="foilconservatortype"  
+		length="20"               
+    />
+</property>	
+    <property name="ftcmotorfac" type="string"  not-null="false">
+    <column name="ftcmotorfac"  
+		length="20"               
+    />
+</property>	
+    <property name="ftcmotormodel" type="string"  not-null="false">
+    <column name="ftcmotormodel"  
+		length="10"               
+    />
+</property>	
+    <property name="felecmodel" type="string"  not-null="false">
+    <column name="felecmodel"  
+		length="10"               
+    />
+</property>	
+    <property name="felecvalue" type="integer"  not-null="false">
+    <column name="felecvalue"  
+		length="25"        precision="10"       
+    />
+</property>	
+    <property name="felecfac" type="string"  not-null="false">
+    <column name="felecfac"  
+		length="50"               
+    />
+</property>	
+    <property name="felecmaterial" type="string"  not-null="false">
+    <column name="felecmaterial"  
+		length="10"               
+    />
+</property>	
+    <property name="fetrfconnector" type="string"  not-null="false">
+    <column name="fetrfconnector"  
+		length="20"               
+    />
+</property>	
+    <property name="fhpcapacity" type="integer"  not-null="false">
+    <column name="fhpcapacity"  
+		length="25"        precision="10"       
+    />
+</property>	
+    <property name="flpcapacity" type="integer"  not-null="false">
+    <column name="flpcapacity"  
+		length="25"        precision="10"       
+    />
+</property>	
+    <property name="fhpspecvol" type="integer"  not-null="false">
+    <column name="fhpspecvol"  
+		length="25"        precision="10"       
+    />
+</property>	
+    <property name="flpspecvol" type="integer"  not-null="false">
+    <column name="flpspecvol"  
+		length="25"        precision="10"       
+    />
+</property>	
+    <property name="fhpspeccur" type="integer"  not-null="false">
+    <column name="fhpspeccur"  
+		length="25"        precision="10"       
+    />
+</property>	
+    <property name="flpspeccur" type="integer"  not-null="false">
+    <column name="flpspeccur"  
+		length="25"        precision="10"       
+    />
+</property>	
+    <property name="fhpconnmod" type="string"  not-null="false">
+    <column name="fhpconnmod"  
+		length="30"               
+    />
+</property>	
+    <property name="flpconnmod" type="string"  not-null="false">
+    <column name="flpconnmod"  
+		length="30"               
+    />
+</property>	
+    <property name="fimpedance" type="integer"  not-null="false">
+    <column name="fimpedance"  
+		length="25"        precision="10"       
+    />
+</property>	
+    <property name="ffixdate" type="date"  not-null="false">
+    <column name="ffixdate"  
+		               
+    />
+</property>	
+    <property name="fexamdate" type="date"  not-null="false">
+    <column name="fexamdate"  
+		               
+    />
+</property>	
+    <property name="fassaydate" type="date"  not-null="false">
+    <column name="fassaydate"  
+		               
+    />
+</property>	
+  
+	
+ <many-to-one name="zparagroudtransfer2" class="EtsEquipment"   column="FFEqpID" cascade="delete-orphan"></many-to-one>
+     </class>
+
+</hibernate-mapping>
+

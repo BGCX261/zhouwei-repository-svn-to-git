@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+<rows>
+   <head>
+        <column width="40" type="link" align="center"  sort="na">序号</column>
+        <column width="100" type="ed" align="left" sort="int">计划编号</column>
+        <column width="210" type="ed" align="center" sort="str">计划时间</column>
+        <column width="210" type="ed" align="center" sort="str">停电时间</column>
+        <column width="250" type="ed" align="center" sort="str">停电范围</column>
+        <settings>
+            <colwidth>px</colwidth>
+        </settings>
+    </head>
+   <row id ="1">
+      <cell>1</cell>
+      <cell>20061229-001</cell>
+      <cell>2006-12-29 8:00 ~ 2006-12-29 17:00</cell>
+      <cell>2006-12-29 8:00 ~ 2006-12-29 17:00</cell>
+      <cell>好大的范围呀！！！！</cell>
+   </row>
+   <row id ="2">
+      <cell>2</cell>
+      <cell>20061229-005</cell>
+      <cell>2006-12-29 8:00 ~ 2006-12-29 17:00</cell>
+      <cell>2006-12-29 8:00 ~ 2006-12-29 17:00</cell>
+      <cell>好大的范围呀！！！！</cell>
+   </row>
+</rows>

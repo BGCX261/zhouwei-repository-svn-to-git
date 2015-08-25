@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="category"
+  id="myeclipse.1240188914078"
+  context-root="/category"
+  j2ee-spec="5.0"
+  archive="category.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

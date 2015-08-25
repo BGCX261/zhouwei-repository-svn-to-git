@@ -1,0 +1,1141 @@
+@charset "utf-8";
+/*------------第一套样式表 修改时间2006.11.2--------------*/
+
+body {
+	SCROLLBAR-FACE-COLOR: #dfdfdf;
+	SCROLLBAR-HIGHLIGHT-COLOR: #f4f4f4;
+	SCROLLBAR-SHADOW-COLOR: #ffffff;
+	SCROLLBAR-ARROW-COLOR: #5b5b5b;
+	scrollbar-dark-shadow-color: #ffffff;
+	scrollbar-3d-light-color: #ffffff;
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	text-align:center;
+
+}
+
+/*---------------caojian add-------------------*/
+.tab_0{
+     background-color:#f6f6f6;
+}
+.tab_1{
+     background-color:#b9cbf7;	 
+}
+.tab_2{
+	 background-color:#d3dffa;
+}
+.tab_3{
+	 background-color:#eaeffd;
+}
+
+.article_required{
+	color:#FF0000;
+}
+
+.inputbutton{
+	background-color:#EFEFEF; 
+	border:1px  solid  #999999; 
+	padding-top:2px; 
+	height:20px;
+}
+
+
+.phase{
+	text-indent:2em;
+	line-height:150%;
+}
+
+table {
+	WORD-BREAK:break-all;
+	font-size: 12px;
+	border-collapse:collapse;
+	font-family:Arial, Helvetica, sans-serif,宋体;
+}
+
+td {
+	border-collapse:collapse;
+}
+
+/*表格标题*/
+th {
+	border-collapse:collapse;
+}
+.input {
+	width:100%;
+	height:18px;
+}
+
+
+
+a:link{
+	font-family:Arial, Helvetica, sans-serif;
+	color:#000000;
+	text-decoration:none;
+}
+
+a:visited{
+	font-family:Arial, Helvetica, sans-serif;
+	color:#000000;
+	text-decoration:none;
+}
+
+a:hover{
+	font-family:Arial, Helvetica, sans-serif;
+	color:#616161;
+	text-decoration:underline;
+}
+
+
+.gray a:link{
+	font-family:Arial, Helvetica, sans-serif;
+	color:#767676;
+	text-decoration:none;
+}
+
+.gray a:visited{
+	font-family:Arial, Helvetica, sans-serif;
+	color:#767676;
+	text-decoration:none;
+}
+
+.gray a:hover{
+	font-family:Arial, Helvetica, sans-serif;
+	color:#616161;
+	text-decoration:underline;
+}
+
+img {
+	border:0px;
+}
+
+
+.red {
+	color:#FF0000;
+}
+
+.green {
+	color:#616161;
+}
+
+/*控制链接样式开始*/
+.gre a:link{
+	font-family:Arial, Helvetica, sans-serif;
+	color:#000000;
+	text-decoration:none;
+}
+
+.gre a:visited{
+	font-family:Arial, Helvetica, sans-serif;
+	color:#00000;
+	text-decoration:none;
+}
+
+.gre a:hover{
+	font-family:Arial, Helvetica, sans-serif;
+	color:#616161;
+	text-decoration:underline;
+}
+/*控制链接样式开始*/
+
+.lable2 {
+	width:100%;
+	height:30px;
+	border-style:none;
+}
+
+
+
+.set a:link{
+	font-family:Arial, Helvetica, sans-serif;
+	color:#000000;
+	text-decoration:none;
+}
+
+.set a:visited{
+	font-family:Arial, Helvetica, sans-serif;
+	color:#000000;
+	text-decoration:none;
+}
+
+#set a:hover{
+	font-family:Arial, Helvetica, sans-serif;
+	color:#616161;
+	text-decoration:underline;
+}
+
+
+/*表格内容页面样式*/
+
+.datasheet a:link{
+	font-family:Arial, Helvetica, sans-serif;
+	color:#000000;
+	text-decoration:underline;
+}
+
+.datasheet a:visited{
+	font-family:Arial, Helvetica, sans-serif;
+	color:#000000;
+	text-decoration:underline;
+}
+
+.datasheet a:hover{
+	font-family:Arial, Helvetica, sans-serif;
+	color:#616161;
+	text-decoration:underline;
+}
+
+.datasheet{
+	border-left:#dadada 1px solid;
+	border-right:#dadada 1px solid;
+	border-bottom:#dadada 1px solid;
+	width:100%;
+}
+
+.datasheet th {
+	border-right:#dadada 2px solid;
+	border-top:#dadada 1px solid;
+	vertical-align:middle;
+	background: url(../../themes/themes1/images/main/th_bg.gif) repeat;
+}
+
+.datasheet td {
+	height:20px;
+	text-align:center;
+	border-right:#dadada 1px solid;
+	border-top:#dadada 1px solid;
+}
+
+.datasheet_in td {
+	height:20px;
+	text-align:center;
+	border-left:#dadada 1px solid;
+	border-top:#dadada 1px solid;
+}
+
+.datasheet img {
+	vertical-align:bottom;
+}
+
+.datasheet2{
+	border-width:0px;
+	width:100%;
+}
+
+
+.pt{
+	padding-top:1px;
+}
+
+
+.detailmain{
+	border-left:#dadada 1px solid;
+	border-right:#dadada 1px solid;
+	border-bottom:#dadada 1px solid;
+	width:100%;
+}
+
+.detailmain th {
+	border-right:#dadada 2px solid;
+	border-top:#dadada 1px solid;
+	vertical-align:middle;
+	background: url(../../themes/themes1/images/main/th_bg.gif) repeat;
+}
+
+
+.detailmain td {
+	height:20px;
+	border-right:#dadada 1px solid;
+	border-top:#dadada 1px solid;
+}
+
+
+.detail {
+	margin-bottom:15px;
+	text-align:left;
+
+}
+
+.detail td {
+	border-left:#dadada 1px solid;
+	border-bottom:#dadada 1px solid;
+	vertical-align:middle;
+}
+
+/*显示设置页面*/
+
+.display td {
+	border-left:#dadada 1px solid;
+	border-bottom:#dadada 1px solid;
+	vertical-align:middle;
+}
+
+/*不显示边框表格样式*/
+.noborder{
+	width:100%;
+}
+
+.noborder th {
+	vertical-align:middle;
+	background: url(../../themes/themes1/images/main/th_bg.gif) repeat;
+}
+
+
+.noborder td {
+	height:20px;
+}
+
+/*END*/
+
+
+.input_display {
+	width:100%;
+	height:18px;
+}
+
+.help {
+	border:#dadada 1px solid;
+}
+
+.help th {
+	border-left:#dadada 1px solid;
+	border-bottom:#dadada 1px solid;
+	background: url(../../themes/themes1/images/main/th_bg.gif) repeat;
+}
+.help td {
+}
+
+/*带样式表格的标题*/
+.topbg {
+	background: url(../../themes/themes1/images/main/th_bg.gif) repeat;
+}
+/*END*/
+
+
+/*menu*/
+.dl {
+border:#dadada 2px;
+width:300px;
+height:400px;
+}
+
+.hand {
+	cursor:hand;
+}
+
+/*鼠标经过变色行样式*/
+.LeftNavOff1 {
+   BACKGROUND-COLOR:none;
+}
+
+.LeftNavOff2 {
+   BACKGROUND-COLOR: #none;
+}
+
+.LeftNavUp {
+   BACKGROUND-COLOR: #E3E3E3;
+}
+/*END*/
+
+.show {
+	border: 2px #dadada solid;
+	text-align:right;
+}
+
+/*统计字段样式*/
+.tongji {
+	border:none;
+	background-color:#dadada;
+}
+
+.tongji td{
+	background-color:#dadada;
+}
+
+.set {
+	border:1px #dadada solid
+}
+
+.set td{
+	border:1px #dadada solid
+}
+
+/*END*/
+
+.inputtab {
+	width:100%;
+	height:18px;
+}
+
+/*------------列表--------------*/
+div.gridbox{
+	overflow:hidden;
+}
+div.gridbox table.hdr td {
+	font-family:arial;
+	font-size:12px;
+	background-Color:#D4D0C8;
+	border: 1px solid;
+	border-color : white Gray Gray white;
+	text-align: center;
+	margin:0px;
+	padding:5px 0px 5px 0px ;
+	font-weight:normal;
+    -moz-user-select:none;
+    overflow:hidden;
+	}
+div.gridbox table.hdr td div.hdrcell{
+
+}
+div.gridbox table.obj td {
+	border: 1px solid;
+	border-color : white Gray Gray white;
+	font-family:Arial;
+	font-size:12px;
+    -moz-user-select:none;
+    overflow:hidden;
+    padding-top:0px;
+    padding-bottom:0px;
+	}
+div.gridbox table.obj th {
+	padding:0px 0px 0px 0px ;
+	margin:0px 0px 0px 0px ;
+	}
+
+div.gridbox table.row20px tr  td{
+    height:20px;
+    white-space: nowrap;
+    padding:0px;
+}
+div.gridbox .objbox {
+	background-color:white;
+
+	}
+div.gridbox table.obj td span.space, div.gridbox table.obj td img.space{
+	width:18px;
+	}
+div.gridbox table.obj tr.rowselected td.cellselected, div.gridbox table.obj td.cellselected {
+	background-color:#d8d8d8;
+	color:black;
+	}
+div.gridbox table.obj tr.rowselected td{
+	background-color:#e1e0d7;
+	color:black;
+	}
+div.gridbox table.obj td.editable{
+    -moz-user-select:text;
+    }
+
+.dragSpanDiv{ 	font-size : 12px; 	border: 1px gray solid; background-color:white; }
+.dhx_combo_select{
+    font-family:arial;
+    font-size:12px;
+    border:1px solid;
+    border-color:black silver silver black;
+    background-color:white;
+    overflow:hidden;
+    cursor:default;
+    position:absolute;
+    height:auto;
+}
+.dhx_combo_edit{
+    width:100%;
+    border:0px;
+    padding:0px;
+    margin:0px;
+    font:12px arial;
+    overflow:hidden;
+}
+
+.dhx_textarea{
+    border:1px solid;
+    border-color:black silver silver black;
+    position:absolute;
+	height:100px;
+}
+.gridDragLine{
+   position:absolute;
+   top:10px; left:0px;
+   width:100%;
+   height:2px;
+   background-color:black;
+   overflow:hidden;
+}
+
+/*paginal output*/
+DIV.pagingBlock{
+	font-size:12px;
+	font-family:verdana,arial;
+}
+DIV.pagingBlock .pagingCurrentPage{
+	font-weight:bold;
+	cursor:default;
+}
+DIV.pagingBlock .pagingPage{
+	cursor:pointer;
+	text-decoration:underline;
+}
+SPAN.recordsInfoBlock {
+	font-size:12px;
+	font-family:verdana,arial;
+}
+/*class for toolbar selectbox. used with pagingWT*/
+.toolbar_select{
+	font-size:10px;
+}
+
+/* xp skin ------------------------------------------------------*/
+div.gridbox_xp{
+	border:1px solid lightgrey;
+}
+div.gridbox_xp table.hdr td {
+	color:#616161;
+	background-image:url('../../components/tag/grid/images/header_bg.gif');
+	border:0px;
+	text-align: center;
+	margin:0px;
+	padding:5px 0px 5px 0px ;
+	font-weight:bold;
+        -moz-user-select:none;
+        overflow:hidden;
+	}
+div.gridbox_xp table.hdr td div.hdrcell{
+	border-left: 1px solid white;
+	border-right: 1px solid gray;
+	height:16px;
+	white-space : nowrap;
+	font-family:Arial;
+	font-size:12px;
+}
+div.gridbox_xp table.obj td {
+	border:0px;
+	border-bottom: 1px solid lightgrey;
+	border-right: 1px solid lightgrey;
+	font-family:Arial;
+	font-size:12px;
+        -moz-user-select:none;
+        overflow:hidden;
+        padding-top:0px;
+        padding-bottom:0px;
+	vertical-align:middle;
+	}
+div.gridbox table.obj tr.rowselected td{
+	background-color:#dadada;
+	color:black;
+	}
+div.gridbox table.obj tr.rowselected td.cellselected, div.gridbox table.obj td.cellselected {
+	background-color:#eeeeee;
+	}
+div.gridbox_xp table.row20px tr  td{
+    height:22px;
+    white-space: nowrap;
+    padding:1px;
+}
+
+
+.calcTable { width:100px; background-color:silver; border: 1px; black solid;  }
+.calcButton { height:20px; cursor:pointer; text-align:center; background-color: gray; color:white; font-size:10px; font-weight:bold; border-top: 1px solid silver; border-right: 1px solid silver; }
+.calcPressed { height:20px; cursor:pointer; text-align:center; background-color: gray; color:white; font-size:10px; font-weight:bold; border-top: 1px solid black; border-right: 1px solid black; }
+.calcInput{ background-color: white;  font-size:10px; font-weight:bold; font-family:tahoma,arial; }
+.calkSubmit{ padding:2px; cursor:pointer; text-align:center; background-color: silver; color:white; font-size:10px; font-weight:bold; border-top: 1px solid white; border-right: 1px solid white; }
+
+
+/*------------菜单--------------*/
+
+/* menu body */
+
+.menu-body {
+	background-color:	#F0F0F0;	/*ThreeDFace;*/
+	color:				MenuText;
+	margin:				0;
+	padding:			0;
+	overflow:			hidden;
+	border:				0;
+	cursor:				default;
+}
+
+.menu-body .outer-border {
+	border:			0;
+}
+
+.menu-body .inner-border {
+	width:		100%;
+	height:		100%;
+	border:		1px solid ThreeDShadow;
+	padding:	2px;
+}
+
+/* end menu body */
+
+/*****************************************************************************/
+
+/* menu items */
+
+.menu-body #scroll-up-item td,
+.menu-body #scroll-down-item td {
+	font-family:	Webdings !important;
+	text-align:		center;
+	padding:		10px;
+}
+
+.menu-body td {
+	font:			menu;
+}
+
+.menu-body .hover td {
+	background-color:	Highlight;
+	color:				HighlightText;
+}
+
+.menu-body td.empty-icon-cell {
+	padding:	2px;
+	border:		0;
+}
+
+.menu-body td.empty-icon-cell span {
+	width:	16px;
+}
+
+.menu-body td.icon-cell {
+	width:		16px;
+	padding:	0px 2px 1px 2px;
+	border:		0;
+
+}
+
+.menu-body td.icon-cell img {
+	width:	16px;
+	height:	16px;
+	margin:	0;
+}
+
+.menu-body td.label-cell {
+	width:		100%;
+	padding:	0px 5px 1px 5px;
+}
+
+.menu-body td.shortcut-cell {
+	padding:	0px 5px 1px 5px;
+}
+
+.menu-body td.arrow-cell {
+	width:			20px;
+	padding:		0px 2px 1px 0px;
+	font-family:	Webdings;
+}
+
+/* end menu items */
+
+/*****************************************************************************/
+
+/* disabled items */
+
+.menu-body .disabled .disabled-container {
+	color:				GrayText;
+}
+
+.menu-body .disabled .icon-cell .disabled-container,
+.menu-body .disabled-hover .icon-cell .disabled-container {
+	background:			GrayText;
+	filter:				progid:DXImageTransform.Microsoft.Chroma(Color=#010101)
+						DropShadow(color=ButtonHighlight, offx=1, offy=1);
+	width:				100%;
+	height:				100%;
+}
+
+.menu-body .disabled-hover .icon-cell .disabled-container {
+	filter:				progid:DXImageTransform.Microsoft.Chroma(Color=#010101);
+}
+
+.menu-body .disabled .icon-cell .disabled-container .disabled-container,
+.menu-body .disabled-hover .icon-cell .disabled-container .disabled-container {
+	background:			Transparent;
+	filter:				Mask(Color=#010101);
+}
+
+.menu-body .disabled-hover td {
+	background-color:	Highlight;
+	color:				GrayText;
+}
+
+/* end disabled items */
+
+/*****************************************************************************/
+
+/* separator */
+
+.menu-body .separator td {
+	font-size:	0.001mm;
+	padding:	4px 2px 4px 2px;
+}
+
+.menu-body .separator-line {
+	overflow:		hidden;
+	border-top:		1px solid ThreeDShadow;
+	height:			1px;
+}
+
+/* end separator */
+
+/*****************************************************************************/
+
+/* scroll buttons */
+
+.menu-body #scroll-up-item td,
+.menu-body #scroll-down-item td {
+	font-family:	Webdings !important;
+	text-align:		center;
+	padding:		10px;
+}
+
+.menu-body #scroll-up-item,
+.menu-body #scroll-down-item {
+	width:			100%;
+}
+
+.menu-body #scroll-up-item td,
+.menu-body #scroll-down-item td {
+	font-family:	Webdings;
+	text-align:		center;
+	padding:		0px 5px 1px 5px;
+}
+
+/* end scroll buttons */
+
+/*****************************************************************************/
+
+/* radio and check box items */
+
+.menu-body .check-box,
+.menu-body .radio-button {
+	width:			16px;
+	text-align:		center;
+	vertical-align:	middle;
+}
+
+.menu-body .checked .check-box {
+	font-family:	Marlett;
+	font-size:	150%;
+}
+
+.menu-body .checked .radio-button {
+	font-family:	Marlett;
+	font-size:	66%;
+}
+
+/* end radio and check box items */
+
+/*****************************************************************************/
+
+/* Menu Bar */
+
+.menu-bar {
+	
+}
+
+.menu-bar .menu-button {
+	
+}
+
+}
+
+/* End Menu Bar */
+
+/*------------工具条--------------*/
+.defaultButtonText{
+	font: 11px Arial;
+	cursor:pointer;
+}
+
+.defaultbutton {
+	border : solid 1px #eeeeee;
+	margin:1px;
+	cursor:pointer;
+}
+.buttonTextDisabled {
+	color: gray;
+	font: 11px Arial;
+}
+.defaultbuttondown {
+	background-color : #DBD8D1;
+	border-bottom : solid 1px #FFFFFF;
+	border-left : solid 1px #808080;
+	border-right : solid 1px #FFFFFF;
+	border-top : solid 1px #808080;
+	cursor : pointer;
+}
+
+.defaultbuttonover {
+	background-color : #eeeeee;
+	border-bottom : solid 1px #808080;
+	border-left : solid 1px #FFFFFF;
+	border-right : solid 1px #808080;
+	border-top : solid 1px #FFFFFF;
+	cursor : pointer;
+}
+
+.icongray {
+	border : solid 1px #D4D0C8;
+	cursor : default;
+	filter : BlendTrans(Percent=50) gray();
+}
+
+.toolbardivider {
+	background-color : #D4D0C8;
+	border-left : solid #808080 1px;
+	border-right : solid #FFFFFF 1px;
+	height : 100%;
+	margin-bottom : 2px;
+	margin-top : 1px;
+	overflow : hidden;
+	vertical-align : middle;
+	width : 2px;
+}
+
+.toolbardividery {
+	background-color : #D4D0C8;
+	border-bottom : solid #FFFFFF 1px;
+	border-top : solid #808080 1px;
+	height : 2px;
+	overflow : hidden;
+	width : 100%;
+}
+
+.toolbarhandle {
+	background-color : #D4D0C8;
+	border-bottom : solid #808080 1px;
+	border-left : solid #FFFFFF 1px;
+	border-right : solid #808080 1px;
+	border-top : solid #FFFFFF 1px;
+	cursor : move;
+	height : 100%;
+	overflow : hidden;
+	width : 3px;
+}
+
+.toolbarname{
+	color : #43537B;
+	font : 11px 'Arial Black',Arial,sans-serif;
+	letter-spacing : 3px;
+	padding-left : 1px;
+	padding-right : 1px;
+}
+
+.toolbartable{
+	background-color : #D4D0C8;
+	border-bottom : solid #808080 1px;
+	border-left : solid #FFFFFF 1px;
+	border-right : solid #808080 1px;
+	border-top : solid #FFFFFF 1px;
+	margin : 0px;
+	-moz-user-select : none;
+	padding : 0px;
+	table-layout : fixed;
+}
+
+.vtoolbarhandle {
+	background-color : #D4D0C8;
+	border-bottom : solid #808080 1px;
+	border-left : solid #FFFFFF 1px;
+	border-right : solid #808080 1px;
+	border-top : solid #FFFFFF 1px;
+	cursor : move;
+	height : 3px;
+}
+
+
+/*------------FOOTER区页面样式开始--------------*/
+
+.footer {
+	width:100%;
+	height:30px;
+	text-align:center;
+	vertical-align:bottom;
+	font-size:12px;
+	font-family:Arial, Helvetica, sans-serif;
+	color:#000000;
+}
+
+.work_footer {
+	width:100%;
+	text-align:center;
+	vertical-align:bottom;
+	font-size:12px;
+	font-family:Arial, Helvetica, sans-serif;
+	color:#000000;
+}
+
+/*------------HEAD区页面样式开始--------------*/
+
+.head {
+	border:0px;
+	width:100%;
+	height:72px;
+	vertical-align:top;
+	border-top:0px none;
+	border-bottom:#008c89 2px solid;
+}
+
+.right_tab {
+	border:0px;
+	width:100%;
+}
+
+.logo {
+	margin-left:5px;
+	margin-top:0px;
+	margin-bottom:0px;
+	text-align:left;
+	border:0px;
+}
+
+
+/*------------LABEL区页面样式开始--------------*/
+
+.label_top {
+	width:100%;
+}
+
+/*标签样式*/
+.ooib {
+	width:100%;
+	height:400px;
+	border-width: 1px;
+	border-style: none solid solid;
+	border-color: #dadada;
+}
+
+.hr{
+	color:#ffffff;
+}
+
+.ooih {
+}
+
+.ooih td {
+	border-width: 1px;
+	padding:10px 5px 3px 5px;
+}
+
+.ooihj {
+	color: #000000;
+	background-color: #ffffff;
+	border-style: solid solid none;
+	border-color: #dadada;
+	text-decoration:none;
+	font-weight:bolder;
+	padding-left:10px;
+}
+
+.ooihs {
+	color: #616161;
+	background-color: #fafafa;
+	border-style: solid;
+	border-color: #dadada #dadada #dadada;
+	cursor: hand;
+	text-decoration:underline;
+}
+
+.ooihx {
+	border-style: none none solid;
+	border-color: #dadada;
+}
+
+
+#lable2 {
+	width:100%;
+	height:30px;
+	border-style:none;
+}
+
+#set {
+	width:100%;
+	height:100%;
+	border:0px;
+}
+
+/*-------------TOOLS区页面样式开始-------------*/
+
+.tools {
+	width:100%;
+	height:29px;
+	border-top:#fff 1px solid;
+	border-bottom:#d4d4d4 1px solid;
+	background:#eeeeee;
+}
+
+.p1 {
+	padding-top:5px;
+}
+
+.input {
+	width:100%;
+	height:18px;
+}
+
+
+/*------------工作台页面样式开始--------------*/
+
+.workbench {
+	width:100%;
+	border:0px;
+}
+
+.top {
+	background:url(../../themes/themes1/images/main/worktop_bg.gif) repeat;
+	height:12px;
+}
+
+.worktab {
+	width:100%;
+	border:#dadada 1px solid;
+}
+
+.worktab th {
+	padding-top:2px;
+	padding-left:8px;
+	padding-right:5px;
+	border-bottom:#dadada 1px solid;
+	background:#f3f3f3;
+}
+
+.worktab td {
+	height:20px;
+	padding-left:5px;
+}
+
+.worktab .img {
+	text-align:right;
+}
+
+.worktab2 {
+	width:100%;
+	border:#dadada 1px solid;
+}
+
+.worktab2 th {
+	padding-top:2px;
+	padding-left:8px;
+	padding-right:5px;
+	background:#f3f3f3;
+}
+
+.worktab2 td {
+	height:20px;
+}
+
+.worktab2 .img {
+	text-align:right;
+}
+
+
+.tab {
+	border-right:#dadada 1px solid;
+	text-align:right;
+}
+
+.tab td {
+	height:20px;
+	text-align:center;
+	border-top:#dadada 1px solid;
+	border-right:#dadada 1px solid;
+}
+
+.tab_in td {
+	height:20px;
+	text-align:center;
+	border-top:#dadada 1px solid;
+}
+
+.tab_top {
+	padding-top:3px;
+	background: url(../../themes/themes1/images/workbench/tab_top.gif) repeat;
+}
+
+/*日计划浏览四个按钮样式*/
+.img1 {
+	background:url(../../themes/themes1/images/main/setting.gif) no-repeat;
+}
+
+.img2 {
+	background:url(../../themes/themes1/images/main/search2.gif) no-repeat;
+}
+
+.img3 {
+	background:url(../../themes/themes1/images/main/import.gif) no-repeat;
+}
+.img4 {
+	background:url(../../themes/themes1/images/main/tj.gif) no-repeat;
+}
+/*END*/
+
+
+/*窗口列表*/
+
+
+.win_list {
+	width:100%;
+	border:none;
+	margin-top:5px;
+	margin-bottom:3px;
+}
+
+/*原叫button*/
+.button11 {
+	width:70px;
+	text-align:center;
+}
+
+/*带底纹表格*/
+.tab_left {
+	margin-top:2px;
+	margin-left:-5px;
+	margin-bottom:5px;
+	border-left:#dadada 1px solid;
+	border-top:#dadada 1px solid;
+}
+
+.tab_left td {
+	border-right:#dadada 1px solid;
+	border-bottom:#dadada 1px solid;
+}
+
+
+/*最小化，最大话按钮*/
+
+
+
+/*------------工作台页面样式结束--------------*/
+
+
+/*---------------tree---------------------*/
+.defaultTreeTable{
+			margin : 0;
+			padding : 0;
+			border : 0;
+}
+.containerTableStyle {overflow:auto;font-size : 12px;}
+.standartTreeRow{	font-family : Verdana, Geneva, Arial, Helvetica, sans-serif; 	font-size : 12px; -moz-user-select: none; }
+.selectedTreeRow{ background-color : navy; color:white; font-family : Verdana, Geneva, Arial, Helvetica, sans-serif; 		font-size : 12px;  -moz-user-select: none;  }
+.standartTreeImage{ width:18px; height:18px;  overflow:hidden; border:0; padding:0; margin:0; }
+.hiddenRow { width:1px;   overflow:hidden;  }
+.dragSpanDiv{ 	font-size : 12px; 	border: thin solid 1 1 1 1; }
+/*---------------tree结束---------------------*/
+
+/*---------------日期控件样式开始----------------------------------------*/
+  .edges {
+            border : 1px solid;
+            border-color: #adaa9c #fff #fff #adaa9c;
+            background-color: #fffbee;
+         }
+
+   /*
+   * for dates between start and end dates
+   */
+   .between {
+      background-color: #dccdb9;
+   }
+
+   .calendar tbody .disabled { text-decoration: line-through; color:#000}
+/*---------------日期控件样式结束---------------------*/

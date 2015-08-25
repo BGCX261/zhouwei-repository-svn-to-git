@@ -1,0 +1,14 @@
+<!DOCTYPE mappings PUBLIC "-//DOZER//DTD MAPPINGS//EN"
+"http://dozer.sourceforge.net/dtd/dozerbeanmapping.dtd">
+<mappings>
+   <mapping>
+   <class-a>com.techstar.dmis.dto.ParaFaullistDto</class-a>
+   <class-b>com.techstar.dmis.dto.transfer.TransParaFaullistDto</class-b>
+   <field>
+      <a>zparafaullist2.feqpid</a>
+      <b>trans_zparafaullist2</b>
+      <a-hint>com.techstar.dmis.dto.EtsEquipmentDto</a-hint>
+      <b-hint>java.lang.String</b-hint>
+   </field>
+   </mapping>
+</mappings>

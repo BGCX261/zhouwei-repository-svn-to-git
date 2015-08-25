@@ -1,0 +1,10 @@
+<!--厂家-->
+<head>
+  <obj>StdManufacturerDto</obj>
+  <column  colName="fmanufactureno" propertyName="fmanufactureno" colType="string" dataTypeLen="32" isPrimary="1" visible="1" width="74" isEdit="0" textColor="#000000" className="StdManufacturerDto" refName="fmanufactureno" ></column>
+  <column  colName="fname" propertyName="fname" colType="string" dataTypeLen="80" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="StdManufacturerDto" refName="fname" ></column>
+  <column  colName="fshortname" propertyName="fshortname" colType="string" dataTypeLen="80" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="StdManufacturerDto" refName="fshortname" ></column>
+  <column  colName="fusedname" propertyName="fusedname" colType="string" dataTypeLen="80" isPrimary="0" visible="1" width="90" isEdit="0" textColor="#000000" className="StdManufacturerDto" refName="fusedname" ></column>
+  <column  colName="ftype" propertyName="ftype" colType="string" dataTypeLen="80" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="StdManufacturerDto" refName="ftype" ></column>
+  <column  colName="fremark" propertyName="fremark" colType="string" dataTypeLen="80" isPrimary="0" visible="1" width="42" isEdit="0" textColor="#000000" className="StdManufacturerDto" refName="fremark" ></column>
+</head>

@@ -1,0 +1,18 @@
+<!--设备重载记录-->
+<head>
+  <obj>DdHloadrecordDto</obj>
+  <column  colName="fid" propertyName="fid" colType="string" dataTypeLen="32" isPrimary="1" visible="0" width="58" isEdit="0" textColor="#000000" className="DdHloadrecordDto" refName="fid" ></column>
+  <column  colName="version" propertyName="version" colType="integer" dataTypeLen="0" isPrimary="0" visible="0" width="202" isEdit="0" textColor="#000000" className="DdHloadrecordDto" refName="version" ></column>   
+  <column  colName="flogdate" propertyName="flogdate" colType="date" dataTypeLen="0" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="DdHloadrecordDto" refName="flogdate" ></column>
+  <column  colName="fstationname" propertyName="fstationname" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="106" isEdit="0" textColor="#000000" className="DdHloadrecordDto" refName="fstationname" ></column>
+  <column  colName="fdevclass" propertyName="fdevclass" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="106" isEdit="0" textColor="#000000" className="DdHloadrecordDto" refName="fdevclass" ></column>
+  <column  colName="fdevname" propertyName="fdevname" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="106" isEdit="0" textColor="#000000" className="DdHloadrecordDto" refName="fdevname" ></column>
+  <column  colName="flinename" propertyName="flinename" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="42" isEdit="0" textColor="#000000" className="DdHloadrecordDto" refName="flinename" ></column>
+  <column  colName="ffixcurrent" propertyName="ffixcurrent" colType="float" dataTypeLen="0" isPrimary="0" visible="1" width="98" isEdit="0" textColor="#000000" className="DdHloadrecordDto" refName="ffixcurrent" ></column>
+  <column  colName="fmaxloadcur" propertyName="fmaxloadcur" colType="float" dataTypeLen="0" isPrimary="0" visible="1" width="130" isEdit="0" textColor="#000000" className="DdHloadrecordDto" refName="fmaxloadcur" ></column>
+  <column  colName="fstarttime" propertyName="fstarttime" colType="timestamp" dataTypeLen="0" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="DdHloadrecordDto" refName="fstarttime" ></column>
+  <column  colName="fkeeptime" propertyName="fkeeptime" colType="integer" dataTypeLen="0" isPrimary="0" visible="1" width="154" isEdit="0" textColor="#000000" className="DdHloadrecordDto" refName="fkeeptime" ></column>
+  <column  colName="fadopmeasure" propertyName="fadopmeasure" colType="string" dataTypeLen="64" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="DdHloadrecordDto" refName="fadopmeasure" ></column>
+  <column  colName="sys_dataowner" propertyName="sys_dataowner" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="106" isEdit="0" textColor="#000000" className="DdHloadrecordDto" refName="sys_dataowner" ></column>
+  <column  colName="fhighestloadrate" propertyName="fhighestloadrate" colType="float" dataTypeLen="7" isPrimary="0" visible="1" width="114" isEdit="0" textColor="#000000" className="DdHloadrecordDto" refName="fhighestloadrate" ></column>
+</head>

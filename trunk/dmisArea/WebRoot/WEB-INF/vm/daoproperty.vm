@@ -1,0 +1,40 @@
+##
+##  jndi connection config
+##  tomcat
+##
+#ds.jndiname=java:comp/env/jdbc/demoDataSource
+
+##
+##  jndi connection config
+##  weblogic
+##
+#ds.jndiname=demoDataSource
+
+##
+##
+##  common config
+##
+##
+show_sql=true
+db.dialect=${conf.dialect}
+
+##
+##
+##  direct connection config
+##
+##
+db.driverClassName=${conf.driver_class}
+db.url=${conf.connection_url}
+db.username=${conf.username}
+db.password=${conf.password}
+
+
+##
+##configurations.xml AbsolutePath
+##
+path.configurations=${conf.confxml}configurations.xml
+
+##
+##exceptionInfo.xml AbsolutePath
+##
+path.exception=${conf.confxml}exceptionInfo.xml

@@ -1,0 +1,134 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="com.techstar.dmis.entity">
+	<class name="DdHloadrecord" table="DMIS_DD_HloadRecord" dynamic-insert="true" dynamic-update="true" optimistic-lock="version">
+    <id name="fid" type="string">
+      <column name="fid" sql-type="varchar(40)" not-null="true"/>
+      <generator class="assigned"/>
+    </id>
+
+ 	<version name="version" column="VERSION" unsaved-value="undefined"/>
+  
+   <property name="flogdate" type="date"  not-null="false">
+    <column name="flogdate"  
+		               
+    />
+</property>	
+    <property name="fstationname" type="string"  not-null="false">
+    <column name="fstationname"  
+		length="40"               
+    />
+</property>	
+    <property name="fdevclass" type="string"  not-null="false">
+    <column name="fdevclass"  
+		length="40"               
+    />
+</property>	
+    <property name="fdevname" type="string"  not-null="false">
+    <column name="fdevname"  
+		length="40"               
+    />
+</property>	
+    <property name="flinename" type="string"  not-null="false">
+    <column name="flinename"  
+		length="40"               
+    />
+</property>	
+    <property name="ffixcurrent" type="integer"  not-null="false">
+    <column name="ffixcurrent"  
+		               
+    />
+</property>	
+    <property name="fmaxloadcur" type="integer"  not-null="false">
+    <column name="fmaxloadcur"  
+		               
+    />
+</property>	
+    <property name="fstarttime" type="timestamp"  not-null="false">
+    <column name="fstarttime"  
+		               
+    />
+</property>	
+    <property name="fendtime" type="timestamp"  not-null="false">
+    <column name="fendtime"  
+		               
+    />
+</property>	
+    <property name="fkeeptime" type="integer"  not-null="false">
+    <column name="fkeeptime"  
+		               
+    />
+</property>	
+    <property name="fhighestloadrate" type="integer"  not-null="false">
+    <column name="fhighestloadrate"  
+		length="7"               
+    />
+</property>	
+    <property name="ftemperature" type="integer"  not-null="false">
+    <column name="ftemperature"  
+		length="7"               
+    />
+</property>	
+    <property name="fremark" type="string"  not-null="false">
+    <column name="fremark"  
+		length="500"               
+    />
+</property>	
+    <property name="fiswritelog" type="string"  not-null="false">
+    <column name="fiswritelog"  
+		length="2"               
+    />
+</property>	
+    <property name="fiswriteinwglog" type="string"  not-null="false">
+    <column name="fiswriteinwglog"  
+		length="2"               
+    />
+</property>	
+    <property name="fstationid" type="string"  not-null="false">
+    <column name="fstationid"  
+		length="40"               
+    />
+</property>	
+    <property name="flineid" type="string"  not-null="false">
+    <column name="flineid"  
+		length="40"               
+    />
+</property>	
+    <property name="sys_fille" type="string"  not-null="false">
+    <column name="sys_fille"  
+		length="40"               
+    />
+</property>	
+    <property name="sys_filldept" type="string"  not-null="false">
+    <column name="sys_filldept"  
+		length="80"               
+    />
+</property>	
+    <property name="sys_filltime" type="timestamp"  not-null="false">
+    <column name="sys_filltime"  
+		               
+    />
+</property>	
+    <property name="sys_isvalid" type="integer"  not-null="false">
+    <column name="sys_isvalid"  
+		               
+    />
+</property>	
+    <property name="sys_dataowner" type="string"  not-null="false">
+    <column name="sys_dataowner"  
+		length="40"               
+    />
+</property>	
+    <property name="fadopmeasure" type="string"  >
+    <column name="fadopmeasure"  
+		length="200"               
+    />
+</property>	
+  
+	
+    <many-to-one name="zddhloadrecord4" class="DdClassondutylog"  column="FCurrLogNO" cascade="none"></many-to-one>
+         <many-to-one name="zddhloadrecord6" class="EtsEquipment"  column="FeqpID" cascade="none"></many-to-one>
+     </class>
+
+</hibernate-mapping>
+

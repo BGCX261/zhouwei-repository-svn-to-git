@@ -1,0 +1,14 @@
+<!DOCTYPE mappings PUBLIC "-//DOZER//DTD MAPPINGS//EN"
+"http://dozer.sourceforge.net/dtd/dozerbeanmapping.dtd">
+<mappings>
+   <mapping>
+   <class-a>com.techstar.dmis.dto.MbayeqpmentDto</class-a>
+   <class-b>com.techstar.dmis.dto.transfer.TransMbayeqpmentDto</class-b>
+   <field>
+      <a>zmbayeqpment2.fid</a>
+      <b>trans_zmbayeqpment2</b>
+      <a-hint>com.techstar.dmis.dto.MbayDto</a-hint>
+      <b-hint>java.lang.String</b-hint>
+   </field>
+   </mapping>
+</mappings>

@@ -1,0 +1,11 @@
+<!--系统图修改记录-->
+<head>
+  <obj>ZdhCharalterrecordDto</obj>
+  <column  colName="zdhrmrec0.fstationname" propertyName="zdhrmrec0" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="90" isEdit="1" textColor="#000000" className="ZdhRmrecDto" refName="fstationname" ></column>
+  <column  colName="zdhrmrec0.switchno" propertyName="zdhrmrec0" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="58" isEdit="1" textColor="#000000" className="ZdhRmrecDto" refName="switchno" ></column>
+  <column  colName="zdhrmrec0.changeexplanationo" propertyName="zdhrmrec0" colType="string" dataTypeLen="400" isPrimary="0" visible="1" width="106" isEdit="1" textColor="#000000" className="ZdhRmrecDto" refName="changeexplanationo" ></column>
+  <column  colName="zdhrmrec0.modificationdatano" propertyName="zdhrmrec0" colType="integer" dataTypeLen="0" isPrimary="0" visible="1" width="122" isEdit="1" textColor="#000000" className="ZdhRmrecDto" refName="modificationdatano" ></column>
+  <column  colName="zdhrmrec0.modificationreason" propertyName="zdhrmrec0" colType="string" dataTypeLen="400" isPrimary="0" visible="1" width="74" isEdit="1" textColor="#000000" className="ZdhRmrecDto" refName="modificationreason" ></column>
+  <column  colName="zdhrmrec0.modificationdate" propertyName="zdhrmrec0" colType="date" dataTypeLen="0" isPrimary="0" visible="1" width="106" isEdit="1" textColor="#000000" className="ZdhRmrecDto" refName="modificationdate" ></column>
+  <column  colName="zdhrmrec0.remarks" propertyName="zdhrmrec0" colType="string" dataTypeLen="100" isPrimary="0" visible="1" width="42" isEdit="1" textColor="#000000" className="ZdhRmrecDto" refName="remarks" ></column>
+</head>

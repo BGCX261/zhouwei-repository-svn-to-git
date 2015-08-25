@@ -1,0 +1,14 @@
+<!DOCTYPE mappings PUBLIC "-//DOZER//DTD MAPPINGS//EN"
+"http://dozer.sourceforge.net/dtd/dozerbeanmapping.dtd">
+<mappings>
+   <mapping>
+   <class-a>com.techstar.dmis.dto.DdEnsuringpsmanageDto</class-a>
+   <class-b>com.techstar.dmis.dto.transfer.TransDdEnsuringpsmanageDto</class-b>
+   <field>
+      <a>fddpremethod4</a>
+      <b>fddpremethod4</b>
+      <a-hint>com.techstar.dmis.dto.DdPremethodDto</a-hint>
+      <b-hint>com.techstar.dmis.dto.transfer.TransDdPremethodDto</b-hint>
+   </field>
+   </mapping>
+</mappings>

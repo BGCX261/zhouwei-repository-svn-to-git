@@ -1,0 +1,20 @@
+<!DOCTYPE mappings PUBLIC "-//DOZER//DTD MAPPINGS//EN"
+"http://dozer.sourceforge.net/dtd/dozerbeanmapping.dtd">
+<mappings>
+   <mapping>
+   <class-a>com.techstar.dmis.dto.FsLfparalistDto</class-a>
+   <class-b>com.techstar.dmis.dto.transfer.TransFsLfparalistDto</class-b>
+   <field>
+      <a>ffsloaddatalist1</a>
+      <b>ffsloaddatalist1</b>
+      <a-hint>com.techstar.dmis.dto.FsLoaddatalistDto</a-hint>
+      <b-hint>com.techstar.dmis.dto.transfer.TransFsLoaddatalistDto</b-hint>
+   </field>
+   <field>
+      <a>zfslfparalist3.id</a>
+      <b>trans_zfslfparalist3</b>
+      <a-hint>com.techstar.dmis.dto.StdLfroundDto</a-hint>
+      <b-hint>java.lang.String</b-hint>
+   </field>
+   </mapping>
+</mappings>

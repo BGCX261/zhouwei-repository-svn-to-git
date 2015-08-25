@@ -1,0 +1,15 @@
+<!--电网风险提示-->
+<head>
+  <obj>DdRepairrisklistDto</obj>
+  <column  colName="fid" propertyName="fid" colType="string" dataTypeLen="32" isPrimary="1" visible="1" width="106" isEdit="0" textColor="#000000" className="DdRepairrisklistDto" refName="fid" ></column>
+  <column  colName="ftransformer" propertyName="ftransformer" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="58" isEdit="0" textColor="#000000" className="DdRepairrisklistDto" refName="ftransformer" ></column>
+  <column  colName="fline" propertyName="fline" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="42" isEdit="0" textColor="#000000" className="DdRepairrisklistDto" refName="fline" ></column>
+  <column  colName="fworkcontent" propertyName="fworkcontent" colType="string" dataTypeLen="500" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="DdRepairrisklistDto" refName="fworkcontent" ></column>
+  <column  colName="foutagestime" propertyName="foutagestime" colType="date" dataTypeLen="0" isPrimary="0" visible="1" width="106" isEdit="0" textColor="#000000" className="DdRepairrisklistDto" refName="foutagestime" ></column>
+  <column  colName="foutageetime" propertyName="foutageetime" colType="date" dataTypeLen="0" isPrimary="0" visible="1" width="106" isEdit="0" textColor="#000000" className="DdRepairrisklistDto" refName="foutageetime" ></column>
+  <column  colName="friskprompt" propertyName="friskprompt" colType="string" dataTypeLen="300" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="DdRepairrisklistDto" refName="friskprompt" ></column>
+  <column  colName="fforecast" propertyName="fforecast" colType="string" dataTypeLen="300" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="DdRepairrisklistDto" refName="fforecast" ></column>
+  <column  colName="friskunit" propertyName="friskunit" colType="string" dataTypeLen="100" isPrimary="0" visible="1" width="106" isEdit="0" textColor="#000000" className="DdRepairrisklistDto" refName="friskunit" ></column>
+  <column  colName="sys_dataowner" propertyName="sys_dataowner" colType="string" dataTypeLen="40" isPrimary="0" visible="1" width="106" isEdit="0" textColor="#000000" className="DdRepairrisklistDto" refName="sys_dataowner" ></column>
+  <column  colName="fdangerreason" propertyName="fdangerreason" colType="string" dataTypeLen="64" isPrimary="0" visible="1" width="74" isEdit="0" textColor="#000000" className="DdRepairrisklistDto" refName="fdangerreason" ></column>
+</head>

@@ -1,0 +1,56 @@
+<!DOCTYPE mappings PUBLIC "-//DOZER//DTD MAPPINGS//EN"
+"http://dozer.sourceforge.net/dtd/dozerbeanmapping.dtd">
+<mappings>
+   <mapping>
+   <class-a>com.techstar.dmis.dto.DdClassondutylogDto</class-a>
+   <class-b>com.techstar.dmis.dto.transfer.TransDdClassondutylogDto</class-b>
+   <field>
+      <a>fddpowerplantoperlog4</a>
+      <b>fddpowerplantoperlog4</b>
+      <a-hint>com.techstar.dmis.dto.DdPowerplantoperlogDto</a-hint>
+      <b-hint>com.techstar.dmis.dto.transfer.TransDdPowerplantoperlogDto</b-hint>
+   </field>
+   <field>
+      <a>fddoperationnotebook4</a>
+      <b>fddoperationnotebook4</b>
+      <a-hint>com.techstar.dmis.dto.DdOperationnotebookDto</a-hint>
+      <b-hint>com.techstar.dmis.dto.transfer.TransDdOperationnotebookDto</b-hint>
+   </field>
+   <field>
+      <a>fddsasusprecord3</a>
+      <b>fddsasusprecord3</b>
+      <a-hint>com.techstar.dmis.dto.DdSasusprecordDto</a-hint>
+      <b-hint>com.techstar.dmis.dto.transfer.TransDdSasusprecordDto</b-hint>
+   </field>
+   <field>
+      <a>fddwaterheight3</a>
+      <b>fddwaterheight3</b>
+      <a-hint>com.techstar.dmis.dto.DdWaterheightDto</a-hint>
+      <b-hint>com.techstar.dmis.dto.transfer.TransDdWaterheightDto</b-hint>
+   </field>
+   <field>
+      <a>fddwaterproofplan2</a>
+      <b>fddwaterproofplan2</b>
+      <a-hint>com.techstar.dmis.dto.DdWaterproofplanDto</a-hint>
+      <b-hint>com.techstar.dmis.dto.transfer.TransDdWaterproofplanDto</b-hint>
+   </field>
+   <field>
+      <a>fddhloadrecord4</a>
+      <b>fddhloadrecord4</b>
+      <a-hint>com.techstar.dmis.dto.DdHloadrecordDto</a-hint>
+      <b-hint>com.techstar.dmis.dto.transfer.TransDdHloadrecordDto</b-hint>
+   </field>
+   <field>
+      <a>fddpowerchangrecord4</a>
+      <b>fddpowerchangrecord4</b>
+      <a-hint>com.techstar.dmis.dto.DdPowerchangrecordDto</a-hint>
+      <b-hint>com.techstar.dmis.dto.transfer.TransDdPowerchangrecordDto</b-hint>
+   </field>
+   <field>
+      <a>fddhpoweroperaterrd5</a>
+      <b>fddhpoweroperaterrd5</b>
+      <a-hint>com.techstar.dmis.dto.DdHpoweroperaterrdDto</a-hint>
+      <b-hint>com.techstar.dmis.dto.transfer.TransDdHpoweroperaterrdDto</b-hint>
+   </field>
+   </mapping>
+</mappings>

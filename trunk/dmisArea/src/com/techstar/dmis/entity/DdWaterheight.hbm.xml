@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="com.techstar.dmis.entity">
+	<class name="DdWaterheight" table="DMIS_DD_Waterheight" dynamic-insert="true" dynamic-update="true" optimistic-lock="version">
+    <id name="fid" type="string">
+      <column name="fid" sql-type="varchar(32)" not-null="true"/>
+      <generator class="assigned"/>
+    </id>
+
+ 	<version name="version" column="VERSION" unsaved-value="undefined"/>
+  
+   <property name="flogdate" type="date"  not-null="false">
+    <column name="flogdate"  
+		               
+    />
+</property>	
+    <property name="fpowerplant" type="string"  not-null="false">
+    <column name="fpowerplant"  
+		length="150"               
+    />
+</property>	
+    <property name="fwaterlevel" type="integer"  not-null="false">
+    <column name="fwaterlevel"  
+		length="14"               
+    />
+</property>	
+    <property name="sys_fille" type="string"  not-null="false">
+    <column name="sys_fille"  
+		length="40"               
+    />
+</property>	
+    <property name="sys_filldept" type="string"  not-null="false">
+    <column name="sys_filldept"  
+		length="80"               
+    />
+</property>	
+    <property name="sys_filltime" type="timestamp"  not-null="false">
+    <column name="sys_filltime"  
+		               
+    />
+</property>	
+    <property name="sys_isvalid" type="integer"  not-null="false">
+    <column name="sys_isvalid"  
+		               
+    />
+</property>	
+    <property name="sys_dataowner" type="string"  not-null="false">
+    <column name="sys_dataowner"  
+		length="40"               
+    />
+</property>	
+    <property name="fwaterleveltime" type="string"  >
+    <column name="fwaterleveltime"  
+		length="200"               
+    />
+</property>	
+  
+	
+    <many-to-one name="zddwaterheight2" class="StdStation"   column="FPowerPlantID" cascade="none"></many-to-one>
+         <many-to-one name="zddwaterheight3" class="DdClassondutylog"   column="FCurLogNO" cascade="none"></many-to-one>
+     </class>
+
+</hibernate-mapping>
+

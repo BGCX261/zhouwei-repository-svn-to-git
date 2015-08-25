@@ -1,0 +1,14 @@
+<!DOCTYPE mappings PUBLIC "-//DOZER//DTD MAPPINGS//EN"
+"http://dozer.sourceforge.net/dtd/dozerbeanmapping.dtd">
+<mappings>
+   <mapping>
+   <class-a>com.techstar.dmis.dto.DdRepairrisklistDto</class-a>
+   <class-b>com.techstar.dmis.dto.transfer.TransDdRepairrisklistDto</class-b>
+   <field>
+      <a>zddrepairrisklist4.fmonthplanno</a>
+      <b>trans_zddrepairrisklist4</b>
+      <a-hint>com.techstar.dmis.dto.DdMoutageplanDto</a-hint>
+      <b-hint>java.lang.String</b-hint>
+   </field>
+   </mapping>
+</mappings>

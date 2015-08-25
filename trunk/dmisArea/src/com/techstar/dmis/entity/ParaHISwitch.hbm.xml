@@ -1,0 +1,133 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="com.techstar.dmis.entity">
+	<class name="ParaHISwitch" table="DMIS_ParaHISwitch" dynamic-insert="true" dynamic-update="true" optimistic-lock="version">
+    <id name="feqpid" type="string">
+      <column name="feqpid" sql-type="varchar(80)" not-null="true"/>
+      <generator class="assigned"/>
+    </id>
+
+ 	<version name="version" column="VERSION" unsaved-value="undefined"/>
+  
+   <property name="flinename" type="string"  not-null="false">
+    <column name="flinename"  
+		length="60"               
+    />
+</property>	
+    <property name="fswitchtype" type="string"  not-null="false">
+    <column name="fswitchtype"  
+		length="10"               
+    />
+</property>	
+    <property name="finstallsite" type="string"  not-null="false">
+    <column name="finstallsite"  
+		length="10"               
+    />
+</property>	
+    <property name="fcheckdate" type="date"  not-null="false">
+    <column name="fcheckdate"  
+		               
+    />
+</property>	
+    <property name="flightmaintaindate" type="date"  not-null="false">
+    <column name="flightmaintaindate"  
+		               
+    />
+</property>	
+    <property name="fmoisturedate" type="date"  not-null="false">
+    <column name="fmoisturedate"  
+		               
+    />
+</property>	
+    <property name="finccreepagedist" type="string"  not-null="false">
+    <column name="finccreepagedist"  
+		length="16"               
+    />
+</property>	
+    <property name="frtvtime" type="date"  not-null="false">
+    <column name="frtvtime"  
+		               
+    />
+</property>	
+    <property name="fratedcurrent" type="integer"  not-null="false">
+    <column name="fratedcurrent"  
+		length="25"        precision="10"       
+    />
+</property>	
+    <property name="fdropoutcurrent" type="integer"  not-null="false">
+    <column name="fdropoutcurrent"  
+		length="25"        precision="10"       
+    />
+</property>	
+    <property name="frupturecapacity" type="integer"  not-null="false">
+    <column name="frupturecapacity"  
+		length="25"        precision="10"       
+    />
+</property>	
+    <property name="ffracturecreepage" type="integer"  not-null="false">
+    <column name="ffracturecreepage"  
+		length="25"        precision="10"       
+    />
+</property>	
+    <property name="fearthcreepage" type="integer"  not-null="false">
+    <column name="fearthcreepage"  
+		length="25"        precision="10"       
+    />
+</property>	
+    <property name="fmechanismtype" type="string"  not-null="false">
+    <column name="fmechanismtype"  
+		length="20"               
+    />
+</property>	
+    <property name="fthermaleqailibrium" type="integer"  not-null="false">
+    <column name="fthermaleqailibrium"  
+		length="25"        precision="10"       
+    />
+</property>	
+    <property name="fpeakwithstand" type="integer"  not-null="false">
+    <column name="fpeakwithstand"  
+		length="25"        precision="10"       
+    />
+</property>	
+    <property name="fheavymaintaindate" type="date"  not-null="false">
+    <column name="fheavymaintaindate"  
+		               
+    />
+</property>	
+    <property name="fratedgaspressure" type="integer"  not-null="false">
+    <column name="fratedgaspressure"  
+		               
+    />
+</property>	
+    <property name="fcompagetype" type="string"  not-null="false">
+    <column name="fcompagetype"  
+		length="10"               
+    />
+</property>	
+    <property name="frtvfac" type="string"  not-null="false">
+    <column name="frtvfac"  
+		length="100"               
+    />
+</property>	
+    <property name="ffixdate" type="date"  not-null="false">
+    <column name="ffixdate"  
+		               
+    />
+</property>	
+    <property name="fexamdate" type="date"  not-null="false">
+    <column name="fexamdate"  
+		               
+    />
+</property>	
+    <property name="fassaydate" type="date"  not-null="false">
+    <column name="fassaydate"  
+		               
+    />
+</property>	
+  
+	
+ <many-to-one name="zparahiswitch2" class="EtsEquipment"   column="FEqpID" cascade="delete-orphan"></many-to-one>
+     </class>
+
+</hibernate-mapping>
+

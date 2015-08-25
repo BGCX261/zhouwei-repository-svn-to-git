@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<books fff="ggg">
+<book email="mashaojing@myce.net.cn">
+	<name>junit in action</name>
+	<price>36</price>
+</book>
+<book1>
+	<name1><test/>java</name1>
+	<price1 date="2007-07-22">20</price1>
+</book1>
+<book>
+	<price>99</price>
+	<name>ooo</name>
+</book>
+</books>
